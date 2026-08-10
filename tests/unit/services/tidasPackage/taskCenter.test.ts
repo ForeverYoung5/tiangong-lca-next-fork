@@ -209,6 +209,72 @@ describe('tidasPackage/taskCenter', () => {
     expect(taskCenter.listTidasPackageTasks()).toEqual([]);
   });
 
+  it('keeps a newly submitted task while a full server history page is refreshed', async () => {
+    const queuedExport = createDeferred<any>();
+    mockQueueExportTidasPackageApi.mockReturnValueOnce(queuedExport.promise);
+
+    const taskCenter = loadTaskCenterModule();
+    await waitFor(() => expect(mockRequestWorkerJobsApi).toHaveBeenCalledTimes(1));
+
+    const submittedTask = taskCenter.submitTidasPackageExportTask({ scope: 'current_user' });
+    const futureUpdatedAt = new Date(Date.now() + 60_000).toISOString();
+    mockRequestWorkerJobsApi.mockResolvedValueOnce({
+      data: Array.from({ length: 30 }, (_, index) => ({
+        id: `server-worker-job-${index}`,
+        jobKind: 'tidas.export_package',
+        status: 'completed',
+        subjectId: `server-package-job-${index}`,
+        createdAt: futureUpdatedAt,
+        updatedAt: futureUpdatedAt,
+      })),
+      error: null,
+    });
+
+    await taskCenter.refreshTidasPackageTasksFromWorkerJobs();
+
+    expect(taskCenter.listTidasPackageTasks()).toContainEqual(
+      expect.objectContaining({ id: submittedTask.id, phase: 'submitting', state: 'running' }),
+    );
+    expect(taskCenter.listTidasPackageTasks()).toHaveLength(30);
+  });
+
+  it('releases the reserved server-history slot when submission fails', async () => {
+    mockQueueExportTidasPackageApi.mockResolvedValueOnce({
+      data: null,
+      error: new Error('queue failed'),
+    });
+
+    const taskCenter = loadTaskCenterModule();
+    await waitFor(() => expect(mockRequestWorkerJobsApi).toHaveBeenCalledTimes(1));
+
+    const submittedTask = taskCenter.submitTidasPackageExportTask({ scope: 'current_user' });
+    await waitFor(() =>
+      expect(taskCenter.listTidasPackageTasks()).toContainEqual(
+        expect.objectContaining({ id: submittedTask.id, state: 'failed' }),
+      ),
+    );
+
+    const futureUpdatedAt = new Date(Date.now() + 60_000).toISOString();
+    mockRequestWorkerJobsApi.mockResolvedValueOnce({
+      data: Array.from({ length: 30 }, (_, index) => ({
+        id: `server-worker-job-${index}`,
+        jobKind: 'tidas.export_package',
+        status: 'completed',
+        subjectId: `server-package-job-${index}`,
+        createdAt: futureUpdatedAt,
+        updatedAt: futureUpdatedAt,
+      })),
+      error: null,
+    });
+
+    await taskCenter.refreshTidasPackageTasksFromWorkerJobs();
+
+    expect(taskCenter.listTidasPackageTasks()).not.toContainEqual(
+      expect.objectContaining({ id: submittedTask.id }),
+    );
+    expect(taskCenter.listTidasPackageTasks()).toHaveLength(30);
+  });
+
   it('hydrates normalized tasks from storage and resumes running jobs', async () => {
     localStorage.setItem(
       STORAGE_KEY,
