@@ -22,9 +22,9 @@ checkPaths:
   - scripts/e2e/**
   - playwright.config.ts
   - tests/e2e/i18n/**
-lastReviewedAt: 2026-09-10
-lastReviewedCommit: 61d2323d8cb477ae881496aad9edb43aee0b3073
-lastReviewedNote: 'Next #1050: reviewed the example-data menu, seven reused dataset pages, fixed example version scope and 58-route localization contract; existing delivery and validation gates remain required.'
+lastReviewedAt: 2026-09-13
+lastReviewedCommit: 61fa8baf6feb78f74880359cbaf2a14070f0ac1d
+lastReviewedNote: 'Reviewed for platform #1067: Edge mirror pull-helper default and source receipt migrated to the canonical tiangong-lca/edge-functions identity at the same reviewed commit ceff9c4893e6fa9ab2b6e163c57b9d6428cbde37; branch operations and mirror content unchanged.'
 ---
 
 # Supabase Environment And Database Workflow

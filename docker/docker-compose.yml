@@ -422,7 +422,7 @@ services:
       context: .
       dockerfile: Dockerfile.worker
       args:
-        LCA_WORKER_REPO: ${LCA_WORKER_REPO:-https://github.com/linancn/tiangong-lca-worker.git}
+        LCA_WORKER_REPO: ${LCA_WORKER_REPO:-https://github.com/tiangong-lca/worker.git}
         LCA_WORKER_REF: ${LCA_WORKER_REF:-refs/heads/main}
         LCA_CALCULATOR_REPO: ${LCA_CALCULATOR_REPO:-}
         LCA_CALCULATOR_REF: ${LCA_CALCULATOR_REF:-}

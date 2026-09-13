@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-readonly DEFAULT_SOURCE_REPOSITORY='https://github.com/linancn/tiangong-lca-edge-functions.git'
+readonly DEFAULT_SOURCE_REPOSITORY='https://github.com/tiangong-lca/edge-functions.git'
 
 usage() {
   cat <<'EOF'
