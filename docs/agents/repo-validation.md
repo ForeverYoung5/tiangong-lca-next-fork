@@ -44,8 +44,8 @@ checkPaths:
   - scripts/i18n/locale-delivery.mjs
   - .github/workflows/**
 lastReviewedAt: 2026-09-13
-lastReviewedCommit: 490df6476a1b7ca19c2d092f86636d52b9bdf637
-lastReviewedNote: 'Reviewed for platform #1062: user-requested Gitleaks Action retirement removes its workflow and dedicated configuration. All other build, lint, type, coverage, release-proof and branch gates remain unchanged; no CLI replacement is added.'
+lastReviewedCommit: 61fa8baf6feb78f74880359cbaf2a14070f0ac1d
+lastReviewedNote: 'Reviewed for platform #1067: active entrypoint defaults migrated to canonical identities (docker Worker clone URL, Edge mirror pull-helper default and source receipt pinned to the same reviewed commit ceff9c4893e6fa9ab2b6e163c57b9d6428cbde37, Footer GitHub link); Footer and Edge-mirror receipt assertions updated with them; frozen historical evidence and all gates unchanged.'
 related:
   - ../AGENTS.md
   - ../.docpact/config.yaml

@@ -40,8 +40,8 @@ checkPaths:
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
 lastReviewedAt: 2026-09-13
-lastReviewedCommit: 490df6476a1b7ca19c2d092f86636d52b9bdf637
-lastReviewedNote: 'Reviewed for platform #1062: user-requested Gitleaks Action retirement removes its workflow and dedicated configuration. All other build, lint, type, coverage, release-proof and branch gates remain unchanged; no CLI replacement is added.'
+lastReviewedCommit: 61fa8baf6feb78f74880359cbaf2a14070f0ac1d
+lastReviewedNote: 'Reviewed for platform #1067: Footer and Edge-mirror receipt assertions updated with the canonical entrypoint identities; troubleshooting guidance unchanged.'
 ---
 
 # Testing Troubleshooting

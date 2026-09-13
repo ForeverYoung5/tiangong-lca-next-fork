@@ -64,7 +64,7 @@ describe('Footer Component', () => {
     );
     expect(screen.getByRole('link', { name: 'github' })).toHaveAttribute(
       'href',
-      'https://github.com/linancn/tiangong-lca-next',
+      'https://github.com/tiangong-lca/platform',
     );
     screen.getAllByRole('link').forEach((anchor) => {
       expect(anchor).toHaveAttribute('target', '_blank');

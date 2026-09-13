@@ -43,8 +43,8 @@ checkPaths:
   - .github/workflows/build.yml
   - .nvmrc
 lastReviewedAt: 2026-09-13
-lastReviewedCommit: 490df6476a1b7ca19c2d092f86636d52b9bdf637
-lastReviewedNote: 'Reviewed for platform #1062: the Gitleaks Security Scan workflow (.github/workflows/gitleaks.yml), its dedicated config (.gitleaks.toml) and ignore file (.gitleaksignore) are removed entirely; no CLI replacement is introduced. Docpact governance references to those files are cleaned. Package version, dependencies, lock, build/lint/type/coverage/release-proof gates and other workflows are unchanged.'
+lastReviewedCommit: 61fa8baf6feb78f74880359cbaf2a14070f0ac1d
+lastReviewedNote: 'Reviewed for platform #1067: active entrypoint defaults migrated to canonical identities (docker Worker clone URL, Edge mirror pull-helper default and source receipt pinned to the same reviewed commit ceff9c4893e6fa9ab2b6e163c57b9d6428cbde37, Footer GitHub link); frozen historical evidence and all build/lint/type/coverage/release gates unchanged.'
 ---
 
 # Development Bootstrap

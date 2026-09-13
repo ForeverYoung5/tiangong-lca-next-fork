@@ -25,9 +25,9 @@ checkPaths:
   - playwright.config.ts
   - config/docs-capture/**
   - tests/e2e/i18n/**
-lastReviewedAt: 2026-09-10
-lastReviewedCommit: 61d2323d8cb477ae881496aad9edb43aee0b3073
-lastReviewedNote: 'Next #1050: reviewed the example-data menu, seven reused dataset pages, fixed example version scope and 58-route localization contract; existing delivery and validation gates remain required.'
+lastReviewedAt: 2026-09-13
+lastReviewedCommit: 61fa8baf6feb78f74880359cbaf2a14070f0ac1d
+lastReviewedNote: 'Reviewed for platform #1067: active entrypoint defaults migrated to canonical identities (docker Worker clone URL, Edge mirror pull-helper default and receipt, Footer GitHub link); stable-versus-generated path map and mirror provenance unchanged.'
 related:
   - ../AGENTS.md
   - ../.docpact/config.yaml
