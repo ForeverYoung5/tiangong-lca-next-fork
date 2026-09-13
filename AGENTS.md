@@ -46,8 +46,8 @@ checkPaths:
   - .husky/pre-push
   - .github/workflows/**
 lastReviewedAt: 2026-09-13
-lastReviewedCommit: 490df6476a1b7ca19c2d092f86636d52b9bdf637
-lastReviewedNote: 'Reviewed for platform #1062: the Gitleaks Security Scan workflow (.github/workflows/gitleaks.yml), its dedicated config (.gitleaks.toml) and ignore file (.gitleaksignore) are removed entirely; no CLI replacement is introduced. Docpact governance references to those files are cleaned. Package version, dependencies, lock, build/lint/type/coverage/release-proof gates and other workflows are unchanged.'
+lastReviewedCommit: b2c4026d728f8d859a39eb516534b850ba169eec
+lastReviewedNote: 'Reviewed for Platform #1067: canonical Footer URL changes the audited source digest; the existing locale artifact generator refreshed only69 derived digest values across17 manifests. Locale messages, counts, decisions, baseline commits, license evidence and quality thresholds are unchanged; complete checked push remains required.'
 related:
   - .docpact/config.yaml
   - docs/agents/repo-validation.md

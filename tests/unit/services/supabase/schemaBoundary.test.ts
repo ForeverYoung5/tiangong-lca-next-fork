@@ -67,7 +67,7 @@ describe('Supabase schema cutover boundary', () => {
       fs.readFileSync(path.join(ROOT, 'docker/volumes/functions/.source-revision.json'), 'utf8'),
     );
     expect(receipt).toEqual({
-      repository: 'https://github.com/linancn/tiangong-lca-edge-functions.git',
+      repository: 'https://github.com/tiangong-lca/edge-functions.git',
       commit: EXPECTED_EDGE_COMMIT,
       sourcePath: 'supabase/functions',
     });
