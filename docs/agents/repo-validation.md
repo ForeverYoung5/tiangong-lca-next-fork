@@ -44,7 +44,7 @@ checkPaths:
   - scripts/i18n/locale-delivery.mjs
   - .github/workflows/**
 lastReviewedAt: 2026-09-13
-lastReviewedCommit: b2c4026d728f8d859a39eb516534b850ba169eec
+lastReviewedCommit: 0c2e56b306f5bd89b375413f5726cb6d32355c7a
 lastReviewedNote: 'Reviewed for Platform #1067: canonical Footer URL changes the audited source digest; the existing locale artifact generator refreshed only69 derived digest values across17 manifests. Locale messages, counts, decisions, baseline commits, license evidence and quality thresholds are unchanged; complete checked push remains required.'
 related:
   - ../AGENTS.md
