@@ -40,8 +40,8 @@ checkPaths:
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
 lastReviewedAt: 2026-09-13
-lastReviewedCommit: 61fa8baf6feb78f74880359cbaf2a14070f0ac1d
-lastReviewedNote: 'Reviewed for platform #1067: Footer and Edge-mirror receipt assertions updated with the canonical entrypoint identities; troubleshooting guidance unchanged.'
+lastReviewedCommit: b2c4026d728f8d859a39eb516534b850ba169eec
+lastReviewedNote: 'Reviewed for Platform #1067: canonical Footer URL changes the audited source digest; the existing locale artifact generator refreshed only69 derived digest values across17 manifests. Locale messages, counts, decisions, baseline commits, license evidence and quality thresholds are unchanged; complete checked push remains required.'
 ---
 
 # Testing Troubleshooting
