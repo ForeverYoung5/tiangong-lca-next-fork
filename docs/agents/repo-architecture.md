@@ -25,9 +25,9 @@ checkPaths:
   - playwright.config.ts
   - config/docs-capture/**
   - tests/e2e/i18n/**
-lastReviewedAt: 2026-09-13
-lastReviewedCommit: 61fa8baf6feb78f74880359cbaf2a14070f0ac1d
-lastReviewedNote: 'Reviewed for platform #1067: active entrypoint defaults migrated to canonical identities (docker Worker clone URL, Edge mirror pull-helper default and receipt, Footer GitHub link); stable-versus-generated path map and mirror provenance unchanged.'
+lastReviewedAt: 2026-09-14
+lastReviewedCommit: ccfb4a0cd12e342cd5980a5f53781b1591fe43f7
+lastReviewedNote: 'Reviewed for Platform #1072: docker/desensitize_data.sql.sh resolves the worker connection env from the canonical ../worker/.env before the pre-rename ../tiangong-lca-worker/.env and the retired ../tiangong-lca-calculator/.env, while keeping explicit REMOTE_DB_URL, SUPABASE_REMOTE_DB_URL, SUPABASE_DB_URL and CONN precedence and the docker/.env then repo .env order unchanged. No Docker, database or production action is performed or authorized; the resolution is characterized with isolated temporary fixtures only.'
 related:
   - ../AGENTS.md
   - ../.docpact/config.yaml
