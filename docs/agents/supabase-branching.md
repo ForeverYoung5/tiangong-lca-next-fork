@@ -22,9 +22,9 @@ checkPaths:
   - scripts/e2e/**
   - playwright.config.ts
   - tests/e2e/i18n/**
-lastReviewedAt: 2026-09-13
-lastReviewedCommit: 61fa8baf6feb78f74880359cbaf2a14070f0ac1d
-lastReviewedNote: 'Reviewed for platform #1067: Edge mirror pull-helper default and source receipt migrated to the canonical tiangong-lca/edge-functions identity at the same reviewed commit ceff9c4893e6fa9ab2b6e163c57b9d6428cbde37; branch operations and mirror content unchanged.'
+lastReviewedAt: 2026-09-14
+lastReviewedCommit: ccfb4a0cd12e342cd5980a5f53781b1591fe43f7
+lastReviewedNote: 'Reviewed for Platform #1072: docker/desensitize_data.sql.sh resolves the worker connection env from the canonical ../worker/.env before the pre-rename ../tiangong-lca-worker/.env and the retired ../tiangong-lca-calculator/.env, while keeping explicit REMOTE_DB_URL, SUPABASE_REMOTE_DB_URL, SUPABASE_DB_URL and CONN precedence and the docker/.env then repo .env order unchanged. No Docker, database or production action is performed or authorized; the resolution is characterized with isolated temporary fixtures only.'
 ---
 
 # Supabase Environment And Database Workflow
