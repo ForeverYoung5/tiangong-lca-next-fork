@@ -22,8 +22,9 @@ Environment variables:
                                   Fallback lookup order when not passed:
                                   1) <repo>/docker/.env
                                   2) <repo>/.env
-                                  3) <repo>/../tiangong-lca-worker/.env
-                                  4) <repo>/../tiangong-lca-calculator/.env (legacy fallback)
+                                  3) <repo>/../worker/.env
+                                  4) <repo>/../tiangong-lca-worker/.env (legacy fallback)
+                                  5) <repo>/../tiangong-lca-calculator/.env (legacy fallback)
                                   Keys: REMOTE_DB_URL, SUPABASE_REMOTE_DB_URL, SUPABASE_DB_URL, CONN
   DATA_SQL                        Target SQL file path.
   DATABASE_SOURCE_ROOT            Clean owning database-engine checkout.

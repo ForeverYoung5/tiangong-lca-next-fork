@@ -43,9 +43,9 @@ checkPaths:
   - pnpm-lock.yaml
   - pnpm-workspace.yaml
   - Dockerfile.app
-lastReviewedAt: 2026-09-13
-lastReviewedCommit: 0c2e56b306f5bd89b375413f5726cb6d32355c7a
-lastReviewedNote: 'Reviewed for Platform #1067: canonical Footer URL changes the audited source digest; the existing locale artifact generator refreshed only69 derived digest values across17 manifests. Locale messages, counts, decisions, baseline commits, license evidence and quality thresholds are unchanged; complete checked push remains required.'
+lastReviewedAt: 2026-09-14
+lastReviewedCommit: ccfb4a0cd12e342cd5980a5f53781b1591fe43f7
+lastReviewedNote: 'Reviewed for Platform #1072: docker/desensitize_data.sql.sh resolves the worker connection env from the canonical ../worker/.env before the pre-rename ../tiangong-lca-worker/.env and the retired ../tiangong-lca-calculator/.env, while keeping explicit REMOTE_DB_URL, SUPABASE_REMOTE_DB_URL, SUPABASE_DB_URL and CONN precedence and the docker/.env then repo .env order unchanged. No Docker, database or production action is performed or authorized; the resolution and the unchanged explicit override are characterized with isolated temporary fixtures only.'
 ---
 
 # Testing Strategy
