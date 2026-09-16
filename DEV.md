@@ -43,7 +43,7 @@ checkPaths:
   - .github/workflows/build.yml
   - .nvmrc
 lastReviewedAt: 2026-09-16
-lastReviewedCommit: d2231cb4d6e7c6e6ddc9b654740a254f4c009d4a
+lastReviewedCommit: 0fbc9941f304c03715b0b59a6d0eb4114d4d3c67
 lastReviewedNote: 'Reviewed for Platform #1081: the deploy target value changed in both workflows. No bootstrap step, command, prerequisite or release flow in this document changes, and no new environment value is needed: the workflow keeps the target as its single source.'
 ---
 
