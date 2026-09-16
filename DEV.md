@@ -43,7 +43,7 @@ checkPaths:
   - .github/workflows/build.yml
   - .nvmrc
 lastReviewedAt: 2026-09-16
-lastReviewedCommit: '088675136b5c1fe46917678f7c49398922a307af'
+lastReviewedCommit: 483f2ea90f7b1b214853574527d150274b4c5f8d
 lastReviewedNote: 'Reviewed for Platform #1076: the default work loop now names what a hosting-boundary build must leave behind, so DEV.md agrees with the implemented crawler and unknown-path behavior in public/robots.txt, public/404.html, public/edgeone.json and the shell metas. No bootstrap step, command, prerequisite or release flow changed.'
 ---
 

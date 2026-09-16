@@ -43,7 +43,7 @@ checkPaths:
   - scripts/reference-data/**
   - .github/workflows/**
 lastReviewedAt: 2026-09-16
-lastReviewedCommit: 083122a7b56c0ddc9c69fcc1d9c34df165d180c8
+lastReviewedCommit: 483f2ea90f7b1b214853574527d150274b4c5f8d
 lastReviewedNote: 'Reviewed for Platform #1076 closeout: the pre-push contract itself is unchanged. The managed gate stopped at five required testing-document reviews because the inventory correction at 083122a7 touches tests/**; this review records that no exact gate command, scope, target-trigger rule or adoption condition changed, and the managed checked push remains the one owned path with no bypass.'
 ---
 

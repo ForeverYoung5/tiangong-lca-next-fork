@@ -40,7 +40,7 @@ checkPaths:
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
 lastReviewedAt: 2026-09-16
-lastReviewedCommit: 083122a7b56c0ddc9c69fcc1d9c34df165d180c8
+lastReviewedCommit: 483f2ea90f7b1b214853574527d150274b4c5f8d
 lastReviewedNote: 'Reviewed for Platform #1076 closeout: no recovery path changes. What stopped the push was a governed-document review gate, not a test, coverage or runtime failure, so the focused recovery commands, failure diagnosis and verification sections remain accurate; there is no new failure mode to document.'
 ---
 
