@@ -44,7 +44,7 @@ checkPaths:
   - scripts/i18n/locale-delivery.mjs
   - .github/workflows/**
 lastReviewedAt: 2026-09-16
-lastReviewedCommit: d2231cb4d6e7c6e6ddc9b654740a254f4c009d4a
+lastReviewedCommit: 0fbc9941f304c03715b0b59a6d0eb4114d4d3c67
 lastReviewedNote: 'Reviewed for Platform #1081: the EdgeOne Pages deploy target in both workflows now names the existing production project, so the release path and the manual CI fallback publish where the public site is actually served. Its deployment-only workflow rule was applied as written: YAML parsing, formatter check and shell syntax check on both edited deploy steps, plus the four workflow-referencing suites (28 tests). No proof requirement changes.'
 related:
   - ../AGENTS.md

@@ -46,7 +46,7 @@ checkPaths:
   - .husky/pre-push
   - .github/workflows/**
 lastReviewedAt: 2026-09-16
-lastReviewedCommit: d2231cb4d6e7c6e6ddc9b654740a254f4c009d4a
+lastReviewedCommit: 0fbc9941f304c03715b0b59a6d0eb4114d4d3c67
 lastReviewedNote: 'Reviewed for Platform #1081: the EdgeOne Pages deploy target in both workflows now names the existing production project, so the release path and the manual CI fallback publish where the public site is actually served. No branch rule, ownership boundary, hard boundary or documented command changes, and the project value stays in the workflow rather than being restated here.'
 related:
   - .docpact/config.yaml
