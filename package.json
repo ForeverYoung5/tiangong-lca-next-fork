@@ -15,6 +15,9 @@
   "scripts": {
     "analyze": "cross-env ANALYZE=1 max build",
     "build": "max build",
+    "edgeone:bundle:stage": "node scripts/edgeone/prepare-routes.mjs --stage",
+    "edgeone:bundle:correct": "node scripts/edgeone/prepare-routes.mjs --correct",
+    "edgeone:bundle:check": "node scripts/edgeone/prepare-routes.mjs --check",
     "deploy": "pnpm build && pnpm gh-pages",
     "dev": "pnpm start:dev",
     "docpact:gate": "node scripts/docpact-gate.js",
