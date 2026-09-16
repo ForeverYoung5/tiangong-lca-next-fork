@@ -38,7 +38,11 @@ type Route = {
   handle?: string;
   'server-name'?: string;
 };
-type RouteTable = { version: number; routes: Route[]; conf?: Record<string, unknown> };
+type RouteTable = {
+  version: number;
+  routes: Route[];
+  conf?: { headers?: unknown[]; redirects?: unknown[]; rewrites?: unknown[]; caches?: unknown[] };
+};
 
 const root = process.cwd();
 const publicRoot = path.resolve(root, 'public');

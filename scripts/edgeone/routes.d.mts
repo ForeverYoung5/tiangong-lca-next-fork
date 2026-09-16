@@ -1,23 +1,23 @@
 export interface Route {
-  readonly src?: string;
-  readonly dest?: string;
-  readonly status?: number;
-  readonly handle?: string;
-  readonly 'server-name'?: string;
-  readonly headers?: Readonly<Record<string, string>>;
+  src?: string;
+  dest?: string;
+  status?: number;
+  handle?: string;
+  'server-name'?: string;
+  headers?: Record<string, string>;
 }
 
 export interface EmbeddedConfiguration {
-  readonly headers?: readonly unknown[];
-  readonly redirects?: readonly unknown[];
-  readonly rewrites?: readonly unknown[];
-  readonly caches?: readonly unknown[];
+  headers?: unknown[];
+  redirects?: unknown[];
+  rewrites?: unknown[];
+  caches?: unknown[];
 }
 
 export interface RouteTable {
-  readonly version: number;
-  readonly routes: readonly Route[];
-  readonly conf?: EmbeddedConfiguration;
+  version: number;
+  routes: Route[];
+  conf?: EmbeddedConfiguration;
 }
 
 export interface CorrectionResult {
