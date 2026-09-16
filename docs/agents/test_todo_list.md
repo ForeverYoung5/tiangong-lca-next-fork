@@ -41,7 +41,7 @@ checkPaths:
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
 lastReviewedAt: 2026-09-16
-lastReviewedCommit: 083122a7b56c0ddc9c69fcc1d9c34df165d180c8
+lastReviewedCommit: 483f2ea90f7b1b214853574527d150274b4c5f8d
 lastReviewedNote: 'Reviewed for Platform #1076 closeout: the reference baseline is intentionally untouched, because this document is a checked-in reference and a delivery's post-commit full-gate counts belong in that delivery's PR evidence. The current state gains one line recording that the SPA-external static inventory now covers the hosted not-found document.'
 ---
 

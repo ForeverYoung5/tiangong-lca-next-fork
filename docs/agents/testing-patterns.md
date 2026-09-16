@@ -43,7 +43,7 @@ checkPaths:
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
 lastReviewedAt: 2026-09-16
-lastReviewedCommit: 083122a7b56c0ddc9c69fcc1d9c34df165d180c8
+lastReviewedCommit: 483f2ea90f7b1b214853574527d150274b4c5f8d
 lastReviewedNote: 'Reviewed for Platform #1076 closeout: no pattern changes. The correction applies an existing rule - a newly shipped static document must be added to the exact inventory a test asserts, and the discovered set must not drift - so the global rules, helper table and focused command shapes remain accurate as written.'
 ---
 
