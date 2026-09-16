@@ -7,6 +7,7 @@ import {
   HOSTING_CONFIG_NAME,
   NOT_FOUND_DOCUMENT,
   ROUTES_RELATIVE_PATH,
+  REQUIRED_ARTIFACTS,
   correctRouteTable,
   prepareBundle,
   readRouteTable,
@@ -48,6 +49,11 @@ const root = process.cwd();
 const publicRoot = path.resolve(root, 'public');
 const fixturePath = path.resolve(root, 'tests/fixtures/edgeone/generated-routes.json');
 const generated = JSON.parse(fs.readFileSync(fixturePath, 'utf8')) as RouteTable;
+const writeBoundaryAssets = (bundle: string) => {
+  const assets = path.join(bundle, ASSETS_RELATIVE_PATH);
+  fs.mkdirSync(assets, { recursive: true });
+  for (const name of REQUIRED_ARTIFACTS) fs.writeFileSync(path.join(assets, name.slice(1)), name);
+};
 const clone = <T>(value: T): T => JSON.parse(JSON.stringify(value)) as T;
 const terminalRoute = (table: RouteTable): Route | undefined =>
   [...table.routes].reverse().find((route) => route.src === FALLBACK_PATTERN);
@@ -142,6 +148,7 @@ describe('EdgeOne deploy bundle routing', () => {
     const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'edgeone-bundle-'));
     try {
       const routesPath = path.join(temporary, ROUTES_RELATIVE_PATH);
+      writeBoundaryAssets(temporary);
       fs.mkdirSync(path.dirname(routesPath), { recursive: true });
       fs.writeFileSync(routesPath, JSON.stringify(generated, null, 2));
       expect(() => prepareBundle({ bundleDir: temporary, check: true })).toThrow(
@@ -181,6 +188,10 @@ describe('EdgeOne deploy bundle routing', () => {
         path.join(dist, 'index.html'),
         '<!doctype html><html><body>shell</body></html>\n',
       );
+      fs.copyFileSync(
+        path.join(publicRoot, 'oauth-consent-bridge.html'),
+        path.join(dist, 'oauth-consent-bridge.html'),
+      );
       fs.writeFileSync(path.join(dist, 'assets', 'app.js'), 'console.log("asset")\n');
       // A previously generated bundle must never be copied into its own assets directory.
       fs.mkdirSync(path.join(dist, '.edgeone'), { recursive: true });
@@ -193,7 +204,13 @@ describe('EdgeOne deploy bundle routing', () => {
       });
       expect(staged).toBeGreaterThan(0);
       const stagedNames = fs.readdirSync(assets).sort();
-      expect(stagedNames).toEqual(['404.html', 'assets', 'index.html', 'robots.txt']);
+      expect(stagedNames).toEqual([
+        '404.html',
+        'assets',
+        'index.html',
+        'oauth-consent-bridge.html',
+        'robots.txt',
+      ]);
       expect(fs.existsSync(path.join(bundle, HOSTING_CONFIG_NAME))).toBe(true);
       expect(
         fs.readFileSync(path.join(assets, ASSETS_RELATIVE_PATH.split('/')[1], 'app.js'), 'utf8'),
@@ -260,7 +277,7 @@ describe('EdgeOne deploy bundle routing', () => {
       const configPath = path.join(publicRoot, 'edgeone.json');
       const routesPath = path.join(bundle, ROUTES_RELATIVE_PATH);
       fs.mkdirSync(path.join(dist, 'assets'), { recursive: true });
-      for (const name of ['404.html', 'robots.txt'])
+      for (const name of ['404.html', 'robots.txt', 'oauth-consent-bridge.html'])
         fs.copyFileSync(path.join(publicRoot, name), path.join(dist, name));
       fs.writeFileSync(path.join(dist, 'index.html'), '<!doctype html><html></html>\n');
       fs.writeFileSync(path.join(dist, 'assets', 'app.aaaa1111.js'), 'old\n');
@@ -271,7 +288,7 @@ describe('EdgeOne deploy bundle routing', () => {
       fs.writeFileSync(
         routesPath,
         table(
-          '^/assets/(app\\.aaaa1111\\.js|delete-me\\.html)$|^/(404|index)\\.html$|^/robots\\.txt$',
+          '^/assets/(app\\.aaaa1111\\.js|delete-me\\.html)$|^/(404|index|oauth-consent-bridge)\\.html$|^/robots\\.txt$',
         ),
       );
       expect(prepareBundle({ bundleDir: bundle, check: true })).toMatchObject({ checked: true });
@@ -288,14 +305,16 @@ describe('EdgeOne deploy bundle routing', () => {
       fs.writeFileSync(
         routesPath,
         table(
-          '^/assets/(app\\.aaaa1111\\.js|delete-me\\.html)$|^/(404|index)\\.html$|^/robots\\.txt$',
+          '^/assets/(app\\.aaaa1111\\.js|delete-me\\.html)$|^/(404|index|oauth-consent-bridge)\\.html$|^/robots\\.txt$',
         ),
       );
       expect(() => prepareBundle({ bundleDir: bundle, check: true })).toThrow(/app\.bbbb2222\.js/u);
 
       // A table generated for the current build is accepted, and the correction then applies to it.
       const current = JSON.parse(
-        table('^/assets/app\\.bbbb2222\\.js$|^/(404|index)\\.html$|^/robots\\.txt$'),
+        table(
+          '^/assets/app\\.bbbb2222\\.js$|^/(404|index|oauth-consent-bridge)\\.html$|^/robots\\.txt$',
+        ),
       ) as {
         routes: { status?: number }[];
       };
@@ -322,6 +341,10 @@ describe('EdgeOne deploy bundle routing', () => {
         fs.readFileSync(path.join(publicRoot, 'robots.txt')),
       );
       fs.writeFileSync(path.join(dist, 'index.html'), '<!doctype html><html></html>\n');
+      fs.copyFileSync(
+        path.join(publicRoot, 'oauth-consent-bridge.html'),
+        path.join(dist, 'oauth-consent-bridge.html'),
+      );
       const configPath = path.join(publicRoot, 'edgeone.json');
       expect(() =>
         stageBundle({ distDir: dist, bundleDir: path.join(dist, 'bundle'), configPath }),
@@ -333,6 +356,82 @@ describe('EdgeOne deploy bundle routing', () => {
       fs.symlinkSync(linkTarget, path.join(bundle, ASSETS_RELATIVE_PATH));
       expect(() => stageBundle({ distDir: dist, bundleDir: bundle, configPath })).toThrow(
         /symlinked path/u,
+      );
+    } finally {
+      fs.rmSync(temporary, { recursive: true, force: true });
+    }
+  });
+
+  it.each(['bundle', '.edgeone'])(
+    'rejects a symlinked %s before deleting external routing',
+    (component) => {
+      const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'edgeone-parent-guard-'));
+      try {
+        const dist = path.join(temporary, 'dist');
+        const bundle = path.join(temporary, 'bundle');
+        const external = path.join(temporary, 'external');
+        fs.mkdirSync(dist);
+        for (const name of ['404.html', 'index.html', 'robots.txt', 'oauth-consent-bridge.html'])
+          fs.writeFileSync(path.join(dist, name), name);
+        const externalRoutes =
+          component === 'bundle'
+            ? path.join(external, '.edgeone', 'routes.json')
+            : path.join(external, 'routes.json');
+        fs.mkdirSync(path.dirname(externalRoutes), { recursive: true });
+        fs.writeFileSync(externalRoutes, 'must remain unchanged');
+        if (component === 'bundle') fs.symlinkSync(external, bundle, 'junction');
+        else {
+          fs.mkdirSync(bundle);
+          fs.symlinkSync(external, path.join(bundle, '.edgeone'), 'junction');
+        }
+        expect(() =>
+          stageBundle({
+            distDir: dist,
+            bundleDir: bundle,
+            configPath: path.join(publicRoot, 'edgeone.json'),
+          }),
+        ).toThrow(/symlinked path/u);
+        expect(fs.readFileSync(externalRoutes, 'utf8')).toBe('must remain unchanged');
+      } finally {
+        fs.rmSync(temporary, { recursive: true, force: true });
+      }
+    },
+  );
+
+  it('checks assets beyond the former file-count and directory-depth cutoffs', () => {
+    const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'edgeone-full-inventory-'));
+    try {
+      writeBoundaryAssets(temporary);
+      const assets = path.join(temporary, ASSETS_RELATIVE_PATH);
+      fs.mkdirSync(path.join(assets, 'a', 'b', 'c', 'd'), { recursive: true });
+      for (let i = 0; i < 405; i++) fs.writeFileSync(path.join(assets, `asset-${i}.js`), 'asset');
+      fs.writeFileSync(path.join(assets, 'a', 'b', 'c', 'd', 'new-hash.js'), 'new asset');
+      const corrected = correctRouteTable(generated).table;
+      corrected.routes[0].src =
+        '^/(404|index|oauth-consent-bridge)\\.html$|^/robots\\.txt$|^/asset-[0-9]+\\.js$';
+      fs.writeFileSync(path.join(temporary, ROUTES_RELATIVE_PATH), JSON.stringify(corrected));
+      expect(() => prepareBundle({ bundleDir: temporary, check: true })).toThrow(/new-hash\.js/u);
+      fs.rmSync(path.join(assets, 'a'), { recursive: true });
+      fs.writeFileSync(path.join(assets, 'zz-new-hash.js'), 'new asset');
+      expect(() => prepareBundle({ bundleDir: temporary, check: true })).toThrow(
+        /zz-new-hash\.js/u,
+      );
+    } finally {
+      fs.rmSync(temporary, { recursive: true, force: true });
+    }
+  });
+
+  it.each(REQUIRED_ARTIFACTS)('rejects a bundle missing the actual %s file', (artifact) => {
+    const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'edgeone-missing-document-'));
+    try {
+      writeBoundaryAssets(temporary);
+      fs.writeFileSync(
+        path.join(temporary, ROUTES_RELATIVE_PATH),
+        JSON.stringify(correctRouteTable(generated).table),
+      );
+      fs.rmSync(path.join(temporary, ASSETS_RELATIVE_PATH, artifact.slice(1)));
+      expect(() => prepareBundle({ bundleDir: temporary, check: true })).toThrow(
+        /missing a regular boundary document/u,
       );
     } finally {
       fs.rmSync(temporary, { recursive: true, force: true });

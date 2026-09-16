@@ -20,32 +20,37 @@
  * semantics are re-implemented here. Generation itself runs as `edgeone pages generate-routes` from
  * the bundle root; the corrections below are applied afterwards.
  */
-import fs from "node:fs";
-import path from "node:path";
+import fs from 'node:fs';
+import path from 'node:path';
 
 export const ROUTES_VERSION = 3;
-export const ROUTES_RELATIVE_PATH = path.posix.join(".edgeone", "routes.json");
-export const ASSETS_RELATIVE_PATH = path.posix.join(".edgeone", "assets");
-export const HOSTING_CONFIG_NAME = "edgeone.json";
-export const NOT_FOUND_DOCUMENT = "/404.html";
+export const ROUTES_RELATIVE_PATH = path.posix.join('.edgeone', 'routes.json');
+export const ASSETS_RELATIVE_PATH = path.posix.join('.edgeone', 'assets');
+export const HOSTING_CONFIG_NAME = 'edgeone.json';
+export const NOT_FOUND_DOCUMENT = '/404.html';
 /** The CLI's own terminal fallback pattern; the correction rewrites its target, never its spelling. */
-export const FALLBACK_PATTERN = "/.*";
+export const FALLBACK_PATTERN = '/.*';
 /** Catch-all spellings that must never be left pointing at the application shell. */
-const SHELL_DOCUMENT = "/index.html";
+const SHELL_DOCUMENT = '/index.html';
 /** A terminal catch-all may only target one of these documents, and must not reach a function. */
 const FALLBACK_TARGETS = new Set([NOT_FOUND_DOCUMENT, SHELL_DOCUMENT]);
 /** Routing files the pinned CLI derives from the assets; they must not survive into a new build. */
 const DERIVED_BUNDLE_PATHS = Object.freeze([ROUTES_RELATIVE_PATH]);
-const FUNCTION_MARKERS = Object.freeze(["module", "server-name"]);
-export const REQUIRED_ARTIFACTS = Object.freeze([NOT_FOUND_DOCUMENT, SHELL_DOCUMENT, "/robots.txt"]);
-const CATCH_ALL = new Set([FALLBACK_PATTERN, "^/.*$", "^/(.*)$"]);
+const FUNCTION_MARKERS = Object.freeze(['module', 'server-name']);
+export const REQUIRED_ARTIFACTS = Object.freeze([
+  NOT_FOUND_DOCUMENT,
+  SHELL_DOCUMENT,
+  '/robots.txt',
+  '/oauth-consent-bridge.html',
+]);
+const CATCH_ALL = new Set([FALLBACK_PATTERN, '^/.*$', '^/(.*)$']);
 
 export function readRouteTable(routesPath) {
   if (!fs.existsSync(routesPath))
     throw new Error(
       `${routesPath} does not exist; run the pinned CLI's \`pages generate-routes\` from the bundle root first`,
     );
-  return JSON.parse(fs.readFileSync(routesPath, "utf8"));
+  return JSON.parse(fs.readFileSync(routesPath, 'utf8'));
 }
 
 export function serializeRouteTable(table) {
@@ -53,7 +58,7 @@ export function serializeRouteTable(table) {
   return JSON.stringify(table, null, 2);
 }
 
-export const isCatchAll = (route) => typeof route?.src === "string" && CATCH_ALL.has(route.src);
+export const isCatchAll = (route) => typeof route?.src === 'string' && CATCH_ALL.has(route.src);
 
 /**
  * Apply the bounded correction: exactly one *terminal* catch-all must serve the 404 document with a
@@ -64,21 +69,30 @@ export const isCatchAll = (route) => typeof route?.src === "string" && CATCH_ALL
  * preserved exactly as generated.
  */
 export function correctRouteTable(table) {
-  if (!table || typeof table !== "object" || Array.isArray(table))
-    throw new Error("The generated routing table must be a JSON object");
+  if (!table || typeof table !== 'object' || Array.isArray(table))
+    throw new Error('The generated routing table must be a JSON object');
   if (!Array.isArray(table.routes) || table.routes.length === 0)
-    throw new Error("The generated routing table has no routes to correct");
+    throw new Error('The generated routing table has no routes to correct');
 
-  const catchAlls = table.routes.map((route, index) => ({ route, index })).filter(({ route }) => isCatchAll(route));
+  const catchAlls = table.routes
+    .map((route, index) => ({ route, index }))
+    .filter(({ route }) => isCatchAll(route));
   if (catchAlls.length !== 1)
     throw new Error(`Expected exactly one terminal catch-all route, found ${catchAlls.length}`);
   const [{ route, index }] = catchAlls;
   if (index !== table.routes.length - 1)
-    throw new Error(`The catch-all route is not terminal: ${table.routes.length - index - 1} route(s) follow it`);
-  if (typeof route.dest !== "string" || !FALLBACK_TARGETS.has(route.dest))
-    throw new Error(`The catch-all route targets ${JSON.stringify(route.dest)} instead of a known 404 document`);
+    throw new Error(
+      `The catch-all route is not terminal: ${table.routes.length - index - 1} route(s) follow it`,
+    );
+  if (typeof route.dest !== 'string' || !FALLBACK_TARGETS.has(route.dest))
+    throw new Error(
+      `The catch-all route targets ${JSON.stringify(route.dest)} instead of a known 404 document`,
+    );
   for (const marker of FUNCTION_MARKERS)
-    if (typeof route[marker] === "string" && !(marker === "server-name" && route[marker] === "file"))
+    if (
+      typeof route[marker] === 'string' &&
+      !(marker === 'server-name' && route[marker] === 'file')
+    )
       throw new Error(`The catch-all route is served by a function (${marker}: ${route[marker]})`);
 
   const previous = { dest: route.dest, status: route.status };
@@ -94,7 +108,7 @@ export function correctRouteTable(table) {
 
 const matchesPath = (pattern, pathname) => {
   try {
-    return new RegExp(pattern, "u").test(pathname);
+    return new RegExp(pattern, 'u').test(pathname);
   } catch {
     return false;
   }
@@ -109,37 +123,46 @@ export function verifyRouteTable(table, { requiredPaths = REQUIRED_ARTIFACTS } =
   const problems = [];
   if (table?.version !== ROUTES_VERSION) problems.push(`version must be ${ROUTES_VERSION}`);
   const routes = Array.isArray(table?.routes) ? table.routes : [];
-  const handlers = routes.filter((route) => route?.handle === "filesystem");
-  if (handlers.length !== 1) problems.push(`expected exactly one filesystem handler, found ${handlers.length}`);
-  if (handlers.length === 1 && typeof handlers[0].src !== "string")
-    problems.push("the filesystem handler lost the compiled asset pattern");
+  const handlers = routes.filter((route) => route?.handle === 'filesystem');
+  if (handlers.length !== 1)
+    problems.push(`expected exactly one filesystem handler, found ${handlers.length}`);
+  if (handlers.length === 1 && typeof handlers[0].src !== 'string')
+    problems.push('the filesystem handler lost the compiled asset pattern');
   for (const route of routes)
     if (isCatchAll(route) && route.dest === SHELL_DOCUMENT)
-      problems.push("a catch-all route still answers with the application shell");
+      problems.push('a catch-all route still answers with the application shell');
   const terminal = routes.filter(isCatchAll).at(-1);
-  if (!terminal) problems.push("no terminal catch-all route");
+  if (!terminal) problems.push('no terminal catch-all route');
   else {
-    if (terminal.dest !== NOT_FOUND_DOCUMENT) problems.push(`terminal catch-all serves ${terminal.dest}`);
+    if (terminal.dest !== NOT_FOUND_DOCUMENT)
+      problems.push(`terminal catch-all serves ${terminal.dest}`);
     if (terminal.status !== 404) problems.push(`terminal catch-all status is ${terminal.status}`);
   }
   const configuration = table?.conf;
-  if (!configuration || typeof configuration !== "object") problems.push("the embedded conf block is missing");
+  if (!configuration || typeof configuration !== 'object')
+    problems.push('the embedded conf block is missing');
   else {
     if (!Array.isArray(configuration.headers) || configuration.headers.length === 0)
-      problems.push("conf.headers is empty");
-    if (!Array.isArray(configuration.rewrites)) problems.push("conf.rewrites is missing");
+      problems.push('conf.headers is empty');
+    if (!Array.isArray(configuration.rewrites)) problems.push('conf.rewrites is missing');
   }
-  if (handlers.length === 1 && typeof handlers[0].src === "string")
+  if (handlers.length === 1 && typeof handlers[0].src === 'string')
     for (const pathname of requiredPaths)
       if (!matchesPath(handlers[0].src, pathname))
         problems.push(`the compiled filesystem pattern does not cover ${pathname}`);
-  if (problems.length) throw new Error(`EdgeOne routing verification failed: ${problems.join("; ")}`);
-  return { routes: routes.length, headers: configuration.headers.length, rewrites: configuration.rewrites.length };
+  if (problems.length)
+    throw new Error(`EdgeOne routing verification failed: ${problems.join('; ')}`);
+  return {
+    routes: routes.length,
+    headers: configuration.headers.length,
+    rewrites: configuration.rewrites.length,
+  };
 }
 
 const assertNotSymlink = (target, action) => {
   const stats = fs.lstatSync(target, { throwIfNoEntry: false });
-  if (stats?.isSymbolicLink()) throw new Error(`Refusing to ${action} through a symlinked path: ${target}`);
+  if (stats?.isSymbolicLink())
+    throw new Error(`Refusing to ${action} through a symlinked path: ${target}`);
 };
 
 /**
@@ -147,24 +170,25 @@ const assertNotSymlink = (target, action) => {
  * asset names of one build, so verification compares it against *this* bundle's real files: a stale
  * table kept from an earlier build no longer covers the current hashed names and must fail.
  */
-export function bundleAssetPaths(bundleDir, { depth = 3, limit = 400 } = {}) {
+export function bundleAssetPaths(bundleDir) {
   const assets = path.join(bundleDir, ASSETS_RELATIVE_PATH);
   if (!fs.existsSync(assets)) return [];
   const found = [];
-  const walk = (directory, remaining) => {
-    if (found.length >= limit) return;
-    for (const entry of fs.readdirSync(directory, { withFileTypes: true }).sort((left, right) => left.name.localeCompare(right.name))) {
-      if (entry.name.startsWith(".")) continue;
+  const walk = (directory) => {
+    for (const entry of fs
+      .readdirSync(directory, { withFileTypes: true })
+      .sort((left, right) => left.name.localeCompare(right.name))) {
       const child = path.join(directory, entry.name);
+      if (entry.isSymbolicLink()) throw new Error(`Refusing a symlinked staged asset: ${child}`);
       if (entry.isDirectory()) {
-        if (remaining > 0) walk(child, remaining - 1);
+        walk(child);
         continue;
       }
-      found.push(`/${path.relative(assets, child).split(path.sep).join("/")}`);
-      if (found.length >= limit) return;
+      if (!entry.isFile()) throw new Error(`Refusing a non-file staged asset: ${child}`);
+      found.push(`/${path.relative(assets, child).split(path.sep).join('/')}`);
     }
   };
-  walk(assets, depth);
+  walk(assets);
   return found.sort();
 }
 
@@ -172,31 +196,37 @@ export function bundleAssetPaths(bundleDir, { depth = 3, limit = 400 } = {}) {
 export function stageBundle({ distDir, bundleDir, configPath }) {
   const dist = path.resolve(distDir);
   const bundle = path.resolve(bundleDir);
-  if (dist === bundle) throw new Error("The bundle directory must differ from the build output");
+  if (dist === bundle) throw new Error('The bundle directory must differ from the build output');
   const contains = (outer, inner) => inner === outer || inner.startsWith(outer + path.sep);
   if (contains(dist, bundle) || contains(bundle, dist))
-    throw new Error(`The bundle directory and the build output must not contain one another: ${bundle}`);
+    throw new Error(
+      `The bundle directory and the build output must not contain one another: ${bundle}`,
+    );
   for (const artifact of REQUIRED_ARTIFACTS) {
-    const source = path.join(dist, artifact.replace(/^\//u, ""));
+    const source = path.join(dist, artifact.replace(/^\//u, ''));
     if (!fs.existsSync(source))
-      throw new Error(`Cannot stage the EdgeOne bundle: ${path.relative(dist, source)} is missing from ${dist}`);
+      throw new Error(
+        `Cannot stage the EdgeOne bundle: ${path.relative(dist, source)} is missing from ${dist}`,
+      );
   }
+  // Check every staging component before invalidating a file underneath it.
+  // Checking only the final file would follow a symlinked bundle or .edgeone parent.
+  const assets = path.join(bundle, ASSETS_RELATIVE_PATH);
+  for (const target of [bundle, path.dirname(assets), assets])
+    assertNotSymlink(target, 'replace the staged assets');
   // The pinned CLI skips generation when a routing file already exists. A table left from an earlier
   // build carries that build's hashed asset pattern and would 404 the current files, so it is removed
   // before staging; generation then runs against this build's assets.
   for (const relative of DERIVED_BUNDLE_PATHS) {
     const target = path.join(bundle, relative);
-    assertNotSymlink(target, "invalidate a derived routing file");
+    assertNotSymlink(target, 'invalidate a derived routing file');
     fs.rmSync(target, { force: true });
   }
-  const assets = path.join(bundle, ASSETS_RELATIVE_PATH);
-  for (const target of [bundle, path.dirname(assets), assets])
-    assertNotSymlink(target, "replace the staged assets");
   fs.rmSync(assets, { recursive: true, force: true });
   fs.mkdirSync(assets, { recursive: true });
   let staged = 0;
   for (const entry of fs.readdirSync(dist, { withFileTypes: true })) {
-    if (entry.name === ".edgeone") continue;
+    if (entry.name === '.edgeone') continue;
     const from = path.join(dist, entry.name);
     const to = path.join(assets, entry.name);
     fs.cpSync(from, to, { recursive: true, dereference: false });
@@ -212,6 +242,11 @@ export function stageBundle({ distDir, bundleDir, configPath }) {
  */
 export function prepareBundle({ bundleDir, check = false }) {
   const routesPath = path.join(bundleDir, ROUTES_RELATIVE_PATH);
+  for (const artifact of REQUIRED_ARTIFACTS) {
+    const file = path.join(bundleDir, ASSETS_RELATIVE_PATH, artifact.slice(1));
+    if (!fs.lstatSync(file, { throwIfNoEntry: false })?.isFile())
+      throw new Error(`The deploy bundle is missing a regular boundary document: ${artifact}`);
+  }
   const table = readRouteTable(routesPath);
   const { table: corrected, corrected: changed, previous } = correctRouteTable(table);
   const requiredPaths = [...REQUIRED_ARTIFACTS, ...bundleAssetPaths(bundleDir)];
@@ -221,7 +256,7 @@ export function prepareBundle({ bundleDir, check = false }) {
     verifyRouteTable(table, { requiredPaths });
     return { routesPath, changed, checked: true, previous };
   }
-  if (changed) fs.writeFileSync(routesPath, serializeRouteTable(corrected));
   verifyRouteTable(corrected, { requiredPaths });
+  if (changed) fs.writeFileSync(routesPath, serializeRouteTable(corrected));
   return { routesPath, changed, checked: false, previous };
 }
