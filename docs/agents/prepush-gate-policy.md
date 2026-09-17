@@ -43,7 +43,7 @@ checkPaths:
   - scripts/reference-data/**
   - .github/workflows/**
 lastReviewedAt: 2026-09-17
-lastReviewedCommit: d6345a46d3a5705e62991bf111259edd5f587c99
+lastReviewedCommit: 4e88077060e4959b5ed04b75d3028a54c48f3041
 lastReviewedNote: 'Reviewed for Platform #1092: exchange form fixes use the ordinary checked-push full gate; no reduced gate, bypass or release-policy change is introduced.'
 ---
 

@@ -44,7 +44,7 @@ checkPaths:
   - scripts/i18n/locale-delivery.mjs
   - .github/workflows/**
 lastReviewedAt: 2026-09-17
-lastReviewedCommit: d6345a46d3a5705e62991bf111259edd5f587c99
+lastReviewedCommit: 4e88077060e4959b5ed04b75d3028a54c48f3041
 lastReviewedNote: 'Reviewed for Platform #1092: 38 focused exchange tests pass on the dev baseline, including real ProForm first-open/reopen defaults and multilingual reference submission; production build passes. Existing full-gate requirements remain unchanged.'
 related:
   - ../AGENTS.md
