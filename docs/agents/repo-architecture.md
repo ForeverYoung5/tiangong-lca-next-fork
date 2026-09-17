@@ -26,8 +26,8 @@ checkPaths:
   - config/docs-capture/**
   - tests/e2e/i18n/**
 lastReviewedAt: 2026-09-17
-lastReviewedCommit: 8ed8a9f84c97572df7474971bb8465b5c18aaa23
-lastReviewedNote: 'Reviewed Platform #1046 v2 upload cutover against current dev: every new import helper pins root_closure_v2 and requires SHA-256; asynchronous Task Center, partial outcomes, committed counts and historical report reads remain covered. Focused 116 tests, lint/type checks and build passed; full push gate and remote delivery are tracked in the PR. Existing toolchain, calculation, environment and gate policies are retained.'
+lastReviewedCommit: d6345a46d3a5705e62991bf111259edd5f587c99
+lastReviewedNote: 'Reviewed for Platform #1092: exchange create initializes direction through ProForm initialValues, and create/edit submit the current complete form store to retain programmatically selected multilingual references.'
 related:
   - ../AGENTS.md
   - ../.docpact/config.yaml
@@ -77,6 +77,7 @@ Use this default read path:
 Rules:
 
 - route and page components orchestrate
+- process exchange creation initializes direction from its input/output entrypoint through ProForm `initialValues`, including reopening after a manual direction change. Exchange create/edit read the current complete form store when synchronizing reference selection and saving, so multilingual names are retained while dynamic `Form.List` fields register.
 - service modules own app-side data access
 - `src/utils/browserNavigation.ts` owns the thin `Location.assign`/`reload`/`replace` side-effect boundary. Runtime callers always pass the real `window.location`; tests pass an explicit mock `Location` or mock this module and must not redefine jsdom's global `window` or `location`
 - Account Basic Information reads current profile metadata through `supabase.auth.getUser()` and writes `display_name` plus the optional, trimmed, 200-character `organization` string through `supabase.auth.updateUser()`. The page may refresh the session after a successful write, but organization remains descriptive profile data and must never control frontend access or backend authorization

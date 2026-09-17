@@ -3,7 +3,7 @@
   "locale": "en-US",
   "validationClosure": {
     "baselineSha": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
-    "auditedInputDigest": "8f8fe75184f9be738378bb6bc129b2073016d128b46811fd9f4016ea72dc5d8d",
+    "auditedInputDigest": "f77ecd16981d1c9e8b7f1362983aa21e7a4dd7eb33355f71684bdf511eb2e46b",
     "validatedMessageCount": 3382,
     "validatedModules": [
       "$entry",
@@ -42,9 +42,9 @@
     "highRiskMessageCount": 1542,
     "highRiskMessageDigest": "8669fae5e4483478aa1f05a46264351ae806bfcb1266d5cdc3fd847a364cd778",
     "catalogDigest": "91a5b12c2fad1fa8575fbe4a28c236e795d4232c3a0c2bea5c4e80511e521075",
-    "dossierDigest": "d9e5b1aef7c495de13abaac2adf85239f9cf067b2a66a19036a2e37c7bc6cd9a",
+    "dossierDigest": "6e31fcb12775e198264faa11be3fd865a5cb641451b7bc1e1ba06e564af97e74",
     "typedContentDossierDigest": "5bee69a379711b6c87e9d7d5ec71180ff52c44c9700ccb0f81f9ae1daf4a1af8",
-    "routeEvidenceDigest": "6147573cf06e9956a87fca9107abf14fef76035fe0e8a7ccead5791462ebb366",
+    "routeEvidenceDigest": "0294cae7f9776544b41134fc64b22b37ec70a2463d361d01c8fbfbd7f08c4967",
     "scope": "deterministic structure only; semantic translation and rendered route review are separate production blockers owned by #635"
   },
   "validationLanes": [
@@ -98,7 +98,7 @@
         "messageDigest": "026c88850b397476bec6435667830fca36bac9f244ab2e4beed098de4747c9bf",
         "highRiskMessageCount": 1542,
         "highRiskMessageDigest": "8669fae5e4483478aa1f05a46264351ae806bfcb1266d5cdc3fd847a364cd778",
-        "dossierDigest": "d9e5b1aef7c495de13abaac2adf85239f9cf067b2a66a19036a2e37c7bc6cd9a",
+        "dossierDigest": "6e31fcb12775e198264faa11be3fd865a5cb641451b7bc1e1ba06e564af97e74",
         "checks": {
           "nonEmptyTargets": true,
           "icuArgumentSignatureParity": true,
@@ -113,5 +113,5 @@
     }
   ],
   "blockedItems": [],
-  "validationDigest": "518ff5f03d6ac633be828766980baaaf993af6c3a686d5c7384f2bd4f3ecd8a7"
+  "validationDigest": "128eaba4570a56c0c4e59b693032cf7a82d1fb0a5ae1a8b2f1fa5785ec84d296"
 }

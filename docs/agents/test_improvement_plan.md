@@ -44,8 +44,8 @@ checkPaths:
   - pnpm-workspace.yaml
   - Dockerfile.app
 lastReviewedAt: 2026-09-17
-lastReviewedCommit: 8ed8a9f84c97572df7474971bb8465b5c18aaa23
-lastReviewedNote: 'Reviewed Platform #1046 v2 upload cutover against current dev: every new import helper pins root_closure_v2 and requires SHA-256; asynchronous Task Center, partial outcomes, committed counts and historical report reads remain covered. Focused 116 tests, lint/type checks and build passed; full push gate and remote delivery are tracked in the PR. Existing toolchain, calculation, environment and gate policies are retained.'
+lastReviewedCommit: 4e88077060e4959b5ed04b75d3028a54c48f3041
+lastReviewedNote: 'Reviewed for Platform #1092: focused and real ProForm regressions cover exchange direction initialization and reference-name retention without changing the long-term test strategy or coverage bar.'
 ---
 
 # Testing Strategy
