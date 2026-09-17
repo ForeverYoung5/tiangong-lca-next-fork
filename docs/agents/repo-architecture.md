@@ -26,8 +26,8 @@ checkPaths:
   - config/docs-capture/**
   - tests/e2e/i18n/**
 lastReviewedAt: 2026-09-17
-lastReviewedCommit: d6345a46d3a5705e62991bf111259edd5f587c99
-lastReviewedNote: 'Reviewed for Platform #1092: exchange create initializes direction through ProForm initialValues, and create/edit submit the current complete form store to retain programmatically selected multilingual references.'
+lastReviewedCommit: a9ab84801dda72fbeed532d104f6c94e5974c8ee
+lastReviewedNote: 'Reviewed Platform #1046 after merging dev v0.0.109: all new imports pin root_closure_v2 with SHA-256 before upload; async recovery, partial results, committed counts and historical readers are preserved. The current dev exchange-form fix and existing toolchain, ownership and gate policies remain intact. Previous exact candidate passed 6232 tests and full coverage; the final merged candidate gate is recorded in the PR.'
 related:
   - ../AGENTS.md
   - ../.docpact/config.yaml

@@ -41,8 +41,8 @@ checkPaths:
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
 lastReviewedAt: 2026-09-17
-lastReviewedCommit: 4e88077060e4959b5ed04b75d3028a54c48f3041
-lastReviewedNote: 'Reviewed for Platform #1092: 38 focused exchange tests pass, including input/output first-open and reopen defaults plus complete multilingual reference submission; no existing testing queue item is retired.'
+lastReviewedCommit: a9ab84801dda72fbeed532d104f6c94e5974c8ee
+lastReviewedNote: 'Reviewed Platform #1046 after merging dev v0.0.109: all new imports pin root_closure_v2 with SHA-256 before upload; async recovery, partial results, committed counts and historical readers are preserved. The current dev exchange-form fix and existing toolchain, ownership and gate policies remain intact. Previous exact candidate passed 6232 tests and full coverage; the final merged candidate gate is recorded in the PR.'
 ---
 
 # Testing Execution State

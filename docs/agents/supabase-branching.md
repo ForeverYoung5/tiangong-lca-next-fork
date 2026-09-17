@@ -23,8 +23,8 @@ checkPaths:
   - playwright.config.ts
   - tests/e2e/i18n/**
 lastReviewedAt: 2026-09-17
-lastReviewedCommit: 8ed8a9f84c97572df7474971bb8465b5c18aaa23
-lastReviewedNote: 'Reviewed Platform #1046 v2 upload cutover against current dev: every new import helper pins root_closure_v2 and requires SHA-256; asynchronous Task Center, partial outcomes, committed counts and historical report reads remain covered. Focused 116 tests, lint/type checks and build passed; full push gate and remote delivery are tracked in the PR. Existing toolchain, calculation, environment and gate policies are retained.'
+lastReviewedCommit: a9ab84801dda72fbeed532d104f6c94e5974c8ee
+lastReviewedNote: 'Reviewed Platform #1046 after merging dev v0.0.109: all new imports pin root_closure_v2 with SHA-256 before upload; async recovery, partial results, committed counts and historical readers are preserved. The current dev exchange-form fix and existing toolchain, ownership and gate policies remain intact. Previous exact candidate passed 6232 tests and full coverage; the final merged candidate gate is recorded in the PR.'
 ---
 
 # Supabase Environment And Database Workflow
