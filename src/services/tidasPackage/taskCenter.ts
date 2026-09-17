@@ -1117,7 +1117,7 @@ export async function submitTidasPackageImportTask(
 ): Promise<void> {
   if (!taskOwnerId) throw new Error('TIDAS package task center requires an authenticated user');
   const generation = taskGeneration;
-  const queued = await queueImportTidasPackageApi(file, 'root_closure_v2');
+  const queued = await queueImportTidasPackageApi(file);
   if (queued.error || !queued.data?.ok) throw queued.error ?? new Error('Import enqueue failed');
   if (!isActiveGeneration(generation)) return;
   const createdAt = nowIso();

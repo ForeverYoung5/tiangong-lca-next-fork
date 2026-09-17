@@ -42,9 +42,9 @@ checkPaths:
   - scripts/typescript-native-parser.*
   - scripts/reference-data/**
   - .github/workflows/**
-lastReviewedAt: 2026-09-10
-lastReviewedCommit: 743f37af007d68c5b561756cdfb3218de73d1a3d
-lastReviewedNote: 'Next #1046: reviewed import-only Task Center changes and focused async/report regressions. Calculation/analysis behavior, bootstrap, protected gate and recorded coverage baseline remain unchanged; full delivery proof stays in the Issue/PR.'
+lastReviewedAt: 2026-09-16
+lastReviewedCommit: 740173082e261a5dcd0b2bd53b42fc6f4742da51
+lastReviewedNote: 'Reviewed for Platform #1086 after independent root review: pinned CLI generates the complete deployment bundle and only its terminal file fallback changes to404. Staging checks bundle and .edgeone parents before invalidating old routes; rejected symlink targets retain external files. Verification checks every staged file without depth/count truncation and requires real root,404,robots and consent documents. All24artifact regressions pass, including repeated builds, actual compiled routes, high/deep inventories, absent boundary documents and symlink side effects. Provider404 behavior remains unverified until production deployment; no authentication, domain, region, CLI dependency or application routing change is claimed.'
 ---
 
 # Pre-Push Gate Policy
@@ -56,6 +56,8 @@ lastReviewedNote: 'Next #1046: reviewed import-only Task Center changes and focu
 Define the intended trigger policy for the existing local docpact gate and `pnpm prepush:gate` command without changing the quality bar.
 
 ## Exact Gate Command
+
+Adding `--prepare-only` to a deterministic release command's `--apply` mode defers only PR creation to the workspace controller. It retains the same candidate composition, Docpact/static checks, checked push and exact remote-SHA verification. The returned proposal is submission evidence; it does not replace the dev Release PR gate or the main promotion proof.
 
 ```bash
 pnpm docpact:gate

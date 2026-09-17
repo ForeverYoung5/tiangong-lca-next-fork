@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
         {
           key: 'github',
           title: <GithubOutlined />,
-          href: 'https://github.com/linancn/tiangong-lca-next',
+          href: 'https://github.com/tiangong-lca/platform',
           blankTarget: true,
         },
       ]}

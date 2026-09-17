@@ -25,9 +25,9 @@ checkPaths:
   - playwright.config.ts
   - config/docs-capture/**
   - tests/e2e/i18n/**
-lastReviewedAt: 2026-09-10
-lastReviewedCommit: 743f37af007d68c5b561756cdfb3218de73d1a3d
-lastReviewedNote: 'Next #1046: reviewed asynchronous TIDAS import submission, partial outcomes, committed counts and complete report downloads; all active locale messages use the shared registry.'
+lastReviewedAt: 2026-09-16
+lastReviewedCommit: '088675136b5c1fe46917678f7c49398922a307af'
+lastReviewedNote: 'Reviewed for Platform #1076: the application host keeps an explicit nonindex boundary while crawling stays allowed, so crawlers can read the directive. public/robots.txt is a real text file; public/404.html answers unknown paths instead of the application shell; the shell declares metas robots=noindex so every hash route inherits it; and public/edgeone.json adds X-Robots-Tag for the shell and the consent bridge while preserving the OAuth consent rewrite and its security headers. Live read-only checks recorded /robots.txt returning the shell with the same ETag as / and the three sibling sites on the same host answering 404 for unknown paths; the app is hash-routed, so no valid route depended on that fallback. pnpm lint and the production pnpm build pass, and the built artifacts were inspected. Deployment, provider recrawl and live acceptance remain pending.'
 related:
   - ../AGENTS.md
   - ../.docpact/config.yaml
@@ -58,6 +58,7 @@ This repo is a Umi `4.7.9` React 19 SPA on one native Ant Design `6.6.2` / ProCo
 | `src/locales/**` | UI strings; every supported locale follows one canonical message manifest, with leaf topology, key ownership, placeholders, and dynamic families kept aligned |
 | `src/global.less`, `src/style/**`, `src/manifest.json`, `src/service-worker.js`, `src/utils/appUrl.ts`, `src/utils/browserNavigation.ts`, `src/utils/ruleVerification.ts`, `src/typings.d.ts` | browser shell support, global styling, explicit navigation side-effect boundaries, and support utilities |
 | `public/**` | generated or reviewed static resource bundles consumed by the app, including the EdgeOne OAuth path rewrite and no-store hash-history consent bridge |
+| `public/robots.txt`, `public/404.html`, `public/edgeone.json` | the application host's crawler and response boundary: crawling is deliberately allowed so crawlers can read noindex, the shell and the unknown-path document are noindex, and this file also owns the OAuth path rewrite and response headers |
 | `scripts/reference-data/**` | deterministic classification/location generation and fail-closed evidence validation |
 | `scripts/e2e/**`, `docker/e2e/**` | test-only exact-candidate release-E2E orchestration, deterministic closed-simulator backend profile, isolated environment, static server, preflight, diagnostics, and bounded continuation |
 | `scripts/qualification/**`, `playwright.closure-download.config.ts`, `tests/browser/**` | test-only exact-commit scope-closure Next adapter and loopback browser contract accepted by the Worker provider aggregator |
@@ -110,7 +111,7 @@ Rules:
 
 Main Process/Flow tables and their existing pickers retain version-qualified row/selection keys. Detail and reference actions keep the returned version; the client does not collapse rows by ID or rerank by the number of versions.
 
-Edge owns rewrite -> normalized English `semantic_query_en` -> embedding. Database owns each bounded lexical/semantic recall, exact-version fusion/hydration and `tg/co/my/te` visibility. Original multilingual full-text input remains intact; English vector input does not restrict authored full-text languages. Portal's separate state-100/200 allowlist must not be copied over Next's authorized personal/team scopes.
+Edge owns rewrite -> normalized English `semantic_query_en` -> embedding. Database owns each bounded lexical/semantic recall, exact-version fusion/hydration and `tg/co/ex/my/te` visibility. Original multilingual full-text input remains intact; English vector input does not restrict authored full-text languages. Portal's separate state-100/200 allowlist must not be copied over Next's authorized personal/team scopes.
 
 The self-hosted mirror remains generated from one exact canonical Edge tree and receipt. The single online-backend exception for this delivery is recorded in `supabase-branching.md` and workspace #963; normal environment selection and promotion policy are unchanged.
 
@@ -206,9 +207,14 @@ Next owns read orchestration, release dataset identity display, directional LCI/
 - `docker/volumes/functions/**` is a generated exact-Edge-revision mirror, not a primary edit surface; refresh it only through the delete-aware helper and retain its source receipt
 - app-side data access does not belong outside `src/services/**`
 - a merged child PR does not finish workspace delivery
+- this host is an authenticated application, not a public content site: the shell and the unknown-path document are noindex, and `public/robots.txt` keeps crawling allowed on purpose so crawlers can read that directive; public documentation and data entry points live on other hosts
 
 The self-hosted snapshot tools keep the generated Edge tree and Database initializer paired. `docker/scripts/export-snapshot-bootstrap.sql` projects constrained roles and source ACL boundaries; `export-snapshot-queue-bootstrap.sql` recreates extension-owned empty queue storage and the Database-owned visibility fence after schema restoration. Runtime/backend semantics remain in their owning repositories.
 
-TIDAS ZIP import now submits `root_closure_v2` asynchronously after signed upload. The package Task Center keeps canonical job identity, projects partial/no-success/interrupted outcomes from report metadata, and recovers committed counts through the package API. Import polling failure preserves the last backend state. `ImportTidasPackage/ImportResult.tsx` loads the bounded v2 report and navigates directly to complete signed report downloads; historical v1 JSON remains downloadable.
+## Example data catalog
+
+`/exampledata` is an authenticated sibling of `/tgdata` and redirects to its Models page. Its parent route sets `hideInMenu: true` to hide the entire Example Data menu group while retaining direct access to every route and all existing functionality. Remove that flag to show the menu again. Both sections reuse the same seven dataset pages, columns, search, detail, version, copy, and export controls. `getDataSource` maps the new section to `ex`; version lists enforce `state_code=-1`, while database queries own list/search scope before pagination and latest-version selection. Switching scope remounts list tables so rows from the previous section cannot remain visible. Example originals expose the same read-only actions as open data; copies use the existing personal draft creation path. Portal and anonymous routes keep their existing boundaries.
+
+All new TIDAS ZIP import helpers submit `root_closure_v2` asynchronously after signed upload. The package Task Center keeps canonical job identity, projects partial/no-success/interrupted outcomes from report metadata, and recovers committed counts through the package API. Import polling failure preserves the last backend state. `ImportTidasPackage/ImportResult.tsx` loads the bounded v2 report and navigates directly to complete signed report downloads; historical v1 JSON remains downloadable.
 
 TIDAS Task Center retains backend start, finish and update timestamps through polling and local recovery. Finished package duration uses start-to-finish time (legacy records fall back to created/update time); readback never stamps a new business update time. The combined LCA/package list orders by creation time and task ID. Import detail refreshes publish one batch, and overlapping requests for the same authenticated owner share a refresh.

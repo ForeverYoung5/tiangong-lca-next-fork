@@ -40,9 +40,9 @@ checkPaths:
   - .github/workflows/build.yml
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
-lastReviewedAt: 2026-09-10
-lastReviewedCommit: 743f37af007d68c5b561756cdfb3218de73d1a3d
-lastReviewedNote: 'Next #1046: reviewed import-only Task Center changes and focused async/report regressions. Calculation/analysis behavior, bootstrap, protected gate and recorded coverage baseline remain unchanged; full delivery proof stays in the Issue/PR.'
+lastReviewedAt: 2026-09-16
+lastReviewedCommit: 740173082e261a5dcd0b2bd53b42fc6f4742da51
+lastReviewedNote: 'Reviewed for Platform #1086 after independent root review: pinned CLI generates the complete deployment bundle and only its terminal file fallback changes to404. Staging checks bundle and .edgeone parents before invalidating old routes; rejected symlink targets retain external files. Verification checks every staged file without depth/count truncation and requires real root,404,robots and consent documents. All24artifact regressions pass, including repeated builds, actual compiled routes, high/deep inventories, absent boundary documents and symlink side effects. Provider404 behavior remains unverified until production deployment; no authentication, domain, region, CLI dependency or application routing change is claimed.'
 ---
 
 # Testing Execution State
@@ -82,7 +82,7 @@ This is a checked-in reference, not a per-PR execution ledger. A delivery's post
 - locale topology, message ownership, ICU placeholders, and dynamic families are additionally protected by `pnpm i18n:audit`
 - active German pins the accepted 2,737-message catalog/runtime state at `c26f306e82ac66f50a56aafe8f89ea96c0b0c67d`; post-baseline existing-message changes use the tracked automated correction overlay, while Issue #601/#602/#606 confirmations retain frozen-history semantics only
 - active locale proof uses `i18n:audit`, the registry/Manifest and hardcoding audits, registry-driven context/quality, `i18n:corrections:check`, and all-locale activation; focused proof stays in the edit loop, and each delivery gets one post-commit full gate through `push:checked`
-- Issue #635 adds a separate Playwright semantic localization proof surface: `pnpm test:e2e:i18n` derives all locale/content-language expectations from registries, now binds 50 stable route/view assertion IDs including OAuth consent, runs Chromium across the complete matrix, and requires the login/selector, team authoring, and process lifecycle critical scenarios in Chromium, Firefox, and WebKit
+- Issue #635 adds a separate Playwright semantic localization proof surface: `pnpm test:e2e:i18n` derives all locale/content-language expectations from registries, now binds 58 stable route/view assertion IDs including OAuth consent, runs Chromium across the complete matrix, and requires the login/selector, team authoring, and process lifecycle critical scenarios in Chromium, Firefox, and WebKit
 - semantic E2E GitHub Actions is credential-free/read-only and manual through `workflow_dispatch`: an operator selects an open business PR or exact SHA when its change risk warrants the content-addressed hermetic qualification, including the complete Chromium matrix and Firefox/WebKit critical scenarios; it is absent from routine PR/dev/release triggers, while authenticated candidate-local/production-backend closure is restricted to an explicitly authorized local operator session with authenticated mode, both production-write guards, and an explicit verified-evidence opt-in
 - Issue #654 adds `e2e:env:install`, read-only `e2e:env:doctor`, exact-candidate `e2e:release`, argument-free bounded `e2e:release:resume`, owned cleanup, and focused `e2e:dev`; release mode archives only a clean Next commit, uses a digest-pinned container and cached production build, performs all safe checks before fixture intent, and never mounts the workspace
 - canonical qualification discovery is recursive: nested specs cannot escape the fail-closed executed/designed-skip inventory, and all 50 assertion IDs remain mandatory
@@ -106,6 +106,7 @@ This is a checked-in reference, not a per-PR execution ledger. A delivery's post
 - dataset SDK validation adapters, shared localized validation helpers, and validation-report navigation now ride on the maintained full-closure baseline
 - Issue #910 adds focused TIDAS scalar normalization, Process/Flow serializer, and six save-entrypoint regression coverage; it creates no open coverage queue
 - data workflow smoke fixtures now pair `fixtures/data/**` input JSON with `fixtures/result/**` expected-result Markdown; the current relationship map is in `tests/data-workflows/fixtures/result/README.md`
+- the SPA-external static HTML inventory asserted by `tests/unit/services/general/publicRoutePolicy.test.ts` now also covers the hosted not-found document `/404.html`, alongside maintenance, OAuth consent and the legal pages: the application host answers unknown paths with that document instead of the application shell
 - file-level coverage collection currently excludes a small set of UI orchestration wrappers from direct collection, including the canvas-heavy national carbon dashboard wallboard shell and the Review Admin quality-diagnostic report panel; the latter retains focused component proof for latest-report loading, explicit manual start, non-blocking active state, report rendering, and retryable runtime failure. If that list changes, re-check save, validation, navigation, highlighting, diagnostic-report, or visual screenshot flows before treating the baseline as settled
 
 ## Reopen Conditions

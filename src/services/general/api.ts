@@ -457,7 +457,6 @@ export async function prepareImportTidasPackageUploadApi(file: {
 }
 
 export async function enqueueImportTidasPackageApi(request: {
-  import_policy?: 'root_closure_v2';
   job_id: string;
   source_artifact_id: string;
   artifact_sha256: string | null;
@@ -470,6 +469,7 @@ export async function enqueueImportTidasPackageApi(request: {
     {
       action: 'enqueue',
       ...request,
+      import_policy: 'root_closure_v2',
     },
   );
 }
@@ -739,7 +739,7 @@ export async function downloadReadyTidasPackageExportApi(
   }
 }
 
-export async function queueImportTidasPackageApi(file: File, importPolicy?: 'root_closure_v2') {
+export async function queueImportTidasPackageApi(file: File) {
   const contentType = file.type || 'application/zip';
   const prepared = await prepareImportTidasPackageUploadApi({
     filename: file.name,
@@ -756,12 +756,10 @@ export async function queueImportTidasPackageApi(file: File, importPolicy?: 'roo
 
   try {
     const artifactSha256 = await computeSha256Hex(file);
-    if (importPolicy && !artifactSha256)
-      throw new Error('Import requires a verified SHA-256 checksum');
+    if (!artifactSha256) throw new Error('Import requires a verified SHA-256 checksum');
     await uploadTidasPackageToSignedUrl(prepared.data.upload, file);
 
     const queued = await enqueueImportTidasPackageApi({
-      ...(importPolicy ? { import_policy: importPolicy } : {}),
       job_id: prepared.data.job_id,
       source_artifact_id: prepared.data.source_artifact_id,
       artifact_sha256: artifactSha256,
@@ -798,7 +796,9 @@ export async function importTidasPackageApi(file: File) {
       throw new Error('Import report is not available');
     }
 
-    const report = await fetchPackageReport<ImportTidasPackageResponse>(reportArtifact);
+    const report = await fetchPackageReport<ImportTidasPackageResponse | TidasPartialImportReport>(
+      reportArtifact,
+    );
     return {
       data: report,
       error: null,
@@ -1309,7 +1309,9 @@ export async function getAllVersions(
     }
   }
 
-  if (hasExactStateCode) {
+  if (dataSource === 'ex') {
+    query = query.eq('state_code', -1);
+  } else if (hasExactStateCode) {
     query = query.eq('state_code', stateCode);
   } else if (dataSource === 'tg') {
     query = query.eq('state_code', 100);

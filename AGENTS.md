@@ -45,9 +45,9 @@ checkPaths:
   - .nvmrc
   - .husky/pre-push
   - .github/workflows/**
-lastReviewedAt: 2026-09-10
-lastReviewedCommit: 743f37af007d68c5b561756cdfb3218de73d1a3d
-lastReviewedNote: 'Next #1046: reviewed asynchronous TIDAS import submission, partial outcomes, committed counts and complete report downloads; all active locale messages use the shared registry.'
+lastReviewedAt: 2026-09-16
+lastReviewedCommit: 740173082e261a5dcd0b2bd53b42fc6f4742da51
+lastReviewedNote: 'Reviewed for Platform #1086 after independent root review: pinned CLI generates the complete deployment bundle and only its terminal file fallback changes to404. Staging checks bundle and .edgeone parents before invalidating old routes; rejected symlink targets retain external files. Verification checks every staged file without depth/count truncation and requires real root,404,robots and consent documents. All24artifact regressions pass, including repeated builds, actual compiled routes, high/deep inventories, absent boundary documents and symlink side effects. Provider404 behavior remains unverified until production deployment; no authentication, domain, region, CLI dependency or application routing change is claimed.'
 related:
   - .docpact/config.yaml
   - docs/agents/repo-validation.md
@@ -142,6 +142,7 @@ Do not start from additional governed source docs, proposal docs, or README-leve
 - data workflow result fixture relationships live in `tests/data-workflows/fixtures/result/README.md`; proof selection stays in `docs/agents/repo-validation.md`
 - run Umi-generating focused tests, coverage, and `pnpm prepush:gate` serially; for ordinary delivery, use focused proof during iteration and let the push hook own the one full gate after the final controlled tracked change. Run manual hermetic browser qualification on the open business PR before merge or release-to-dev when the change risk warrants it, so a failure can be fixed on that same PR. Deterministic release/promotion pushes use only their repo-owned restricted profiles because the exact dev Release PR owns the non-browser release gate. The hook skips no-update and raw deletion-only pushes, accepts `HEAD` only as the current exact branch source, and rejects other ineligible checked ref shapes before any expensive gate.
 - new dependencies require human approval
+- the application host's crawler and response boundary is `public/robots.txt`, `public/404.html`, `public/edgeone.json`, plus the shell `metas` in `config/config.ts`; the host is noindex by design while crawling stays allowed, and unknown paths must answer 404 rather than the application shell. The deploy bundle carries the pinned CLI's generated `.edgeone/routes.json`, whose terminal fallback is corrected to serve `public/404.html` with status 404; `scripts/edgeone` stages, corrects and verifies it, and both deploy workflows run that preparation before the deploy step
 - production-writing E2E requires a host without `CI` or `GITHUB_ACTIONS`; only after that check may the controller clear image-inherited CI markers for the local container. Authenticated mode plus two write guards remain mandatory: `E2E_ALLOW_PRODUCTION_DATA=true` and `E2E_PRODUCTION_WRITE_CONFIRMATION=I_AUTHORIZE_ONE_CODEX_E2E_PRODUCTION_PROCESS`; verified tracked evidence additionally requires `E2E_WRITE_VERIFIED_EVIDENCE=true`. Before create it writes an intent ledger, and before delete it verifies the production row's UUID, authenticated owner, and all five multilingual fields across every registry authoring language, then proves `created=cleaned` and `leaked=0`
 
 ## Minimal Execution Facts
@@ -246,6 +247,7 @@ Use the role table in this file as the update map.
 - do not pass documentation screenshot credentials on the command line, persist browser profiles/storage state, or treat missing/invalid credentials as verified authorization denial
 - do not use the screenshot executor for data creation or mutation; only the explicit authentication/session exchange may use non-GET requests
 - do not treat a merged repo PR here as workspace-delivery complete if the root repo still needs a submodule bump
+- do not remove the application host's noindex boundary, convert `robots.txt` into a disallow list, or reintroduce a path-based fallback that answers the application shell for unknown paths; app routes are hash-routed, so no valid route depends on such a fallback
 
 ## Workspace Integration
 

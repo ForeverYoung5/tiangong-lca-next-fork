@@ -1923,7 +1923,7 @@ describe('tidasPackage/taskCenter', () => {
     mockGetTidasPackageJobApi.mockReturnValue(pending.promise);
     const file = new File(['zip'], 'partial.zip');
     await center.submitTidasPackageImportTask(file);
-    expect(mockQueueImportTidasPackageApi).toHaveBeenCalledWith(file, 'root_closure_v2');
+    expect(mockQueueImportTidasPackageApi).toHaveBeenCalledWith(file);
     expect(center.listTidasPackageTasks()[0].state).toBe('running');
     pending.resolve({
       data: {

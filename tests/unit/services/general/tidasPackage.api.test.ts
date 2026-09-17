@@ -1059,6 +1059,7 @@ describe('general/api TIDAS package helpers', () => {
     expect(mockFunctionsInvoke).toHaveBeenNthCalledWith(2, 'import_tidas_package', {
       body: {
         action: 'enqueue',
+        import_policy: 'root_closure_v2',
         artifact_byte_size: 7,
         artifact_sha256: '0a1bff',
         content_type: 'application/zip',
@@ -1073,7 +1074,7 @@ describe('general/api TIDAS package helpers', () => {
     });
   });
 
-  it('falls back to a null artifact hash when Web Crypto digest is unavailable', async () => {
+  it('rejects new imports before upload when Web Crypto digest is unavailable', async () => {
     const file = createZipFile();
     Object.defineProperty(global, 'crypto', {
       configurable: true,
@@ -1112,22 +1113,12 @@ describe('general/api TIDAS package helpers', () => {
 
     const result = await importTidasPackageApi(file);
 
-    expect(result.error).toEqual(new Error('enqueue failed'));
-    expect(mockFunctionsInvoke).toHaveBeenNthCalledWith(2, 'import_tidas_package', {
-      body: expect.objectContaining({
-        action: 'enqueue',
-        artifact_sha256: null,
-        job_id: 'job-null-hash',
-        source_artifact_id: 'artifact-null-hash',
-      }),
-      headers: {
-        Authorization: 'Bearer token-123',
-      },
-      region: FunctionRegion.UsEast1,
-    });
+    expect(result.error).toEqual(new Error('Import requires a verified SHA-256 checksum'));
+    expect(mockFunctionsInvoke).toHaveBeenCalledTimes(1);
+    expect(mockUploadToSignedUrl).not.toHaveBeenCalled();
   });
 
-  it('falls back to a null artifact hash when digest computation throws', async () => {
+  it('rejects new imports before upload when digest computation throws', async () => {
     const file = createZipFile();
     mockDigest.mockRejectedValueOnce(new Error('digest failed'));
 
@@ -1160,19 +1151,9 @@ describe('general/api TIDAS package helpers', () => {
 
     const result = await importTidasPackageApi(file);
 
-    expect(result.error).toEqual(new Error('enqueue failed'));
-    expect(mockFunctionsInvoke).toHaveBeenNthCalledWith(2, 'import_tidas_package', {
-      body: expect.objectContaining({
-        action: 'enqueue',
-        artifact_sha256: null,
-        job_id: 'job-digest-error',
-        source_artifact_id: 'artifact-digest-error',
-      }),
-      headers: {
-        Authorization: 'Bearer token-123',
-      },
-      region: FunctionRegion.UsEast1,
-    });
+    expect(result.error).toEqual(new Error('Import requires a verified SHA-256 checksum'));
+    expect(mockFunctionsInvoke).toHaveBeenCalledTimes(1);
+    expect(mockUploadToSignedUrl).not.toHaveBeenCalled();
   });
 
   it('rewrites docker-internal import report URLs to the browser-accessible Supabase origin', async () => {
@@ -1933,7 +1914,7 @@ describe('general/api TIDAS package helpers', () => {
           error: null,
         })
         .mockResolvedValueOnce({ data: { ok: true, job_id: 'job-import' }, error: null });
-      const result = await queueImportTidasPackageApi(createZipFile(), 'root_closure_v2');
+      const result = await queueImportTidasPackageApi(createZipFile());
       expect(result.error?.message ?? null).toBe(
         available ? null : 'Import requires a verified SHA-256 checksum',
       );

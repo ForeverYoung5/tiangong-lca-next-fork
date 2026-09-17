@@ -42,9 +42,9 @@ checkPaths:
   - .github/workflows/release-readiness.yml
   - .github/workflows/build.yml
   - .nvmrc
-lastReviewedAt: 2026-09-10
-lastReviewedCommit: 743f37af007d68c5b561756cdfb3218de73d1a3d
-lastReviewedNote: 'Next #1046: reviewed import-only Task Center changes and focused async/report regressions. Calculation/analysis behavior, bootstrap, protected gate and recorded coverage baseline remain unchanged; full delivery proof stays in the Issue/PR.'
+lastReviewedAt: 2026-09-16
+lastReviewedCommit: 740173082e261a5dcd0b2bd53b42fc6f4742da51
+lastReviewedNote: 'Reviewed for Platform #1086 after independent root review: pinned CLI generates the complete deployment bundle and only its terminal file fallback changes to404. Staging checks bundle and .edgeone parents before invalidating old routes; rejected symlink targets retain external files. Verification checks every staged file without depth/count truncation and requires real root,404,robots and consent documents. All24artifact regressions pass, including repeated builds, actual compiled routes, high/deep inventories, absent boundary documents and symlink side effects. Provider404 behavior remains unverified until production deployment; no authentication, domain, region, CLI dependency or application routing change is claimed.'
 ---
 
 # Development Bootstrap
@@ -102,7 +102,7 @@ pnpm e2e:env:doctor
 3. make the scoped change
 4. run focused validation
 5. run `pnpm lint`
-6. run `pnpm build` when the change affects shipped behavior or static assets
+6. run `pnpm build` when the change affects shipped behavior or static assets. A build that touches the hosting boundary must leave `dist/robots.txt` and `dist/404.html` present, the noindex meta in `dist/index.html`, and the OAuth consent rewrite plus its headers in `dist/edgeone.json`. The deploy bundle then adds the platform routing: `pnpm edgeone:bundle:stage` stages `dist-edgeone`, the pinned CLI's `edgeone pages generate-routes` runs there, and `pnpm edgeone:bundle:correct` plus `pnpm edgeone:bundle:check` verify the table before deploy. The correction only turns the CLI's terminal fallback into `dest: /404.html` with `status: 404`; a bundle whose compiled pattern does not cover its own assets, or whose table needs no such fallback, fails verification instead of deploying.
 7. commit the final controlled tracked change and run `pnpm push:checked origin <branch>`; its ordinary hook owns the one full gate. Do not pass a reduced gate profile manually; the deterministic release commands own those restricted profiles.
 
 If no push will occur and a standalone handoff needs final evidence, run `pnpm docpact:gate` and then `pnpm prepush:gate` manually instead. Do not also push the same unchanged checkpoint merely to repeat those gates.
@@ -116,6 +116,9 @@ If no push will occur and a standalone handoff needs final evidence, run `pnpm d
 | explicit `main` env | `pnpm start:main` |
 | sync the self-hosted Edge mirror from one reviewed commit | `./docker/pull-edge-functions.sh --ref <40-character-commit-sha>` |
 | local docpact gate | `pnpm docpact:gate` |
+| stage the EdgeOne deploy bundle | `pnpm edgeone:bundle:stage` |
+| correct the generated routing | `pnpm edgeone:bundle:correct` |
+| verify the deploy bundle routing | `pnpm edgeone:bundle:check` |
 | lint + typecheck | `pnpm lint` |
 | native TypeScript 7 web typecheck | `pnpm tsc` |
 | native TypeScript 7 Electron typecheck | `pnpm tsc:electron` |
@@ -156,7 +159,7 @@ If no push will occur and a standalone handoff needs final evidence, run `pnpm d
 | compute the semantic qualification identity key | `pnpm e2e:qualification:key` |
 | qualify the semantic release harness locally without production access | `pnpm e2e:qualify --proof .local/e2e-release/qualification-proof.json` |
 | verify an external qualification proof | `pnpm release:proof:verify --proof <path>` |
-| manually qualify a business PR/ref in GitHub | `gh workflow run i18n-semantic-e2e.yml --repo linancn/tiangong-lca-next --ref <workflow-branch> -f ref=<business-pr-branch-or-sha>` |
+| manually qualify a business PR/ref in GitHub | `gh workflow run i18n-semantic-e2e.yml --repo tiangong-lca/platform --ref <workflow-branch> -f ref=<business-pr-branch-or-sha>` |
 | enforce active German runtime assembly | `pnpm i18n:de:audit` |
 | validate the historical Issue #606 snapshot only | `pnpm i18n:de:delta:review:check` |
 | validate the historical Issue #601 Pilot only | `pnpm i18n:de:pilot` |
@@ -235,6 +238,10 @@ Use these commands for every normal versioned release. They replace manual packa
    ```bash
    pnpm --silent release:promote-dev-to-main --release-pr <merged-dev-pr-number> --issue <number> --apply
    ```
+
+For workspace-managed delivery, add `--prepare-only` to either `--apply` command. The helper still composes and pushes the exact candidate through every structural, Docpact and restricted push gate, then returns `status: ready_for_submission` and `pr_proposal` without creating a PR. Save the proposal body verbatim to a file and pass its repository, base, head and title through the workspace controller's current `task submit` surface; use its immutable-promote route for the main promotion. Confirm the submitted PR head equals `pr_proposal.expected_head` and preserve the embedded release marker. Start each owning executable task through the controller before preparing it. When an exact matching open PR already exists, the helper returns that PR without creating another one.
+
+The push remote must identify one fetch/push repository. Canonical HTTPS and SSH URLs may differ only in transport; account-specific transport belongs in scoped Git configuration. Direct `tiangong-lca/platform` heads use a bare branch name, while personal forks use `owner:branch` when creating the PR. PR lookup uses a bare branch and verifies returned head repository/owner metadata before reuse. Multiple URLs, conflicting explicit owners, a different repository under the canonical owner, missing PR identity or a full bounded result stop the helper. An opaque personal-fork remote requires an explicit `--head-owner`; that override cannot bypass a known mismatch or ambiguous fetch/push destination.
 
 The commands create or reuse PRs but never merge them. Merge the dev Release PR only after its non-browser gate passes; the later main check is expected to be proof/identity-only and must fail closed if the candidate or main baseline drifted. Browser E2E is not evaluated by either release PR. Use a manual release-assembly path only for an explicitly diagnosed unsupported or recovery case; document why the deterministic command could not represent the release, and preserve its version-only, immutable-candidate, and managed-gate guarantees.
 

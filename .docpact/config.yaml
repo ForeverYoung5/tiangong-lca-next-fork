@@ -1,8 +1,8 @@
 version: 1
 layout: repo
-lastReviewedAt: '2026-09-10'
-lastReviewedCommit: '743f37af007d68c5b561756cdfb3218de73d1a3d'
-lastReviewedNote: 'Next #1046: reviewed asynchronous TIDAS import submission, partial outcomes, committed counts and complete report downloads; all active locale messages use the shared registry.'
+lastReviewedAt: "2026-09-16"
+lastReviewedCommit: "740173082e261a5dcd0b2bd53b42fc6f4742da51"
+lastReviewedNote: 'Reviewed for Platform #1086 after independent root review: pinned CLI generates the complete deployment bundle and only its terminal file fallback changes to404. Staging checks bundle and .edgeone parents before invalidating old routes; rejected symlink targets retain external files. Verification checks every staged file without depth/count truncation and requires real root,404,robots and consent documents. All24artifact regressions pass, including repeated builds, actual compiled routes, high/deep inventories, absent boundary documents and symlink side effects. Provider404 behavior remains unverified until production deployment; no authentication, domain, region, CLI dependency or application routing change is claimed.'
 
 # Keep path-level ownership, routing intents, and governed-doc rules here.
 # AGENTS.md keeps the entry-level repo contract and minimal execution summary.
@@ -11,7 +11,7 @@ catalog:
   repos:
     - id: next
       path: .
-      canonicalRepo: linancn/tiangong-lca-next
+      canonicalRepo: tiangong-lca/platform
       entryDoc: AGENTS.md
       workflowDocs:
         - DEV.md
@@ -52,8 +52,6 @@ ownership:
           - tests/e2e/**
           - .dockerignore
           - .gitignore
-          - .gitleaks.toml
-          - .gitleaksignore
           - .oxlintrc.json
           - .prettierignore
           - .prettierrc.js
@@ -125,8 +123,6 @@ coverage:
     - tests/e2e/**
     - .dockerignore
     - .gitignore
-    - .gitleaks.toml
-    - .gitleaksignore
     - .oxlintrc.json
     - .prettierignore
     - .prettierrc.js
@@ -221,8 +217,6 @@ routing:
         - pnpm-workspace.yaml
         - .dockerignore
         - .gitignore
-        - .gitleaks.toml
-        - .gitleaksignore
         - .oxlintrc.json
         - .prettierignore
         - .prettierrc.js
@@ -296,8 +290,6 @@ routing:
         - pnpm-workspace.yaml
         - .dockerignore
         - .gitignore
-        - .gitleaks.toml
-        - .gitleaksignore
         - .oxlintrc.json
         - .prettierignore
         - .prettierrc.js
@@ -442,10 +434,6 @@ rules:
         kind: package-manager-config
       - path: .dockerignore
         kind: container-build-input
-      - path: .gitleaks.toml
-        kind: secret-scan-config
-      - path: .gitleaksignore
-        kind: secret-scan-config
       - path: .nvmrc
         kind: runtime-baseline
       - path: .oxlintrc.json
@@ -676,6 +664,26 @@ rules:
       - path: docs/agents/supabase-branching.md
         mode: review_or_update
     reason: OAuth consent, same-origin login continuation, callback safety, grant revocation, EdgeOne bridging, and the absence of retired compatibility surfaces must remain one reviewed frontend authorization boundary.
+  - id: next-hosted-indexing-boundary-contract
+    scope: repo
+    repo: next
+    triggers:
+      - path: public/robots.txt
+        kind: crawler-policy
+      - path: public/404.html
+        kind: unknown-path-response
+      - path: public/edgeone.json
+        kind: hosting-response-headers
+    requiredDocs:
+      - path: AGENTS.md
+        mode: review_or_update
+      - path: .docpact/config.yaml
+        mode: review_or_update
+      - path: docs/agents/repo-architecture.md
+        mode: review_or_update
+      - path: docs/agents/repo-validation.md
+        mode: review_or_update
+    reason: This host serves an authenticated application, so the shell and unknown paths must stay out of search while crawling remains allowed to let crawlers read the directive, and the hosting rewrite and response headers must keep their reviewed shape.
   - id: next-branding-and-packaging-contract
     scope: repo
     repo: next
@@ -728,10 +736,6 @@ rules:
         kind: container-build-input
       - path: .gitignore
         kind: local-runtime-boundary
-      - path: .gitleaks.toml
-        kind: secret-scan-config
-      - path: .gitleaksignore
-        kind: secret-scan-config
       - path: .oxlintrc.json
         kind: lint-gate
       - path: .prettierrc.js
