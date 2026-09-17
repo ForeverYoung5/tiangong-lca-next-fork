@@ -46,7 +46,7 @@ checkPaths:
   - .husky/pre-push
   - .github/workflows/**
 lastReviewedAt: 2026-09-17
-lastReviewedCommit: d6345a46d3a5705e62991bf111259edd5f587c99
+lastReviewedCommit: 4e88077060e4959b5ed04b75d3028a54c48f3041
 lastReviewedNote: 'Reviewed for Platform #1092: exchange names and entrypoint direction defaults remain frontend-owned; repository boundaries, dependency pins and dev delivery policy are unchanged.'
 related:
   - .docpact/config.yaml

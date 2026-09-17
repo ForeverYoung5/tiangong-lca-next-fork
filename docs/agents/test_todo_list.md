@@ -41,7 +41,7 @@ checkPaths:
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
 lastReviewedAt: 2026-09-17
-lastReviewedCommit: d6345a46d3a5705e62991bf111259edd5f587c99
+lastReviewedCommit: 4e88077060e4959b5ed04b75d3028a54c48f3041
 lastReviewedNote: 'Reviewed for Platform #1092: 38 focused exchange tests pass, including input/output first-open and reopen defaults plus complete multilingual reference submission; no existing testing queue item is retired.'
 ---
 
