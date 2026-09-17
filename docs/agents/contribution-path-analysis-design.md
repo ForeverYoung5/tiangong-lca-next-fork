@@ -20,9 +20,9 @@ checkPaths:
   - docs/agents/util_calculate.md
   - src/pages/Processes/Analysis/**
   - src/components/LcaTaskCenter/**
-lastReviewedAt: 2026-09-09
-lastReviewedCommit: 202e30656b62cad9ca1403b7d02880dff6bbe08c
-lastReviewedNote: 'Reviewed for Next #1044: the matrix calculation replaces the legacy pipeline; analysis design references remain unchanged.'
+lastReviewedAt: 2026-09-17
+lastReviewedCommit: 8ed8a9f84c97572df7474971bb8465b5c18aaa23
+lastReviewedNote: 'Reviewed Platform #1046 v2 upload cutover against current dev: every new import helper pins root_closure_v2 and requires SHA-256; asynchronous Task Center, partial outcomes, committed counts and historical report reads remain covered. Focused 116 tests, lint/type checks and build passed; full push gate and remote delivery are tracked in the PR. Existing toolchain, calculation, environment and gate policies are retained.'
 ---
 
 # Contribution Path Analysis Design

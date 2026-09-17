@@ -22,9 +22,9 @@ checkPaths:
   - scripts/e2e/**
   - playwright.config.ts
   - tests/e2e/i18n/**
-lastReviewedAt: 2026-09-16
-lastReviewedCommit: '088675136b5c1fe46917678f7c49398922a307af'
-lastReviewedNote: 'Reviewed for Platform #1076: the application host keeps an explicit nonindex boundary while crawling stays allowed, so crawlers can read the directive. public/robots.txt is a real text file; public/404.html answers unknown paths instead of the application shell; the shell declares metas robots=noindex so every hash route inherits it; and public/edgeone.json adds X-Robots-Tag for the shell and the consent bridge while preserving the OAuth consent rewrite and its security headers. Live read-only checks recorded /robots.txt returning the shell with the same ETag as / and the three sibling sites on the same host answering 404 for unknown paths; the app is hash-routed, so no valid route depended on that fallback. pnpm lint and the production pnpm build pass, and the built artifacts were inspected. Deployment, provider recrawl and live acceptance remain pending. No environment-selection, qualification-profile or database-ownership change is included.'
+lastReviewedAt: 2026-09-17
+lastReviewedCommit: 8ed8a9f84c97572df7474971bb8465b5c18aaa23
+lastReviewedNote: 'Reviewed Platform #1046 v2 upload cutover against current dev: every new import helper pins root_closure_v2 and requires SHA-256; asynchronous Task Center, partial outcomes, committed counts and historical report reads remain covered. Focused 116 tests, lint/type checks and build passed; full push gate and remote delivery are tracked in the PR. Existing toolchain, calculation, environment and gate policies are retained.'
 ---
 
 # Supabase Environment And Database Workflow

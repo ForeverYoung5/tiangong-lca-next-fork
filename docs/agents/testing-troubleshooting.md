@@ -39,9 +39,9 @@ checkPaths:
   - .github/workflows/build.yml
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
-lastReviewedAt: 2026-09-16
-lastReviewedCommit: 740173082e261a5dcd0b2bd53b42fc6f4742da51
-lastReviewedNote: 'Reviewed for Platform #1086 after independent root review: pinned CLI generates the complete deployment bundle and only its terminal file fallback changes to404. Staging checks bundle and .edgeone parents before invalidating old routes; rejected symlink targets retain external files. Verification checks every staged file without depth/count truncation and requires real root,404,robots and consent documents. All24artifact regressions pass, including repeated builds, actual compiled routes, high/deep inventories, absent boundary documents and symlink side effects. Provider404 behavior remains unverified until production deployment; no authentication, domain, region, CLI dependency or application routing change is claimed.'
+lastReviewedAt: 2026-09-17
+lastReviewedCommit: 8ed8a9f84c97572df7474971bb8465b5c18aaa23
+lastReviewedNote: 'Reviewed Platform #1046 v2 upload cutover against current dev: every new import helper pins root_closure_v2 and requires SHA-256; asynchronous Task Center, partial outcomes, committed counts and historical report reads remain covered. Focused 116 tests, lint/type checks and build passed; full push gate and remote delivery are tracked in the PR. Existing toolchain, calculation, environment and gate policies are retained.'
 ---
 
 # Testing Troubleshooting

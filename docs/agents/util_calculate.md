@@ -21,9 +21,9 @@ checkPaths:
   - src/services/lciaMethods/**
   - src/components/LcaTaskCenter/**
   - src/pages/Processes/Analysis/**
-lastReviewedAt: 2026-09-09
-lastReviewedCommit: 202e30656b62cad9ca1403b7d02880dff6bbe08c
-lastReviewedNote: 'Reviewed for Next #1044 third-review fixes: boundary aggregation keys on the exact Flow revision (no cross-revision merging), inventory assembly drops only exact-zero amounts and validates the primary group quantitative-reference exchange against the requested target (input-pivot treatment references exempt).'
+lastReviewedAt: 2026-09-17
+lastReviewedCommit: 8ed8a9f84c97572df7474971bb8465b5c18aaa23
+lastReviewedNote: 'Reviewed Platform #1046 v2 upload cutover against current dev: every new import helper pins root_closure_v2 and requires SHA-256; asynchronous Task Center, partial outcomes, committed counts and historical report reads remain covered. Focused 116 tests, lint/type checks and build passed; full push gate and remote delivery are tracked in the PR. Existing toolchain, calculation, environment and gate policies are retained.'
 ---
 
 # Lifecycle Model Calculation Reference
