@@ -739,7 +739,7 @@ function taskFromWorkerJob(
     jobKind: firstString(job.jobKind),
     jobId: packageJobId,
     scope: (firstString(job.subjectVersion) as TidasPackageManifestScope | undefined) ?? null,
-    rootCount: 0,
+    rootCount: importSummary?.root_count ?? 0,
     filename: filenameFromWorkerJob(job),
     error:
       state === 'failed' ? firstString(job.errorMessage, job.errorCode, job.status) : undefined,
@@ -781,7 +781,8 @@ function mergeWorkerJobTask(
     scope: current.scope ?? serverTask.scope,
     startedAt: serverTask.startedAt ?? current.startedAt,
     finishedAt: serverTask.finishedAt ?? current.finishedAt,
-    rootCount: current.rootCount || serverTask.rootCount,
+    rootCount: serverTask.importSummary?.root_count ?? (current.rootCount || serverTask.rootCount),
+    filename: serverTask.filename ?? current.filename,
   };
 }
 

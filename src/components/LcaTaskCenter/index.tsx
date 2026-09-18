@@ -205,6 +205,12 @@ function packagePhaseLabel(phase: TidasPackageTaskPhase, intl: IntlShapeLike): s
       defaultMessage: 'Collecting related data',
     });
   }
+  if (phase === 'import_package') {
+    return intl.formatMessage({
+      id: 'component.tidasPackage.taskCenter.phase.importPackage',
+      defaultMessage: 'Importing data',
+    });
+  }
   if (phase === 'finalize_zip') {
     return intl.formatMessage({
       id: 'component.tidasPackage.taskCenter.phase.finalizeZip',
@@ -587,7 +593,36 @@ function lcaProcessSteps(task: LcaBackgroundTask, intl: IntlShapeLike): ProcessS
   });
 }
 
-function packageProcessStageLabel(phase: TidasPackageTaskPhase, intl: IntlShapeLike): string {
+function packageProcessStageLabel(
+  task: TidasPackageBackgroundTask,
+  phase: TidasPackageTaskPhase | 'report',
+  intl: IntlShapeLike,
+): string {
+  if (task.kind === 'tidas_package_import') {
+    if (phase === 'submitting') {
+      return intl.formatMessage({
+        id: 'component.tidasPackage.taskCenter.process.import.prepareUpload',
+        defaultMessage: 'Prepare upload',
+      });
+    }
+    if (phase === 'queued') {
+      return intl.formatMessage({
+        id: 'component.tidasPackage.taskCenter.process.import.validatePackage',
+        defaultMessage: 'Validate package',
+      });
+    }
+    if (phase === 'import_package') {
+      return intl.formatMessage({
+        id: 'component.tidasPackage.taskCenter.process.import.importData',
+        defaultMessage: 'Import data',
+      });
+    }
+    return intl.formatMessage({
+      id: 'component.tidasPackage.taskCenter.process.import.buildReport',
+      defaultMessage: 'Build report',
+    });
+  }
+
   if (phase === 'submitting') {
     return intl.formatMessage({
       id: 'component.tidasPackage.taskCenter.process.export.submitTask',
@@ -618,18 +653,26 @@ function packageProcessStageLabel(phase: TidasPackageTaskPhase, intl: IntlShapeL
   });
 }
 
+function packageProcessPhases(
+  task: TidasPackageBackgroundTask,
+): Array<TidasPackageTaskPhase | 'report'> {
+  if (task.kind === 'tidas_package_import') {
+    return ['submitting', 'queued', 'import_package', 'report'];
+  }
+  return ['submitting', 'queued', 'collect_refs', 'finalize_zip', 'completed'];
+}
+
 function packageProcessSteps(
   task: TidasPackageBackgroundTask,
   intl: IntlShapeLike,
 ): ProcessStepItem[] {
-  const phases: TidasPackageTaskPhase[] = [
-    'submitting',
-    'queued',
-    'collect_refs',
-    'finalize_zip',
-    'completed',
-  ];
-  const currentPhase = task.phase === 'failed' ? phases[phases.length - 1] : task.phase;
+  const phases = packageProcessPhases(task);
+  const currentPhase =
+    task.kind === 'tidas_package_import' && task.phase === 'completed'
+      ? 'report'
+      : task.phase === 'failed'
+        ? phases[phases.length - 1]
+        : task.phase;
   const currentIndex = Math.max(
     0,
     phases.findIndex((phase) => phase === currentPhase),
@@ -647,7 +690,7 @@ function packageProcessSteps(
             : undefined;
     return {
       key: phase,
-      title: packageProcessStageLabel(phase, intl),
+      title: packageProcessStageLabel(task, phase, intl),
       description,
       state,
     };
@@ -848,6 +891,16 @@ function taskProgressStrokeColor(
   item: TaskCenterItem,
   token: ReturnType<typeof theme.useToken>['token'],
 ): string {
+  if (item.kind === 'package' && item.task.kind === 'tidas_package_import') {
+    if (
+      item.task.state === 'failed' ||
+      item.task.importOutcome === 'none' ||
+      item.task.importOutcome === 'interrupted'
+    )
+      return token.colorError;
+    if (item.task.state === 'completed' && item.task.importOutcome === 'partial')
+      return token.colorWarning;
+  }
   if (item.task.state === 'completed') {
     return token.colorSuccess;
   }
@@ -1157,17 +1210,17 @@ function packageBusinessDetail(
   task: TidasPackageBackgroundTask,
   intl: IntlShapeLike,
 ): React.ReactNode {
-  if (task.kind === 'tidas_package_import')
-    return task.jobId ? (
-      <TidasImportResult
-        jobId={task.jobId}
-        reportAvailable={task.importReportAvailable}
-        detailsAvailable={task.importDetailsAvailable}
-      />
-    ) : null;
   const singleRoot = task.request?.roots?.length === 1 ? task.request.roots[0] : null;
+  const isImport = task.kind === 'tidas_package_import';
   const errorText = packageTaskErrorText(task, intl);
-  const filename = task.filename ?? 'tidas-package.zip';
+  const filename =
+    task.filename ??
+    (isImport
+      ? intl.formatMessage({
+          id: 'component.tidasPackage.taskCenter.detail.importFileFallback',
+          defaultMessage: 'Uploaded ZIP package',
+        })
+      : 'tidas-package.zip');
 
   return (
     <Space orientation='vertical' size={14} style={{ width: '100%' }}>
@@ -1196,6 +1249,13 @@ function packageBusinessDetail(
           },
         ]}
       />
+      {isImport && task.jobId && (
+        <TidasImportResult
+          jobId={task.jobId}
+          reportAvailable={task.importReportAvailable}
+          detailsAvailable={task.importDetailsAvailable}
+        />
+      )}
       {singleRoot && (
         <DetailSection
           title={intl.formatMessage({
@@ -1208,7 +1268,7 @@ function packageBusinessDetail(
           </Typography.Text>
         </DetailSection>
       )}
-      {task.state === 'failed' && errorText && (
+      {!isImport && task.state === 'failed' && errorText && (
         <DetailSection
           title={intl.formatMessage({
             id: 'pages.process.lca.taskCenter.detail.failureReason',
@@ -1275,8 +1335,7 @@ const TaskDetailPopoverContent: React.FC<{
       >
         {taskBusinessDetailContent(item, intl)}
       </DetailSection>
-      {!(item.kind === 'package' && item.task.kind === 'tidas_package_import') &&
-        taskProcessDetailContent(item, intl)}
+      {taskProcessDetailContent(item, intl)}
     </Space>
   );
 };
@@ -1719,8 +1778,6 @@ const LcaTaskCenter: React.FC = () => {
                   const itemKey = taskItemKey(item);
                   const progressPercent = taskProgressPercent(item);
                   const expanded = expandedTaskKeys.includes(itemKey);
-                  const isImport =
-                    item.kind === 'package' && item.task.kind === 'tidas_package_import';
                   return (
                     <div
                       key={itemKey}
@@ -1748,47 +1805,45 @@ const LcaTaskCenter: React.FC = () => {
                             intl,
                             item.kind === 'package' ? item.task.importOutcome : undefined,
                           )}
-                          {!isImport && (
-                            <Popover
-                              trigger='click'
-                              placement='bottomLeft'
-                              styles={{
-                                content: {
-                                  maxHeight: DIAGNOSTICS_POPOVER_MAX_HEIGHT,
-                                  overflowX: 'hidden',
-                                  overflowY: 'auto',
-                                },
-                                root: {
-                                  maxWidth: DIAGNOSTICS_POPOVER_WIDTH + 32,
-                                },
-                              }}
-                              content={<TaskDiagnosticsPopoverContent item={item} intl={intl} />}
+                          <Popover
+                            trigger='click'
+                            placement='bottomLeft'
+                            styles={{
+                              content: {
+                                maxHeight: DIAGNOSTICS_POPOVER_MAX_HEIGHT,
+                                overflowX: 'hidden',
+                                overflowY: 'auto',
+                              },
+                              root: {
+                                maxWidth: DIAGNOSTICS_POPOVER_WIDTH + 32,
+                              },
+                            }}
+                            content={<TaskDiagnosticsPopoverContent item={item} intl={intl} />}
+                          >
+                            <Tooltip
+                              title={intl.formatMessage({
+                                id: 'pages.process.lca.taskCenter.diagnostics',
+                                defaultMessage: 'Diagnostics',
+                              })}
                             >
-                              <Tooltip
-                                title={intl.formatMessage({
+                              <Button
+                                aria-label={intl.formatMessage({
                                   id: 'pages.process.lca.taskCenter.diagnostics',
                                   defaultMessage: 'Diagnostics',
                                 })}
-                              >
-                                <Button
-                                  aria-label={intl.formatMessage({
-                                    id: 'pages.process.lca.taskCenter.diagnostics',
-                                    defaultMessage: 'Diagnostics',
-                                  })}
-                                  size='small'
-                                  type='text'
-                                  icon={<InfoCircleOutlined style={{ fontSize: 12 }} />}
-                                  style={{
-                                    color: token.colorTextTertiary,
-                                    height: 18,
-                                    minWidth: 18,
-                                    paddingInline: 0,
-                                    width: 18,
-                                  }}
-                                />
-                              </Tooltip>
-                            </Popover>
-                          )}
+                                size='small'
+                                type='text'
+                                icon={<InfoCircleOutlined style={{ fontSize: 12 }} />}
+                                style={{
+                                  color: token.colorTextTertiary,
+                                  height: 18,
+                                  minWidth: 18,
+                                  paddingInline: 0,
+                                  width: 18,
+                                }}
+                              />
+                            </Tooltip>
+                          </Popover>
                         </Space>
                         <Typography.Text type='secondary' style={{ fontSize: 12 }}>
                           {intl.formatMessage({
@@ -1805,36 +1860,32 @@ const LcaTaskCenter: React.FC = () => {
                         })}{' '}
                         {formatDuration(getTaskElapsedMs(item))}
                       </Typography.Text>
-                      {isImport ? (
-                        <span />
-                      ) : (
-                        <Space orientation='vertical' size={5} style={{ width: '100%' }}>
-                          <Space size={4} wrap>
-                            <Typography.Text style={{ fontSize: 13 }}>
-                              {intl.formatMessage({
-                                id: 'pages.process.lca.taskCenter.phasePrefix',
-                                defaultMessage: 'Phase:',
-                              })}
-                            </Typography.Text>
-                            <Typography.Text style={{ fontSize: 13 }}>
-                              {phaseLabel(item, intl)}
-                            </Typography.Text>
-                          </Space>
-                          <div style={{ alignItems: 'center', display: 'flex', gap: 8 }}>
-                            <Progress
-                              percent={progressPercent}
-                              showInfo={false}
-                              size='small'
-                              strokeColor={taskProgressStrokeColor(item, token)}
-                              style={{ flex: '1 1 132px', marginBottom: 0, minWidth: 132 }}
-                              railColor={token.colorFillSecondary}
-                            />
-                            <Typography.Text style={{ fontSize: 12, minWidth: 34 }}>
-                              {progressPercent}%
-                            </Typography.Text>
-                          </div>
+                      <Space orientation='vertical' size={5} style={{ width: '100%' }}>
+                        <Space size={4} wrap>
+                          <Typography.Text style={{ fontSize: 13 }}>
+                            {intl.formatMessage({
+                              id: 'pages.process.lca.taskCenter.phasePrefix',
+                              defaultMessage: 'Phase:',
+                            })}
+                          </Typography.Text>
+                          <Typography.Text style={{ fontSize: 13 }}>
+                            {phaseLabel(item, intl)}
+                          </Typography.Text>
                         </Space>
-                      )}
+                        <div style={{ alignItems: 'center', display: 'flex', gap: 8 }}>
+                          <Progress
+                            percent={progressPercent}
+                            showInfo={false}
+                            size='small'
+                            strokeColor={taskProgressStrokeColor(item, token)}
+                            style={{ flex: '1 1 132px', marginBottom: 0, minWidth: 132 }}
+                            railColor={token.colorFillSecondary}
+                          />
+                          <Typography.Text style={{ fontSize: 12, minWidth: 34 }}>
+                            {progressPercent}%
+                          </Typography.Text>
+                        </div>
+                      </Space>
                       <Space size={6} wrap>
                         <Tooltip
                           title={intl.formatMessage({

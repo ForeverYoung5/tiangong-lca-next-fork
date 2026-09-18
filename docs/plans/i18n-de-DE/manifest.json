@@ -3,7 +3,7 @@
   "source": {
     "baseRef": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
     "baseCommit": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
-    "auditedInputDigest": "e422fa90f5a90ff1e629816bd2041c3c2ecb6248634634866e6c164ea9fd9bc7",
+    "auditedInputDigest": "74dab1a07faf91d5be239f56dc4461da7c94ac33413df2c89bef3211a5f65e6a",
     "auditedInputDigestAlgorithm": "sha256(path\\0content\\0)",
     "repository": "tiangong-lca/platform"
   },
@@ -71,11 +71,11 @@
     "localeLeafModuleCounts": { "en-US": 31, "zh-CN": 31, "de-DE": 31, "fr-FR": 31 },
     "localeUniqueKeyCounts": { "en-US": 3382, "zh-CN": 3382, "de-DE": 3382, "fr-FR": 3382 },
     "canonicalCandidateKeyCount": 3382,
-    "activeStaticKeyCount": 2231,
+    "activeStaticKeyCount": 2237,
     "activeDynamicKeyCount": 321,
-    "reservedKeyCount": 830,
+    "reservedKeyCount": 824,
     "productionSourceFileCount": 466,
-    "literalReferenceCount": 4243,
+    "literalReferenceCount": 4249,
     "dynamicCallsiteCount": 33,
     "dynamicCallsiteSummaryCount": 33,
     "registeredDynamicCallsiteCount": 33,
@@ -18176,7 +18176,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 674,
+          "line": 717,
           "column": 12,
           "symbol": "packageTaskErrorText",
           "defaultMessage": "Export package is too large for the current storage upload limit. Try exporting a smaller scope, or ask an administrator to enable large-file upload support.",
@@ -18191,7 +18191,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 674,
+              "line": 717,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -21594,7 +21594,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 730,
+          "line": 773,
           "column": 12,
           "symbol": "tidasScopeLabel",
           "defaultMessage": "Current user data",
@@ -21615,7 +21615,7 @@
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 730,
+              "line": 773,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -21692,7 +21692,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 742,
+          "line": 785,
           "column": 12,
           "symbol": "tidasScopeLabel",
           "defaultMessage": "Current user data + open data",
@@ -21713,7 +21713,7 @@
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 742,
+              "line": 785,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -21790,7 +21790,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 736,
+          "line": 779,
           "column": 12,
           "symbol": "tidasScopeLabel",
           "defaultMessage": "Open data",
@@ -21811,7 +21811,7 @@
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 736,
+              "line": 779,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -21997,7 +21997,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1177,
+          "line": 1230,
           "column": 20,
           "symbol": "packageBusinessDetail",
           "defaultMessage": "File name",
@@ -22012,7 +22012,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1177,
+              "line": 1230,
               "column": 20,
               "kind": "formatMessage"
             }
@@ -22022,7 +22022,7 @@
     },
     {
       "id": "component.tidasPackage.taskCenter.detail.importFileFallback",
-      "category": "reserved",
+      "category": "active-static",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["component_tidasPackage"],
@@ -22076,8 +22076,32 @@
           }
         }
       },
-      "references": [],
-      "defaultMessages": []
+      "references": [
+        {
+          "kind": "formatMessage",
+          "path": "src/components/LcaTaskCenter/index.tsx",
+          "line": 1219,
+          "column": 9,
+          "symbol": "filename",
+          "defaultMessage": "Uploaded ZIP package",
+          "defaultMessageExpression": null
+        }
+      ],
+      "defaultMessages": [
+        {
+          "value": "Uploaded ZIP package",
+          "argumentSignature": [],
+          "placeholders": [],
+          "locations": [
+            {
+              "path": "src/components/LcaTaskCenter/index.tsx",
+              "line": 1219,
+              "column": 9,
+              "kind": "formatMessage"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "component.tidasPackage.taskCenter.detail.importKind",
@@ -22257,7 +22281,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1045,
+          "line": 1098,
           "column": 18,
           "symbol": "packageDiagnosticContent",
           "defaultMessage": "Job ID",
@@ -22272,7 +22296,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1045,
+              "line": 1098,
               "column": 18,
               "kind": "formatMessage"
             }
@@ -22340,7 +22364,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1191,
+          "line": 1244,
           "column": 20,
           "symbol": "packageBusinessDetail",
           "defaultMessage": "Root records",
@@ -22355,7 +22379,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1191,
+              "line": 1244,
               "column": 20,
               "kind": "formatMessage"
             }
@@ -22423,7 +22447,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1201,
+          "line": 1261,
           "column": 18,
           "symbol": "packageBusinessDetail",
           "defaultMessage": "Root data",
@@ -22438,7 +22462,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1201,
+              "line": 1261,
               "column": 18,
               "kind": "formatMessage"
             }
@@ -22506,7 +22530,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1184,
+          "line": 1237,
           "column": 20,
           "symbol": "packageBusinessDetail",
           "defaultMessage": "Data scope",
@@ -22521,7 +22545,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1184,
+              "line": 1237,
               "column": 20,
               "kind": "formatMessage"
             }
@@ -22589,7 +22613,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1867,
+          "line": 1918,
           "column": 38,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "Download",
@@ -22598,7 +22622,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1873,
+          "line": 1924,
           "column": 45,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "Download",
@@ -22613,13 +22637,13 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1867,
+              "line": 1918,
               "column": 38,
               "kind": "formatMessage"
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1873,
+              "line": 1924,
               "column": 45,
               "kind": "formatMessage"
             }
@@ -22687,7 +22711,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1418,
+          "line": 1477,
           "column": 11,
           "symbol": "handleDownload",
           "defaultMessage": "Failed to download TIDAS package",
@@ -22702,7 +22726,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1418,
+              "line": 1477,
               "column": 11,
               "kind": "formatMessage"
             }
@@ -22770,7 +22794,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1407,
+          "line": 1466,
           "column": 9,
           "symbol": "handleDownload",
           "defaultMessage": "Downloaded {filename}",
@@ -22785,7 +22809,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1407,
+              "line": 1466,
               "column": 9,
               "kind": "formatMessage"
             }
@@ -22912,7 +22936,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 761,
+          "line": 804,
           "column": 12,
           "symbol": "taskTypeLabel",
           "defaultMessage": "TIDAS Export",
@@ -22927,7 +22951,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 761,
+              "line": 804,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -22995,7 +23019,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 767,
+          "line": 810,
           "column": 12,
           "symbol": "taskTypeLabel",
           "defaultMessage": "TIDAS Import",
@@ -23010,7 +23034,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 767,
+              "line": 810,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -23161,7 +23185,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 209,
+          "line": 215,
           "column": 12,
           "symbol": "packagePhaseLabel",
           "defaultMessage": "Building ZIP",
@@ -23176,7 +23200,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 209,
+              "line": 215,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -23186,7 +23210,7 @@
     },
     {
       "id": "component.tidasPackage.taskCenter.phase.importPackage",
-      "category": "reserved",
+      "category": "active-static",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["component_tidasPackage"],
@@ -23240,8 +23264,32 @@
           }
         }
       },
-      "references": [],
-      "defaultMessages": []
+      "references": [
+        {
+          "kind": "formatMessage",
+          "path": "src/components/LcaTaskCenter/index.tsx",
+          "line": 209,
+          "column": 12,
+          "symbol": "packagePhaseLabel",
+          "defaultMessage": "Importing data",
+          "defaultMessageExpression": null
+        }
+      ],
+      "defaultMessages": [
+        {
+          "value": "Importing data",
+          "argumentSignature": [],
+          "placeholders": [],
+          "locations": [
+            {
+              "path": "src/components/LcaTaskCenter/index.tsx",
+              "line": 209,
+              "column": 12,
+              "kind": "formatMessage"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "component.tidasPackage.taskCenter.phase.queued",
@@ -23469,7 +23517,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 610,
+          "line": 645,
           "column": 12,
           "symbol": "packageProcessStageLabel",
           "defaultMessage": "Build ZIP",
@@ -23484,7 +23532,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 610,
+              "line": 645,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -23552,7 +23600,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 604,
+          "line": 639,
           "column": 12,
           "symbol": "packageProcessStageLabel",
           "defaultMessage": "Collect related data",
@@ -23567,7 +23615,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 604,
+              "line": 639,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -23635,7 +23683,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 598,
+          "line": 633,
           "column": 12,
           "symbol": "packageProcessStageLabel",
           "defaultMessage": "Queued",
@@ -23650,7 +23698,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 598,
+              "line": 633,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -23718,7 +23766,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 615,
+          "line": 650,
           "column": 10,
           "symbol": "packageProcessStageLabel",
           "defaultMessage": "Export ready",
@@ -23733,7 +23781,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 615,
+              "line": 650,
               "column": 10,
               "kind": "formatMessage"
             }
@@ -23801,7 +23849,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 592,
+          "line": 627,
           "column": 12,
           "symbol": "packageProcessStageLabel",
           "defaultMessage": "Submit task",
@@ -23816,7 +23864,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 592,
+              "line": 627,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -23826,7 +23874,7 @@
     },
     {
       "id": "component.tidasPackage.taskCenter.process.import.buildReport",
-      "category": "reserved",
+      "category": "active-static",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["component_tidasPackage"],
@@ -23880,12 +23928,36 @@
           }
         }
       },
-      "references": [],
-      "defaultMessages": []
+      "references": [
+        {
+          "kind": "formatMessage",
+          "path": "src/components/LcaTaskCenter/index.tsx",
+          "line": 620,
+          "column": 12,
+          "symbol": "packageProcessStageLabel",
+          "defaultMessage": "Build report",
+          "defaultMessageExpression": null
+        }
+      ],
+      "defaultMessages": [
+        {
+          "value": "Build report",
+          "argumentSignature": [],
+          "placeholders": [],
+          "locations": [
+            {
+              "path": "src/components/LcaTaskCenter/index.tsx",
+              "line": 620,
+              "column": 12,
+              "kind": "formatMessage"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "component.tidasPackage.taskCenter.process.import.importData",
-      "category": "reserved",
+      "category": "active-static",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["component_tidasPackage"],
@@ -23939,12 +24011,36 @@
           }
         }
       },
-      "references": [],
-      "defaultMessages": []
+      "references": [
+        {
+          "kind": "formatMessage",
+          "path": "src/components/LcaTaskCenter/index.tsx",
+          "line": 615,
+          "column": 14,
+          "symbol": "packageProcessStageLabel",
+          "defaultMessage": "Import data",
+          "defaultMessageExpression": null
+        }
+      ],
+      "defaultMessages": [
+        {
+          "value": "Import data",
+          "argumentSignature": [],
+          "placeholders": [],
+          "locations": [
+            {
+              "path": "src/components/LcaTaskCenter/index.tsx",
+              "line": 615,
+              "column": 14,
+              "kind": "formatMessage"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "component.tidasPackage.taskCenter.process.import.prepareUpload",
-      "category": "reserved",
+      "category": "active-static",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["component_tidasPackage"],
@@ -23998,12 +24094,36 @@
           }
         }
       },
-      "references": [],
-      "defaultMessages": []
+      "references": [
+        {
+          "kind": "formatMessage",
+          "path": "src/components/LcaTaskCenter/index.tsx",
+          "line": 603,
+          "column": 14,
+          "symbol": "packageProcessStageLabel",
+          "defaultMessage": "Prepare upload",
+          "defaultMessageExpression": null
+        }
+      ],
+      "defaultMessages": [
+        {
+          "value": "Prepare upload",
+          "argumentSignature": [],
+          "placeholders": [],
+          "locations": [
+            {
+              "path": "src/components/LcaTaskCenter/index.tsx",
+              "line": 603,
+              "column": 14,
+              "kind": "formatMessage"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "component.tidasPackage.taskCenter.process.import.validatePackage",
-      "category": "reserved",
+      "category": "active-static",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["component_tidasPackage"],
@@ -24057,8 +24177,32 @@
           }
         }
       },
-      "references": [],
-      "defaultMessages": []
+      "references": [
+        {
+          "kind": "formatMessage",
+          "path": "src/components/LcaTaskCenter/index.tsx",
+          "line": 609,
+          "column": 14,
+          "symbol": "packageProcessStageLabel",
+          "defaultMessage": "Validate package",
+          "defaultMessageExpression": null
+        }
+      ],
+      "defaultMessages": [
+        {
+          "value": "Validate package",
+          "argumentSignature": [],
+          "placeholders": [],
+          "locations": [
+            {
+              "path": "src/components/LcaTaskCenter/index.tsx",
+              "line": 609,
+              "column": 14,
+              "kind": "formatMessage"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "component.tidasPackage.taskCenter.rootCountSummary",
@@ -24474,7 +24618,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 800,
+          "line": 843,
           "column": 9,
           "symbol": "taskTitle",
           "defaultMessage": "Export TIDAS package",
@@ -24489,7 +24633,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 800,
+              "line": 843,
               "column": 9,
               "kind": "formatMessage"
             }
@@ -24557,7 +24701,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 793,
+          "line": 836,
           "column": 9,
           "symbol": "taskTitle",
           "defaultMessage": "Export package: {filename}",
@@ -24572,7 +24716,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 793,
+              "line": 836,
               "column": 9,
               "kind": "formatMessage"
             }
@@ -24640,7 +24784,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 813,
+          "line": 856,
           "column": 7,
           "symbol": "taskTitle",
           "defaultMessage": "Import TIDAS package",
@@ -24655,7 +24799,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 813,
+              "line": 856,
               "column": 7,
               "kind": "formatMessage"
             }
@@ -24723,7 +24867,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 806,
+          "line": 849,
           "column": 7,
           "symbol": "taskTitle",
           "defaultMessage": "Import package: {filename}",
@@ -24738,7 +24882,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 806,
+              "line": 849,
               "column": 7,
               "kind": "formatMessage"
             }
@@ -66882,7 +67026,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1707,
+          "line": 1766,
           "column": 38,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "Task details are currently unavailable.",
@@ -66903,7 +67047,7 @@
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1707,
+              "line": 1766,
               "column": 38,
               "kind": "formatMessage"
             }
@@ -80673,7 +80817,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 773,
+          "line": 816,
           "column": 12,
           "symbol": "taskTypeLabel",
           "defaultMessage": "Data Product",
@@ -80688,7 +80832,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 773,
+              "line": 816,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -157721,7 +157865,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 715,
+          "line": 758,
           "column": 7,
           "symbol": "lcaModeLabel",
           "defaultMessage": "All Processes (Reference Flow = 1)",
@@ -157745,7 +157889,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 715,
+              "line": 758,
               "column": 7,
               "kind": "formatMessage"
             },
@@ -157819,7 +157963,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 719,
+          "line": 762,
           "column": 7,
           "symbol": "lcaModeLabel",
           "defaultMessage": "Single-Process Calculation",
@@ -157834,7 +157978,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 719,
+              "line": 762,
               "column": 7,
               "kind": "formatMessage"
             }
@@ -168349,7 +168493,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1480,
+          "line": 1539,
           "column": 12,
           "symbol": "modalTitle",
           "defaultMessage": "Clear finished",
@@ -168364,7 +168508,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1480,
+              "line": 1539,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -168432,7 +168576,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1672,
+          "line": 1731,
           "column": 32,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "Continue",
@@ -168447,7 +168591,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1672,
+              "line": 1731,
               "column": 32,
               "kind": "formatMessage"
             }
@@ -168574,7 +168718,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 962,
+          "line": 1015,
           "column": 18,
           "symbol": "lcaDiagnosticContent",
           "defaultMessage": "Build job ID",
@@ -168589,7 +168733,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 962,
+              "line": 1015,
               "column": 18,
               "kind": "formatMessage"
             }
@@ -168775,7 +168919,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1301,
+          "line": 1360,
           "column": 16,
           "symbol": "TaskDiagnosticsPopoverContent",
           "defaultMessage": "Debug information",
@@ -168790,7 +168934,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1301,
+              "line": 1360,
               "column": 16,
               "kind": "formatMessage"
             }
@@ -168858,7 +169002,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1144,
+          "line": 1197,
           "column": 18,
           "symbol": "lcaBusinessDetail",
           "defaultMessage": "Failure reason",
@@ -168867,7 +169011,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1213,
+          "line": 1273,
           "column": 18,
           "symbol": "packageBusinessDetail",
           "defaultMessage": "Failure reason",
@@ -168882,13 +169026,13 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1144,
+              "line": 1197,
               "column": 18,
               "kind": "formatMessage"
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1213,
+              "line": 1273,
               "column": 18,
               "kind": "formatMessage"
             }
@@ -168956,7 +169100,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1271,
+          "line": 1331,
           "column": 16,
           "symbol": "TaskDetailPopoverContent",
           "defaultMessage": "Detail information",
@@ -168971,7 +169115,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1271,
+              "line": 1331,
               "column": 16,
               "kind": "formatMessage"
             }
@@ -169039,7 +169183,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1119,
+          "line": 1172,
           "column": 20,
           "symbol": "lcaBusinessDetail",
           "defaultMessage": "Demand type",
@@ -169054,7 +169198,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1119,
+              "line": 1172,
               "column": 20,
               "kind": "formatMessage"
             }
@@ -169122,7 +169266,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1136,
+          "line": 1189,
           "column": 12,
           "symbol": "lcaBusinessDetail",
           "defaultMessage": "The task completed without a returned result.",
@@ -169137,7 +169281,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1136,
+              "line": 1189,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -169264,7 +169408,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 983,
+          "line": 1036,
           "column": 18,
           "symbol": "lcaDiagnosticContent",
           "defaultMessage": "Result ID",
@@ -169306,7 +169450,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 983,
+              "line": 1036,
               "column": 18,
               "kind": "formatMessage"
             },
@@ -169451,7 +169595,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1126,
+          "line": 1179,
           "column": 20,
           "symbol": "lcaBusinessDetail",
           "defaultMessage": "Data scope",
@@ -169466,7 +169610,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1126,
+              "line": 1179,
               "column": 20,
               "kind": "formatMessage"
             }
@@ -169534,7 +169678,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 976,
+          "line": 1029,
           "column": 18,
           "symbol": "lcaDiagnosticContent",
           "defaultMessage": "Snapshot ID",
@@ -169576,7 +169720,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 976,
+              "line": 1029,
               "column": 18,
               "kind": "formatMessage"
             },
@@ -169662,7 +169806,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 969,
+          "line": 1022,
           "column": 18,
           "symbol": "lcaDiagnosticContent",
           "defaultMessage": "Calculation job ID",
@@ -169677,7 +169821,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 969,
+              "line": 1022,
               "column": 18,
               "kind": "formatMessage"
             }
@@ -169922,8 +170066,8 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1768,
-          "column": 40,
+          "line": 1824,
+          "column": 38,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "Diagnostics",
           "defaultMessageExpression": null
@@ -169931,8 +170075,8 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1774,
-          "column": 47,
+          "line": 1830,
+          "column": 45,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "Diagnostics",
           "defaultMessageExpression": null
@@ -169946,14 +170090,14 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1768,
-              "column": 40,
+              "line": 1824,
+              "column": 38,
               "kind": "formatMessage"
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1774,
-              "column": 47,
+              "line": 1830,
+              "column": 45,
               "kind": "formatMessage"
             }
           ]
@@ -170020,7 +170164,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 887,
+          "line": 940,
           "column": 10,
           "symbol": "DiagnosticRows",
           "defaultMessage": "No diagnostics available",
@@ -170035,7 +170179,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 887,
+              "line": 940,
               "column": 10,
               "kind": "formatMessage"
             }
@@ -170103,7 +170247,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 955,
+          "line": 1008,
           "column": 18,
           "symbol": "lcaDiagnosticContent",
           "defaultMessage": "Worker job kind",
@@ -170112,7 +170256,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1038,
+          "line": 1091,
           "column": 18,
           "symbol": "packageDiagnosticContent",
           "defaultMessage": "Worker job kind",
@@ -170127,13 +170271,13 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 955,
+              "line": 1008,
               "column": 18,
               "kind": "formatMessage"
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1038,
+              "line": 1091,
               "column": 18,
               "kind": "formatMessage"
             }
@@ -170201,7 +170345,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 990,
+          "line": 1043,
           "column": 18,
           "symbol": "lcaDiagnosticContent",
           "defaultMessage": "Request",
@@ -170210,7 +170354,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1052,
+          "line": 1105,
           "column": 18,
           "symbol": "packageDiagnosticContent",
           "defaultMessage": "Request",
@@ -170225,13 +170369,13 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 990,
+              "line": 1043,
               "column": 18,
               "kind": "formatMessage"
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1052,
+              "line": 1105,
               "column": 18,
               "kind": "formatMessage"
             }
@@ -170299,7 +170443,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 948,
+          "line": 1001,
           "column": 18,
           "symbol": "lcaDiagnosticContent",
           "defaultMessage": "Root job ID",
@@ -170314,7 +170458,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 948,
+              "line": 1001,
               "column": 18,
               "kind": "formatMessage"
             }
@@ -170382,7 +170526,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 934,
+          "line": 987,
           "column": 18,
           "symbol": "lcaDiagnosticContent",
           "defaultMessage": "Sequence",
@@ -170391,7 +170535,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1017,
+          "line": 1070,
           "column": 18,
           "symbol": "packageDiagnosticContent",
           "defaultMessage": "Sequence",
@@ -170406,13 +170550,13 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 934,
+              "line": 987,
               "column": 18,
               "kind": "formatMessage"
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1017,
+              "line": 1070,
               "column": 18,
               "kind": "formatMessage"
             }
@@ -170480,7 +170624,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 927,
+          "line": 980,
           "column": 18,
           "symbol": "lcaDiagnosticContent",
           "defaultMessage": "Task ID",
@@ -170489,7 +170633,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1010,
+          "line": 1063,
           "column": 18,
           "symbol": "packageDiagnosticContent",
           "defaultMessage": "Task ID",
@@ -170504,13 +170648,13 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 927,
+              "line": 980,
               "column": 18,
               "kind": "formatMessage"
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1010,
+              "line": 1063,
               "column": 18,
               "kind": "formatMessage"
             }
@@ -170578,7 +170722,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1024,
+          "line": 1077,
           "column": 18,
           "symbol": "packageDiagnosticContent",
           "defaultMessage": "Task kind",
@@ -170593,7 +170737,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1024,
+              "line": 1077,
               "column": 18,
               "kind": "formatMessage"
             }
@@ -170661,7 +170805,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 941,
+          "line": 994,
           "column": 18,
           "symbol": "lcaDiagnosticContent",
           "defaultMessage": "Worker job ID",
@@ -170670,7 +170814,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1031,
+          "line": 1084,
           "column": 18,
           "symbol": "packageDiagnosticContent",
           "defaultMessage": "Worker job ID",
@@ -170685,13 +170829,13 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 941,
+              "line": 994,
               "column": 18,
               "kind": "formatMessage"
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1031,
+              "line": 1084,
               "column": 18,
               "kind": "formatMessage"
             }
@@ -170818,7 +170962,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1802,
+          "line": 1857,
           "column": 26,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "Elapsed",
@@ -170833,7 +170977,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1802,
+              "line": 1857,
               "column": 26,
               "kind": "formatMessage"
             }
@@ -170901,7 +171045,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1543,
+          "line": 1602,
           "column": 32,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "No tasks",
@@ -170916,7 +171060,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1543,
+              "line": 1602,
               "column": 32,
               "kind": "formatMessage"
             }
@@ -170984,7 +171128,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 778,
+          "line": 821,
           "column": 10,
           "symbol": "taskTypeLabel",
           "defaultMessage": "All",
@@ -170999,7 +171143,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 778,
+              "line": 821,
               "column": 10,
               "kind": "formatMessage"
             }
@@ -171150,7 +171294,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 747,
+          "line": 790,
           "column": 10,
           "symbol": "tidasScopeLabel",
           "defaultMessage": "Not specified",
@@ -171165,7 +171309,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 747,
+              "line": 790,
               "column": 10,
               "kind": "formatMessage"
             }
@@ -171233,7 +171377,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1680,
+          "line": 1739,
           "column": 30,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "Open",
@@ -171248,7 +171392,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1680,
+              "line": 1739,
               "column": 30,
               "kind": "formatMessage"
             }
@@ -171467,7 +171611,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 215,
+          "line": 221,
           "column": 12,
           "symbol": "packagePhaseLabel",
           "defaultMessage": "Completed",
@@ -171488,7 +171632,7 @@
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 215,
+              "line": 221,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -171565,7 +171709,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 220,
+          "line": 226,
           "column": 10,
           "symbol": "packagePhaseLabel",
           "defaultMessage": "Failed",
@@ -171586,7 +171730,7 @@
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 220,
+              "line": 226,
               "column": 10,
               "kind": "formatMessage"
             }
@@ -171888,8 +172032,8 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1814,
-          "column": 32,
+          "line": 1866,
+          "column": 30,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "Phase:",
           "defaultMessageExpression": null
@@ -171909,8 +172053,8 @@
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1814,
-              "column": 32,
+              "line": 1866,
+              "column": 30,
               "kind": "formatMessage"
             }
           ]
@@ -171977,7 +172121,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 498,
+          "line": 504,
           "column": 12,
           "symbol": "processStepMeta",
           "defaultMessage": "Took {duration}",
@@ -171992,7 +172136,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 498,
+              "line": 504,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -172060,7 +172204,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 489,
+          "line": 495,
           "column": 12,
           "symbol": "processStepMeta",
           "defaultMessage": "Running · {duration}",
@@ -172075,7 +172219,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 489,
+              "line": 495,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -172143,7 +172287,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 289,
+          "line": 295,
           "column": 12,
           "symbol": "processStateLabel",
           "defaultMessage": "Completed",
@@ -172158,7 +172302,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 289,
+              "line": 295,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -172226,7 +172370,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 301,
+          "line": 307,
           "column": 12,
           "symbol": "processStateLabel",
           "defaultMessage": "Stopped",
@@ -172241,7 +172385,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 301,
+              "line": 307,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -172309,7 +172453,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 295,
+          "line": 301,
           "column": 12,
           "symbol": "processStateLabel",
           "defaultMessage": "In progress",
@@ -172324,7 +172468,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 295,
+              "line": 301,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -172392,7 +172536,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 306,
+          "line": 312,
           "column": 10,
           "symbol": "processStateLabel",
           "defaultMessage": "Waiting",
@@ -172407,7 +172551,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 306,
+              "line": 312,
               "column": 10,
               "kind": "formatMessage"
             }
@@ -172475,7 +172619,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 520,
+          "line": 526,
           "column": 12,
           "symbol": "lcaProcessStageLabel",
           "defaultMessage": "Build snapshot",
@@ -172490,7 +172634,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 520,
+              "line": 526,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -172558,7 +172702,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 531,
+          "line": 537,
           "column": 10,
           "symbol": "lcaProcessStageLabel",
           "defaultMessage": "Organize result",
@@ -172573,7 +172717,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 531,
+              "line": 537,
               "column": 10,
               "kind": "formatMessage"
             }
@@ -172641,7 +172785,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 526,
+          "line": 532,
           "column": 12,
           "symbol": "lcaProcessStageLabel",
           "defaultMessage": "Solve",
@@ -172656,7 +172800,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 526,
+              "line": 532,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -172724,7 +172868,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 514,
+          "line": 520,
           "column": 12,
           "symbol": "lcaProcessStageLabel",
           "defaultMessage": "Submit task",
@@ -172739,7 +172883,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 514,
+              "line": 520,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -172807,7 +172951,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1243,
+          "line": 1303,
           "column": 16,
           "symbol": "taskProcessDetailContent",
           "defaultMessage": "Execution stages",
@@ -172816,7 +172960,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1254,
+          "line": 1314,
           "column": 14,
           "symbol": "taskProcessDetailContent",
           "defaultMessage": "Execution stages",
@@ -172831,13 +172975,13 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1243,
+              "line": 1303,
               "column": 16,
               "kind": "formatMessage"
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1254,
+              "line": 1314,
               "column": 14,
               "kind": "formatMessage"
             }
@@ -172914,7 +173058,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1469,
+          "line": 1528,
           "column": 12,
           "symbol": "modalTitle",
           "defaultMessage": "Refresh",
@@ -172935,7 +173079,7 @@
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1469,
+              "line": 1528,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -173003,7 +173147,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1435,
+          "line": 1494,
           "column": 11,
           "symbol": "handleRefreshTasks",
           "defaultMessage": "Failed to refresh tasks",
@@ -173018,7 +173162,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1435,
+              "line": 1494,
               "column": 11,
               "kind": "formatMessage"
             }
@@ -173866,7 +174010,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1456,
+          "line": 1515,
           "column": 10,
           "symbol": "modalTitle",
           "defaultMessage": "Task Center",
@@ -173875,7 +174019,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1492,
+          "line": 1551,
           "column": 21,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "Task Center",
@@ -173884,7 +174028,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1496,
+          "line": 1555,
           "column": 16,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "Task Center",
@@ -173899,19 +174043,19 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1456,
+              "line": 1515,
               "column": 10,
               "kind": "formatMessage"
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1492,
+              "line": 1551,
               "column": 21,
               "kind": "formatMessage"
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1496,
+              "line": 1555,
               "column": 16,
               "kind": "formatMessage"
             }
@@ -173979,7 +174123,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 786,
+          "line": 829,
           "column": 12,
           "symbol": "taskTitle",
           "defaultMessage": "LCA calculation",
@@ -173994,7 +174138,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 786,
+              "line": 829,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -174121,7 +174265,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 755,
+          "line": 798,
           "column": 12,
           "symbol": "taskTypeLabel",
           "defaultMessage": "LCA Calculation",
@@ -174136,7 +174280,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 755,
+              "line": 798,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -174204,7 +174348,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1794,
+          "line": 1849,
           "column": 28,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "Updated",
@@ -174219,7 +174363,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1794,
+              "line": 1849,
               "column": 28,
               "kind": "formatMessage"
             }
@@ -174287,7 +174431,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1648,
+          "line": 1707,
           "column": 38,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "View",
@@ -174296,7 +174440,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1654,
+          "line": 1713,
           "column": 45,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "View",
@@ -174305,7 +174449,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1840,
+          "line": 1891,
           "column": 34,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "View",
@@ -174314,7 +174458,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1846,
+          "line": 1897,
           "column": 41,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "View",
@@ -174329,25 +174473,25 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1648,
+              "line": 1707,
               "column": 38,
               "kind": "formatMessage"
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1654,
+              "line": 1713,
               "column": 45,
               "kind": "formatMessage"
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1840,
+              "line": 1891,
               "column": 34,
               "kind": "formatMessage"
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1846,
+              "line": 1897,
               "column": 41,
               "kind": "formatMessage"
             }

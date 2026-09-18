@@ -157,7 +157,11 @@ jest.mock('antd', () => {
     );
   };
 
-  const Progress = ({ percent }: any) => <div role='progressbar'>{percent}%</div>;
+  const Progress = ({ percent, strokeColor }: any) => (
+    <div role='progressbar' data-color={strokeColor}>
+      {percent}%
+    </div>
+  );
   const Space = ({ children, style, ...props }: any) => {
     const domProps = { ...props };
     delete domProps.align;
@@ -203,6 +207,7 @@ jest.mock('antd', () => {
         colorFillSecondary: '#fafafa',
         colorPrimary: '#1677ff',
         colorSuccess: '#52c41a',
+        colorWarning: '#faad14',
         colorTextTertiary: '#595959',
         colorWhite: '#fff',
       },
@@ -277,12 +282,20 @@ describe('LcaTaskCenter', () => {
     ];
     render(<LcaTaskCenter />);
     fireEvent.click(screen.getByRole('button', { name: 'Task Center' }));
-    expect(screen.getByText(label)).toHaveAttribute('data-color', color);
-    expect(screen.queryByRole('progressbar')).not.toBeInTheDocument();
-    expect(screen.queryByRole('button', { name: 'Diagnostics' })).not.toBeInTheDocument();
+    expect(
+      screen.getAllByText(label).find((node) => node.hasAttribute('data-color')),
+    ).toHaveAttribute('data-color', color);
+    expect(screen.getByRole('progressbar')).toHaveAttribute(
+      'data-color',
+      { success: '#52c41a', warning: '#faad14', error: '#ff4d4f', processing: '#1677ff' }[color],
+    );
+    expect(screen.getByRole('button', { name: 'Diagnostics' })).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: 'View' }));
     expect(screen.getByTestId('import-result')).toBeInTheDocument();
-    expect(screen.queryByText('Execution stages')).not.toBeInTheDocument();
+    expect(screen.getByText('Uploaded ZIP package')).toBeInTheDocument();
+    expect(screen.getByText('Data scope')).toBeInTheDocument();
+    expect(screen.getByText('Root records')).toBeInTheDocument();
+    expect(screen.getAllByText('Execution stages').length).toBeGreaterThan(0);
   });
 
   it('does not offer report actions for an import without a job id', () => {
@@ -1025,7 +1038,7 @@ describe('LcaTaskCenter', () => {
     expect(screen.getAllByText('Queued').length).toBeGreaterThan(0);
     expect(screen.getAllByText('Submitting').length).toBeGreaterThan(0);
     expect(screen.getByText('Collecting related data')).toBeInTheDocument();
-    expect(screen.queryByText('Importing data')).not.toBeInTheDocument();
+    expect(screen.getAllByText('Importing data').length).toBeGreaterThan(0);
     expect(screen.getByText('Building ZIP')).toBeInTheDocument();
     expect(screen.getAllByText('Completed').length).toBeGreaterThan(0);
     expect(screen.getAllByText('Failed').length).toBeGreaterThan(0);
@@ -1058,10 +1071,10 @@ describe('LcaTaskCenter', () => {
     expect(screen.getAllByText('File name').length).toBeGreaterThan(0);
     expect(screen.getAllByText('Root records').length).toBeGreaterThan(0);
     expect(screen.getAllByText('Execution stages').length).toBeGreaterThan(0);
-    expect(screen.queryByText('Prepare upload')).not.toBeInTheDocument();
-    expect(screen.queryByText('Validate package')).not.toBeInTheDocument();
-    expect(screen.queryByText('Import data')).not.toBeInTheDocument();
-    expect(screen.queryByText('Build report')).not.toBeInTheDocument();
+    expect(screen.getAllByText('Prepare upload').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('Validate package').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('Import data').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('Build report').length).toBeGreaterThan(0);
     expect(screen.getAllByText('Collect related data').length).toBeGreaterThan(0);
     expect(screen.getAllByText('Build ZIP').length).toBeGreaterThan(0);
     expect(screen.queryByText('import validation failed')).not.toBeInTheDocument();

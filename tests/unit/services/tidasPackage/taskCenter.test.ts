@@ -1995,7 +1995,13 @@ describe('tidasPackage/taskCenter', () => {
             executionComplete: outcome !== 'interrupted',
             reportAvailable: true,
             detailsAvailable: false,
-            summary: { imported_count: 1, not_imported_count: notImported, invalid: -1, text: '2' },
+            summary: {
+              root_count: 2,
+              imported_count: 1,
+              not_imported_count: notImported,
+              invalid: -1,
+              text: '2',
+            },
           }),
         ],
         error: null,
@@ -2006,7 +2012,9 @@ describe('tidasPackage/taskCenter', () => {
         importOutcome: projected,
         importReportAvailable: true,
         importDetailsAvailable: false,
-        importSummary: { imported_count: 1, not_imported_count: notImported },
+        rootCount: 2,
+        filename: 'a.zip',
+        importSummary: { root_count: 2, imported_count: 1, not_imported_count: notImported },
       });
       expect(center.listTidasPackageTasks()[0].importSummary).not.toHaveProperty('invalid');
       expect(mockGetTidasPackageJobApi).not.toHaveBeenCalled();

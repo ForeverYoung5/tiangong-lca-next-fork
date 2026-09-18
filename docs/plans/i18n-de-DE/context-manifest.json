@@ -5,8 +5,8 @@
     "repository": "tiangong-lca/platform",
     "baselineSha": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
     "sourceManifestPath": "docs/plans/i18n-de-DE/manifest.json",
-    "sourceManifestDigest": "507b8f3d7ede3eeced1056f8da1c0ffa5fb8ea85f6aed0a48930a98a70ce5d9c",
-    "auditedInputDigest": "e422fa90f5a90ff1e629816bd2041c3c2ecb6248634634866e6c164ea9fd9bc7"
+    "sourceManifestDigest": "038c72b4350567e878bfea3dbbca381b2fa870a2305a9ead005b5f20aeea5ec6",
+    "auditedInputDigest": "74dab1a07faf91d5be239f56dc4461da7c94ac33413df2c89bef3211a5f65e6a"
   },
   "inventory": {
     "sourceMessageCount": 3382,
@@ -47,7 +47,7 @@
     "messageCount": 3382,
     "completeCount": 3382,
     "blockedCount": 0,
-    "dossierDigest": "b5ba83cc68f101c5285beb7b764fb39f28c90e8910f4ae7540286e6e206decfe",
+    "dossierDigest": "8143c7c291d29e77e1d46dc0432ce89d59d6e27d7a657c92278feb8228a76731",
     "catalogDigest": "a70d5037aedb11d5f09d38ab6bce0e339112ef64858adaf47a8ab39db3bec61d",
     "moduleCount": 32,
     "moduleDigest": "3b4f2df2201d552cc6e09b75bcebf64a30ac3511d401d79c50d4eb6e806195d3",
@@ -55,9 +55,9 @@
       "error-or-validation": 392,
       "explanatory-copy": 123,
       "field-guidance": 59,
-      "label-or-body-copy": 1341,
+      "label-or-body-copy": 1346,
       "navigation-or-tab": 237,
-      "reserved-catalog-copy": 323,
+      "reserved-catalog-copy": 318,
       "status-or-empty-state": 121,
       "success-notification": 189,
       "title-or-heading": 252,
@@ -67,9 +67,9 @@
       "destructive-or-rejecting-action": 48,
       "failure-or-invalid-input": 392,
       "interactive-ready": 564,
-      "retained-not-currently-reachable": 442,
+      "retained-not-currently-reachable": 437,
       "successful-completion": 189,
-      "visible": 1747
+      "visible": 1752
     },
     "riskCounts": { "high": 1542, "low": 1606, "medium": 234 },
     "highRiskMessageCount": 1542,
@@ -88,7 +88,7 @@
   },
   "usageIndex": {
     "source": "docs/plans/i18n-de-DE/manifest.json messages[*].references/moduleOwnership/dynamicFamilies",
-    "literalReferenceCount": 4243,
+    "literalReferenceCount": 4249,
     "dynamicCallsiteCount": 33,
     "glossaryRuleScope": "full target catalog at the automated quality gate",
     "onDemandCommand": "pnpm i18n:context:dossier --locale de-DE --message <MESSAGE_ID>"
@@ -1294,5 +1294,5 @@
     "docs/plans/i18n-de-DE/style-guide.md": "b139bb9cc48a23f9b9f69efc44611daba4684c3495aa5cf4fb0ac57e3ab3994f"
   },
   "blockedContext": [],
-  "contextDigest": "7ad128421a5289d1dbfdf2cac2d3711766204b48b23247cd7870e8a19de5de1e"
+  "contextDigest": "d3714326ec906b9351d042ec9bbaa9e6c10d89287639742c4997590150c67ec3"
 }
