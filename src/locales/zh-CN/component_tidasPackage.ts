@@ -80,7 +80,7 @@ export default {
   'component.tidasPackage.taskCenter.download.error': '下载 TIDAS 数据包失败',
   'component.tidasPackage.import.queued': '导入任务已提交，请在任务中心查看进度和结果。',
   'component.tidasPackage.import.result.success': '所有过程和模型分组已导入',
-  'component.tidasPackage.import.result.partial': '部分导入成功',
+  'component.tidasPackage.import.result.partial': '部分导入',
   'component.tidasPackage.import.result.none': '没有过程或模型分组导入成功',
   'component.tidasPackage.import.result.interrupted': '导入已中断，已提交的数据会保留',
   'component.tidasPackage.import.result.counts': '已新增：{imported}；已存在：{existing}；成功分组：{groups}',

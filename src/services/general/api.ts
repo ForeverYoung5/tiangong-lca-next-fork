@@ -519,7 +519,7 @@ function parseUrlOrNull(value: string) {
   }
 }
 
-function normalizeBrowserAccessiblePackageUrl(signedUrl: string) {
+export function normalizeBrowserAccessiblePackageUrl(signedUrl: string) {
   const configuredSupabaseUrl = process.env.SUPABASE_URL?.trim() || '';
   if (!configuredSupabaseUrl) {
     return signedUrl;

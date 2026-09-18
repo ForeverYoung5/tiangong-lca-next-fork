@@ -171,7 +171,7 @@ jest.mock('antd', () => {
       </div>
     );
   };
-  const Tag = ({ children }: any) => <span>{children}</span>;
+  const Tag = ({ children, color }: any) => <span data-color={color}>{children}</span>;
   const Tabs = ({ activeKey, items = [], onChange }: any) => (
     <div role='tablist'>
       {items.map((item: any) => (
@@ -252,6 +252,55 @@ describe('LcaTaskCenter', () => {
     mockRefreshLcaTasksFromWorkerJobs.mockResolvedValue([]);
     mockRefreshTidasPackageTasksFromWorkerJobs.mockResolvedValue([]);
     mockRefreshDataProductTasks.mockResolvedValue([]);
+  });
+
+  it.each([
+    ['success', 'completed', 'Completed', 'success'],
+    ['partial', 'completed', 'Partially imported', 'warning'],
+    ['none', 'completed', 'Failed', 'error'],
+    ['interrupted', 'completed', 'Failed', 'error'],
+    ['partial', 'failed', 'Failed', 'error'],
+    ['success', 'running', 'Running', 'processing'],
+  ])('uses the correct import result label and color (%s/%s)', (outcome, state, label, color) => {
+    mockPackageTasks = [
+      {
+        id: 'colors',
+        kind: 'tidas_package_import',
+        state,
+        phase: state,
+        importOutcome: outcome,
+        jobId: 'job',
+        rootCount: 0,
+        createdAt: '2026-09-18T00:00:00Z',
+        updatedAt: '2026-09-18T00:01:00Z',
+      },
+    ];
+    render(<LcaTaskCenter />);
+    fireEvent.click(screen.getByRole('button', { name: 'Task Center' }));
+    expect(screen.getByText(label)).toHaveAttribute('data-color', color);
+    expect(screen.queryByRole('progressbar')).not.toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'Diagnostics' })).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'View' }));
+    expect(screen.getByTestId('import-result')).toBeInTheDocument();
+    expect(screen.queryByText('Execution stages')).not.toBeInTheDocument();
+  });
+
+  it('does not offer report actions for an import without a job id', () => {
+    mockPackageTasks = [
+      {
+        id: 'missing-job',
+        kind: 'tidas_package_import',
+        state: 'running',
+        phase: 'queued',
+        rootCount: 0,
+        createdAt: '2026-09-18T00:00:00Z',
+        updatedAt: '2026-09-18T00:01:00Z',
+      },
+    ];
+    render(<LcaTaskCenter />);
+    fireEvent.click(screen.getByRole('button', { name: 'Task Center' }));
+    fireEvent.click(screen.getByRole('button', { name: 'View' }));
+    expect(screen.queryByTestId('import-result')).not.toBeInTheDocument();
   });
 
   it('keeps completed package duration and order fixed after later metadata refreshes', () => {
@@ -976,7 +1025,7 @@ describe('LcaTaskCenter', () => {
     expect(screen.getAllByText('Queued').length).toBeGreaterThan(0);
     expect(screen.getAllByText('Submitting').length).toBeGreaterThan(0);
     expect(screen.getByText('Collecting related data')).toBeInTheDocument();
-    expect(screen.getByText('Importing data')).toBeInTheDocument();
+    expect(screen.queryByText('Importing data')).not.toBeInTheDocument();
     expect(screen.getByText('Building ZIP')).toBeInTheDocument();
     expect(screen.getAllByText('Completed').length).toBeGreaterThan(0);
     expect(screen.getAllByText('Failed').length).toBeGreaterThan(0);
@@ -1009,13 +1058,13 @@ describe('LcaTaskCenter', () => {
     expect(screen.getAllByText('File name').length).toBeGreaterThan(0);
     expect(screen.getAllByText('Root records').length).toBeGreaterThan(0);
     expect(screen.getAllByText('Execution stages').length).toBeGreaterThan(0);
-    expect(screen.getAllByText('Prepare upload').length).toBeGreaterThan(0);
-    expect(screen.getAllByText('Validate package').length).toBeGreaterThan(0);
-    expect(screen.getAllByText('Import data').length).toBeGreaterThan(0);
-    expect(screen.getAllByText('Build report').length).toBeGreaterThan(0);
+    expect(screen.queryByText('Prepare upload')).not.toBeInTheDocument();
+    expect(screen.queryByText('Validate package')).not.toBeInTheDocument();
+    expect(screen.queryByText('Import data')).not.toBeInTheDocument();
+    expect(screen.queryByText('Build report')).not.toBeInTheDocument();
     expect(screen.getAllByText('Collect related data').length).toBeGreaterThan(0);
     expect(screen.getAllByText('Build ZIP').length).toBeGreaterThan(0);
-    expect(screen.getByText('import validation failed')).toBeInTheDocument();
+    expect(screen.queryByText('import validation failed')).not.toBeInTheDocument();
     expect(screen.getByText('package failed')).toBeInTheDocument();
     expect(
       screen.getByText(
