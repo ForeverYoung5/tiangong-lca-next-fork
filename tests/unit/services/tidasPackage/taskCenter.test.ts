@@ -2028,6 +2028,39 @@ describe('tidasPackage/taskCenter', () => {
     },
   );
 
+  it.each([0, 2])(
+    'completes rootless whole-package imports with %s inserted records',
+    async (inserted) => {
+      const center = loadTaskCenterModule();
+      await center.refreshTidasPackageTasksFromWorkerJobs();
+      await enqueueImport(center);
+      mockRequestWorkerJobsApi.mockResolvedValue({
+        data: [
+          importRow({
+            outcome: 'success',
+            executionComplete: true,
+            summary: {
+              total_entries: 2,
+              root_count: 0,
+              imported_count: inserted,
+              existing_count: 2 - inserted,
+              not_imported_count: 0,
+            },
+          }),
+        ],
+        error: null,
+      });
+      await center.refreshTidasPackageTasksFromWorkerJobs();
+      expect(center.listTidasPackageTasks()[0]).toMatchObject({
+        state: 'completed',
+        importOutcome: 'success',
+        rootCount: 0,
+        importSummary: { existing_count: 2 - inserted },
+      });
+      expect(mockGetTidasPackageJobApi).not.toHaveBeenCalled();
+    },
+  );
+
   it('has no import polling or timeout and retains state across list errors and reload', async () => {
     jest.useFakeTimers();
     const center = loadTaskCenterModule();
