@@ -39,9 +39,9 @@ checkPaths:
   - .github/workflows/build.yml
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
-lastReviewedAt: 2026-09-17
-lastReviewedCommit: 4e88077060e4959b5ed04b75d3028a54c48f3041
-lastReviewedNote: 'Reviewed for Platform #1092: empty exchange names arise from pre-registration Form.List snapshots, while blank direction defaults arise from imperative initialization before ProForm readiness; regression proof retains real form lifecycle behavior.'
+lastReviewedAt: 2026-09-18
+lastReviewedCommit: 8fe356541c3ab6bcdc2c62df4fc16a8aeff31d92
+lastReviewedNote: 'Reviewed Platform #1046 whole-package result fixtures: valid rootless and all-existing packages remain completed from list results; partial/failed colors, metadata, four stages and report-on-click remain covered. Existing bootstrap, ownership, test strategy and gate policy are unchanged.'
 ---
 
 # Testing Troubleshooting
