@@ -44,7 +44,7 @@ checkPaths:
   - scripts/i18n/locale-delivery.mjs
   - .github/workflows/**
 lastReviewedAt: 2026-09-20
-lastReviewedCommit: 39ef7fa27ac85f3921cb98115698135909dd716b
+lastReviewedCommit: 46c2b72d7b68926dde4a486cb3e16667289baad4
 lastReviewedNote: 'Reviewed Platform #1097 W10 form-rule deduplication against the installed TIDAS SDK. Required field paths remain SDK-addressable, the two-component Process version is accepted, and Flow-property field prompts remain an evidenced UI projection. Documentation ownership, bootstrap, test strategy, and gate policy are unchanged.'
 related:
   - ../AGENTS.md
