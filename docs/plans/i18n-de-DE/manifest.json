@@ -3,7 +3,7 @@
   "source": {
     "baseRef": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
     "baseCommit": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
-    "auditedInputDigest": "74dab1a07faf91d5be239f56dc4461da7c94ac33413df2c89bef3211a5f65e6a",
+    "auditedInputDigest": "a31ecb7b34a2209af6322c4c0c1f76ea86065593fbdf2d3d3086c62b7164af2f",
     "auditedInputDigestAlgorithm": "sha256(path\\0content\\0)",
     "repository": "tiangong-lca/platform"
   },
@@ -71,11 +71,11 @@
     "localeLeafModuleCounts": { "en-US": 31, "zh-CN": 31, "de-DE": 31, "fr-FR": 31 },
     "localeUniqueKeyCounts": { "en-US": 3382, "zh-CN": 3382, "de-DE": 3382, "fr-FR": 3382 },
     "canonicalCandidateKeyCount": 3382,
-    "activeStaticKeyCount": 2237,
+    "activeStaticKeyCount": 2236,
     "activeDynamicKeyCount": 321,
-    "reservedKeyCount": 824,
+    "reservedKeyCount": 825,
     "productionSourceFileCount": 466,
-    "literalReferenceCount": 4249,
+    "literalReferenceCount": 4248,
     "dynamicCallsiteCount": 33,
     "dynamicCallsiteSummaryCount": 33,
     "registeredDynamicCallsiteCount": 33,
@@ -190783,7 +190783,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 667,
+          "line": 660,
           "column": 17,
           "symbol": "<module>",
           "defaultMessage": "Please input approval of overall compliance",
@@ -190798,7 +190798,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 667,
+              "line": 660,
               "column": 17,
               "kind": "schema-messageKey"
             }
@@ -191145,7 +191145,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 952,
+          "line": 945,
           "column": 15,
           "symbol": "<module>",
           "defaultMessage": "Please input copyright",
@@ -191160,7 +191160,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 952,
+              "line": 945,
               "column": 15,
               "kind": "schema-messageKey"
             }
@@ -191311,7 +191311,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 1068,
+          "line": 1061,
           "column": 17,
           "symbol": "<module>",
           "defaultMessage": "Please input data derivation type/status",
@@ -191326,7 +191326,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 1068,
+              "line": 1061,
               "column": 17,
               "kind": "schema-messageKey"
             }
@@ -191394,7 +191394,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 995,
+          "line": 988,
           "column": 17,
           "symbol": "<module>",
           "defaultMessage": "Please input data set internal ID",
@@ -191409,7 +191409,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 995,
+              "line": 988,
               "column": 17,
               "kind": "schema-messageKey"
             }
@@ -191477,7 +191477,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 869,
+          "line": 862,
           "column": 15,
           "symbol": "<module>",
           "defaultMessage": "Please input data set version",
@@ -191492,7 +191492,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 869,
+              "line": 862,
               "column": 15,
               "kind": "schema-messageKey"
             }
@@ -191560,7 +191560,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 707,
+          "line": 700,
           "column": 17,
           "symbol": "<module>",
           "defaultMessage": "Please input documentation compliance",
@@ -191575,7 +191575,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 707,
+              "line": 700,
               "column": 17,
               "kind": "schema-messageKey"
             }
@@ -191643,7 +191643,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 1026,
+          "line": 1019,
           "column": 17,
           "symbol": "<module>",
           "defaultMessage": "Please input exchange direction",
@@ -191658,7 +191658,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 1026,
+              "line": 1019,
               "column": 17,
               "kind": "schema-messageKey"
             }
@@ -191975,7 +191975,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 764,
+          "line": 757,
           "column": 15,
           "symbol": "<module>",
           "defaultMessage": "Please input intended applications",
@@ -191990,7 +191990,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 764,
+              "line": 757,
               "column": 15,
               "kind": "schema-messageKey"
             }
@@ -192058,7 +192058,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 974,
+          "line": 967,
           "column": 15,
           "symbol": "<module>",
           "defaultMessage": "Please input license type",
@@ -192073,7 +192073,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 974,
+              "line": 967,
               "column": 15,
               "kind": "schema-messageKey"
             }
@@ -192224,7 +192224,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 1037,
+          "line": 1030,
           "column": 17,
           "symbol": "<module>",
           "defaultMessage": "Please input mean amount",
@@ -192233,7 +192233,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 1114,
+          "line": 1107,
           "column": 15,
           "symbol": "<module>",
           "defaultMessage": "Please input mean amount",
@@ -192248,13 +192248,13 @@
           "locations": [
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 1037,
+              "line": 1030,
               "column": 17,
               "kind": "schema-messageKey"
             },
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 1114,
+              "line": 1107,
               "column": 15,
               "kind": "schema-messageKey"
             }
@@ -192405,7 +192405,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 687,
+          "line": 680,
           "column": 17,
           "symbol": "<module>",
           "defaultMessage": "Please input methodological compliance",
@@ -192420,7 +192420,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 687,
+              "line": 680,
               "column": 17,
               "kind": "schema-messageKey"
             }
@@ -192571,7 +192571,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 677,
+          "line": 670,
           "column": 17,
           "symbol": "<module>",
           "defaultMessage": "Please input nomenclature compliance",
@@ -192586,7 +192586,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 677,
+              "line": 670,
               "column": 17,
               "kind": "schema-messageKey"
             }
@@ -192654,7 +192654,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 896,
+          "line": 889,
           "column": 15,
           "symbol": "<module>",
           "defaultMessage": "Please input permanent data set URI",
@@ -192669,7 +192669,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 896,
+              "line": 889,
               "column": 15,
               "kind": "schema-messageKey"
             }
@@ -192737,7 +192737,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 717,
+          "line": 710,
           "column": 17,
           "symbol": "<module>",
           "defaultMessage": "Please input quality compliance",
@@ -192752,7 +192752,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 717,
+              "line": 710,
               "column": 17,
               "kind": "schema-messageKey"
             }
@@ -192903,7 +192903,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 733,
+          "line": 726,
           "column": 17,
           "symbol": "<module>",
           "defaultMessage": "Please input commissioner of data set",
@@ -192918,7 +192918,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 733,
+              "line": 726,
               "column": 17,
               "kind": "schema-messageKey"
             }
@@ -192928,7 +192928,7 @@
     },
     {
       "id": "pages.process.validator.referenceToCompleteReviewReport.required",
-      "category": "active-static",
+      "category": "reserved",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["pages_process"],
@@ -192982,32 +192982,8 @@
           }
         }
       },
-      "references": [
-        {
-          "kind": "schema-messageKey",
-          "path": "src/pages/Processes/processes_schema.json",
-          "line": 625,
-          "column": 19,
-          "symbol": "<module>",
-          "defaultMessage": "Please input complete review report",
-          "defaultMessageExpression": null
-        }
-      ],
-      "defaultMessages": [
-        {
-          "value": "Please input complete review report",
-          "argumentSignature": [],
-          "placeholders": [],
-          "locations": [
-            {
-              "path": "src/pages/Processes/processes_schema.json",
-              "line": 625,
-              "column": 19,
-              "kind": "schema-messageKey"
-            }
-          ]
-        }
-      ]
+      "references": [],
+      "defaultMessages": []
     },
     {
       "id": "pages.process.validator.referenceToComplianceSystem.required",
@@ -193069,7 +193045,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 650,
+          "line": 643,
           "column": 19,
           "symbol": "<module>",
           "defaultMessage": "Please input compliance system name",
@@ -193084,7 +193060,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 650,
+              "line": 643,
               "column": 19,
               "kind": "schema-messageKey"
             }
@@ -193152,7 +193128,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 801,
+          "line": 794,
           "column": 17,
           "symbol": "<module>",
           "defaultMessage": "Please input data set format(s)",
@@ -193167,7 +193143,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 801,
+              "line": 794,
               "column": 17,
               "kind": "schema-messageKey"
             }
@@ -193318,7 +193294,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 1007,
+          "line": 1000,
           "column": 19,
           "symbol": "<module>",
           "defaultMessage": "Please input flow",
@@ -193333,7 +193309,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 1007,
+              "line": 1000,
               "column": 19,
               "kind": "schema-messageKey"
             }
@@ -193484,7 +193460,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 933,
+          "line": 926,
           "column": 17,
           "symbol": "<module>",
           "defaultMessage": "Please input owner of data set",
@@ -193499,7 +193475,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 933,
+              "line": 926,
               "column": 17,
               "kind": "schema-messageKey"
             }
@@ -193567,7 +193543,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 834,
+          "line": 827,
           "column": 17,
           "symbol": "<module>",
           "defaultMessage": "Please select the person or entity entering the data.",
@@ -193582,7 +193558,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 834,
+              "line": 827,
               "column": 17,
               "kind": "schema-messageKey"
             }
@@ -193816,7 +193792,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 1047,
+          "line": 1040,
           "column": 17,
           "symbol": "<module>",
           "defaultMessage": "Please input resulting amount",
@@ -193831,7 +193807,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 1047,
+              "line": 1040,
               "column": 17,
               "kind": "schema-messageKey"
             }
@@ -193899,7 +193875,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 697,
+          "line": 690,
           "column": 17,
           "symbol": "<module>",
           "defaultMessage": "Please input review compliance",
@@ -193914,7 +193890,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 697,
+              "line": 690,
               "column": 17,
               "kind": "schema-messageKey"
             }
@@ -194314,7 +194290,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 790,
+          "line": 783,
           "column": 15,
           "symbol": "<module>",
           "defaultMessage": "Please enter the time stamp.",
@@ -194329,7 +194305,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 790,
+              "line": 783,
               "column": 15,
               "kind": "schema-messageKey"
             }
@@ -277426,7 +277402,7 @@
         {
           "kind": "schema-messageKey",
           "path": "src/pages/Processes/processes_schema.json",
-          "line": 874,
+          "line": 867,
           "column": 15,
           "symbol": "<module>",
           "defaultMessage": "Version format must be XX.XX.XXX, where X is a digit!",
@@ -277489,7 +277465,7 @@
             },
             {
               "path": "src/pages/Processes/processes_schema.json",
-              "line": 874,
+              "line": 867,
               "column": 15,
               "kind": "schema-messageKey"
             },

@@ -43,8 +43,8 @@ checkPaths:
   - scripts/typescript-native-parser.*
   - scripts/i18n/locale-delivery.mjs
   - .github/workflows/**
-lastReviewedAt: 2026-09-18
-lastReviewedCommit: d0f64424af98857967592f4281d8a4ed8c25bf99
+lastReviewedAt: 2026-09-19
+lastReviewedCommit: ec64e2142f67874171bbd5ddb32f8aed581d9824
 lastReviewedNote: 'Reviewed Platform #1046 refinement: imports reconcile from the shared list only; terminal outcomes use green/orange/red, orphan records prevent full success, and reports resolve signed links only on click. Owner isolation, reload recovery and once-only data refresh are tested. Export/LCA behavior, ownership and gate policy remain unchanged; validation evidence is recorded in the task.'
 related:
   - ../AGENTS.md

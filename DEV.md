@@ -42,8 +42,8 @@ checkPaths:
   - .github/workflows/release-readiness.yml
   - .github/workflows/build.yml
   - .nvmrc
-lastReviewedAt: 2026-09-18
-lastReviewedCommit: 8fe356541c3ab6bcdc2c62df4fc16a8aeff31d92
+lastReviewedAt: 2026-09-19
+lastReviewedCommit: ec64e2142f67874171bbd5ddb32f8aed581d9824
 lastReviewedNote: 'Reviewed Platform #1046 whole-package result fixtures: valid rootless and all-existing packages remain completed from list results; partial/failed colors, metadata, four stages and report-on-click remain covered. Existing bootstrap, ownership, test strategy and gate policy are unchanged.'
 ---
 
