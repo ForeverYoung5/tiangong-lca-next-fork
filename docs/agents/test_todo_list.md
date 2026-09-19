@@ -41,7 +41,7 @@ checkPaths:
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
 lastReviewedAt: 2026-09-20
-lastReviewedCommit: 946947e382e67d975a96f27acec727ac419f437c
+lastReviewedCommit: 39ef7fa27ac85f3921cb98115698135909dd716b
 lastReviewedNote: 'Reviewed Platform #1097 W10 form-rule deduplication against the installed TIDAS SDK. Required field paths remain SDK-addressable, the two-component Process version is accepted, and Flow-property field prompts remain an evidenced UI projection. Documentation ownership, bootstrap, test strategy, and gate policy are unchanged.'
 ---
 
