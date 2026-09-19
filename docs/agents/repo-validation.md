@@ -44,7 +44,7 @@ checkPaths:
   - scripts/i18n/locale-delivery.mjs
   - .github/workflows/**
 lastReviewedAt: 2026-09-19
-lastReviewedCommit: ec64e2142f67874171bbd5ddb32f8aed581d9824
+lastReviewedCommit: 814d6c29b70a5d7e4a3da04aed6fe97e9a09dd2d
 lastReviewedNote: 'Reviewed Platform #1046 refinement: imports reconcile from the shared list only; terminal outcomes use green/orange/red, orphan records prevent full success, and reports resolve signed links only on click. Owner isolation, reload recovery and once-only data refresh are tested. Export/LCA behavior, ownership and gate policy remain unchanged; validation evidence is recorded in the task.'
 related:
   - ../AGENTS.md
