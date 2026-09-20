@@ -1411,12 +1411,10 @@ describe('AssignmentReview', () => {
 
     await waitFor(() => expect(screen.getByTestId('row-review-2')).toBeInTheDocument());
     expect(screen.queryByTestId('search-input')).not.toBeInTheDocument();
-    expect(screen.getAllByTestId('review-process-detail')[0]).toHaveTextContent(
+    expect(screen.getByTestId('review-process-detail')).toHaveTextContent(
       'edit:review:review-2:show',
     );
-    expect(screen.getAllByTestId('review-process-detail')[1]).toHaveTextContent(
-      'view:review:review-2:hide',
-    );
+    expect(screen.queryByText('view:review:review-2:hide')).not.toBeInTheDocument();
 
     await userEvent.selectOptions(screen.getByRole('combobox', { name: 'Display mode' }), 'other');
     await waitFor(() =>
@@ -1999,7 +1997,7 @@ describe('AssignmentReview', () => {
     expect(screen.queryByText('edit:review:review-8')).not.toBeInTheDocument();
   });
 
-  it('renders reviewed lifecycle rows with edit and view actions when review buttons are enabled', async () => {
+  it('renders reviewed lifecycle rows with only the review action when review buttons are enabled', async () => {
     const actionRef = { current: { reload: jest.fn() } };
     mockGetReviewsTableDataOfReviewMember.mockResolvedValueOnce({
       success: true,
@@ -2027,9 +2025,10 @@ describe('AssignmentReview', () => {
     );
 
     await waitFor(() => expect(screen.getByTestId('row-review-8b')).toBeInTheDocument());
-    const details = screen.getAllByTestId('review-lifecycle-detail');
-    expect(details[0]).toHaveTextContent('edit:review:review-8b');
-    expect(details[1]).toHaveTextContent('view:review:review-8b');
+    expect(screen.getByTestId('review-lifecycle-detail')).toHaveTextContent(
+      'edit:review:review-8b',
+    );
+    expect(screen.queryByText('view:review:review-8b')).not.toBeInTheDocument();
   });
 
   it('logs reference query failures, shows loading, and supports collapsing root rows', async () => {
