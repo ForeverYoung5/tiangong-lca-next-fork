@@ -44,8 +44,8 @@ checkPaths:
   - pnpm-workspace.yaml
   - Dockerfile.app
 lastReviewedAt: 2026-09-20
-lastReviewedCommit: 46c2b72d7b68926dde4a486cb3e16667289baad4
-lastReviewedNote: 'Reviewed Platform #1097 W10 form-rule deduplication against the installed TIDAS SDK. Required field paths remain SDK-addressable, the two-component Process version is accepted, and Flow-property field prompts remain an evidenced UI projection. Documentation ownership, bootstrap, test strategy, and gate policy are unchanged.'
+lastReviewedCommit: 25bfea81d9507deccf4aa968c213600eea13b927
+lastReviewedNote: 'Reviewed Platform #1107: TIDAS import report presentation, localization and Jest discovery were checked against this contract; its governed scope and rules remain unchanged.'
 ---
 
 # Testing Strategy
