@@ -3,7 +3,7 @@
   "locale": "fr-FR",
   "source": {
     "baselineSha": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
-    "sourceManifestDigest": "f2ea4ddcdfd204b81b2b08cdb5c50dfb89a1fc4cb15e25573cc68a6edc573da0"
+    "sourceManifestDigest": "e17c4a2e4f7a137bb62dfa4a39dc687e197a80cc2aa9f64545ddf5b1bc24d7a7"
   },
   "registry": {
     "canonicalLocale": "fr-FR",
@@ -78,8 +78,8 @@
     "hardcodingAllowlistDigest": "ccf0ec3cf64830f8608ac996bc503237f08628e1acd987eb786cdd24f7394a5a"
   },
   "evidence": {
-    "contextDigest": "bdc1d27c3fa19828b1f5f0c7647d11bde16a705eec0f1a3ce12d62379163299c",
-    "qualityDigest": "20db3f1f14c51ee3c3c16a274b4c19a2bfd209174894e8b39641a54ec4be3e8a",
+    "contextDigest": "334575f4d069347dc0e179e5a2fae136f65b0aa7de233785e15a48d078ef5791",
+    "qualityDigest": "17cc3092fcc62a799b35feebb048aac0c946ff8ae20a57aadf07874a3cbe2e41",
     "correctionLedgerDigest": "fcda3136886694c111258daee7f51b6bf0f29e3333ed7e582d7fcc349f0b4c74",
     "routeViewCoverageDigest": "63a54b313b5fb435b9adeecea0435262840258b8fd7897084b82968194233572",
     "fallbackContractDigest": "94c88648a2bc4fa2b3e3dd2b1db476db5a182e8a5dd9dce2140f6faf2cceabe5",
@@ -125,5 +125,5 @@
       "ownerIssue": "#867"
     }
   ],
-  "activationDigest": "ad2bede6d80d507fb6e8cc8df668755d50c44180906ab17eef6c93d1c140e8ce"
+  "activationDigest": "b1ab56fa405836df69bc0ce621c4c1eb2652524e6d2e536628bf54ef0c638767"
 }

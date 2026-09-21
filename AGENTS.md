@@ -46,8 +46,8 @@ checkPaths:
   - .husky/pre-push
   - .github/workflows/**
 lastReviewedAt: 2026-09-21
-lastReviewedCommit: 25d57284565efb719c471df2bfdceb05dfc65717
-lastReviewedNote: 'Reviewed Platform #1109 after merging current dev: review action and input/output display parity use shared data-page views; the #1107 import-report behavior, repository contracts, validation, and testing policies remain unchanged.'
+lastReviewedCommit: 6aad37543b8bddac1edb85862d7979ce8f540f20
+lastReviewedNote: 'Reviewed Platform #1109 follow-up: shared review-view consolidation and generated locale artifact refresh do not change repository ownership, bootstrap, branch, or delivery rules.'
 related:
   - .docpact/config.yaml
   - docs/agents/repo-validation.md
