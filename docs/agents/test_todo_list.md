@@ -41,7 +41,7 @@ checkPaths:
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
 lastReviewedAt: 2026-09-21
-lastReviewedCommit: df4a2bdc4bfea90aa864748e6af3c145f4762243
+lastReviewedCommit: 6f8be14cd161d54b8cc2f0965ced23f3fd4234a7
 lastReviewedNote: 'Reviewed for Platform #1111: the current dependency qualification advances the installed TIDAS SDK to 0.3.1 and adds ordered Process review-array proof without reopening the coverage queue.'
 ---
 
