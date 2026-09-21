@@ -1,8 +1,8 @@
 version: 1
 layout: repo
 lastReviewedAt: "2026-09-21"
-lastReviewedCommit: "6aad37543b8bddac1edb85862d7979ce8f540f20"
-lastReviewedNote: 'Reviewed Platform #1109 follow-up: shared review views remove one duplicate ProTable and locale-materialized implementation surface; generated locale artifacts were refreshed idempotently, while language, validation, gate, and testing policy remain unchanged.'
+lastReviewedCommit: "df4a2bdc4bfea90aa864748e6af3c145f4762243"
+lastReviewedNote: 'Reviewed for Platform #1111: the exact installed TIDAS SDK advances to 0.3.1 with mapper-independent Process review-array qualification; routing, ownership, coverage, and rule semantics are unchanged.'
 
 # Keep path-level ownership, routing intents, and governed-doc rules here.
 # AGENTS.md keeps the entry-level repo contract and minimal execution summary.
