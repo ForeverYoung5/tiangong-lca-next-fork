@@ -46,8 +46,8 @@ checkPaths:
   - .husky/pre-push
   - .github/workflows/**
 lastReviewedAt: 2026-09-21
-lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
-lastReviewedNote: 'Reviewed for Platform #1115: the released TIDAS SDK 0.4.0 adds mapper-independent Process general-comment requiredness qualification; repository ownership, bootstrap, branch, and delivery rules are unchanged.'
+lastReviewedCommit: 4023bdb2afd335143040957b641241467320ade7
+lastReviewedNote: 'Reviewed for Platform #1107 after integrating Platform #1115: SDK 0.4.0 remains the installed contract; the task-center partial-import result and Tooltip update leave repository ownership, bootstrap, branch, and delivery rules unchanged.'
 related:
   - .docpact/config.yaml
   - docs/agents/repo-validation.md

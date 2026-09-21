@@ -40,8 +40,8 @@ checkPaths:
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
 lastReviewedAt: 2026-09-21
-lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
-lastReviewedNote: 'Reviewed for Platform #1115: the installed SDK recovery path now targets 0.4.0 and includes required Process general-comment qualification; the troubleshooting workflow is otherwise unchanged.'
+lastReviewedCommit: 4023bdb2afd335143040957b641241467320ade7
+lastReviewedNote: 'Reviewed for Platform #1107 after integrating Platform #1115: the installed SDK recovery path remains on 0.4.0, and task-center Tooltip/result-recovery coverage introduces no new troubleshooting workflow.'
 ---
 
 # Testing Troubleshooting
