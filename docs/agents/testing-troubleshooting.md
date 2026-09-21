@@ -39,9 +39,9 @@ checkPaths:
   - .github/workflows/build.yml
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
-lastReviewedAt: 2026-09-20
-lastReviewedCommit: 4c008bb04f8717af6c8ce2e62f61aaca19fc5062
-lastReviewedNote: 'Reviewed review input/output display parity against shared Process and LifeCycleModel data views. Audit transitions, ownership, validation requirements, and testing policy are unchanged.'
+lastReviewedAt: 2026-09-21
+lastReviewedCommit: 25d57284565efb719c471df2bfdceb05dfc65717
+lastReviewedNote: 'Reviewed Platform #1109 after merging current dev: review action and input/output display parity use shared data-page views; the #1107 import-report behavior, repository contracts, validation, and testing policies remain unchanged.'
 ---
 
 # Testing Troubleshooting
@@ -74,6 +74,7 @@ Canonical baseline and proof ownership stays with `DEV.md` and `docs/agents/repo
 | mock not hit | wrong import path or mock order | verify module path and set mocks before importing the subject |
 | SDK-backed Jest suites pass but the installed TIDAS SDK contract fails | Jest's `@tiangong-lca/tidas-sdk/core` mapper hid a package-version, factory, or validation-envelope incompatibility | run `pnpm test:ci tests/unit/config/installedTidasSdkContract.test.ts --runInBand --no-coverage`, inspect the child Node output, and repair the exact installed `0.2.0` graph or real package contract instead of weakening the mapper-independent assertion |
 | Jest 30 fails before or during discovery after a dependency update | a removed matcher alias, `jest.SpyInstance`-only typing, `testPathPattern`, unsupported internal deep import, or custom-sequencer constructor drift escaped the migration contract | run `pnpm test:ci tests/unit/config/packageManagerContract.test.ts tests/unit/scripts/slowJestSequencer.test.ts --runInBand --no-coverage`, preserve the explicit inventory and public package entrypoints, and fix the first exact migration finding instead of narrowing discovery |
+| Jest exits successfully with zero suites on macOS while stderr reports Watchman `dyld` or `SIGABRT` | the local Watchman binary depends on a removed Homebrew ICU library, so file discovery silently returns an empty result | inspect the Jest log and structured suite count; use `--no-watchman` for focused runs. The full pre-push receipt and coverage commands include `--no-watchman` so they still run the complete Jest inventory through Node filesystem discovery; never count zero suites as a passing gate |
 | a slow or instrumented run briefly renders loaded data and then replaces it with an empty response | mount initialization and an immediate user action called the same async loader before React committed its loading state | guard the request with a ref-backed in-flight owner rather than a render-state closure, then add a deferred-response test that fires the action before resolving the first request and requires one service call |
 | TypeScript 7 source-analysis output is stale, traversal is incomplete, or a script hangs after parsing | a consumer bypassed the repository adapter, the adapter did not replace/dispose its virtual source, or a TypeScript upgrade changed the pinned unstable API | run `pnpm test:ci tests/unit/scripts/typescriptNativeParser.test.ts --runInBand --no-coverage` plus the affected i18n/source-analysis suite; keep `typescript/unstable/*` imports only in `scripts/typescript-native-parser.mjs` and its declaration, and never add TS6 as a fallback |
 | `pnpm lint` reports an unused or deprecated API that Prettier did not remove | Oxlint now owns correctness while Prettier formats only and no longer organizes imports | run `pnpm lint:js` to isolate the finding, remove or replace the unused/deprecated code explicitly, then run `pnpm lint:prettier`; do not restore ESLint, the standalone deprecated scanner, or the organize-imports plugin |

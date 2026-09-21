@@ -43,9 +43,9 @@ checkPaths:
   - scripts/typescript-native-parser.*
   - scripts/i18n/locale-delivery.mjs
   - .github/workflows/**
-lastReviewedAt: 2026-09-20
-lastReviewedCommit: 4c008bb04f8717af6c8ce2e62f61aaca19fc5062
-lastReviewedNote: 'Reviewed review input/output display parity against shared Process and LifeCycleModel data views. Audit transitions, ownership, validation requirements, and testing policy are unchanged.'
+lastReviewedAt: 2026-09-21
+lastReviewedCommit: 25d57284565efb719c471df2bfdceb05dfc65717
+lastReviewedNote: 'Reviewed Platform #1109 after merging current dev: review action and input/output display parity use shared data-page views; the #1107 import-report behavior, repository contracts, validation, and testing policies remain unchanged.'
 related:
   - ../AGENTS.md
   - ../.docpact/config.yaml

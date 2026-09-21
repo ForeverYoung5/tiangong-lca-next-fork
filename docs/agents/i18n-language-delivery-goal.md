@@ -56,9 +56,9 @@ checkPaths:
   - .github/workflows/i18n-semantic-e2e.yml
   - .github/workflows/build.yml
   - package.json
-lastReviewedAt: 2026-09-13
-lastReviewedCommit: ac09fc5113b742bcb507a68d532119cc83ea50f4
-lastReviewedNote: 'Next #1050: reviewed the example-data menu, seven reused dataset pages, fixed example version scope and 58-route localization contract; existing delivery and validation gates remain required.'
+lastReviewedAt: 2026-09-20
+lastReviewedCommit: 25bfea81d9507deccf4aa968c213600eea13b927
+lastReviewedNote: 'Reviewed Platform #1107: TIDAS import report presentation, localization and Jest discovery were checked against this contract; its governed scope and rules remain unchanged.'
 baselineObservedAt: 2026-07-18
 related:
   - ../../AGENTS.md
