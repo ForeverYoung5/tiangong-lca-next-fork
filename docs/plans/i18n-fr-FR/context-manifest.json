@@ -5,12 +5,12 @@
     "repository": "tiangong-lca/platform",
     "baselineSha": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
     "sourceManifestPath": "docs/plans/i18n-de-DE/manifest.json",
-    "sourceManifestDigest": "e17c4a2e4f7a137bb62dfa4a39dc687e197a80cc2aa9f64545ddf5b1bc24d7a7",
-    "auditedInputDigest": "75d87a806ece296fc6c3f5147ef0f3a60da683bfb6e2a5717236a49912db11e0"
+    "sourceManifestDigest": "b2e1916896959d135edee581e2766c9f708c37860b7cce47926766a2b881ca90",
+    "auditedInputDigest": "a60cbdb3b527d28f41991fb7fdb7e595402d984cb59deb57c27b8efdbabe34ad"
   },
   "inventory": {
-    "sourceMessageCount": 3382,
-    "localeMessageCount": 3382,
+    "sourceMessageCount": 3390,
+    "localeMessageCount": 3390,
     "leafModuleCount": 31,
     "dynamicFamilyCount": 16,
     "dynamicCallsiteCount": 33,
@@ -44,22 +44,22 @@
       "preserved tokens and layout/RTL/dark risks",
       "candidate/rationale/risk/validation"
     ],
-    "messageCount": 3382,
-    "completeCount": 3382,
+    "messageCount": 3390,
+    "completeCount": 3390,
     "blockedCount": 0,
-    "dossierDigest": "e76e0f1f1fbee52c85ec45d904d358dd180aa435bea94059644c3c5f99e7bf8c",
-    "catalogDigest": "1879cad38f57331c997776e1d8f73595168959a3609d7df895c289bb0408684c",
+    "dossierDigest": "0f0837bdc303d10b441338d827d051bca1afbc59e116b6d73e8d3e3c1c324323",
+    "catalogDigest": "23b429e0b88aeb8ec43bf39c2cc58e0aa09a2b008fec758e489b561ed493d61e",
     "moduleCount": 32,
     "moduleDigest": "3b4f2df2201d552cc6e09b75bcebf64a30ac3511d401d79c50d4eb6e806195d3",
     "roleCounts": {
       "error-or-validation": 392,
       "explanatory-copy": 123,
-      "field-guidance": 59,
-      "label-or-body-copy": 1345,
+      "field-guidance": 60,
+      "label-or-body-copy": 1351,
       "navigation-or-tab": 237,
       "reserved-catalog-copy": 319,
       "status-or-empty-state": 121,
-      "success-notification": 189,
+      "success-notification": 190,
       "title-or-heading": 252,
       "user-action": 345
     },
@@ -68,12 +68,12 @@
       "failure-or-invalid-input": 392,
       "interactive-ready": 564,
       "retained-not-currently-reachable": 438,
-      "successful-completion": 189,
-      "visible": 1751
+      "successful-completion": 190,
+      "visible": 1758
     },
-    "riskCounts": { "high": 1542, "low": 1608, "medium": 232 },
-    "highRiskMessageCount": 1542,
-    "highRiskMessageDigest": "8669fae5e4483478aa1f05a46264351ae806bfcb1266d5cdc3fd847a364cd778"
+    "riskCounts": { "high": 1545, "low": 1612, "medium": 233 },
+    "highRiskMessageCount": 1545,
+    "highRiskMessageDigest": "0e17a7f04a68ac2b6c64f14de5db4dc8ce2449464f291afc5f0f40dfec166a95"
   },
   "typedContentDossiers": {
     "sourcePath": "src/components/ImportTidasPackage/reportContent.ts",
@@ -94,7 +94,7 @@
   },
   "usageIndex": {
     "source": "docs/plans/i18n-de-DE/manifest.json messages[*].references/moduleOwnership/dynamicFamilies",
-    "literalReferenceCount": 4163,
+    "literalReferenceCount": 4171,
     "dynamicCallsiteCount": 33,
     "glossaryRuleScope": "full target catalog at the automated quality gate",
     "onDemandCommand": "pnpm i18n:context:dossier --locale fr-FR --message <MESSAGE_ID>"
@@ -1300,5 +1300,5 @@
     "docs/plans/i18n-fr-FR/style-guide.md": "3b651e352a50676ed7f6609dcad88145dbd6a9ad81177ad261526b59d7bf4db4"
   },
   "blockedContext": [],
-  "contextDigest": "7f4aef7e5c070257fd566a7437795a0d8f0c7c6cb333ee8f5632345ccad700c8"
+  "contextDigest": "f65bd2aafef9119105dd91dfc73de2c86a60c06919760ef7785ecff45bcafbd8"
 }

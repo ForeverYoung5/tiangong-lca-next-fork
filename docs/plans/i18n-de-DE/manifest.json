@@ -3,7 +3,7 @@
   "source": {
     "baseRef": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
     "baseCommit": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
-    "auditedInputDigest": "75d87a806ece296fc6c3f5147ef0f3a60da683bfb6e2a5717236a49912db11e0",
+    "auditedInputDigest": "a60cbdb3b527d28f41991fb7fdb7e595402d984cb59deb57c27b8efdbabe34ad",
     "auditedInputDigestAlgorithm": "sha256(path\\0content\\0)",
     "repository": "tiangong-lca/platform"
   },
@@ -69,13 +69,13 @@
   "summary": {
     "localeCount": 4,
     "localeLeafModuleCounts": { "en-US": 31, "zh-CN": 31, "de-DE": 31, "fr-FR": 31 },
-    "localeUniqueKeyCounts": { "en-US": 3382, "zh-CN": 3382, "de-DE": 3382, "fr-FR": 3382 },
-    "canonicalCandidateKeyCount": 3382,
-    "activeStaticKeyCount": 2233,
+    "localeUniqueKeyCounts": { "en-US": 3390, "zh-CN": 3390, "de-DE": 3390, "fr-FR": 3390 },
+    "canonicalCandidateKeyCount": 3390,
+    "activeStaticKeyCount": 2241,
     "activeDynamicKeyCount": 321,
     "reservedKeyCount": 828,
     "productionSourceFileCount": 466,
-    "literalReferenceCount": 4163,
+    "literalReferenceCount": 4171,
     "dynamicCallsiteCount": 33,
     "dynamicCallsiteSummaryCount": 33,
     "registeredDynamicCallsiteCount": 33,
@@ -19371,7 +19371,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 81,
+            "line": 89,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19382,7 +19382,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 81,
+            "line": 89,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19393,7 +19393,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 81,
+            "line": 89,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19404,7 +19404,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 81,
+            "line": 89,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19631,7 +19631,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 93,
+            "line": 101,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19642,7 +19642,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 93,
+            "line": 101,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19653,7 +19653,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 93,
+            "line": 101,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19664,7 +19664,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 93,
+            "line": 101,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19694,7 +19694,7 @@
           "placeholders": ["existing", "groups", "imported"],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 86,
+            "line": 94,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19709,7 +19709,7 @@
           "placeholders": ["existing", "groups", "imported"],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 86,
+            "line": 94,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19724,7 +19724,7 @@
           "placeholders": ["existing", "groups", "imported"],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 86,
+            "line": 94,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19739,7 +19739,7 @@
           "placeholders": ["existing", "groups", "imported"],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 86,
+            "line": 94,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19765,7 +19765,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 91,
+            "line": 99,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19776,7 +19776,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 91,
+            "line": 99,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19787,7 +19787,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 91,
+            "line": 99,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19798,7 +19798,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 91,
+            "line": 99,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19824,7 +19824,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 85,
+            "line": 93,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19835,7 +19835,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 85,
+            "line": 93,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19846,7 +19846,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 85,
+            "line": 93,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19857,7 +19857,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 85,
+            "line": 93,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19883,7 +19883,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 84,
+            "line": 92,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19894,7 +19894,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 84,
+            "line": 92,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19905,7 +19905,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 84,
+            "line": 92,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19916,7 +19916,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 84,
+            "line": 92,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19942,7 +19942,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 95,
+            "line": 103,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19953,7 +19953,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 95,
+            "line": 103,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19964,7 +19964,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 95,
+            "line": 103,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -19975,7 +19975,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 95,
+            "line": 103,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20001,7 +20001,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 83,
+            "line": 91,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20012,7 +20012,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 83,
+            "line": 91,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20023,7 +20023,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 83,
+            "line": 91,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20034,7 +20034,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 83,
+            "line": 91,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20084,7 +20084,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 87,
+            "line": 95,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20095,7 +20095,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 87,
+            "line": 95,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20106,7 +20106,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 87,
+            "line": 95,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20117,7 +20117,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 87,
+            "line": 95,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20143,7 +20143,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 90,
+            "line": 98,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20154,7 +20154,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 90,
+            "line": 98,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20165,7 +20165,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 90,
+            "line": 98,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20176,7 +20176,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 90,
+            "line": 98,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20202,7 +20202,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 92,
+            "line": 100,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20213,7 +20213,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 92,
+            "line": 100,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20224,7 +20224,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 92,
+            "line": 100,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20235,7 +20235,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 92,
+            "line": 100,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20285,7 +20285,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 89,
+            "line": 97,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20296,7 +20296,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 89,
+            "line": 97,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20307,7 +20307,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 89,
+            "line": 97,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20318,7 +20318,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 89,
+            "line": 97,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20344,7 +20344,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 82,
+            "line": 90,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20355,7 +20355,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 82,
+            "line": 90,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20366,7 +20366,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 82,
+            "line": 90,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20377,7 +20377,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 82,
+            "line": 90,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20403,7 +20403,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 88,
+            "line": 96,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20414,7 +20414,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 88,
+            "line": 96,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20425,7 +20425,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 88,
+            "line": 96,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20436,7 +20436,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 88,
+            "line": 96,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20486,7 +20486,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 94,
+            "line": 102,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20497,7 +20497,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 94,
+            "line": 102,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20508,7 +20508,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 94,
+            "line": 102,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -20519,7 +20519,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 94,
+            "line": 102,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -21796,6 +21796,172 @@
       ]
     },
     {
+      "id": "component.tidasPackage.taskCenter.detail.blockedRootCount",
+      "category": "active-static",
+      "dynamicFamilies": [],
+      "moduleOwnership": {
+        "en-US": ["component_tidasPackage"],
+        "zh-CN": ["component_tidasPackage"],
+        "de-DE": ["component_tidasPackage"],
+        "fr-FR": ["component_tidasPackage"]
+      },
+      "translations": {
+        "en-US": {
+          "value": "Blocked root groups",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/en-US/component_tidasPackage.ts",
+            "line": 73,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        },
+        "zh-CN": {
+          "value": "阻断根分组",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/zh-CN/component_tidasPackage.ts",
+            "line": 73,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        },
+        "de-DE": {
+          "value": "Blockierte Startgruppen",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/de-DE/component_tidasPackage.ts",
+            "line": 73,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        },
+        "fr-FR": {
+          "value": "Groupes racines bloqués",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/fr-FR/component_tidasPackage.ts",
+            "line": 73,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        }
+      },
+      "references": [
+        {
+          "kind": "formatMessage",
+          "path": "src/components/LcaTaskCenter/index.tsx",
+          "line": 1297,
+          "column": 24,
+          "symbol": "packageBusinessDetail",
+          "defaultMessage": "Blocked root groups",
+          "defaultMessageExpression": null
+        }
+      ],
+      "defaultMessages": [
+        {
+          "value": "Blocked root groups",
+          "argumentSignature": [],
+          "placeholders": [],
+          "locations": [
+            {
+              "path": "src/components/LcaTaskCenter/index.tsx",
+              "line": 1297,
+              "column": 24,
+              "kind": "formatMessage"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "component.tidasPackage.taskCenter.detail.existingCount",
+      "category": "active-static",
+      "dynamicFamilies": [],
+      "moduleOwnership": {
+        "en-US": ["component_tidasPackage"],
+        "zh-CN": ["component_tidasPackage"],
+        "de-DE": ["component_tidasPackage"],
+        "fr-FR": ["component_tidasPackage"]
+      },
+      "translations": {
+        "en-US": {
+          "value": "Already present and skipped",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/en-US/component_tidasPackage.ts",
+            "line": 70,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        },
+        "zh-CN": {
+          "value": "已存在并跳过",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/zh-CN/component_tidasPackage.ts",
+            "line": 70,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        },
+        "de-DE": {
+          "value": "Bereits vorhanden und übersprungen",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/de-DE/component_tidasPackage.ts",
+            "line": 70,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        },
+        "fr-FR": {
+          "value": "Déjà présents et ignorés",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/fr-FR/component_tidasPackage.ts",
+            "line": 70,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        }
+      },
+      "references": [
+        {
+          "kind": "formatMessage",
+          "path": "src/components/LcaTaskCenter/index.tsx",
+          "line": 1276,
+          "column": 24,
+          "symbol": "packageBusinessDetail",
+          "defaultMessage": "Already present and skipped",
+          "defaultMessageExpression": null
+        }
+      ],
+      "defaultMessages": [
+        {
+          "value": "Already present and skipped",
+          "argumentSignature": [],
+          "placeholders": [],
+          "locations": [
+            {
+              "path": "src/components/LcaTaskCenter/index.tsx",
+              "line": 1276,
+              "column": 24,
+              "kind": "formatMessage"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "component.tidasPackage.taskCenter.detail.exportKind",
       "category": "reserved",
       "dynamicFamilies": [],
@@ -21871,7 +22037,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 68,
+            "line": 76,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -21882,7 +22048,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 68,
+            "line": 76,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -21893,7 +22059,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 68,
+            "line": 76,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -21904,7 +22070,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 68,
+            "line": 76,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -22155,7 +22321,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 67,
+            "line": 75,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -22166,7 +22332,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 67,
+            "line": 75,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -22177,7 +22343,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 67,
+            "line": 75,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -22188,7 +22354,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 67,
+            "line": 75,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -22196,6 +22362,172 @@
       },
       "references": [],
       "defaultMessages": []
+    },
+    {
+      "id": "component.tidasPackage.taskCenter.detail.importResult",
+      "category": "active-static",
+      "dynamicFamilies": [],
+      "moduleOwnership": {
+        "en-US": ["component_tidasPackage"],
+        "zh-CN": ["component_tidasPackage"],
+        "de-DE": ["component_tidasPackage"],
+        "fr-FR": ["component_tidasPackage"]
+      },
+      "translations": {
+        "en-US": {
+          "value": "Import result",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/en-US/component_tidasPackage.ts",
+            "line": 67,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        },
+        "zh-CN": {
+          "value": "导入结果",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/zh-CN/component_tidasPackage.ts",
+            "line": 67,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        },
+        "de-DE": {
+          "value": "Importergebnis",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/de-DE/component_tidasPackage.ts",
+            "line": 67,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        },
+        "fr-FR": {
+          "value": "Résultat de l’importation",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/fr-FR/component_tidasPackage.ts",
+            "line": 67,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        }
+      },
+      "references": [
+        {
+          "kind": "formatMessage",
+          "path": "src/components/LcaTaskCenter/index.tsx",
+          "line": 1254,
+          "column": 18,
+          "symbol": "packageBusinessDetail",
+          "defaultMessage": "Import result",
+          "defaultMessageExpression": null
+        }
+      ],
+      "defaultMessages": [
+        {
+          "value": "Import result",
+          "argumentSignature": [],
+          "placeholders": [],
+          "locations": [
+            {
+              "path": "src/components/LcaTaskCenter/index.tsx",
+              "line": 1254,
+              "column": 18,
+              "kind": "formatMessage"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "component.tidasPackage.taskCenter.detail.importedCount",
+      "category": "active-static",
+      "dynamicFamilies": [],
+      "moduleOwnership": {
+        "en-US": ["component_tidasPackage"],
+        "zh-CN": ["component_tidasPackage"],
+        "de-DE": ["component_tidasPackage"],
+        "fr-FR": ["component_tidasPackage"]
+      },
+      "translations": {
+        "en-US": {
+          "value": "Newly imported",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/en-US/component_tidasPackage.ts",
+            "line": 69,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        },
+        "zh-CN": {
+          "value": "新增",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/zh-CN/component_tidasPackage.ts",
+            "line": 69,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        },
+        "de-DE": {
+          "value": "Neu importiert",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/de-DE/component_tidasPackage.ts",
+            "line": 69,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        },
+        "fr-FR": {
+          "value": "Nouvellement importés",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/fr-FR/component_tidasPackage.ts",
+            "line": 69,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        }
+      },
+      "references": [
+        {
+          "kind": "formatMessage",
+          "path": "src/components/LcaTaskCenter/index.tsx",
+          "line": 1269,
+          "column": 24,
+          "symbol": "packageBusinessDetail",
+          "defaultMessage": "Newly imported",
+          "defaultMessageExpression": null
+        }
+      ],
+      "defaultMessages": [
+        {
+          "value": "Newly imported",
+          "argumentSignature": [],
+          "placeholders": [],
+          "locations": [
+            {
+              "path": "src/components/LcaTaskCenter/index.tsx",
+              "line": 1269,
+              "column": 24,
+              "kind": "formatMessage"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "component.tidasPackage.taskCenter.detail.jobId",
@@ -22274,6 +22606,172 @@
               "path": "src/components/LcaTaskCenter/index.tsx",
               "line": 1098,
               "column": 18,
+              "kind": "formatMessage"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "component.tidasPackage.taskCenter.detail.notImportedCount",
+      "category": "active-static",
+      "dynamicFamilies": [],
+      "moduleOwnership": {
+        "en-US": ["component_tidasPackage"],
+        "zh-CN": ["component_tidasPackage"],
+        "de-DE": ["component_tidasPackage"],
+        "fr-FR": ["component_tidasPackage"]
+      },
+      "translations": {
+        "en-US": {
+          "value": "Not imported",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/en-US/component_tidasPackage.ts",
+            "line": 71,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        },
+        "zh-CN": {
+          "value": "未导入",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/zh-CN/component_tidasPackage.ts",
+            "line": 71,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        },
+        "de-DE": {
+          "value": "Nicht importiert",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/de-DE/component_tidasPackage.ts",
+            "line": 71,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        },
+        "fr-FR": {
+          "value": "Non importés",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/fr-FR/component_tidasPackage.ts",
+            "line": 71,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        }
+      },
+      "references": [
+        {
+          "kind": "formatMessage",
+          "path": "src/components/LcaTaskCenter/index.tsx",
+          "line": 1283,
+          "column": 24,
+          "symbol": "packageBusinessDetail",
+          "defaultMessage": "Not imported",
+          "defaultMessageExpression": null
+        }
+      ],
+      "defaultMessages": [
+        {
+          "value": "Not imported",
+          "argumentSignature": [],
+          "placeholders": [],
+          "locations": [
+            {
+              "path": "src/components/LcaTaskCenter/index.tsx",
+              "line": 1283,
+              "column": 24,
+              "kind": "formatMessage"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "component.tidasPackage.taskCenter.detail.partialHint",
+      "category": "active-static",
+      "dynamicFamilies": [],
+      "moduleOwnership": {
+        "en-US": ["component_tidasPackage"],
+        "zh-CN": ["component_tidasPackage"],
+        "de-DE": ["component_tidasPackage"],
+        "fr-FR": ["component_tidasPackage"]
+      },
+      "translations": {
+        "en-US": {
+          "value": "Some data was not imported. Download the report to view blocked root groups and validation issues.",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/en-US/component_tidasPackage.ts",
+            "line": 74,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        },
+        "zh-CN": {
+          "value": "部分数据未导入，请下载报告查看被阻断的根分组和校验问题。",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/zh-CN/component_tidasPackage.ts",
+            "line": 74,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        },
+        "de-DE": {
+          "value": "Einige Daten wurden nicht importiert. Laden Sie den Bericht herunter, um blockierte Startgruppen und Validierungsprobleme anzuzeigen.",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/de-DE/component_tidasPackage.ts",
+            "line": 74,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        },
+        "fr-FR": {
+          "value": "Certaines données n’ont pas été importées. Téléchargez le rapport pour consulter les groupes racines bloqués et les problèmes de validation.",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/fr-FR/component_tidasPackage.ts",
+            "line": 74,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        }
+      },
+      "references": [
+        {
+          "kind": "formatMessage",
+          "path": "src/components/LcaTaskCenter/index.tsx",
+          "line": 1309,
+          "column": 22,
+          "symbol": "packageBusinessDetail",
+          "defaultMessage": "Some data was not imported. Download the report to view blocked root groups and validation issues.",
+          "defaultMessageExpression": null
+        }
+      ],
+      "defaultMessages": [
+        {
+          "value": "Some data was not imported. Download the report to view blocked root groups and validation issues.",
+          "argumentSignature": [],
+          "placeholders": [],
+          "locations": [
+            {
+              "path": "src/components/LcaTaskCenter/index.tsx",
+              "line": 1309,
+              "column": 22,
               "kind": "formatMessage"
             }
           ]
@@ -22423,7 +22921,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1254,
+          "line": 1320,
           "column": 18,
           "symbol": "packageBusinessDetail",
           "defaultMessage": "Root data",
@@ -22438,7 +22936,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1254,
+              "line": 1320,
               "column": 18,
               "kind": "formatMessage"
             }
@@ -22530,6 +23028,172 @@
       ]
     },
     {
+      "id": "component.tidasPackage.taskCenter.detail.successfulRootCount",
+      "category": "active-static",
+      "dynamicFamilies": [],
+      "moduleOwnership": {
+        "en-US": ["component_tidasPackage"],
+        "zh-CN": ["component_tidasPackage"],
+        "de-DE": ["component_tidasPackage"],
+        "fr-FR": ["component_tidasPackage"]
+      },
+      "translations": {
+        "en-US": {
+          "value": "Successful root groups",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/en-US/component_tidasPackage.ts",
+            "line": 72,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        },
+        "zh-CN": {
+          "value": "成功根分组",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/zh-CN/component_tidasPackage.ts",
+            "line": 72,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        },
+        "de-DE": {
+          "value": "Erfolgreiche Startgruppen",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/de-DE/component_tidasPackage.ts",
+            "line": 72,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        },
+        "fr-FR": {
+          "value": "Groupes racines réussis",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/fr-FR/component_tidasPackage.ts",
+            "line": 72,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        }
+      },
+      "references": [
+        {
+          "kind": "formatMessage",
+          "path": "src/components/LcaTaskCenter/index.tsx",
+          "line": 1290,
+          "column": 24,
+          "symbol": "packageBusinessDetail",
+          "defaultMessage": "Successful root groups",
+          "defaultMessageExpression": null
+        }
+      ],
+      "defaultMessages": [
+        {
+          "value": "Successful root groups",
+          "argumentSignature": [],
+          "placeholders": [],
+          "locations": [
+            {
+              "path": "src/components/LcaTaskCenter/index.tsx",
+              "line": 1290,
+              "column": 24,
+              "kind": "formatMessage"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "component.tidasPackage.taskCenter.detail.totalEntries",
+      "category": "active-static",
+      "dynamicFamilies": [],
+      "moduleOwnership": {
+        "en-US": ["component_tidasPackage"],
+        "zh-CN": ["component_tidasPackage"],
+        "de-DE": ["component_tidasPackage"],
+        "fr-FR": ["component_tidasPackage"]
+      },
+      "translations": {
+        "en-US": {
+          "value": "Total records",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/en-US/component_tidasPackage.ts",
+            "line": 68,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        },
+        "zh-CN": {
+          "value": "本次结果总记录",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/zh-CN/component_tidasPackage.ts",
+            "line": 68,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        },
+        "de-DE": {
+          "value": "Datensätze insgesamt",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/de-DE/component_tidasPackage.ts",
+            "line": 68,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        },
+        "fr-FR": {
+          "value": "Nombre total d’enregistrements",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/fr-FR/component_tidasPackage.ts",
+            "line": 68,
+            "column": 3,
+            "module": "component_tidasPackage"
+          }
+        }
+      },
+      "references": [
+        {
+          "kind": "formatMessage",
+          "path": "src/components/LcaTaskCenter/index.tsx",
+          "line": 1262,
+          "column": 24,
+          "symbol": "packageBusinessDetail",
+          "defaultMessage": "Total records",
+          "defaultMessageExpression": null
+        }
+      ],
+      "defaultMessages": [
+        {
+          "value": "Total records",
+          "argumentSignature": [],
+          "placeholders": [],
+          "locations": [
+            {
+              "path": "src/components/LcaTaskCenter/index.tsx",
+              "line": 1262,
+              "column": 24,
+              "kind": "formatMessage"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "component.tidasPackage.taskCenter.download",
       "category": "active-static",
       "dynamicFamilies": [],
@@ -22546,7 +23210,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 78,
+            "line": 86,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -22557,7 +23221,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 78,
+            "line": 86,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -22568,7 +23232,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 78,
+            "line": 86,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -22579,7 +23243,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 78,
+            "line": 86,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -22589,7 +23253,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1919,
+          "line": 1985,
           "column": 38,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "Download",
@@ -22598,7 +23262,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1925,
+          "line": 1991,
           "column": 45,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "Download",
@@ -22613,13 +23277,13 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1919,
+              "line": 1985,
               "column": 38,
               "kind": "formatMessage"
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1925,
+              "line": 1991,
               "column": 45,
               "kind": "formatMessage"
             }
@@ -22644,7 +23308,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 80,
+            "line": 88,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -22655,7 +23319,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 80,
+            "line": 88,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -22666,7 +23330,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 80,
+            "line": 88,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -22677,7 +23341,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 80,
+            "line": 88,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -22687,7 +23351,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1470,
+          "line": 1536,
           "column": 11,
           "symbol": "handleDownload",
           "defaultMessage": "Failed to download TIDAS package",
@@ -22702,7 +23366,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1470,
+              "line": 1536,
               "column": 11,
               "kind": "formatMessage"
             }
@@ -22727,7 +23391,7 @@
           "placeholders": ["filename"],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 79,
+            "line": 87,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -22738,7 +23402,7 @@
           "placeholders": ["filename"],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 79,
+            "line": 87,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -22749,7 +23413,7 @@
           "placeholders": ["filename"],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 79,
+            "line": 87,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -22760,7 +23424,7 @@
           "placeholders": ["filename"],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 79,
+            "line": 87,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -22770,7 +23434,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1459,
+          "line": 1525,
           "column": 9,
           "symbol": "handleDownload",
           "defaultMessage": "Downloaded {filename}",
@@ -22785,7 +23449,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1459,
+              "line": 1525,
               "column": 9,
               "kind": "formatMessage"
             }
@@ -23450,7 +24114,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 76,
+            "line": 84,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23461,7 +24125,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 76,
+            "line": 84,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23472,7 +24136,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 76,
+            "line": 84,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23483,7 +24147,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 76,
+            "line": 84,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23533,7 +24197,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 75,
+            "line": 83,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23544,7 +24208,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 75,
+            "line": 83,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23555,7 +24219,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 75,
+            "line": 83,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23566,7 +24230,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 75,
+            "line": 83,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23616,7 +24280,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 74,
+            "line": 82,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23627,7 +24291,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 74,
+            "line": 82,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23638,7 +24302,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 74,
+            "line": 82,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23649,7 +24313,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 74,
+            "line": 82,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23699,7 +24363,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 77,
+            "line": 85,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23710,7 +24374,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 77,
+            "line": 85,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23721,7 +24385,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 77,
+            "line": 85,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23732,7 +24396,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 77,
+            "line": 85,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23782,7 +24446,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 73,
+            "line": 81,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23793,7 +24457,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 73,
+            "line": 81,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23804,7 +24468,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 73,
+            "line": 81,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23815,7 +24479,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 73,
+            "line": 81,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23865,7 +24529,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 72,
+            "line": 80,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23876,7 +24540,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 72,
+            "line": 80,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23887,7 +24551,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 72,
+            "line": 80,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23898,7 +24562,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 72,
+            "line": 80,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23948,7 +24612,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 71,
+            "line": 79,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23959,7 +24623,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 71,
+            "line": 79,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23970,7 +24634,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 71,
+            "line": 79,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -23981,7 +24645,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 71,
+            "line": 79,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -24031,7 +24695,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 69,
+            "line": 77,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -24042,7 +24706,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 69,
+            "line": 77,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -24053,7 +24717,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 69,
+            "line": 77,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -24064,7 +24728,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 69,
+            "line": 77,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -24114,7 +24778,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/component_tidasPackage.ts",
-            "line": 70,
+            "line": 78,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -24125,7 +24789,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/component_tidasPackage.ts",
-            "line": 70,
+            "line": 78,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -24136,7 +24800,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/component_tidasPackage.ts",
-            "line": 70,
+            "line": 78,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -24147,7 +24811,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/component_tidasPackage.ts",
-            "line": 70,
+            "line": 78,
             "column": 3,
             "module": "component_tidasPackage"
           }
@@ -66972,7 +67636,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1759,
+          "line": 1825,
           "column": 38,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "Task details are currently unavailable.",
@@ -66993,7 +67657,7 @@
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1759,
+              "line": 1825,
               "column": 38,
               "kind": "formatMessage"
             }
@@ -168070,7 +168734,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1532,
+          "line": 1598,
           "column": 12,
           "symbol": "modalTitle",
           "defaultMessage": "Clear finished",
@@ -168085,7 +168749,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1532,
+              "line": 1598,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -168153,7 +168817,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1724,
+          "line": 1790,
           "column": 32,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "Continue",
@@ -168168,7 +168832,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1724,
+              "line": 1790,
               "column": 32,
               "kind": "formatMessage"
             }
@@ -168496,7 +169160,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1353,
+          "line": 1419,
           "column": 16,
           "symbol": "TaskDiagnosticsPopoverContent",
           "defaultMessage": "Debug information",
@@ -168511,7 +169175,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1353,
+              "line": 1419,
               "column": 16,
               "kind": "formatMessage"
             }
@@ -168588,7 +169252,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1266,
+          "line": 1332,
           "column": 18,
           "symbol": "packageBusinessDetail",
           "defaultMessage": "Failure reason",
@@ -168609,7 +169273,7 @@
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1266,
+              "line": 1332,
               "column": 18,
               "kind": "formatMessage"
             }
@@ -168677,7 +169341,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1324,
+          "line": 1390,
           "column": 16,
           "symbol": "TaskDetailPopoverContent",
           "defaultMessage": "Detail information",
@@ -168692,7 +169356,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1324,
+              "line": 1390,
               "column": 16,
               "kind": "formatMessage"
             }
@@ -169643,7 +170307,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1817,
+          "line": 1883,
           "column": 38,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "Diagnostics",
@@ -169652,7 +170316,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1823,
+          "line": 1889,
           "column": 45,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "Diagnostics",
@@ -169667,13 +170331,13 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1817,
+              "line": 1883,
               "column": 38,
               "kind": "formatMessage"
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1823,
+              "line": 1889,
               "column": 45,
               "kind": "formatMessage"
             }
@@ -170539,7 +171203,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1850,
+          "line": 1916,
           "column": 26,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "Elapsed",
@@ -170554,7 +171218,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1850,
+              "line": 1916,
               "column": 26,
               "kind": "formatMessage"
             }
@@ -170622,7 +171286,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1595,
+          "line": 1661,
           "column": 32,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "No tasks",
@@ -170637,7 +171301,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1595,
+              "line": 1661,
               "column": 32,
               "kind": "formatMessage"
             }
@@ -170954,7 +171618,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1732,
+          "line": 1798,
           "column": 30,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "Open",
@@ -170969,7 +171633,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1732,
+              "line": 1798,
               "column": 30,
               "kind": "formatMessage"
             }
@@ -171609,7 +172273,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1859,
+          "line": 1925,
           "column": 30,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "Phase:",
@@ -171630,7 +172294,7 @@
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1859,
+              "line": 1925,
               "column": 30,
               "kind": "formatMessage"
             }
@@ -172528,7 +173192,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1296,
+          "line": 1362,
           "column": 16,
           "symbol": "taskProcessDetailContent",
           "defaultMessage": "Execution stages",
@@ -172537,7 +173201,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1307,
+          "line": 1373,
           "column": 14,
           "symbol": "taskProcessDetailContent",
           "defaultMessage": "Execution stages",
@@ -172552,13 +173216,13 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1296,
+              "line": 1362,
               "column": 16,
               "kind": "formatMessage"
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1307,
+              "line": 1373,
               "column": 14,
               "kind": "formatMessage"
             }
@@ -172635,7 +173299,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1521,
+          "line": 1587,
           "column": 12,
           "symbol": "modalTitle",
           "defaultMessage": "Refresh",
@@ -172656,7 +173320,7 @@
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1521,
+              "line": 1587,
               "column": 12,
               "kind": "formatMessage"
             }
@@ -172724,7 +173388,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1487,
+          "line": 1553,
           "column": 11,
           "symbol": "handleRefreshTasks",
           "defaultMessage": "Failed to refresh tasks",
@@ -172739,7 +173403,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1487,
+              "line": 1553,
               "column": 11,
               "kind": "formatMessage"
             }
@@ -173587,7 +174251,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1508,
+          "line": 1574,
           "column": 10,
           "symbol": "modalTitle",
           "defaultMessage": "Task Center",
@@ -173596,7 +174260,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1544,
+          "line": 1610,
           "column": 21,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "Task Center",
@@ -173605,7 +174269,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1548,
+          "line": 1614,
           "column": 16,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "Task Center",
@@ -173620,19 +174284,19 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1508,
+              "line": 1574,
               "column": 10,
               "kind": "formatMessage"
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1544,
+              "line": 1610,
               "column": 21,
               "kind": "formatMessage"
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1548,
+              "line": 1614,
               "column": 16,
               "kind": "formatMessage"
             }
@@ -173925,7 +174589,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1842,
+          "line": 1908,
           "column": 28,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "Updated",
@@ -173940,7 +174604,7 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1842,
+              "line": 1908,
               "column": 28,
               "kind": "formatMessage"
             }
@@ -174008,7 +174672,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1700,
+          "line": 1766,
           "column": 38,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "View",
@@ -174017,7 +174681,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1706,
+          "line": 1772,
           "column": 45,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "View",
@@ -174026,7 +174690,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1884,
+          "line": 1950,
           "column": 34,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "View",
@@ -174035,7 +174699,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/LcaTaskCenter/index.tsx",
-          "line": 1890,
+          "line": 1956,
           "column": 41,
           "symbol": "LcaTaskCenter",
           "defaultMessage": "View",
@@ -174050,25 +174714,25 @@
           "locations": [
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1700,
+              "line": 1766,
               "column": 38,
               "kind": "formatMessage"
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1706,
+              "line": 1772,
               "column": 45,
               "kind": "formatMessage"
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1884,
+              "line": 1950,
               "column": 34,
               "kind": "formatMessage"
             },
             {
               "path": "src/components/LcaTaskCenter/index.tsx",
-              "line": 1890,
+              "line": 1956,
               "column": 41,
               "kind": "formatMessage"
             }

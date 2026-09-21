@@ -1023,6 +1023,13 @@ describe('tidasPackage/taskCenter', () => {
           status: 'completed',
           subjectType: 'lca_package_job',
           subjectId: 'package-import-completed',
+          result: {
+            importResult: {
+              outcome: 'success',
+              executionComplete: true,
+              summary: { total_entries: 1, imported_count: 1, not_imported_count: 0 },
+            },
+          },
           createdAt: '2026-03-21T08:40:00.000Z',
           updatedAt: '2026-03-21T08:41:00.000Z',
         },
@@ -2132,17 +2139,161 @@ describe('tidasPackage/taskCenter', () => {
     await expect(center.refreshTidasPackageTasksFromWorkerJobs()).resolves.toHaveLength(1);
     expect(center.listTidasPackageTasks()[0].state).toBe('failed');
   });
-  it('accepts incomplete legacy list summaries without requesting individual jobs', async () => {
+  it('recovers a terminal v2 import result once from report artifact metadata', async () => {
     const center = loadTaskCenterModule();
     await center.refreshTidasPackageTasksFromWorkerJobs();
     await enqueueImport(center);
+    mockGetTidasPackageJobApi.mockResolvedValue({
+      data: {
+        ok: true,
+        job_id: 'import-job',
+        job_type: 'import_package',
+        status: 'completed',
+        scope: null,
+        root_count: 2,
+        timestamps: {
+          created_at: '2026-09-18T00:00:00Z',
+          started_at: '2026-09-18T00:00:01Z',
+          finished_at: '2026-09-18T00:00:02Z',
+          updated_at: '2026-09-18T00:00:02Z',
+        },
+        payload: {},
+        diagnostics: {},
+        artifacts: [],
+        artifacts_by_kind: {
+          import_report: {
+            status: 'ready',
+            metadata: {
+              outcome: 'success',
+              execution_complete: true,
+              summary: {
+                total_entries: 12,
+                imported_count: 1,
+                existing_count: 9,
+                not_imported_count: 2,
+                root_count: 2,
+                successful_root_count: 1,
+                blocked_root_count: 1,
+              },
+            },
+          },
+          import_details: { status: 'ready', metadata: {} },
+        },
+        request_cache: null,
+      },
+      error: null,
+    });
     mockRequestWorkerJobsApi.mockResolvedValue({
       data: [importRow({ outcome: 'future', summary: 'invalid' })],
       error: null,
     });
     await center.refreshTidasPackageTasksFromWorkerJobs();
-    expect(center.listTidasPackageTasks()[0].importSummary).toEqual({});
-    expect(mockGetTidasPackageJobApi).not.toHaveBeenCalled();
+    expect(center.listTidasPackageTasks()[0]).toMatchObject({
+      state: 'completed',
+      phase: 'completed',
+      importOutcome: 'partial',
+      importReportAvailable: true,
+      importDetailsAvailable: true,
+      rootCount: 2,
+      importSummary: {
+        total_entries: 12,
+        imported_count: 1,
+        existing_count: 9,
+        not_imported_count: 2,
+        root_count: 2,
+        successful_root_count: 1,
+        blocked_root_count: 1,
+      },
+    });
+    await center.refreshTidasPackageTasksFromWorkerJobs();
+    expect(mockGetTidasPackageJobApi).toHaveBeenCalledTimes(1);
+    expect(center.listTidasPackageTasks()[0].importOutcome).toBe('partial');
+  });
+
+  it('fails a terminal import whose result remains unavailable without polling it again', async () => {
+    const center = loadTaskCenterModule();
+    await center.refreshTidasPackageTasksFromWorkerJobs();
+    await enqueueImport(center);
+    mockGetTidasPackageJobApi.mockResolvedValue({ data: null, error: new Error('unavailable') });
+    mockRequestWorkerJobsApi.mockResolvedValue({ data: [importRow({})], error: null });
+    await center.refreshTidasPackageTasksFromWorkerJobs();
+    await center.refreshTidasPackageTasksFromWorkerJobs();
+    expect(center.listTidasPackageTasks()[0]).toMatchObject({
+      state: 'failed',
+      phase: 'failed',
+      error: 'Import result is unavailable',
+    });
+    expect(mockGetTidasPackageJobApi).toHaveBeenCalledTimes(1);
+  });
+
+  it('recovers a persisted terminal import after it has left the recent Worker list', async () => {
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({
+        version: 1,
+        savedAt: new Date().toISOString(),
+        tasks: [
+          {
+            id: 'historical-import',
+            sequence: 1,
+            kind: 'tidas_package_import',
+            state: 'completed',
+            phase: 'completed',
+            message: 'Import package completed',
+            createdAt: '2026-09-18T00:00:00Z',
+            updatedAt: '2026-09-18T00:01:00Z',
+            jobId: 'historical-job',
+            rootCount: 0,
+          },
+        ],
+      }),
+    );
+    mockGetTidasPackageJobApi.mockResolvedValue({
+      data: {
+        ok: true,
+        job_id: 'historical-job',
+        job_type: 'import_package',
+        status: 'completed',
+        scope: null,
+        root_count: 0,
+        timestamps: {},
+        payload: {},
+        diagnostics: {},
+        artifacts: [],
+        artifacts_by_kind: {
+          import_report: {
+            status: 'ready',
+            metadata: {
+              outcome: 'success',
+              execution_complete: true,
+              summary: {
+                total_entries: 2,
+                imported_count: 0,
+                existing_count: 2,
+                not_imported_count: 0,
+                root_count: 0,
+                successful_root_count: 0,
+                blocked_root_count: 0,
+              },
+            },
+          },
+        },
+        request_cache: null,
+      },
+      error: null,
+    });
+
+    const center = loadTaskCenterModule();
+    await waitFor(() =>
+      expect(center.listTidasPackageTasks()[0]).toMatchObject({
+        state: 'completed',
+        importOutcome: 'success',
+        importReportAvailable: true,
+        importSummary: { total_entries: 2, existing_count: 2, not_imported_count: 0 },
+      }),
+    );
+    await center.refreshTidasPackageTasksFromWorkerJobs();
+    expect(mockGetTidasPackageJobApi).toHaveBeenCalledTimes(1);
   });
 
   it('handles recovered imports with no domain job id and no inserted count', async () => {
@@ -2156,7 +2307,9 @@ describe('tidasPackage/taskCenter', () => {
       error: null,
     });
     await center.refreshTidasPackageTasksFromWorkerJobs();
-    expect(center.listTidasPackageTasks()).toHaveLength(1);
+    expect(center.listTidasPackageTasks()).toEqual([
+      expect.objectContaining({ state: 'failed', phase: 'failed' }),
+    ]);
   });
 
   it.each(['subscriber', 'event'])(
