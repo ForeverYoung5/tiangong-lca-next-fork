@@ -42,9 +42,9 @@ checkPaths:
   - .github/workflows/build.yml
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
-lastReviewedAt: 2026-09-20
-lastReviewedCommit: 25bfea81d9507deccf4aa968c213600eea13b927
-lastReviewedNote: 'Reviewed Platform #1107: TIDAS import report presentation, localization and Jest discovery were checked against this contract; its governed scope and rules remain unchanged.'
+lastReviewedAt: 2026-09-21
+lastReviewedCommit: 6aad37543b8bddac1edb85862d7979ce8f540f20
+lastReviewedNote: 'Reviewed Platform #1109 follow-up: shared review views remove one duplicate ProTable and locale-materialized implementation surface; generated locale artifacts were refreshed idempotently, while language, validation, gate, and testing policy remain unchanged.'
 ---
 
 # Testing Patterns Reference

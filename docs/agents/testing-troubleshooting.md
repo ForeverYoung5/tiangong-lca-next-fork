@@ -39,9 +39,9 @@ checkPaths:
   - .github/workflows/build.yml
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
-lastReviewedAt: 2026-09-20
-lastReviewedCommit: 25bfea81d9507deccf4aa968c213600eea13b927
-lastReviewedNote: 'Reviewed Platform #1107: documented the local Watchman discovery failure and the full Jest inventory path using Node filesystem discovery.'
+lastReviewedAt: 2026-09-21
+lastReviewedCommit: 6aad37543b8bddac1edb85862d7979ce8f540f20
+lastReviewedNote: 'Reviewed Platform #1109 follow-up: shared review views remove one duplicate ProTable and locale-materialized implementation surface; generated locale artifacts were refreshed idempotently, while language, validation, gate, and testing policy remain unchanged.'
 ---
 
 # Testing Troubleshooting

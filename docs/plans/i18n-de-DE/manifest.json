@@ -3,7 +3,7 @@
   "source": {
     "baseRef": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
     "baseCommit": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
-    "auditedInputDigest": "ca80ea5f0195cea352e52e667bd49a52fcfeda0854a6964ea81c6b82e1f10e08",
+    "auditedInputDigest": "75d87a806ece296fc6c3f5147ef0f3a60da683bfb6e2a5717236a49912db11e0",
     "auditedInputDigestAlgorithm": "sha256(path\\0content\\0)",
     "repository": "tiangong-lca/platform"
   },
@@ -75,7 +75,7 @@
     "activeDynamicKeyCount": 321,
     "reservedKeyCount": 828,
     "productionSourceFileCount": 466,
-    "literalReferenceCount": 4243,
+    "literalReferenceCount": 4163,
     "dynamicCallsiteCount": 33,
     "dynamicCallsiteSummaryCount": 33,
     "registeredDynamicCallsiteCount": 33,
@@ -16969,7 +16969,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Review/Components/AssignmentReview.tsx",
-          "line": 1127,
+          "line": 1100,
           "column": 18,
           "symbol": "AssignmentReview",
           "defaultMessage": null,
@@ -30632,7 +30632,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/AssignmentReview.tsx",
-          "line": 1261,
+          "line": 1234,
           "column": 17,
           "symbol": "AssignmentReview",
           "defaultMessage": "Review Management",
@@ -30656,7 +30656,7 @@
           "locations": [
             {
               "path": "src/pages/Review/Components/AssignmentReview.tsx",
-              "line": 1261,
+              "line": 1234,
               "column": 17,
               "kind": "FormattedMessage"
             },
@@ -56128,24 +56128,6 @@
         },
         {
           "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/Exchange/view.tsx",
-          "line": 51,
-          "column": 23,
-          "symbol": "ProcessExchangeView",
-          "defaultMessage": "View",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/Exchange/view.tsx",
-          "line": 56,
-          "column": 13,
-          "symbol": "ProcessExchangeView",
-          "defaultMessage": "View",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
           "path": "src/pages/Sources/Components/view.tsx",
           "line": 390,
           "column": 25,
@@ -56299,18 +56281,6 @@
               "path": "src/pages/Processes/Components/view.tsx",
               "line": 1989,
               "column": 11,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/Exchange/view.tsx",
-              "line": 51,
-              "column": 23,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/Exchange/view.tsx",
-              "line": 56,
-              "column": 13,
               "kind": "FormattedMessage"
             },
             {
@@ -83232,15 +83202,6 @@
           "symbol": "EdgeExchangeView",
           "defaultMessage": "View exchange relation",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-          "line": 74,
-          "column": 11,
-          "symbol": "EdgeExchangeView",
-          "defaultMessage": "View exchange relation",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -83252,12 +83213,6 @@
             {
               "path": "src/pages/LifeCycleModels/Components/toolbar/Exchange/view.tsx",
               "line": 85,
-              "column": 11,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-              "line": 74,
               "column": 11,
               "kind": "FormattedMessage"
             }
@@ -83428,15 +83383,6 @@
           "symbol": "IoPortSelector",
           "defaultMessage": "View flow port",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortView.tsx",
-          "line": 234,
-          "column": 11,
-          "symbol": "IoPortSelector",
-          "defaultMessage": "View flow port",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -83448,12 +83394,6 @@
             {
               "path": "src/pages/LifeCycleModels/Components/toolbar/Exchange/ioPortView.tsx",
               "line": 249,
-              "column": 11,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortView.tsx",
-              "line": 234,
               "column": 11,
               "kind": "FormattedMessage"
             }
@@ -83790,15 +83730,6 @@
           "symbol": "TargetAmount",
           "defaultMessage": "Reference flow",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-          "line": 141,
-          "column": 13,
-          "symbol": "TargetAmount",
-          "defaultMessage": "Reference flow",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -83816,12 +83747,6 @@
             {
               "path": "src/pages/LifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
               "line": 149,
-              "column": 13,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-              "line": 141,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -83986,15 +83911,6 @@
           "symbol": "ExchangeSelect",
           "defaultMessage": "Source process output flow",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-          "line": 91,
-          "column": 17,
-          "symbol": "EdgeExchangeView",
-          "defaultMessage": "Source process output flow",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -84012,12 +83928,6 @@
             {
               "path": "src/pages/Processes/Components/Exchange/select.tsx",
               "line": 335,
-              "column": 17,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-              "line": 91,
               "column": 17,
               "kind": "FormattedMessage"
             }
@@ -84099,15 +84009,6 @@
           "symbol": "ExchangeSelect",
           "defaultMessage": "Target input flow name",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-          "line": 239,
-          "column": 17,
-          "symbol": "EdgeExchangeView",
-          "defaultMessage": "Target input flow name",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -84125,12 +84026,6 @@
             {
               "path": "src/pages/Processes/Components/Exchange/select.tsx",
               "line": 366,
-              "column": 17,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-              "line": 239,
               "column": 17,
               "kind": "FormattedMessage"
             }
@@ -84207,7 +84102,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1371,
+          "line": 1250,
           "column": 15,
           "symbol": "defaultTabContent",
           "defaultMessage": "Data set format(s)",
@@ -84228,7 +84123,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1371,
+              "line": 1250,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -93874,24 +93769,6 @@
         },
         {
           "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortView.tsx",
-          "line": 103,
-          "column": 9,
-          "symbol": "processExchangeColumns",
-          "defaultMessage": "Reference unit",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 239,
-          "column": 9,
-          "symbol": "processExchangeColumns",
-          "defaultMessage": "Reference unit",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
           "path": "src/pages/Unitgroups/Components/select/descriptionMini.tsx",
           "line": 58,
           "column": 11,
@@ -93960,18 +93837,6 @@
             {
               "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortSelect.tsx",
               "line": 117,
-              "column": 9,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortView.tsx",
-              "line": 103,
-              "column": 9,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 239,
               "column": 9,
               "kind": "FormattedMessage"
             },
@@ -119188,15 +119053,6 @@
           "symbol": "defaultTabContent",
           "defaultMessage": "General comment",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-          "line": 257,
-          "column": 13,
-          "symbol": "TargetAmount",
-          "defaultMessage": "General comment",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -119239,12 +119095,6 @@
               "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewInfo.tsx",
               "line": 284,
               "column": 11,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-              "line": 257,
-              "column": 13,
               "kind": "FormattedMessage"
             }
           ]
@@ -119830,15 +119680,6 @@
           "symbol": "defaultTabContent",
           "defaultMessage": "Name",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-          "line": 250,
-          "column": 13,
-          "symbol": "TargetAmount",
-          "defaultMessage": "Name",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -119886,12 +119727,6 @@
             {
               "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewInfo.tsx",
               "line": 192,
-              "column": 13,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-              "line": 250,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -127793,15 +127628,6 @@
           "symbol": "TargetAmount",
           "defaultMessage": "Original amount",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-          "line": 109,
-          "column": 17,
-          "symbol": "TargetAmount",
-          "defaultMessage": "Original amount",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -127819,12 +127645,6 @@
             {
               "path": "src/pages/LifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
               "line": 117,
-              "column": 17,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-              "line": 109,
               "column": 17,
               "kind": "FormattedMessage"
             }
@@ -127906,15 +127726,6 @@
           "symbol": "TargetAmount",
           "defaultMessage": "Ref node",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-          "line": 247,
-          "column": 18,
-          "symbol": "TargetAmount",
-          "defaultMessage": "Ref node",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -127932,12 +127743,6 @@
             {
               "path": "src/pages/LifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
               "line": 253,
-              "column": 18,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-              "line": 247,
               "column": 18,
               "kind": "FormattedMessage"
             }
@@ -128019,15 +127824,6 @@
           "symbol": "TargetAmount",
           "defaultMessage": "Scaling factor",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-          "line": 128,
-          "column": 17,
-          "symbol": "TargetAmount",
-          "defaultMessage": "Scaling factor",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -128045,12 +127841,6 @@
             {
               "path": "src/pages/LifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
               "line": 136,
-              "column": 17,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-              "line": 128,
               "column": 17,
               "kind": "FormattedMessage"
             }
@@ -128168,33 +127958,6 @@
           "symbol": "TargetAmount",
           "defaultMessage": "Target amount",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-          "line": 55,
-          "column": 11,
-          "symbol": "TargetAmount",
-          "defaultMessage": "Target amount",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-          "line": 71,
-          "column": 11,
-          "symbol": "TargetAmount",
-          "defaultMessage": "Target amount",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-          "line": 90,
-          "column": 17,
-          "symbol": "TargetAmount",
-          "defaultMessage": "Target amount",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -128236,24 +127999,6 @@
             {
               "path": "src/pages/LifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
               "line": 98,
-              "column": 17,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-              "line": 55,
-              "column": 11,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-              "line": 71,
-              "column": 11,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-              "line": 90,
               "column": 17,
               "kind": "FormattedMessage"
             }
@@ -146485,7 +146230,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 181,
+          "line": 186,
           "column": 9,
           "symbol": "tabList",
           "defaultMessage": "Compliance declarations",
@@ -146512,7 +146257,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 181,
+              "line": 186,
               "column": 9,
               "kind": "FormattedMessage"
             }
@@ -147083,15 +146828,6 @@
           "symbol": "getExchangeColumns",
           "defaultMessage": "Data derivation type / status",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 265,
-          "column": 9,
-          "symbol": "processExchangeColumns",
-          "defaultMessage": "Data derivation type / status",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -147103,12 +146839,6 @@
             {
               "path": "src/pages/Processes/Components/Exchange/column.tsx",
               "line": 144,
-              "column": 9,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 265,
               "column": 9,
               "kind": "FormattedMessage"
             }
@@ -147356,15 +147086,6 @@
           "symbol": "ProcessExchangeView",
           "defaultMessage": "View Exchange",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/Exchange/view.tsx",
-          "line": 63,
-          "column": 11,
-          "symbol": "ProcessExchangeView",
-          "defaultMessage": "View Exchange",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -147382,12 +147103,6 @@
             {
               "path": "src/pages/Processes/Components/Exchange/view.tsx",
               "line": 95,
-              "column": 11,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/Exchange/view.tsx",
-              "line": 63,
               "column": 11,
               "kind": "FormattedMessage"
             }
@@ -147550,7 +147265,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1676,
+          "line": 1555,
           "column": 22,
           "symbol": "defaultTabContent",
           "defaultMessage": "Input",
@@ -147589,7 +147304,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1676,
+              "line": 1555,
               "column": 22,
               "kind": "FormattedMessage"
             }
@@ -147662,15 +147377,6 @@
           "symbol": "getExchangeColumns",
           "defaultMessage": "Mean amount",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 214,
-          "column": 9,
-          "symbol": "processExchangeColumns",
-          "defaultMessage": "Mean amount",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -147682,12 +147388,6 @@
             {
               "path": "src/pages/Processes/Components/Exchange/column.tsx",
               "line": 81,
-              "column": 9,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 214,
               "column": 9,
               "kind": "FormattedMessage"
             }
@@ -147791,7 +147491,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1752,
+          "line": 1634,
           "column": 17,
           "symbol": "defaultTabContent",
           "defaultMessage": "Output",
@@ -147830,7 +147530,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1752,
+              "line": 1634,
               "column": 17,
               "kind": "FormattedMessage"
             }
@@ -147921,15 +147621,6 @@
           "symbol": "getExchangeColumns",
           "defaultMessage": "Quantitative reference",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 276,
-          "column": 9,
-          "symbol": "processExchangeColumns",
-          "defaultMessage": "Quantitative reference",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -147953,12 +147644,6 @@
             {
               "path": "src/pages/Processes/Components/Exchange/column.tsx",
               "line": 156,
-              "column": 9,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 276,
               "column": 9,
               "kind": "FormattedMessage"
             }
@@ -148031,15 +147716,6 @@
           "symbol": "getExchangeColumns",
           "defaultMessage": "Resulting amount",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 225,
-          "column": 9,
-          "symbol": "processExchangeColumns",
-          "defaultMessage": "Resulting amount",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -148051,12 +147727,6 @@
             {
               "path": "src/pages/Processes/Components/Exchange/column.tsx",
               "line": 94,
-              "column": 9,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 225,
               "column": 9,
               "kind": "FormattedMessage"
             }
@@ -148129,15 +147799,6 @@
           "symbol": "getExchangeColumns",
           "defaultMessage": "Review type",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 290,
-          "column": 9,
-          "symbol": "processExchangeColumns",
-          "defaultMessage": "Review type",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -148149,12 +147810,6 @@
             {
               "path": "src/pages/Processes/Components/Exchange/column.tsx",
               "line": 171,
-              "column": 9,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 290,
               "column": 9,
               "kind": "FormattedMessage"
             }
@@ -148227,15 +147882,6 @@
           "symbol": "getExchangeColumns",
           "defaultMessage": "Reviewed",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 300,
-          "column": 15,
-          "symbol": "processExchangeColumns",
-          "defaultMessage": "Reviewed",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -148247,12 +147893,6 @@
             {
               "path": "src/pages/Processes/Components/Exchange/column.tsx",
               "line": 181,
-              "column": 15,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 300,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -148325,15 +147965,6 @@
           "symbol": "getExchangeColumns",
           "defaultMessage": "Unreviewed",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 305,
-          "column": 15,
-          "symbol": "processExchangeColumns",
-          "defaultMessage": "Unreviewed",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -148345,12 +147976,6 @@
             {
               "path": "src/pages/Processes/Components/Exchange/column.tsx",
               "line": 186,
-              "column": 15,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 305,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -188965,7 +188590,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 176,
+          "line": 181,
           "column": 12,
           "symbol": "tabList",
           "defaultMessage": "Validation",
@@ -188992,7 +188617,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 176,
+              "line": 181,
               "column": 12,
               "kind": "FormattedMessage"
             }
@@ -194553,7 +194178,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 162,
+          "line": 167,
           "column": 9,
           "symbol": "tabList",
           "defaultMessage": "Administrative information",
@@ -194580,7 +194205,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 162,
+              "line": 167,
               "column": 9,
               "kind": "FormattedMessage"
             }
@@ -194666,7 +194291,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1323,
+          "line": 1202,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Data set generator / modeller",
@@ -194693,7 +194318,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1323,
+              "line": 1202,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -194788,7 +194413,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1654,
+          "line": 1533,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Access and use restrictions",
@@ -194821,7 +194446,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1654,
+              "line": 1533,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -194907,7 +194532,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1601,
+          "line": 1480,
           "column": 19,
           "symbol": "defaultTabContent",
           "defaultMessage": "Copyright?",
@@ -194934,7 +194559,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1601,
+              "line": 1480,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -195186,7 +194811,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1340,
+          "line": 1219,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Data entry by",
@@ -195213,7 +194838,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1340,
+              "line": 1219,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -195299,7 +194924,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1465,
+          "line": 1344,
           "column": 19,
           "symbol": "defaultTabContent",
           "defaultMessage": "Data set version",
@@ -195326,7 +194951,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1465,
+              "line": 1344,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -195412,7 +195037,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1443,
+          "line": 1322,
           "column": 19,
           "symbol": "defaultTabContent",
           "defaultMessage": "Date of last revision",
@@ -195439,7 +195064,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1443,
+              "line": 1322,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -195534,7 +195159,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1309,
+          "line": 1188,
           "column": 11,
           "symbol": "defaultTabContent",
           "defaultMessage": "Intended applications",
@@ -195567,7 +195192,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1309,
+              "line": 1188,
               "column": 11,
               "kind": "FormattedMessage"
             }
@@ -195653,7 +195278,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1639,
+          "line": 1518,
           "column": 19,
           "symbol": "defaultTabContent",
           "defaultMessage": "License type",
@@ -195680,7 +195305,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1639,
+              "line": 1518,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -196181,7 +195806,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1490,
+          "line": 1369,
           "column": 19,
           "symbol": "defaultTabContent",
           "defaultMessage": "Permanent data set URI",
@@ -196208,7 +195833,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1490,
+              "line": 1369,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -196386,7 +196011,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1299,
+          "line": 1178,
           "column": 11,
           "symbol": "defaultTabContent",
           "defaultMessage": "Project",
@@ -196419,7 +196044,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1299,
+              "line": 1178,
               "column": 11,
               "kind": "FormattedMessage"
             }
@@ -196505,7 +196130,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1429,
+          "line": 1308,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Publication and ownership",
@@ -196532,7 +196157,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1429,
+              "line": 1308,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -196618,7 +196243,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1286,
+          "line": 1165,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Commissioner of data set",
@@ -196645,7 +196270,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1286,
+              "line": 1165,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -196731,7 +196356,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1386,
+          "line": 1265,
           "column": 15,
           "symbol": "defaultTabContent",
           "defaultMessage": "Converted original data set from:",
@@ -196758,7 +196383,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1386,
+              "line": 1265,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -196927,7 +196552,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1416,
+          "line": 1295,
           "column": 15,
           "symbol": "defaultTabContent",
           "defaultMessage": "Official approval of data set by producer/operator:",
@@ -196954,7 +196579,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1416,
+              "line": 1295,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -197040,7 +196665,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1618,
+          "line": 1497,
           "column": 15,
           "symbol": "defaultTabContent",
           "defaultMessage": "Entities or persons with exclusive access to this data set",
@@ -197067,7 +196692,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1618,
+              "line": 1497,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -197153,7 +196778,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1580,
+          "line": 1459,
           "column": 15,
           "symbol": "defaultTabContent",
           "defaultMessage": "Owner of data set",
@@ -197180,7 +196805,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1580,
+              "line": 1459,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -197266,7 +196891,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1401,
+          "line": 1280,
           "column": 15,
           "symbol": "defaultTabContent",
           "defaultMessage": "Data entry by:",
@@ -197293,7 +196918,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1401,
+              "line": 1280,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -197379,7 +197004,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1543,
+          "line": 1422,
           "column": 15,
           "symbol": "defaultTabContent",
           "defaultMessage": "Registration authority",
@@ -197406,7 +197031,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1543,
+              "line": 1422,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -197492,7 +197117,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1528,
+          "line": 1407,
           "column": 15,
           "symbol": "defaultTabContent",
           "defaultMessage": "Unchanged re-publication of:",
@@ -197519,7 +197144,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1528,
+              "line": 1407,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -197605,7 +197230,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1564,
+          "line": 1443,
           "column": 19,
           "symbol": "defaultTabContent",
           "defaultMessage": "Registration number",
@@ -197632,7 +197257,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1564,
+              "line": 1443,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -197718,7 +197343,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1354,
+          "line": 1233,
           "column": 19,
           "symbol": "defaultTabContent",
           "defaultMessage": "Time stamp (last saved)",
@@ -197745,7 +197370,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1354,
+              "line": 1233,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -197831,7 +197456,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1512,
+          "line": 1391,
           "column": 19,
           "symbol": "defaultTabContent",
           "defaultMessage": "Workflow and publication status",
@@ -197858,7 +197483,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1512,
+              "line": 1391,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -198945,15 +198570,6 @@
           "symbol": "ProcessExchangeView",
           "defaultMessage": "Allocated fraction",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/Exchange/view.tsx",
-          "line": 336,
-          "column": 19,
-          "symbol": "ProcessExchangeView",
-          "defaultMessage": "Allocated fraction",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -198977,12 +198593,6 @@
             {
               "path": "src/pages/Processes/Components/Exchange/view.tsx",
               "line": 412,
-              "column": 19,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/Exchange/view.tsx",
-              "line": 336,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -199073,15 +198683,6 @@
           "symbol": "ProcessExchangeView",
           "defaultMessage": "Allocation",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/Exchange/view.tsx",
-          "line": 303,
-          "column": 13,
-          "symbol": "ProcessExchangeView",
-          "defaultMessage": "Allocation",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -199105,12 +198706,6 @@
             {
               "path": "src/pages/Processes/Components/Exchange/view.tsx",
               "line": 375,
-              "column": 13,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/Exchange/view.tsx",
-              "line": 303,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -199219,33 +198814,6 @@
           "symbol": "ProcessExchangeView",
           "defaultMessage": "Data derivation type / status",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/Exchange/view.tsx",
-          "line": 375,
-          "column": 17,
-          "symbol": "ProcessExchangeView",
-          "defaultMessage": "Data derivation type / status",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-          "line": 176,
-          "column": 25,
-          "symbol": "EdgeExchangeView",
-          "defaultMessage": "Data derivation type / status",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-          "line": 324,
-          "column": 25,
-          "symbol": "EdgeExchangeView",
-          "defaultMessage": "Data derivation type / status",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -199282,24 +198850,6 @@
               "path": "src/pages/Processes/Components/Exchange/view.tsx",
               "line": 459,
               "column": 17,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/Exchange/view.tsx",
-              "line": 375,
-              "column": 17,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-              "line": 176,
-              "column": 25,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-              "line": 324,
-              "column": 25,
               "kind": "FormattedMessage"
             }
           ]
@@ -199389,15 +198939,6 @@
           "symbol": "ProcessExchangeView",
           "defaultMessage": "Data source type",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/Exchange/view.tsx",
-          "line": 356,
-          "column": 17,
-          "symbol": "ProcessExchangeView",
-          "defaultMessage": "Data source type",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -199421,12 +198962,6 @@
             {
               "path": "src/pages/Processes/Components/Exchange/view.tsx",
               "line": 436,
-              "column": 17,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/Exchange/view.tsx",
-              "line": 356,
               "column": 17,
               "kind": "FormattedMessage"
             }
@@ -199535,33 +199070,6 @@
           "symbol": "ProcessExchangeView",
           "defaultMessage": "Exchange direction",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/Exchange/view.tsx",
-          "line": 96,
-          "column": 17,
-          "symbol": "ProcessExchangeView",
-          "defaultMessage": "Exchange direction",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-          "line": 108,
-          "column": 25,
-          "symbol": "EdgeExchangeView",
-          "defaultMessage": "Exchange direction",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-          "line": 256,
-          "column": 25,
-          "symbol": "EdgeExchangeView",
-          "defaultMessage": "Exchange direction",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -199598,24 +199106,6 @@
               "path": "src/pages/Processes/Components/Exchange/view.tsx",
               "line": 128,
               "column": 17,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/Exchange/view.tsx",
-              "line": 96,
-              "column": 17,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-              "line": 108,
-              "column": 25,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-              "line": 256,
-              "column": 25,
               "kind": "FormattedMessage"
             }
           ]
@@ -199705,15 +199195,6 @@
           "symbol": "ProcessExchangeView",
           "defaultMessage": "Function type",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/Exchange/view.tsx",
-          "line": 145,
-          "column": 17,
-          "symbol": "ProcessExchangeView",
-          "defaultMessage": "Function type",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -199737,12 +199218,6 @@
             {
               "path": "src/pages/Processes/Components/Exchange/view.tsx",
               "line": 185,
-              "column": 17,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/Exchange/view.tsx",
-              "line": 145,
               "column": 17,
               "kind": "FormattedMessage"
             }
@@ -199869,33 +199344,6 @@
           "symbol": "ProcessExchangeView",
           "defaultMessage": "Functional unit, Production period, or Other parameter",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/Exchange/view.tsx",
-          "line": 432,
-          "column": 13,
-          "symbol": "ProcessExchangeView",
-          "defaultMessage": "Functional unit, Production period, or Other parameter",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-          "line": 226,
-          "column": 21,
-          "symbol": "EdgeExchangeView",
-          "defaultMessage": "Functional unit, Production period, or Other parameter",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-          "line": 374,
-          "column": 21,
-          "symbol": "EdgeExchangeView",
-          "defaultMessage": "Functional unit, Production period, or Other parameter",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -199944,24 +199392,6 @@
               "path": "src/pages/Processes/Components/Exchange/view.tsx",
               "line": 544,
               "column": 13,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/Exchange/view.tsx",
-              "line": 432,
-              "column": 13,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-              "line": 226,
-              "column": 21,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-              "line": 374,
-              "column": 21,
               "kind": "FormattedMessage"
             }
           ]
@@ -200087,33 +199517,6 @@
           "symbol": "ProcessExchangeView",
           "defaultMessage": "Comment",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/Exchange/view.tsx",
-          "line": 397,
-          "column": 11,
-          "symbol": "ProcessExchangeView",
-          "defaultMessage": "Comment",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-          "line": 187,
-          "column": 19,
-          "symbol": "EdgeExchangeView",
-          "defaultMessage": "Comment",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-          "line": 335,
-          "column": 19,
-          "symbol": "EdgeExchangeView",
-          "defaultMessage": "Comment",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -200162,24 +199565,6 @@
               "path": "src/pages/Processes/Components/Exchange/view.tsx",
               "line": 503,
               "column": 11,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/Exchange/view.tsx",
-              "line": 397,
-              "column": 11,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-              "line": 187,
-              "column": 19,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-              "line": 335,
-              "column": 19,
               "kind": "FormattedMessage"
             }
           ]
@@ -200269,15 +199654,6 @@
           "symbol": "ProcessExchangeView",
           "defaultMessage": "Internal reference to co-product",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/Exchange/view.tsx",
-          "line": 317,
-          "column": 19,
-          "symbol": "ProcessExchangeView",
-          "defaultMessage": "Internal reference to co-product",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -200301,12 +199677,6 @@
             {
               "path": "src/pages/Processes/Components/Exchange/view.tsx",
               "line": 389,
-              "column": 19,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/Exchange/view.tsx",
-              "line": 317,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -200397,15 +199767,6 @@
           "symbol": "ProcessExchangeView",
           "defaultMessage": "Location",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/Exchange/view.tsx",
-          "line": 126,
-          "column": 17,
-          "symbol": "ProcessExchangeView",
-          "defaultMessage": "Location",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -200429,12 +199790,6 @@
             {
               "path": "src/pages/Processes/Components/Exchange/view.tsx",
               "line": 162,
-              "column": 17,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/Exchange/view.tsx",
-              "line": 126,
               "column": 17,
               "kind": "FormattedMessage"
             }
@@ -200534,24 +199889,6 @@
           "symbol": "ProcessExchangeEdit",
           "defaultMessage": "Mean amount",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-          "line": 138,
-          "column": 25,
-          "symbol": "EdgeExchangeView",
-          "defaultMessage": "Mean amount",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-          "line": 286,
-          "column": 25,
-          "symbol": "EdgeExchangeView",
-          "defaultMessage": "Mean amount",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -200582,18 +199919,6 @@
               "path": "src/pages/Processes/Components/Exchange/edit.tsx",
               "line": 636,
               "column": 19,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-              "line": 138,
-              "column": 25,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-              "line": 286,
-              "column": 25,
               "kind": "FormattedMessage"
             }
           ]
@@ -200728,33 +200053,6 @@
           "symbol": "ProcessExchangeView",
           "defaultMessage": "Quantitative reference",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/Exchange/view.tsx",
-          "line": 407,
-          "column": 13,
-          "symbol": "ProcessExchangeView",
-          "defaultMessage": "Quantitative reference",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-          "line": 197,
-          "column": 21,
-          "symbol": "EdgeExchangeView",
-          "defaultMessage": "Quantitative reference",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-          "line": 345,
-          "column": 21,
-          "symbol": "EdgeExchangeView",
-          "defaultMessage": "Quantitative reference",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -200809,24 +200107,6 @@
               "path": "src/pages/Processes/Components/Exchange/view.tsx",
               "line": 513,
               "column": 13,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/Exchange/view.tsx",
-              "line": 407,
-              "column": 13,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-              "line": 197,
-              "column": 21,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-              "line": 345,
-              "column": 21,
               "kind": "FormattedMessage"
             }
           ]
@@ -200925,15 +200205,6 @@
           "symbol": "TargetAmount",
           "defaultMessage": "Reference flow dataset identifier",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-          "line": 163,
-          "column": 21,
-          "symbol": "TargetAmount",
-          "defaultMessage": "Reference flow dataset identifier",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -200963,12 +200234,6 @@
             {
               "path": "src/pages/LifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
               "line": 171,
-              "column": 21,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-              "line": 163,
               "column": 21,
               "kind": "FormattedMessage"
             }
@@ -201104,15 +200369,6 @@
           "symbol": "ProcessExchangeView",
           "defaultMessage": "Data source(s)",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/Exchange/view.tsx",
-          "line": 388,
-          "column": 13,
-          "symbol": "ProcessExchangeView",
-          "defaultMessage": "Data source(s)",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -201167,12 +200423,6 @@
               "path": "src/pages/Processes/Components/Exchange/view.tsx",
               "line": 490,
               "column": 21,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/Exchange/view.tsx",
-              "line": 388,
-              "column": 13,
               "kind": "FormattedMessage"
             }
           ]
@@ -201280,33 +200530,6 @@
           "symbol": "ProcessExchangeView",
           "defaultMessage": "Flow",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/Exchange/view.tsx",
-          "line": 109,
-          "column": 13,
-          "symbol": "ProcessExchangeView",
-          "defaultMessage": "Flow",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-          "line": 120,
-          "column": 21,
-          "symbol": "EdgeExchangeView",
-          "defaultMessage": "Flow",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-          "line": 268,
-          "column": 21,
-          "symbol": "EdgeExchangeView",
-          "defaultMessage": "Flow",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -201343,24 +200566,6 @@
               "path": "src/pages/Processes/Components/Exchange/view.tsx",
               "line": 145,
               "column": 13,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/Exchange/view.tsx",
-              "line": 109,
-              "column": 13,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-              "line": 120,
-              "column": 21,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-              "line": 268,
-              "column": 21,
               "kind": "FormattedMessage"
             }
           ]
@@ -201468,33 +200673,6 @@
           "symbol": "ProcessExchangeView",
           "defaultMessage": "Reference flow(s)",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/Exchange/view.tsx",
-          "line": 421,
-          "column": 19,
-          "symbol": "ProcessExchangeView",
-          "defaultMessage": "Reference flow(s)",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-          "line": 212,
-          "column": 27,
-          "symbol": "EdgeExchangeView",
-          "defaultMessage": "Reference flow(s)",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-          "line": 360,
-          "column": 27,
-          "symbol": "EdgeExchangeView",
-          "defaultMessage": "Reference flow(s)",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -201531,24 +200709,6 @@
               "path": "src/pages/Processes/Components/Exchange/view.tsx",
               "line": 527,
               "column": 19,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/Exchange/view.tsx",
-              "line": 421,
-              "column": 19,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-              "line": 212,
-              "column": 27,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-              "line": 360,
-              "column": 27,
               "kind": "FormattedMessage"
             }
           ]
@@ -201638,15 +200798,6 @@
           "symbol": "ProcessExchangeView",
           "defaultMessage": "Variable",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/Exchange/view.tsx",
-          "line": 164,
-          "column": 17,
-          "symbol": "ProcessExchangeView",
-          "defaultMessage": "Variable",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -201670,12 +200821,6 @@
             {
               "path": "src/pages/Processes/Components/Exchange/view.tsx",
               "line": 208,
-              "column": 17,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/Exchange/view.tsx",
-              "line": 164,
               "column": 17,
               "kind": "FormattedMessage"
             }
@@ -201775,24 +200920,6 @@
           "symbol": "ProcessExchangeEdit",
           "defaultMessage": "Resulting amount",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-          "line": 157,
-          "column": 25,
-          "symbol": "EdgeExchangeView",
-          "defaultMessage": "Resulting amount",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-          "line": 305,
-          "column": 25,
-          "symbol": "EdgeExchangeView",
-          "defaultMessage": "Resulting amount",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -201823,18 +200950,6 @@
               "path": "src/pages/Processes/Components/Exchange/edit.tsx",
               "line": 662,
               "column": 19,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-              "line": 157,
-              "column": 25,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/view.tsx",
-              "line": 305,
-              "column": 25,
               "kind": "FormattedMessage"
             }
           ]
@@ -202016,15 +201131,6 @@
           "symbol": "TargetAmount",
           "defaultMessage": "Short description",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-          "line": 229,
-          "column": 13,
-          "symbol": "TargetAmount",
-          "defaultMessage": "Short description",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -202054,12 +201160,6 @@
             {
               "path": "src/pages/LifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
               "line": 237,
-              "column": 13,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-              "line": 229,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -202150,15 +201250,6 @@
           "symbol": "TargetAmount",
           "defaultMessage": "Type",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-          "line": 192,
-          "column": 19,
-          "symbol": "TargetAmount",
-          "defaultMessage": "Type",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -202182,12 +201273,6 @@
             {
               "path": "src/pages/LifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
               "line": 200,
-              "column": 19,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-              "line": 192,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -202278,15 +201363,6 @@
           "symbol": "TargetAmount",
           "defaultMessage": "URI",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-          "line": 208,
-          "column": 19,
-          "symbol": "TargetAmount",
-          "defaultMessage": "URI",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -202310,12 +201386,6 @@
             {
               "path": "src/pages/LifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
               "line": 216,
-              "column": 19,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-              "line": 208,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -202401,7 +201471,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 171,
+          "line": 176,
           "column": 9,
           "symbol": "tabList",
           "defaultMessage": "Inputs and Outputs",
@@ -202428,7 +201498,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 171,
+              "line": 176,
               "column": 9,
               "kind": "FormattedMessage"
             }
@@ -205319,7 +204389,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 153,
+          "line": 158,
           "column": 9,
           "symbol": "tabList",
           "defaultMessage": "Modelling and validation",
@@ -205346,7 +204416,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 153,
+              "line": 158,
               "column": 9,
               "kind": "FormattedMessage"
             }
@@ -208322,7 +207392,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1115,
+          "line": 994,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Annual supply or production volume",
@@ -208355,7 +207425,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1115,
+              "line": 994,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -208441,7 +207511,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1188,
+          "line": 1067,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Completeness",
@@ -208468,7 +207538,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1188,
+              "line": 1067,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -208818,7 +207888,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1218,
+          "line": 1097,
           "column": 15,
           "symbol": "defaultTabContent",
           "defaultMessage": "Completeness elementary flows, per topic",
@@ -208845,7 +207915,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1218,
+              "line": 1097,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -208931,7 +208001,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1232,
+          "line": 1111,
           "column": 21,
           "symbol": "defaultTabContent",
           "defaultMessage": "completeness type",
@@ -208958,7 +208028,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1232,
+              "line": 1111,
               "column": 21,
               "kind": "FormattedMessage"
             }
@@ -209044,7 +208114,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1255,
+          "line": 1134,
           "column": 21,
           "symbol": "defaultTabContent",
           "defaultMessage": "value",
@@ -209071,7 +208141,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1255,
+              "line": 1134,
               "column": 21,
               "kind": "FormattedMessage"
             }
@@ -209166,7 +208236,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1271,
+          "line": 1150,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Completeness other problem field(s)",
@@ -209199,7 +208269,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1271,
+              "line": 1150,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -209285,7 +208355,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1202,
+          "line": 1081,
           "column": 19,
           "symbol": "defaultTabContent",
           "defaultMessage": "Completeness product model",
@@ -209312,7 +208382,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1202,
+              "line": 1081,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -211088,7 +210158,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1139,
+          "line": 1018,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Data collection period",
@@ -211121,7 +210191,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1139,
+              "line": 1018,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -211216,7 +210286,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 994,
+          "line": 873,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Data cut-off and completeness principles",
@@ -211249,7 +210319,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 994,
+              "line": 873,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -211344,7 +210414,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1018,
+          "line": 897,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Data selection and combination principles",
@@ -211377,7 +210447,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1018,
+              "line": 897,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -211463,7 +210533,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 987,
+          "line": 866,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Data sources, treatment, and representativeness",
@@ -211490,7 +210560,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 987,
+              "line": 866,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -211585,7 +210655,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1042,
+          "line": 921,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Data treatment and extrapolations principles",
@@ -211618,7 +210688,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1042,
+              "line": 921,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -211713,7 +210783,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1006,
+          "line": 885,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Deviation from data cut-off and completeness principles / explanations",
@@ -211746,7 +210816,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1006,
+              "line": 885,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -211841,7 +210911,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 936,
+          "line": 815,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Deviations from LCI method approaches / explanations",
@@ -211874,7 +210944,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 936,
+              "line": 815,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -211969,7 +211039,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 901,
+          "line": 780,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Deviation from LCI method principle / explanations",
@@ -212002,7 +211072,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 901,
+              "line": 780,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -212097,7 +211167,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 957,
+          "line": 836,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Deviation from modelling constants / explanations",
@@ -212130,7 +211200,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 957,
+              "line": 836,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -212225,7 +211295,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1030,
+          "line": 909,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Deviation from data selection and combination principles / explanations",
@@ -212258,7 +211328,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1030,
+              "line": 909,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -212353,7 +211423,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1054,
+          "line": 933,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Deviation from data treatment and extrapolations principles / explanations",
@@ -212386,7 +211456,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1054,
+              "line": 933,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -212472,7 +211542,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 852,
+          "line": 731,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "LCI method and allocation",
@@ -212499,7 +211569,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 852,
+              "line": 731,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -212585,7 +211655,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 921,
+          "line": 800,
           "column": 19,
           "symbol": "defaultTabContent",
           "defaultMessage": "LCI method approaches",
@@ -212612,7 +211682,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 921,
+              "line": 800,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -212698,7 +211768,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 887,
+          "line": 766,
           "column": 19,
           "symbol": "defaultTabContent",
           "defaultMessage": "LCI method principle",
@@ -212725,7 +211795,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 887,
+              "line": 766,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -212820,7 +211890,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 948,
+          "line": 827,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Modelling constants",
@@ -212853,7 +211923,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 948,
+              "line": 827,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -212939,7 +212009,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1102,
+          "line": 981,
           "column": 19,
           "symbol": "defaultTabContent",
           "defaultMessage": "Percentage supply or production covered",
@@ -212966,7 +212036,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1102,
+              "line": 981,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -213308,7 +212378,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1068,
+          "line": 947,
           "column": 15,
           "symbol": "defaultTabContent",
           "defaultMessage": "Data handling report",
@@ -213335,7 +212405,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1068,
+              "line": 947,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -213430,7 +212500,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1082,
+          "line": 961,
           "column": 15,
           "symbol": "defaultTabContent",
           "defaultMessage": "Data source(s) used for this data set",
@@ -213463,7 +212533,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1082,
+              "line": 961,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -213549,7 +212619,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 971,
+          "line": 850,
           "column": 15,
           "symbol": "defaultTabContent",
           "defaultMessage": "LCA methodology report",
@@ -213576,7 +212646,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 971,
+              "line": 850,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -213858,7 +212928,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1127,
+          "line": 1006,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Sampling procedure",
@@ -213891,7 +212961,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1127,
+              "line": 1006,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -214063,7 +213133,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 866,
+          "line": 745,
           "column": 19,
           "symbol": "defaultTabContent",
           "defaultMessage": "Dataset type",
@@ -214108,7 +213178,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 866,
+              "line": 745,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -214618,7 +213688,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1151,
+          "line": 1030,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Uncertainty adjustments",
@@ -214651,7 +213721,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1151,
+              "line": 1030,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -215311,7 +214381,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 1163,
+          "line": 1042,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Use advice for data set",
@@ -215344,7 +214414,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 1163,
+              "line": 1042,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -215746,7 +214816,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 144,
+          "line": 149,
           "column": 9,
           "symbol": "tabList",
           "defaultMessage": "Process information",
@@ -215773,7 +214843,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 144,
+              "line": 149,
               "column": 9,
               "kind": "FormattedMessage"
             }
@@ -215868,7 +214938,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 368,
+          "line": 247,
           "column": 15,
           "symbol": "defaultTabContent",
           "defaultMessage": "Base name",
@@ -215901,7 +214971,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 368,
+              "line": 247,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -216046,7 +215116,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 513,
+          "line": 392,
           "column": 19,
           "symbol": "defaultTabContent",
           "defaultMessage": "Data set valid until:",
@@ -216073,7 +215143,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 513,
+              "line": 392,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -216195,7 +215265,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 559,
+          "line": 438,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Geographical representativeness description",
@@ -216204,7 +215274,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 597,
+          "line": 476,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Geographical representativeness description",
@@ -216255,13 +215325,13 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 559,
+              "line": 438,
               "column": 13,
               "kind": "FormattedMessage"
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 597,
+              "line": 476,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -216356,7 +215426,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 401,
+          "line": 280,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Quantitative product or process properties",
@@ -216389,7 +215459,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 401,
+              "line": 280,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -216484,7 +215554,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 443,
+          "line": 322,
           "column": 11,
           "symbol": "defaultTabContent",
           "defaultMessage": "General comment on data set",
@@ -216517,7 +215587,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 443,
+              "line": 322,
               "column": 11,
               "kind": "FormattedMessage"
             }
@@ -216594,7 +215664,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 345,
+          "line": 224,
           "column": 17,
           "symbol": "defaultTabContent",
           "defaultMessage": "ID",
@@ -216615,7 +215685,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 345,
+              "line": 224,
               "column": 17,
               "kind": "FormattedMessage"
             }
@@ -216701,7 +215771,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 422,
+          "line": 301,
           "column": 17,
           "symbol": "defaultTabContent",
           "defaultMessage": "Identifier of sub-data set",
@@ -216728,7 +215798,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 422,
+              "line": 301,
               "column": 17,
               "kind": "FormattedMessage"
             }
@@ -216814,7 +215884,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 551,
+          "line": 430,
           "column": 15,
           "symbol": "defaultTabContent",
           "defaultMessage": "Location",
@@ -216841,7 +215911,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 551,
+              "line": 430,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -216927,7 +215997,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 537,
+          "line": 416,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Location",
@@ -216954,7 +216024,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 537,
+              "line": 416,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -217108,7 +216178,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 390,
+          "line": 269,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Mix and location types",
@@ -217141,7 +216211,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 390,
+              "line": 269,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -217236,7 +216306,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 666,
+          "line": 545,
           "column": 11,
           "symbol": "defaultTabContent",
           "defaultMessage": "Model description",
@@ -217269,7 +216339,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 666,
+              "line": 545,
               "column": 11,
               "kind": "FormattedMessage"
             }
@@ -217346,7 +216416,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 360,
+          "line": 239,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Name",
@@ -217367,7 +216437,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 360,
+              "line": 239,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -217453,7 +216523,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 464,
+          "line": 343,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Data set LCA report, background info",
@@ -217480,7 +216550,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 464,
+              "line": 343,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -217566,7 +216636,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 653,
+          "line": 532,
           "column": 15,
           "symbol": "defaultTabContent",
           "defaultMessage": "Flow diagram(s) or picture(s)",
@@ -217593,7 +216663,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 653,
+              "line": 532,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -217679,7 +216749,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 642,
+          "line": 521,
           "column": 15,
           "symbol": "defaultTabContent",
           "defaultMessage": "Technology pictogram",
@@ -217706,7 +216776,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 642,
+              "line": 521,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -217792,7 +216862,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 494,
+          "line": 373,
           "column": 19,
           "symbol": "defaultTabContent",
           "defaultMessage": "Reference year",
@@ -217819,7 +216889,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 494,
+              "line": 373,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -217923,7 +216993,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 575,
+          "line": 454,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Sub-location(s)",
@@ -217932,7 +217002,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 589,
+          "line": 468,
           "column": 15,
           "symbol": "defaultTabContent",
           "defaultMessage": "Sub-location(s)",
@@ -217971,13 +217041,13 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 575,
+              "line": 454,
               "column": 13,
               "kind": "FormattedMessage"
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 589,
+              "line": 468,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -218072,7 +217142,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 434,
+          "line": 313,
           "column": 11,
           "symbol": "defaultTabContent",
           "defaultMessage": "Synonyms",
@@ -218105,7 +217175,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 434,
+              "line": 313,
               "column": 11,
               "kind": "FormattedMessage"
             }
@@ -218200,7 +217270,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 631,
+          "line": 510,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Technical purpose of product or process",
@@ -218233,7 +217303,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 631,
+              "line": 510,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -218319,7 +217389,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 613,
+          "line": 492,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Technological representativeness",
@@ -218346,7 +217416,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 613,
+              "line": 492,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -218441,7 +217511,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 620,
+          "line": 499,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Technology description including background system",
@@ -218474,7 +217544,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 620,
+              "line": 499,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -218560,7 +217630,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 480,
+          "line": 359,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Time representativeness",
@@ -218587,7 +217657,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 480,
+              "line": 359,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -218682,7 +217752,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 524,
+          "line": 403,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Time representativeness description",
@@ -218715,7 +217785,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 524,
+              "line": 403,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -218810,7 +217880,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 378,
+          "line": 257,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Treatment, standards, routes",
@@ -218843,7 +217913,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 378,
+              "line": 257,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -218929,7 +217999,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 678,
+          "line": 557,
           "column": 13,
           "symbol": "defaultTabContent",
           "defaultMessage": "Variable / parameter",
@@ -218956,7 +218026,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 678,
+              "line": 557,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -219051,7 +218121,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 835,
+          "line": 714,
           "column": 15,
           "symbol": "defaultTabContent",
           "defaultMessage": "Comment, units, defaults",
@@ -219084,7 +218154,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 835,
+              "line": 714,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -219170,7 +218240,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 714,
+          "line": 593,
           "column": 19,
           "symbol": "defaultTabContent",
           "defaultMessage": "Formula",
@@ -219197,7 +218267,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 714,
+              "line": 593,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -219283,7 +218353,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 777,
+          "line": 656,
           "column": 19,
           "symbol": "defaultTabContent",
           "defaultMessage": "Maximum value",
@@ -219310,7 +218380,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 777,
+              "line": 656,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -219396,7 +218466,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 735,
+          "line": 614,
           "column": 19,
           "symbol": "defaultTabContent",
           "defaultMessage": "Mean value",
@@ -219423,7 +218493,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 735,
+              "line": 614,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -219509,7 +218579,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 756,
+          "line": 635,
           "column": 19,
           "symbol": "defaultTabContent",
           "defaultMessage": "Minimum value",
@@ -219536,7 +218606,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 756,
+              "line": 635,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -219622,7 +218692,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 692,
+          "line": 571,
           "column": 19,
           "symbol": "defaultTabContent",
           "defaultMessage": "Name of variable",
@@ -219649,7 +218719,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 692,
+              "line": 571,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -219735,7 +218805,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 820,
+          "line": 699,
           "column": 19,
           "symbol": "defaultTabContent",
           "defaultMessage": "Relative standard deviation (95%) in %",
@@ -219762,7 +218832,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 820,
+              "line": 699,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -219848,7 +218918,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 798,
+          "line": 677,
           "column": 19,
           "symbol": "defaultTabContent",
           "defaultMessage": "Uncertainty distribution type",
@@ -219875,7 +218945,7 @@
             },
             {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 798,
+              "line": 677,
               "column": 19,
               "kind": "FormattedMessage"
             }
@@ -221189,7 +220259,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/AssignmentReview.tsx",
-          "line": 1009,
+          "line": 982,
           "column": 18,
           "symbol": "AssignmentReview",
           "defaultMessage": "Actions",
@@ -221237,7 +220307,7 @@
             },
             {
               "path": "src/pages/Review/Components/AssignmentReview.tsx",
-              "line": 1009,
+              "line": 982,
               "column": 18,
               "kind": "FormattedMessage"
             },
@@ -222827,7 +221897,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Review/Components/AssignmentReview.tsx",
-          "line": 1210,
+          "line": 1183,
           "column": 29,
           "symbol": "filterControls",
           "defaultMessage": "Data type",
@@ -222842,7 +221912,7 @@
           "locations": [
             {
               "path": "src/pages/Review/Components/AssignmentReview.tsx",
-              "line": 1210,
+              "line": 1183,
               "column": 29,
               "kind": "formatMessage"
             }
@@ -222993,7 +222063,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Review/Components/AssignmentReview.tsx",
-          "line": 1199,
+          "line": 1172,
           "column": 29,
           "symbol": "filterControls",
           "defaultMessage": "Display mode",
@@ -223008,7 +222078,7 @@
           "locations": [
             {
               "path": "src/pages/Review/Components/AssignmentReview.tsx",
-              "line": 1199,
+              "line": 1172,
               "column": 29,
               "kind": "formatMessage"
             }
@@ -229370,7 +228440,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Review/Components/AssignmentReview.tsx",
-          "line": 1179,
+          "line": 1152,
           "column": 42,
           "symbol": "qualityDiagnosticLabel",
           "defaultMessage": "Run quality diagnostic",
@@ -229394,7 +228464,7 @@
           "locations": [
             {
               "path": "src/pages/Review/Components/AssignmentReview.tsx",
-              "line": 1179,
+              "line": 1152,
               "column": 42,
               "kind": "formatMessage"
             },
@@ -232266,7 +231336,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/AssignmentReview.tsx",
-          "line": 1228,
+          "line": 1201,
           "column": 21,
           "symbol": "AssignmentReview",
           "defaultMessage": "Failed to load referenced reviews. Reselect the root review to retry.",
@@ -232281,7 +231351,7 @@
           "locations": [
             {
               "path": "src/pages/Review/Components/AssignmentReview.tsx",
-              "line": 1228,
+              "line": 1201,
               "column": 21,
               "kind": "FormattedMessage"
             }
@@ -232420,7 +231490,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/AssignmentReview.tsx",
-          "line": 1323,
+          "line": 1296,
           "column": 15,
           "symbol": "AssignmentReview",
           "defaultMessage": "Selected {rootCount} root reviews and {referenceCount} reference reviews",
@@ -232438,7 +231508,7 @@
           "locations": [
             {
               "path": "src/pages/Review/Components/AssignmentReview.tsx",
-              "line": 1323,
+              "line": 1296,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -233497,7 +232567,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/AssignmentReview.tsx",
-          "line": 1001,
+          "line": 974,
           "column": 13,
           "symbol": "AssignmentReview",
           "defaultMessage": "Deadline",
@@ -233524,7 +232594,7 @@
             },
             {
               "path": "src/pages/Review/Components/AssignmentReview.tsx",
-              "line": 1001,
+              "line": 974,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -234607,7 +233677,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/AssignmentReview.tsx",
-          "line": 1055,
+          "line": 1028,
           "column": 16,
           "symbol": "getSubTitle",
           "defaultMessage": "Assigned Task",
@@ -234631,7 +233701,7 @@
           "locations": [
             {
               "path": "src/pages/Review/Components/AssignmentReview.tsx",
-              "line": 1055,
+              "line": 1028,
               "column": 16,
               "kind": "FormattedMessage"
             }
@@ -234791,7 +233861,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/AssignmentReview.tsx",
-          "line": 1059,
+          "line": 1032,
           "column": 16,
           "symbol": "getSubTitle",
           "defaultMessage": "Pending Review",
@@ -234815,7 +233885,7 @@
           "locations": [
             {
               "path": "src/pages/Review/Components/AssignmentReview.tsx",
-              "line": 1059,
+              "line": 1032,
               "column": 16,
               "kind": "FormattedMessage"
             }
@@ -234883,7 +233953,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/AssignmentReview.tsx",
-          "line": 1061,
+          "line": 1034,
           "column": 16,
           "symbol": "getSubTitle",
           "defaultMessage": "Rejected",
@@ -234907,7 +233977,7 @@
           "locations": [
             {
               "path": "src/pages/Review/Components/AssignmentReview.tsx",
-              "line": 1061,
+              "line": 1034,
               "column": 16,
               "kind": "FormattedMessage"
             }
@@ -234975,7 +234045,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/AssignmentReview.tsx",
-          "line": 1064,
+          "line": 1037,
           "column": 11,
           "symbol": "getSubTitle",
           "defaultMessage": "Rejected Task",
@@ -234999,7 +234069,7 @@
           "locations": [
             {
               "path": "src/pages/Review/Components/AssignmentReview.tsx",
-              "line": 1064,
+              "line": 1037,
               "column": 11,
               "kind": "FormattedMessage"
             }
@@ -235067,7 +234137,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/AssignmentReview.tsx",
-          "line": 1057,
+          "line": 1030,
           "column": 16,
           "symbol": "getSubTitle",
           "defaultMessage": "Reviewed",
@@ -235091,7 +234161,7 @@
           "locations": [
             {
               "path": "src/pages/Review/Components/AssignmentReview.tsx",
-              "line": 1057,
+              "line": 1030,
               "column": 16,
               "kind": "FormattedMessage"
             }
@@ -235159,7 +234229,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/AssignmentReview.tsx",
-          "line": 1052,
+          "line": 1025,
           "column": 11,
           "symbol": "getSubTitle",
           "defaultMessage": "Unassigned Task",
@@ -235183,7 +234253,7 @@
           "locations": [
             {
               "path": "src/pages/Review/Components/AssignmentReview.tsx",
-              "line": 1052,
+              "line": 1025,
               "column": 11,
               "kind": "FormattedMessage"
             }
@@ -236949,7 +236019,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Review/Components/AssignmentReview.tsx",
-          "line": 1113,
+          "line": 1086,
           "column": 30,
           "symbol": "AssignmentReview",
           "defaultMessage": null,
@@ -249017,24 +248087,6 @@
         },
         {
           "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortView.tsx",
-          "line": 59,
-          "column": 14,
-          "symbol": "processExchangeColumns",
-          "defaultMessage": "Index",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 190,
-          "column": 14,
-          "symbol": "processExchangeColumns",
-          "defaultMessage": "Index",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/ReviewProgress.tsx",
           "line": 176,
           "column": 14,
@@ -249232,18 +248284,6 @@
             {
               "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortSelect.tsx",
               "line": 72,
-              "column": 14,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortView.tsx",
-              "line": 59,
-              "column": 14,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 190,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -250067,17 +249107,8 @@
         },
         {
           "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortView.tsx",
-          "line": 165,
-          "column": 14,
-          "symbol": "processExchangeColumns",
-          "defaultMessage": "Actions",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 317,
+          "line": 196,
           "column": 14,
           "symbol": "processExchangeColumns",
           "defaultMessage": "Actions",
@@ -250271,14 +249302,8 @@
               "kind": "FormattedMessage"
             },
             {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortView.tsx",
-              "line": 165,
-              "column": 14,
-              "kind": "FormattedMessage"
-            },
-            {
               "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 317,
+              "line": 196,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -250794,24 +249819,6 @@
         },
         {
           "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortView.tsx",
-          "line": 76,
-          "column": 14,
-          "symbol": "processExchangeColumns",
-          "defaultMessage": "Version",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 207,
-          "column": 14,
-          "symbol": "processExchangeColumns",
-          "defaultMessage": "Version",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
           "path": "src/pages/Sources/Components/select/drawer.tsx",
           "line": 187,
           "column": 14,
@@ -250970,18 +249977,6 @@
             {
               "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortSelect.tsx",
               "line": 89,
-              "column": 14,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortView.tsx",
-              "line": 76,
-              "column": 14,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 207,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -265305,15 +264300,6 @@
           "symbol": "TargetAmount",
           "defaultMessage": "Version",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-          "line": 223,
-          "column": 24,
-          "symbol": "TargetAmount",
-          "defaultMessage": "Version",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -265331,12 +264317,6 @@
             {
               "path": "src/pages/LifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
               "line": 231,
-              "column": 24,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewTargetAmount.tsx",
-              "line": 223,
               "column": 24,
               "kind": "FormattedMessage"
             }
@@ -270429,15 +269409,6 @@
           "symbol": "processExchangeColumns",
           "defaultMessage": "Data derivation type / status",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortView.tsx",
-          "line": 136,
-          "column": 9,
-          "symbol": "processExchangeColumns",
-          "defaultMessage": "Data derivation type / status",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -270461,12 +269432,6 @@
             {
               "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortSelect.tsx",
               "line": 150,
-              "column": 9,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortView.tsx",
-              "line": 136,
               "column": 9,
               "kind": "FormattedMessage"
             }
@@ -270675,15 +269640,6 @@
           "symbol": "ProcessExchangeView",
           "defaultMessage": "Maximum amount",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/Exchange/view.tsx",
-          "line": 259,
-          "column": 21,
-          "symbol": "ProcessExchangeView",
-          "defaultMessage": "Maximum amount",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -270707,12 +269663,6 @@
             {
               "path": "src/pages/Processes/Components/Exchange/view.tsx",
               "line": 323,
-              "column": 21,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/Exchange/view.tsx",
-              "line": 259,
               "column": 21,
               "kind": "FormattedMessage"
             }
@@ -270806,26 +269756,8 @@
         },
         {
           "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/Exchange/view.tsx",
-          "line": 183,
-          "column": 17,
-          "symbol": "ProcessExchangeView",
-          "defaultMessage": "Mean amount",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortSelect.tsx",
           "line": 95,
-          "column": 14,
-          "symbol": "processExchangeColumns",
-          "defaultMessage": "Mean amount",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortView.tsx",
-          "line": 82,
           "column": 14,
           "symbol": "processExchangeColumns",
           "defaultMessage": "Mean amount",
@@ -270857,20 +269789,8 @@
               "kind": "FormattedMessage"
             },
             {
-              "path": "src/pages/Review/Components/Exchange/view.tsx",
-              "line": 183,
-              "column": 17,
-              "kind": "FormattedMessage"
-            },
-            {
               "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortSelect.tsx",
               "line": 95,
-              "column": 14,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortView.tsx",
-              "line": 82,
               "column": 14,
               "kind": "FormattedMessage"
             }
@@ -270961,15 +269881,6 @@
           "symbol": "ProcessExchangeView",
           "defaultMessage": "Minimum amount",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/Exchange/view.tsx",
-          "line": 240,
-          "column": 21,
-          "symbol": "ProcessExchangeView",
-          "defaultMessage": "Minimum amount",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -270993,12 +269904,6 @@
             {
               "path": "src/pages/Processes/Components/Exchange/view.tsx",
               "line": 300,
-              "column": 21,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/Exchange/view.tsx",
-              "line": 240,
               "column": 21,
               "kind": "FormattedMessage"
             }
@@ -271089,15 +269994,6 @@
           "symbol": "processExchangeColumns",
           "defaultMessage": "Quantitative reference",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortView.tsx",
-          "line": 147,
-          "column": 9,
-          "symbol": "processExchangeColumns",
-          "defaultMessage": "Quantitative reference",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -271121,12 +270017,6 @@
             {
               "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortSelect.tsx",
               "line": 161,
-              "column": 9,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortView.tsx",
-              "line": 147,
               "column": 9,
               "kind": "FormattedMessage"
             }
@@ -271226,24 +270116,6 @@
           "symbol": "processExchangeColumns",
           "defaultMessage": "Flow",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortView.tsx",
-          "line": 65,
-          "column": 14,
-          "symbol": "processExchangeColumns",
-          "defaultMessage": "Flow",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-          "line": 196,
-          "column": 14,
-          "symbol": "processExchangeColumns",
-          "defaultMessage": "Flow",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -271273,18 +270145,6 @@
             {
               "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortSelect.tsx",
               "line": 78,
-              "column": 14,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortView.tsx",
-              "line": 65,
-              "column": 14,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewProcess/tabsDetail.tsx",
-              "line": 196,
               "column": 14,
               "kind": "FormattedMessage"
             }
@@ -271375,15 +270235,6 @@
           "symbol": "ProcessExchangeView",
           "defaultMessage": "Relative StdDev in %",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/Exchange/view.tsx",
-          "line": 285,
-          "column": 21,
-          "symbol": "ProcessExchangeView",
-          "defaultMessage": "Relative StdDev in %",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -271407,12 +270258,6 @@
             {
               "path": "src/pages/Processes/Components/Exchange/view.tsx",
               "line": 353,
-              "column": 21,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/Exchange/view.tsx",
-              "line": 285,
               "column": 21,
               "kind": "FormattedMessage"
             }
@@ -271506,26 +270351,8 @@
         },
         {
           "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/Exchange/view.tsx",
-          "line": 199,
-          "column": 17,
-          "symbol": "ProcessExchangeView",
-          "defaultMessage": "Resulting amount",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortSelect.tsx",
           "line": 105,
-          "column": 9,
-          "symbol": "processExchangeColumns",
-          "defaultMessage": "Resulting amount",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortView.tsx",
-          "line": 92,
           "column": 9,
           "symbol": "processExchangeColumns",
           "defaultMessage": "Resulting amount",
@@ -271557,20 +270384,8 @@
               "kind": "FormattedMessage"
             },
             {
-              "path": "src/pages/Review/Components/Exchange/view.tsx",
-              "line": 199,
-              "column": 17,
-              "kind": "FormattedMessage"
-            },
-            {
               "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortSelect.tsx",
               "line": 105,
-              "column": 9,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/Exchange/ioPortView.tsx",
-              "line": 92,
               "column": 9,
               "kind": "FormattedMessage"
             }
@@ -271774,15 +270589,6 @@
           "symbol": "ProcessExchangeView",
           "defaultMessage": "Uncertainty distribution type",
           "defaultMessageExpression": null
-        },
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/Exchange/view.tsx",
-          "line": 218,
-          "column": 17,
-          "symbol": "ProcessExchangeView",
-          "defaultMessage": "Uncertainty distribution type",
-          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -271806,12 +270612,6 @@
             {
               "path": "src/pages/Processes/Components/Exchange/view.tsx",
               "line": 274,
-              "column": 17,
-              "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/Review/Components/Exchange/view.tsx",
-              "line": 218,
               "column": 17,
               "kind": "FormattedMessage"
             }

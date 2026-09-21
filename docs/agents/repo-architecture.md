@@ -25,9 +25,9 @@ checkPaths:
   - playwright.config.ts
   - config/docs-capture/**
   - tests/e2e/i18n/**
-lastReviewedAt: 2026-09-20
-lastReviewedCommit: 25bfea81d9507deccf4aa968c213600eea13b927
-lastReviewedNote: 'Reviewed Platform #1107: the import report download now sits beside View and generates a bounded, multilingual JSON report in the browser; task details and backend ownership are unchanged.'
+lastReviewedAt: 2026-09-21
+lastReviewedCommit: 25d57284565efb719c471df2bfdceb05dfc65717
+lastReviewedNote: 'Reviewed Platform #1109 after merging current dev: review action and input/output display parity use shared data-page views; the #1107 import-report behavior, repository contracts, validation, and testing policies remain unchanged.'
 related:
   - ../AGENTS.md
   - ../.docpact/config.yaml
