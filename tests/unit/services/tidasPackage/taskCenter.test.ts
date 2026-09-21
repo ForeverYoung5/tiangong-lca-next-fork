@@ -2226,6 +2226,47 @@ describe('tidasPackage/taskCenter', () => {
     expect(mockGetTidasPackageJobApi).toHaveBeenCalledTimes(1);
   });
 
+  it('maps a recovered no-success report to a failed terminal task', async () => {
+    const center = loadTaskCenterModule();
+    await center.refreshTidasPackageTasksFromWorkerJobs();
+    await enqueueImport(center);
+    mockGetTidasPackageJobApi.mockResolvedValue({
+      data: {
+        ok: true,
+        job_id: 'import-job',
+        job_type: 'import_package',
+        status: 'completed',
+        scope: null,
+        root_count: 1,
+        timestamps: {},
+        payload: {},
+        diagnostics: {},
+        artifacts: [],
+        artifacts_by_kind: {
+          import_report: {
+            status: 'ready',
+            metadata: {
+              outcome: 'none',
+              execution_complete: true,
+              summary: { total_entries: 1, not_imported_count: 1, root_count: 1 },
+            },
+          },
+        },
+        request_cache: null,
+      },
+      error: null,
+    });
+    mockRequestWorkerJobsApi.mockResolvedValue({ data: [importRow({})], error: null });
+
+    await center.refreshTidasPackageTasksFromWorkerJobs();
+    expect(center.listTidasPackageTasks()[0]).toMatchObject({
+      state: 'failed',
+      phase: 'failed',
+      message: 'Import package failed',
+      importOutcome: 'none',
+    });
+  });
+
   it('recovers a persisted terminal import after it has left the recent Worker list', async () => {
     localStorage.setItem(
       STORAGE_KEY,
@@ -2294,6 +2335,54 @@ describe('tidasPackage/taskCenter', () => {
     );
     await center.refreshTidasPackageTasksFromWorkerJobs();
     expect(mockGetTidasPackageJobApi).toHaveBeenCalledTimes(1);
+  });
+
+  it('discards a historical result recovery after the authenticated owner changes', async () => {
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({
+        version: 1,
+        savedAt: new Date().toISOString(),
+        tasks: [
+          {
+            id: 'historical-import',
+            sequence: 1,
+            kind: 'tidas_package_import',
+            state: 'completed',
+            phase: 'completed',
+            message: 'Import package completed',
+            createdAt: '2026-09-18T00:00:00Z',
+            updatedAt: '2026-09-18T00:01:00Z',
+            jobId: 'historical-job',
+            rootCount: 0,
+          },
+        ],
+      }),
+    );
+    mockRequestWorkerJobsApi.mockResolvedValue({
+      data: [
+        {
+          id: 'historical-import',
+          jobKind: 'tidas.import_package',
+          subjectId: 'historical-job',
+          status: 'completed',
+          createdAt: '2026-09-18T00:00:00Z',
+          updatedAt: '2026-09-18T00:01:00Z',
+        },
+      ],
+      error: null,
+    });
+    const detail = createDeferred<any>();
+    mockGetTidasPackageJobApi.mockReturnValue(detail.promise);
+
+    const center = loadTaskCenterModule();
+    const refresh = center.refreshTidasPackageTasksFromWorkerJobs();
+    await flushPromises();
+    mockRequestWorkerJobsApi.mockResolvedValue({ data: [], error: null });
+    center.bindTidasPackageTaskCenterOwner('user-b');
+    detail.resolve({ data: { ok: false }, error: null });
+    await refresh;
+    expect(center.listTidasPackageTasks()).toEqual([]);
   });
 
   it('handles recovered imports with no domain job id and no inserted count', async () => {
