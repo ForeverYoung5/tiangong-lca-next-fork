@@ -43,7 +43,7 @@ checkPaths:
   - scripts/reference-data/**
   - .github/workflows/**
 lastReviewedAt: 2026-09-21
-lastReviewedCommit: df4a2bdc4bfea90aa864748e6af3c145f4762243
+lastReviewedCommit: 6f8be14cd161d54b8cc2f0965ced23f3fd4234a7
 lastReviewedNote: 'Reviewed for Platform #1111: the exact SDK dependency and installed-package Process review contract advance to 0.3.1; pre-push ownership and trigger policy are unchanged.'
 ---
 
