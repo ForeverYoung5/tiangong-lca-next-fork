@@ -44,7 +44,7 @@ checkPaths:
   - .github/workflows/release-readiness.yml
 lastReviewedAt: 2026-09-21
 lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
-lastReviewedNote: 'Reviewed for Platform #1111: the real installed-package contract adds ordered Process review coverage for SDK 0.3.1 without changing reusable test-selection or helper patterns.'
+lastReviewedNote: 'Reviewed for Platform #1115: the real installed-package contract adds required Process general-comment coverage for SDK 0.4.0 without changing reusable test-selection or helper patterns.'
 ---
 
 # Testing Patterns Reference
@@ -112,7 +112,7 @@ Validation-specific rule:
 Toolchain-specific rule:
 
 - keep TypeScript `7.0.2` as the only direct compiler/API implementation; command-contract tests must reject a TS6 alias, a `tsc6`/compat command, or a non-repository compiler entrypoint
-- for an upgraded package that Jest maps to a test double, launch a child Node test through normal package resolution and assert the real installed manifest plus representative runtime behavior. The TIDAS SDK contract must cover all seven dataset factories, `validateEnhanced`, and the normalized failure envelope at exact version `0.2.0`
+- for an upgraded package that Jest maps to a test double, launch a child Node test through normal package resolution and assert the real installed manifest plus representative runtime behavior. The TIDAS SDK contract must cover all seven dataset factories, `validateEnhanced`, the normalized failure envelope, and required Process general-comment validation at exact version `0.4.0`
 - keep every `typescript/unstable/*` import inside `scripts/typescript-native-parser.mjs` and `scripts/typescript-native-parser.d.mts`. Adapter proof must cover source replacement without stale AST state, traversal and parent/text ranges, TSX guards, syntactic diagnostics, JSON parsing, and clean process exit
 - use Oxlint for unused and deprecated API correctness and Prettier for formatting only. Keep the focused repo-local `tiangong/no-invalid-this` rule until Oxlint provides a native equivalent, and prove it rejects module-level `this`. Tests must reject reintroducing ESLint, the standalone deprecated scanner, or a Prettier organize-imports plugin
 
