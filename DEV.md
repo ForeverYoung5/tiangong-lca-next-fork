@@ -43,8 +43,8 @@ checkPaths:
   - .github/workflows/build.yml
   - .nvmrc
 lastReviewedAt: 2026-09-20
-lastReviewedCommit: 46c2b72d7b68926dde4a486cb3e16667289baad4
-lastReviewedNote: 'Reviewed Platform #1097 W10 form-rule deduplication against the installed TIDAS SDK. Required field paths remain SDK-addressable, the two-component Process version is accepted, and Flow-property field prompts remain an evidenced UI projection. Documentation ownership, bootstrap, test strategy, and gate policy are unchanged.'
+lastReviewedCommit: 4c008bb04f8717af6c8ce2e62f61aaca19fc5062
+lastReviewedNote: 'Reviewed review input/output display parity. The local bootstrap and work loop remain unchanged.'
 ---
 
 # Development Bootstrap

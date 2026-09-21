@@ -28,7 +28,7 @@ jest.mock('@ant-design/pro-components', () => {
   const React = require('react');
   return {
     __esModule: true,
-    ProTable: ({ request, actionRef, columns }: any) => {
+    ProTable: ({ request, actionRef, columns, scroll }: any) => {
       const [rows, setRows] = React.useState<any[]>([]);
       const title = toText(columns?.[0]?.title) || 'table';
 
@@ -46,7 +46,10 @@ jest.mock('@ant-design/pro-components', () => {
       }, [actionRef, runRequest]);
 
       return (
-        <div data-testid={`table-${title}`}>
+        <div data-testid={`table-${title}`} data-scroll={scroll?.x ?? ''}>
+          <div data-testid={`table-columns-${title}`}>
+            {(columns ?? []).map((column: any) => toText(column.title)).join('|')}
+          </div>
           {rows.map((row, index) => (
             <div key={`${title}-${index}`}>
               <div>{`${row.referenceToFlowDataSetId}:${row.stateCode ?? 'na'}:${row.classification ?? '-'}`}</div>
@@ -233,7 +236,7 @@ describe('Review process TabsDetail', () => {
     dataSetInternalID: 'ex-1',
     referenceToFlowDataSetId: 'flow-1',
     referenceToFlowDataSetVersion: '1.0.0',
-    referenceToFlowDataSet: { '@refObjectId': 'flow-1', '@version': '1.0.0' },
+    referenceToFlowDataSet: [{ '@refObjectId': 'flow-1', '@version': '1.0.0' }],
     stateCode: undefined,
     classification: undefined,
   };
@@ -410,6 +413,10 @@ describe('Review process TabsDetail', () => {
       'en',
     );
     expect(await screen.findAllByText('flow-1:30:class-a')).toHaveLength(2);
+    expect(screen.getAllByTestId('table-Index')).toHaveLength(2);
+    expect(screen.getAllByTestId('table-Index')[0]).toHaveAttribute('data-scroll', 'max-content');
+    expect(screen.getAllByTestId('table-columns-Index')[0]).toHaveTextContent('Flow type');
+    expect(screen.getAllByTestId('table-columns-Index')[0]).toHaveTextContent('Classification');
   });
 
   it('renders mapped option labels across process, modelling, and administrative tabs', async () => {

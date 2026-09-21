@@ -26,8 +26,8 @@ checkPaths:
   - config/docs-capture/**
   - tests/e2e/i18n/**
 lastReviewedAt: 2026-09-20
-lastReviewedCommit: 946947e382e67d975a96f27acec727ac419f437c
-lastReviewedNote: 'Reviewed Platform #1097 W10 form-rule deduplication against the installed TIDAS SDK. Required field paths remain SDK-addressable, the two-component Process version is accepted, and Flow-property field prompts remain an evidenced UI projection. Documentation ownership, bootstrap, test strategy, and gate policy are unchanged.'
+lastReviewedCommit: 4c008bb04f8717af6c8ce2e62f61aaca19fc5062
+lastReviewedNote: 'Reviewed review input/output display parity against shared Process and LifeCycleModel data views. Audit transitions, ownership, validation requirements, and testing policy are unchanged.'
 related:
   - ../AGENTS.md
   - ../.docpact/config.yaml
