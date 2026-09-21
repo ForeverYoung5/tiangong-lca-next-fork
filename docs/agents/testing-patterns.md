@@ -43,8 +43,8 @@ checkPaths:
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
 lastReviewedAt: 2026-09-21
-lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
-lastReviewedNote: 'Reviewed for Platform #1115: the real installed-package contract adds required Process general-comment coverage for SDK 0.4.0 without changing reusable test-selection or helper patterns.'
+lastReviewedCommit: 4023bdb2afd335143040957b641241467320ade7
+lastReviewedNote: 'Reviewed for Platform #1107 after integrating Platform #1115: the task-center test exercises Tooltip guidance and retained import details while preserving the SDK 0.4.0 installed-package and reusable test-helper patterns.'
 ---
 
 # Testing Patterns Reference
