@@ -2226,6 +2226,46 @@ describe('tidasPackage/taskCenter', () => {
     expect(mockGetTidasPackageJobApi).toHaveBeenCalledTimes(1);
   });
 
+  it('fails a recovered terminal import whose report metadata omits the outcome', async () => {
+    const center = loadTaskCenterModule();
+    await center.refreshTidasPackageTasksFromWorkerJobs();
+    await enqueueImport(center);
+    mockGetTidasPackageJobApi.mockResolvedValue({
+      data: {
+        ok: true,
+        job_id: 'import-job',
+        job_type: 'import_package',
+        status: 'completed',
+        scope: null,
+        root_count: 1,
+        timestamps: {},
+        payload: {},
+        diagnostics: {},
+        artifacts: [],
+        artifacts_by_kind: {
+          import_report: {
+            status: 'ready',
+            metadata: {
+              execution_complete: true,
+              summary: { total_entries: 1, imported_count: 1, root_count: 1 },
+            },
+          },
+        },
+        request_cache: null,
+      },
+      error: null,
+    });
+    mockRequestWorkerJobsApi.mockResolvedValue({ data: [importRow({})], error: null });
+
+    await center.refreshTidasPackageTasksFromWorkerJobs();
+    expect(center.listTidasPackageTasks()[0]).toMatchObject({
+      state: 'failed',
+      phase: 'failed',
+      error: 'Import result is unavailable',
+      importReportAvailable: true,
+    });
+  });
+
   it('maps a recovered no-success report to a failed terminal task', async () => {
     const center = loadTaskCenterModule();
     await center.refreshTidasPackageTasksFromWorkerJobs();
@@ -2362,7 +2402,7 @@ describe('tidasPackage/taskCenter', () => {
     mockRequestWorkerJobsApi.mockResolvedValue({
       data: [
         {
-          id: 'historical-import',
+          id: 'historical-worker',
           jobKind: 'tidas.import_package',
           subjectId: 'historical-job',
           status: 'completed',
