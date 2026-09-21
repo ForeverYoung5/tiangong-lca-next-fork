@@ -1145,7 +1145,7 @@ const DetailGrid: React.FC<{ rows: DetailRow[] }> = ({ rows }) => {
   );
 };
 
-const DetailSection: React.FC<{ title: string; children: React.ReactNode }> = ({
+const DetailSection: React.FC<{ title: React.ReactNode; children: React.ReactNode }> = ({
   title,
   children,
 }) => (
@@ -1221,6 +1221,11 @@ function packageBusinessDetail(
           defaultMessage: 'Uploaded ZIP package',
         })
       : 'tidas-package.zip');
+  const partialImportHint = intl.formatMessage({
+    id: 'component.tidasPackage.taskCenter.detail.partialHint',
+    defaultMessage:
+      'Some data was not imported. Download the report to view blocked root groups and validation issues.',
+  });
 
   return (
     <Space orientation='vertical' size={14} style={{ width: '100%' }}>
@@ -1251,10 +1256,19 @@ function packageBusinessDetail(
       />
       {isImport && task.importSummary && (
         <DetailSection
-          title={intl.formatMessage({
-            id: 'component.tidasPackage.taskCenter.detail.importResult',
-            defaultMessage: 'Import result',
-          })}
+          title={
+            <Space size={6}>
+              {intl.formatMessage({
+                id: 'component.tidasPackage.taskCenter.detail.importResult',
+                defaultMessage: 'Import result',
+              })}
+              {task.importOutcome === 'partial' && (
+                <Tooltip title={partialImportHint}>
+                  <InfoCircleOutlined aria-label={partialImportHint} style={{ cursor: 'help' }} />
+                </Tooltip>
+              )}
+            </Space>
+          }
         >
           <DetailGrid
             rows={[
@@ -1302,17 +1316,6 @@ function packageBusinessDetail(
               },
             ]}
           />
-          {task.importOutcome === 'partial' && (
-            <Alert
-              showIcon
-              type='warning'
-              title={intl.formatMessage({
-                id: 'component.tidasPackage.taskCenter.detail.partialHint',
-                defaultMessage:
-                  'Some data was not imported. Download the report to view blocked root groups and validation issues.',
-              })}
-            />
-          )}
         </DetailSection>
       )}
       {singleRoot && (

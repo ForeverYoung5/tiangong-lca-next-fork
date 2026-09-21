@@ -87,7 +87,7 @@ jest.mock('@ant-design/icons', () => ({
   CloseCircleOutlined: () => <span>close-icon</span>,
   DownloadOutlined: () => <span>download-icon</span>,
   EyeOutlined: () => <span>eye-icon</span>,
-  InfoCircleOutlined: () => <span>info-icon</span>,
+  InfoCircleOutlined: (props: any) => <span {...props}>info-icon</span>,
   ReloadOutlined: () => <span>reload-icon</span>,
 }));
 
@@ -314,7 +314,7 @@ describe('LcaTaskCenter', () => {
     expect(screen.getAllByText('Execution stages').length).toBeGreaterThan(0);
   });
 
-  it('shows partial import counts and guidance while preserving package details', () => {
+  it('shows partial import counts and tooltip guidance while preserving package details', () => {
     mockPackageTasks = [
       {
         id: 'partial-details',
@@ -353,10 +353,11 @@ describe('LcaTaskCenter', () => {
     expect(screen.getByText('Successful root groups')).toBeInTheDocument();
     expect(screen.getByText('Blocked root groups')).toBeInTheDocument();
     expect(
-      screen.getByText(
+      screen.getByLabelText(
         'Some data was not imported. Download the report to view blocked root groups and validation issues.',
       ),
     ).toBeInTheDocument();
+    expect(screen.queryByRole('alert')).not.toBeInTheDocument();
   });
 
   it('does not offer report actions for an import without a job id', () => {
