@@ -1997,6 +1997,39 @@ describe('AssignmentReview', () => {
     expect(screen.queryByText('edit:review:review-8')).not.toBeInTheDocument();
   });
 
+  it('renders reviewed process rows in view mode when hideReviewButton is true', async () => {
+    mockGetReviewsTableDataOfReviewMember.mockResolvedValueOnce({
+      success: true,
+      data: [
+        {
+          id: 'review-8-process',
+          name: 'Reviewed Process',
+          userName: 'Reviewer',
+          isFromLifeCycle: false,
+          json: {
+            data: { id: 'process-8', version: '8.0.0' },
+            user: { id: 'user-8' },
+          },
+        },
+      ],
+      total: 1,
+    });
+
+    render(
+      <AssignmentReview
+        userData={{ user_id: 'member-1', role: 'review-member' }}
+        tableType='reviewed'
+        actionRef={{ current: { reload: jest.fn() } }}
+        hideReviewButton={true}
+      />,
+    );
+
+    await waitFor(() => expect(screen.getByTestId('row-review-8-process')).toBeInTheDocument());
+    expect(screen.getByTestId('review-process-detail')).toHaveTextContent(
+      'view:review:review-8-process:hide',
+    );
+  });
+
   it('renders reviewed lifecycle rows with only the review action when review buttons are enabled', async () => {
     const actionRef = { current: { reload: jest.fn() } };
     mockGetReviewsTableDataOfReviewMember.mockResolvedValueOnce({
@@ -2350,6 +2383,35 @@ describe('AssignmentReview', () => {
       resolveOld({ success: true, data: [{ id: 'stale-review' }], total: 1 });
     });
     expect(screen.queryByTestId('row-stale-review')).not.toBeInTheDocument();
+    expect(screen.getByTestId('row-review-1')).toBeInTheDocument();
+  });
+
+  it('ignores an older request failure after a newer search has completed', async () => {
+    let rejectOld!: (reason: Error) => void;
+    mockGetReviewsTableDataOfReviewAdmin.mockImplementationOnce(
+      () =>
+        new Promise((_resolve, reject) => {
+          rejectOld = reject;
+        }),
+    );
+
+    render(
+      <AssignmentReview
+        userData={{ user_id: 'admin', role: 'review-admin' }}
+        tableType='unassigned'
+        actionRef={{ current: {} }}
+      />,
+    );
+
+    await userEvent.click(screen.getByRole('button', { name: 'trigger-search' }));
+    await waitFor(() => expect(screen.getByTestId('row-review-1')).toBeInTheDocument());
+
+    await act(async () => {
+      rejectOld(new Error('stale request failed'));
+      await Promise.resolve();
+    });
+
+    expect(screen.queryByRole('alert')).not.toBeInTheDocument();
     expect(screen.getByTestId('row-review-1')).toBeInTheDocument();
   });
   it('preserves the searched scope for paging and sorting and rejects an obsolete scheduled request', async () => {
