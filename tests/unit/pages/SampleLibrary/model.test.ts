@@ -111,4 +111,11 @@ describe('sample library model', () => {
     ).toBe('short');
     expect(extractSampleLibraryName(row(null), 'contacts', 'en-US')).toBe('-');
   });
+
+  it.each(['lifecyclemodels', 'processes', 'flows'] as const)(
+    'falls back safely when a %s name is missing',
+    (type) => {
+      expect(extractSampleLibraryName(row(null), type, 'en-US')).toBe('-');
+    },
+  );
 });
