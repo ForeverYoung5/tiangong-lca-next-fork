@@ -425,7 +425,7 @@
       "schemaVersion": "tiangong.i18n-semantic-e2e-evidence.v2",
       "schemaPath": "docs/plans/i18n/semantic-e2e-evidence.schema.json",
       "evidencePath": ".local/e2e-release/semantic-e2e-evidence.json",
-      "requiredAssertionCount": 58,
+      "requiredAssertionCount": 59,
       "requiredLocales": ["zh-CN", "en-US", "de-DE", "fr-FR"],
       "requiredBrowsers": ["chromium", "firefox", "webkit"],
       "browserCoverage": {
@@ -1051,6 +1051,22 @@
       "visible": {
         "kind": "locale-messages",
         "messageIds": ["menu.tedata", "menu.tgdata.contacts"]
+      }
+    },
+    "rv.sample-library.catalog-and-drawers": {
+      "kind": "role-boundary",
+      "session": "authenticated",
+      "navigate": {
+        "hashPath": "/sample-library",
+        "hashQuery": {}
+      },
+      "expected": {
+        "hashPath": "/sample-library",
+        "hashQuery": {}
+      },
+      "boundary": {
+        "selector": "[data-testid='access-denied']",
+        "messageIds": ["pages.accessDenied.message"]
       }
     },
     "rv.data-processing.build-preview-publication-tabs": {
@@ -2060,6 +2076,63 @@
         ],
         "plannedBrowserAssertions": [
           "contact classification labels refresh for every registry content language"
+        ]
+      },
+      "unownedStaticContent": 0,
+      "blockedContext": 0
+    },
+    {
+      "id": "sample-library",
+      "routes": ["/sample-library"],
+      "executableAssertionIds": {
+        "/sample-library": "rv.sample-library.catalog-and-drawers"
+      },
+      "viewState": "dataset-tabs-origin-and-publication-filters",
+      "trigger": "Open Sample Library as a data product manager, switch all seven dataset tabs and origin filters, filter Process publication status, select unpublished Process versions, publish them, and open every existing detail drawer without navigation.",
+      "component": "src/pages/SampleLibrary/index.tsx",
+      "accessContext": "authenticated standard-user route-access boundary; data-product-manager-role-required for the internal page",
+      "copySources": {
+        "sourcePaths": [
+          "config/routes.ts",
+          "src/pages/SampleLibrary/index.tsx",
+          "src/pages/SampleLibrary/DetailButton.tsx",
+          "src/components/AccessDenied/index.tsx"
+        ],
+        "localeMessageIds": [],
+        "localeMessageIdPrefixes": ["pages.sampleLibrary."],
+        "declaredFallbacks": []
+      },
+      "visibleStates": [
+        "default",
+        "loading",
+        "ready",
+        "empty",
+        "error",
+        "success",
+        "all-data",
+        "literature-data",
+        "enterprise-data",
+        "published",
+        "unpublished",
+        "selection",
+        "confirmation-modal",
+        "detail-drawer"
+      ],
+      "targetCoverage": {
+        "localeScope": "all-registry-locales",
+        "ownership": "shared locale catalog and existing localized dataset detail drawers",
+        "structureAudit": "exact route, seven dataset tabs, three origin modes, Process publication filters/actions, and drawer-only detail behavior",
+        "missingContent": 0
+      },
+      "proof": {
+        "requiredEvidenceScope": "access-boundary-observed",
+        "focusedTests": [
+          "tests/unit/config/routes.test.ts",
+          "tests/unit/pages/SampleLibrary/model.test.ts",
+          "tests/unit/pages/SampleLibrary/DetailButton.test.tsx"
+        ],
+        "plannedBrowserAssertions": [
+          "data product manager can traverse every localized tab and open details without changing the route"
         ]
       },
       "unownedStaticContent": 0,

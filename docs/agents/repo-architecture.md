@@ -25,8 +25,8 @@ checkPaths:
   - playwright.config.ts
   - config/docs-capture/**
   - tests/e2e/i18n/**
-lastReviewedAt: 2026-09-21
-lastReviewedCommit: 25d57284565efb719c471df2bfdceb05dfc65717
+lastReviewedAt: 2026-09-22
+lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
 lastReviewedNote: 'Reviewed Platform #1109 after merging current dev: review action and input/output display parity use shared data-page views; the #1107 import-report behavior, repository contracts, validation, and testing policies remain unchanged.'
 related:
   - ../AGENTS.md

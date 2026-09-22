@@ -56,8 +56,8 @@ checkPaths:
   - .github/workflows/i18n-semantic-e2e.yml
   - .github/workflows/build.yml
   - package.json
-lastReviewedAt: 2026-09-21
-lastReviewedCommit: 6aad37543b8bddac1edb85862d7979ce8f540f20
+lastReviewedAt: 2026-09-22
+lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
 lastReviewedNote: 'Reviewed Platform #1109 follow-up: shared review views remove one duplicate ProTable and locale-materialized implementation surface; generated locale artifacts were refreshed idempotently, while language, validation, gate, and testing policy remain unchanged.'
 baselineObservedAt: 2026-07-18
 related:

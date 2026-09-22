@@ -11,6 +11,7 @@ export default {
   'menu.dashboard.nationalCarbon': 'Tableau de bord des données',
   'menu.dashboard.workplace': 'Espace de travail',
   'menu.dataProcessing': 'Traitement des données',
+  'menu.sampleLibrary': 'Bibliothèque d’échantillons',
   'menu.exception.403': '403',
   'menu.exception.404': '404',
   'menu.exception.500': '500',

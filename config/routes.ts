@@ -307,6 +307,13 @@ export default [
     ],
   },
   {
+    path: '/sample-library',
+    name: 'sampleLibrary',
+    access: 'canDataProductManager',
+    icon: 'BookOutlined',
+    component: './SampleLibrary',
+  },
+  {
     path: '/data-processing',
     name: 'dataProcessing',
     access: 'canDataProductManager',

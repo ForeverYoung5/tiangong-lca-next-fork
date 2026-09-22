@@ -43,8 +43,8 @@ checkPaths:
   - scripts/typescript-native-parser.*
   - scripts/i18n/locale-delivery.mjs
   - .github/workflows/**
-lastReviewedAt: 2026-09-21
-lastReviewedCommit: 6f8be14cd161d54b8cc2f0965ced23f3fd4234a7
+lastReviewedAt: 2026-09-22
+lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
 lastReviewedNote: 'Reviewed for Platform #1111: dependency qualification advances the exact installed TIDAS SDK to 0.3.1 and covers ordered Process reviews; the validation command matrix and gate policy are unchanged.'
 related:
   - ../AGENTS.md

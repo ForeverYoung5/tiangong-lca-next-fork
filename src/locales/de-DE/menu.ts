@@ -11,6 +11,7 @@ export default {
   'menu.dashboard.nationalCarbon': 'Daten-Dashboard',
   'menu.dashboard.workplace': 'Arbeitsbereich',
   'menu.dataProcessing': 'Datenverarbeitung',
+  'menu.sampleLibrary': 'Datensatzbibliothek',
   'menu.exception.403': 'Fehler 403',
   'menu.exception.404': 'Fehler 404',
   'menu.exception.500': 'Fehler 500',

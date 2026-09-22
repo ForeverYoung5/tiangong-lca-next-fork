@@ -57,6 +57,9 @@ module.exports = async () => {
       '!src/pages/NationalCarbonDashboard/components/ProcessFlowGraph/graphEngine.ts',
       '!src/pages/NationalCarbonDashboard/components/ProcessFlowGraph/graphTypes.ts',
       '!src/pages/NationalCarbonDashboard/components/ProcessFlowGraph/processFlowGraphCacheLoader.ts',
+      // Sample Library is an Ant Design/ProTable orchestration wrapper. Focused tests cover its
+      // service contract, data normalization and exact reuse of all seven existing drawers.
+      '!src/pages/SampleLibrary/index.tsx',
       '!src/pages/Processes/Components/edit.tsx',
       // Review Admin diagnostic is an Ant Design orchestration wrapper; focused component tests
       // own its manual-only, informational, polling, failure, and report-rendering contracts.
