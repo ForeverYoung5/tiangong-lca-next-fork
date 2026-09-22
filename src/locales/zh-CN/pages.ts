@@ -514,6 +514,7 @@ export default {
   'pages.sampleLibrary.origin.literature': '文献数据',
   'pages.sampleLibrary.origin.enterprise': '企业数据',
   'pages.sampleLibrary.status.all': '全部状态',
+  'pages.sampleLibrary.status.title': '发布状态',
   'pages.sampleLibrary.status.published': '已发布',
   'pages.sampleLibrary.status.unpublished': '未发布',
   'pages.sampleLibrary.column.name': '名称',

@@ -27,7 +27,6 @@ const DATASET_MAIN_PAGE_PATHS = [
   'src/pages/Flows/index.tsx',
   'src/pages/LifeCycleModels/index.tsx',
   'src/pages/Processes/index.tsx',
-  'src/pages/SampleLibrary/index.tsx',
   'src/pages/Sources/index.tsx',
   'src/pages/Unitgroups/index.tsx',
 ] as const;
@@ -197,7 +196,6 @@ export const PRO_COMPONENT_SURFACE_FAMILIES = [
       'src/pages/Processes/Analysis/index.tsx',
       'src/pages/Processes/index.tsx',
       'src/pages/Review/index.tsx',
-      'src/pages/SampleLibrary/index.tsx',
       'src/pages/Sources/index.tsx',
       'src/pages/Teams/index.tsx',
       'src/pages/Unitgroups/index.tsx',
@@ -242,10 +240,10 @@ export const PRO_COMPONENT_SURFACE_FAMILIES = [
 export const EXPECTED_PRO_COMPONENT_RUNTIME_COUNTS = {
   DragSortTable: 1,
   LoginForm: 3,
-  PageContainer: 16,
+  PageContainer: 15,
   ProForm: 27,
   ProLayout: 3,
-  ProTable: 67,
+  ProTable: 66,
   SettingDrawer: 1,
   TableDropdown: 3,
 } as const satisfies Record<ProComponentRuntimeTag, number>;

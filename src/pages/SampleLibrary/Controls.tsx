@@ -8,7 +8,7 @@ import {
   getSampleLibraryFilters,
   type SampleLibraryOrigin,
   type SampleLibraryPublicationStatus,
-} from '@/services/sampleLibrary/api';
+} from '@/services/sampleLibrary/filters';
 
 export default function SampleLibraryControls({
   actionRef,

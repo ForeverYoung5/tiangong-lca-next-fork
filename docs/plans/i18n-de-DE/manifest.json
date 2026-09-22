@@ -3,7 +3,7 @@
   "source": {
     "baseRef": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
     "baseCommit": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
-    "auditedInputDigest": "2fe990ae5098de0db59ca86baf83fa32b8b66aeeeb25ab4ca007b92dac5dd8c4",
+    "auditedInputDigest": "7ef0a476ed0145e5ea2cb4446bbbc1fdb75b480d6effd79b864e58dbab2a7bee",
     "auditedInputDigestAlgorithm": "sha256(path\\0content\\0)",
     "repository": "tiangong-lca/platform"
   },
@@ -69,13 +69,13 @@
   "summary": {
     "localeCount": 4,
     "localeLeafModuleCounts": { "en-US": 31, "zh-CN": 31, "de-DE": 31, "fr-FR": 31 },
-    "localeUniqueKeyCounts": { "en-US": 3426, "zh-CN": 3426, "de-DE": 3426, "fr-FR": 3426 },
-    "canonicalCandidateKeyCount": 3426,
-    "activeStaticKeyCount": 2264,
+    "localeUniqueKeyCounts": { "en-US": 3427, "zh-CN": 3427, "de-DE": 3427, "fr-FR": 3427 },
+    "canonicalCandidateKeyCount": 3427,
+    "activeStaticKeyCount": 2253,
     "activeDynamicKeyCount": 321,
-    "reservedKeyCount": 841,
-    "productionSourceFileCount": 471,
-    "literalReferenceCount": 4217,
+    "reservedKeyCount": 853,
+    "productionSourceFileCount": 469,
+    "literalReferenceCount": 4186,
     "dynamicCallsiteCount": 33,
     "dynamicCallsiteSummaryCount": 33,
     "registeredDynamicCallsiteCount": 33,
@@ -13116,7 +13116,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Contacts/index.tsx",
-          "line": 171,
+          "line": 172,
           "column": 25,
           "symbol": "renderContactActions",
           "defaultMessage": "Data contributed to the team successfully.",
@@ -13125,7 +13125,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Flows/index.tsx",
-          "line": 334,
+          "line": 335,
           "column": 29,
           "symbol": "flowsColumns",
           "defaultMessage": "Data contributed to the team successfully.",
@@ -13134,7 +13134,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/LifeCycleModels/index.tsx",
-          "line": 295,
+          "line": 296,
           "column": 29,
           "symbol": "processColumns",
           "defaultMessage": "Data contributed to the team successfully.",
@@ -13143,7 +13143,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Processes/index.tsx",
-          "line": 361,
+          "line": 421,
           "column": 29,
           "symbol": "processColumns",
           "defaultMessage": "Data contributed to the team successfully.",
@@ -13152,7 +13152,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Sources/index.tsx",
-          "line": 168,
+          "line": 169,
           "column": 25,
           "symbol": "renderSourceActions",
           "defaultMessage": "Data contributed to the team successfully.",
@@ -13167,31 +13167,31 @@
           "locations": [
             {
               "path": "src/pages/Contacts/index.tsx",
-              "line": 171,
+              "line": 172,
               "column": 25,
               "kind": "formatMessage"
             },
             {
               "path": "src/pages/Flows/index.tsx",
-              "line": 334,
+              "line": 335,
               "column": 29,
               "kind": "formatMessage"
             },
             {
               "path": "src/pages/LifeCycleModels/index.tsx",
-              "line": 295,
+              "line": 296,
               "column": 29,
               "kind": "formatMessage"
             },
             {
               "path": "src/pages/Processes/index.tsx",
-              "line": 361,
+              "line": 421,
               "column": 29,
               "kind": "formatMessage"
             },
             {
               "path": "src/pages/Sources/index.tsx",
-              "line": 168,
+              "line": 169,
               "column": 25,
               "kind": "formatMessage"
             }
@@ -31336,7 +31336,7 @@
     },
     {
       "id": "menu.sampleLibrary",
-      "category": "reserved",
+      "category": "active-static",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["menu"],
@@ -31390,8 +31390,32 @@
           }
         }
       },
-      "references": [],
-      "defaultMessages": []
+      "references": [
+        {
+          "kind": "FormattedMessage",
+          "path": "src/pages/Utils/index.tsx",
+          "line": 18,
+          "column": 12,
+          "symbol": "getDataTitle",
+          "defaultMessage": "Sample Library",
+          "defaultMessageExpression": null
+        }
+      ],
+      "defaultMessages": [
+        {
+          "value": "Sample Library",
+          "argumentSignature": [],
+          "placeholders": [],
+          "locations": [
+            {
+              "path": "src/pages/Utils/index.tsx",
+              "line": 18,
+              "column": 12,
+              "kind": "FormattedMessage"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "menu.sampleLibrary.contacts",
@@ -32563,7 +32587,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Contacts/index.tsx",
-          "line": 404,
+          "line": 405,
           "column": 13,
           "symbol": "TableList",
           "defaultMessage": "Contacts",
@@ -32578,7 +32602,7 @@
           "locations": [
             {
               "path": "src/pages/Contacts/index.tsx",
-              "line": 404,
+              "line": 405,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -32646,7 +32670,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Flowproperties/index.tsx",
-          "line": 405,
+          "line": 406,
           "column": 15,
           "symbol": "TableList",
           "defaultMessage": "Flow Properties",
@@ -32661,7 +32685,7 @@
           "locations": [
             {
               "path": "src/pages/Flowproperties/index.tsx",
-              "line": 405,
+              "line": 406,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -32729,7 +32753,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Flows/index.tsx",
-          "line": 514,
+          "line": 515,
           "column": 13,
           "symbol": "TableList",
           "defaultMessage": "Flows",
@@ -32744,7 +32768,7 @@
           "locations": [
             {
               "path": "src/pages/Flows/index.tsx",
-              "line": 514,
+              "line": 515,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -32871,7 +32895,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Processes/index.tsx",
-          "line": 611,
+          "line": 693,
           "column": 13,
           "symbol": "TableList",
           "defaultMessage": "Processes",
@@ -32886,7 +32910,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/index.tsx",
-              "line": 611,
+              "line": 693,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -32954,7 +32978,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/LifeCycleModels/index.tsx",
-          "line": 434,
+          "line": 435,
           "column": 13,
           "symbol": "TableList",
           "defaultMessage": "Product Models",
@@ -32969,7 +32993,7 @@
           "locations": [
             {
               "path": "src/pages/LifeCycleModels/index.tsx",
-              "line": 434,
+              "line": 435,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -33037,7 +33061,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Sources/index.tsx",
-          "line": 399,
+          "line": 400,
           "column": 13,
           "symbol": "TableList",
           "defaultMessage": "Sources",
@@ -33052,7 +33076,7 @@
           "locations": [
             {
               "path": "src/pages/Sources/index.tsx",
-              "line": 399,
+              "line": 400,
               "column": 13,
               "kind": "FormattedMessage"
             }
@@ -33120,7 +33144,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Unitgroups/index.tsx",
-          "line": 385,
+          "line": 386,
           "column": 15,
           "symbol": "TableList",
           "defaultMessage": "Unit Groups",
@@ -33135,7 +33159,7 @@
           "locations": [
             {
               "path": "src/pages/Unitgroups/index.tsx",
-              "line": 385,
+              "line": 386,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -59918,18 +59942,9 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Contacts/index.tsx",
-          "line": 264,
+          "line": 265,
           "column": 14,
           "symbol": "contactColumns",
-          "defaultMessage": "E-mail",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/columns.tsx",
-          "line": 189,
-          "column": 11,
-          "symbol": "getSampleLibraryColumns",
           "defaultMessage": "E-mail",
           "defaultMessageExpression": null
         }
@@ -59960,15 +59975,9 @@
             },
             {
               "path": "src/pages/Contacts/index.tsx",
-              "line": 264,
+              "line": 265,
               "column": 14,
               "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/SampleLibrary/columns.tsx",
-              "line": 189,
-              "column": 11,
-              "kind": "formatMessage"
             }
           ]
         }
@@ -83109,7 +83118,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Flows/index.tsx",
-          "line": 212,
+          "line": 213,
           "column": 14,
           "symbol": "flowsColumns",
           "defaultMessage": "CAS Number",
@@ -83121,15 +83130,6 @@
           "line": 175,
           "column": 14,
           "symbol": "FlowsColumns",
-          "defaultMessage": "CAS Number",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/columns.tsx",
-          "line": 115,
-          "column": 9,
-          "symbol": "getSampleLibraryColumns",
           "defaultMessage": "CAS Number",
           "defaultMessageExpression": null
         }
@@ -83148,7 +83148,7 @@
             },
             {
               "path": "src/pages/Flows/index.tsx",
-              "line": 212,
+              "line": 213,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -83157,12 +83157,6 @@
               "line": 175,
               "column": 14,
               "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/SampleLibrary/columns.tsx",
-              "line": 115,
-              "column": 9,
-              "kind": "formatMessage"
             }
           ]
         }
@@ -83726,7 +83720,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Flows/index.tsx",
-          "line": 183,
+          "line": 184,
           "column": 14,
           "symbol": "flowsColumns",
           "defaultMessage": "Flow type",
@@ -83738,15 +83732,6 @@
           "line": 161,
           "column": 14,
           "symbol": "FlowsColumns",
-          "defaultMessage": "Flow type",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/columns.tsx",
-          "line": 98,
-          "column": 9,
-          "symbol": "getSampleLibraryColumns",
           "defaultMessage": "Flow type",
           "defaultMessageExpression": null
         }
@@ -83765,7 +83750,7 @@
             },
             {
               "path": "src/pages/Flows/index.tsx",
-              "line": 183,
+              "line": 184,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -83774,12 +83759,6 @@
               "line": 161,
               "column": 14,
               "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/SampleLibrary/columns.tsx",
-              "line": 98,
-              "column": 9,
-              "kind": "formatMessage"
             }
           ]
         }
@@ -83904,18 +83883,9 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Flows/index.tsx",
-          "line": 220,
+          "line": 221,
           "column": 9,
           "symbol": "flowsColumns",
-          "defaultMessage": "Location of supply",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/columns.tsx",
-          "line": 122,
-          "column": 9,
-          "symbol": "getSampleLibraryColumns",
           "defaultMessage": "Location of supply",
           "defaultMessageExpression": null
         }
@@ -83928,15 +83898,9 @@
           "locations": [
             {
               "path": "src/pages/Flows/index.tsx",
-              "line": 220,
+              "line": 221,
               "column": 9,
               "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/SampleLibrary/columns.tsx",
-              "line": 122,
-              "column": 9,
-              "kind": "formatMessage"
             }
           ]
         }
@@ -94903,7 +94867,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Flowproperties/index.tsx",
-          "line": 232,
+          "line": 233,
           "column": 9,
           "symbol": "flowpropertiesColumns",
           "defaultMessage": "Reference unit",
@@ -94964,15 +94928,6 @@
           "defaultMessageExpression": null
         },
         {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/columns.tsx",
-          "line": 148,
-          "column": 11,
-          "symbol": "getSampleLibraryColumns",
-          "defaultMessage": "Reference unit",
-          "defaultMessageExpression": null
-        },
-        {
           "kind": "FormattedMessage",
           "path": "src/pages/Unitgroups/Components/select/descriptionMini.tsx",
           "line": 58,
@@ -95005,7 +94960,7 @@
             },
             {
               "path": "src/pages/Flowproperties/index.tsx",
-              "line": 232,
+              "line": 233,
               "column": 9,
               "kind": "FormattedMessage"
             },
@@ -95044,12 +94999,6 @@
               "line": 117,
               "column": 9,
               "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/SampleLibrary/columns.tsx",
-              "line": 148,
-              "column": 11,
-              "kind": "formatMessage"
             },
             {
               "path": "src/pages/Unitgroups/Components/select/descriptionMini.tsx",
@@ -95127,7 +95076,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Flowproperties/index.tsx",
-          "line": 420,
+          "line": 421,
           "column": 17,
           "symbol": "TableList",
           "defaultMessage": "Need to add or supplement flow properties? Contact an administrator.",
@@ -95142,7 +95091,7 @@
           "locations": [
             {
               "path": "src/pages/Flowproperties/index.tsx",
-              "line": 420,
+              "line": 421,
               "column": 17,
               "kind": "FormattedMessage"
             }
@@ -168478,7 +168427,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Processes/index.tsx",
-          "line": 643,
+          "line": 736,
           "column": 30,
           "symbol": "analysisPageOption",
           "defaultMessage": "LCA Analysis",
@@ -168487,7 +168436,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Processes/index.tsx",
-          "line": 695,
+          "line": 852,
           "column": 32,
           "symbol": "mobileActions",
           "defaultMessage": "LCA Analysis",
@@ -168508,13 +168457,13 @@
             },
             {
               "path": "src/pages/Processes/index.tsx",
-              "line": 643,
+              "line": 736,
               "column": 30,
               "kind": "formatMessage"
             },
             {
               "path": "src/pages/Processes/index.tsx",
-              "line": 695,
+              "line": 852,
               "column": 32,
               "kind": "formatMessage"
             }
@@ -175666,7 +175615,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Processes/index.tsx",
-          "line": 854,
+          "line": 1011,
           "column": 21,
           "symbol": "TableList",
           "defaultMessage": "Failed to load process list.",
@@ -175681,7 +175630,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/index.tsx",
-              "line": 854,
+              "line": 1011,
               "column": 21,
               "kind": "formatMessage"
             }
@@ -175767,18 +175716,9 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Processes/index.tsx",
-          "line": 229,
+          "line": 257,
           "column": 14,
           "symbol": "processColumns",
-          "defaultMessage": "Location",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/columns.tsx",
-          "line": 88,
-          "column": 9,
-          "symbol": "getSampleLibraryColumns",
           "defaultMessage": "Location",
           "defaultMessageExpression": null
         }
@@ -175803,15 +175743,9 @@
             },
             {
               "path": "src/pages/Processes/index.tsx",
-              "line": 229,
+              "line": 257,
               "column": 14,
               "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/SampleLibrary/columns.tsx",
-              "line": 88,
-              "column": 9,
-              "kind": "formatMessage"
             }
           ]
         }
@@ -181446,18 +181380,9 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Processes/index.tsx",
-          "line": 222,
+          "line": 250,
           "column": 14,
           "symbol": "processColumns",
-          "defaultMessage": "Reference year",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/columns.tsx",
-          "line": 81,
-          "column": 9,
-          "symbol": "getSampleLibraryColumns",
           "defaultMessage": "Reference year",
           "defaultMessageExpression": null
         }
@@ -181482,15 +181407,9 @@
             },
             {
               "path": "src/pages/Processes/index.tsx",
-              "line": 222,
+              "line": 250,
               "column": 14,
               "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/SampleLibrary/columns.tsx",
-              "line": 81,
-              "column": 9,
-              "kind": "formatMessage"
             }
           ]
         }
@@ -214365,7 +214284,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Processes/index.tsx",
-          "line": 208,
+          "line": 236,
           "column": 9,
           "symbol": "processColumns",
           "defaultMessage": "Dataset type",
@@ -214377,15 +214296,6 @@
           "line": 745,
           "column": 19,
           "symbol": "defaultTabContent",
-          "defaultMessage": "Dataset type",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/columns.tsx",
-          "line": 71,
-          "column": 9,
-          "symbol": "getSampleLibraryColumns",
           "defaultMessage": "Dataset type",
           "defaultMessageExpression": null
         }
@@ -214422,7 +214332,7 @@
             },
             {
               "path": "src/pages/Processes/index.tsx",
-              "line": 208,
+              "line": 236,
               "column": 9,
               "kind": "FormattedMessage"
             },
@@ -214431,12 +214341,6 @@
               "line": 745,
               "column": 19,
               "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/SampleLibrary/columns.tsx",
-              "line": 71,
-              "column": 9,
-              "kind": "formatMessage"
             }
           ]
         }
@@ -237001,7 +236905,7 @@
     },
     {
       "id": "pages.sampleLibrary.clearSelection",
-      "category": "active-static",
+      "category": "reserved",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["pages"],
@@ -237016,7 +236920,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/pages.ts",
-            "line": 532,
+            "line": 533,
             "column": 3,
             "module": "pages"
           }
@@ -237027,7 +236931,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/pages.ts",
-            "line": 532,
+            "line": 533,
             "column": 3,
             "module": "pages"
           }
@@ -237038,7 +236942,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/pages.ts",
-            "line": 532,
+            "line": 533,
             "column": 3,
             "module": "pages"
           }
@@ -237049,38 +236953,14 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/pages.ts",
-            "line": 532,
+            "line": 533,
             "column": 3,
             "module": "pages"
           }
         }
       },
-      "references": [
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 294,
-          "column": 20,
-          "symbol": "SampleLibraryPage",
-          "defaultMessage": "Clear",
-          "defaultMessageExpression": null
-        }
-      ],
-      "defaultMessages": [
-        {
-          "value": "Clear",
-          "argumentSignature": [],
-          "placeholders": [],
-          "locations": [
-            {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 294,
-              "column": 20,
-              "kind": "formatMessage"
-            }
-          ]
-        }
-      ]
+      "references": [],
+      "defaultMessages": []
     },
     {
       "id": "pages.sampleLibrary.column.actions",
@@ -237099,7 +236979,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/pages.ts",
-            "line": 525,
+            "line": 526,
             "column": 3,
             "module": "pages"
           }
@@ -237110,7 +236990,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/pages.ts",
-            "line": 525,
+            "line": 526,
             "column": 3,
             "module": "pages"
           }
@@ -237121,7 +237001,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/pages.ts",
-            "line": 525,
+            "line": 526,
             "column": 3,
             "module": "pages"
           }
@@ -237132,7 +237012,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/pages.ts",
-            "line": 525,
+            "line": 526,
             "column": 3,
             "module": "pages"
           }
@@ -237158,7 +237038,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/pages.ts",
-            "line": 520,
+            "line": 521,
             "column": 3,
             "module": "pages"
           }
@@ -237169,7 +237049,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/pages.ts",
-            "line": 520,
+            "line": 521,
             "column": 3,
             "module": "pages"
           }
@@ -237180,7 +237060,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/pages.ts",
-            "line": 520,
+            "line": 521,
             "column": 3,
             "module": "pages"
           }
@@ -237191,7 +237071,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/pages.ts",
-            "line": 520,
+            "line": 521,
             "column": 3,
             "module": "pages"
           }
@@ -237217,7 +237097,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/pages.ts",
-            "line": 524,
+            "line": 525,
             "column": 3,
             "module": "pages"
           }
@@ -237228,7 +237108,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/pages.ts",
-            "line": 524,
+            "line": 525,
             "column": 3,
             "module": "pages"
           }
@@ -237239,7 +237119,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/pages.ts",
-            "line": 524,
+            "line": 525,
             "column": 3,
             "module": "pages"
           }
@@ -237250,7 +237130,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/pages.ts",
-            "line": 524,
+            "line": 525,
             "column": 3,
             "module": "pages"
           }
@@ -237276,7 +237156,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/pages.ts",
-            "line": 519,
+            "line": 520,
             "column": 3,
             "module": "pages"
           }
@@ -237287,7 +237167,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/pages.ts",
-            "line": 519,
+            "line": 520,
             "column": 3,
             "module": "pages"
           }
@@ -237298,7 +237178,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/pages.ts",
-            "line": 519,
+            "line": 520,
             "column": 3,
             "module": "pages"
           }
@@ -237309,7 +237189,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/pages.ts",
-            "line": 519,
+            "line": 520,
             "column": 3,
             "module": "pages"
           }
@@ -237320,7 +237200,7 @@
     },
     {
       "id": "pages.sampleLibrary.column.origin",
-      "category": "active-static",
+      "category": "reserved",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["pages"],
@@ -237335,7 +237215,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/pages.ts",
-            "line": 522,
+            "line": 523,
             "column": 3,
             "module": "pages"
           }
@@ -237346,7 +237226,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/pages.ts",
-            "line": 522,
+            "line": 523,
             "column": 3,
             "module": "pages"
           }
@@ -237357,7 +237237,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/pages.ts",
-            "line": 522,
+            "line": 523,
             "column": 3,
             "module": "pages"
           }
@@ -237368,42 +237248,18 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/pages.ts",
-            "line": 522,
+            "line": 523,
             "column": 3,
             "module": "pages"
           }
         }
       },
-      "references": [
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/columns.tsx",
-          "line": 208,
-          "column": 14,
-          "symbol": "getSampleLibraryColumns",
-          "defaultMessage": "Origin",
-          "defaultMessageExpression": null
-        }
-      ],
-      "defaultMessages": [
-        {
-          "value": "Origin",
-          "argumentSignature": [],
-          "placeholders": [],
-          "locations": [
-            {
-              "path": "src/pages/SampleLibrary/columns.tsx",
-              "line": 208,
-              "column": 14,
-              "kind": "formatMessage"
-            }
-          ]
-        }
-      ]
+      "references": [],
+      "defaultMessages": []
     },
     {
       "id": "pages.sampleLibrary.column.publicationStatus",
-      "category": "active-static",
+      "category": "reserved",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["pages"],
@@ -237418,7 +237274,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/pages.ts",
-            "line": 523,
+            "line": 524,
             "column": 3,
             "module": "pages"
           }
@@ -237429,7 +237285,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/pages.ts",
-            "line": 523,
+            "line": 524,
             "column": 3,
             "module": "pages"
           }
@@ -237440,7 +237296,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/pages.ts",
-            "line": 523,
+            "line": 524,
             "column": 3,
             "module": "pages"
           }
@@ -237451,38 +237307,14 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/pages.ts",
-            "line": 523,
+            "line": 524,
             "column": 3,
             "module": "pages"
           }
         }
       },
-      "references": [
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/columns.tsx",
-          "line": 231,
-          "column": 14,
-          "symbol": "getSampleLibraryColumns",
-          "defaultMessage": "Publication status",
-          "defaultMessageExpression": null
-        }
-      ],
-      "defaultMessages": [
-        {
-          "value": "Publication status",
-          "argumentSignature": [],
-          "placeholders": [],
-          "locations": [
-            {
-              "path": "src/pages/SampleLibrary/columns.tsx",
-              "line": 231,
-              "column": 14,
-              "kind": "formatMessage"
-            }
-          ]
-        }
-      ]
+      "references": [],
+      "defaultMessages": []
     },
     {
       "id": "pages.sampleLibrary.column.version",
@@ -237501,7 +237333,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/pages.ts",
-            "line": 521,
+            "line": 522,
             "column": 3,
             "module": "pages"
           }
@@ -237512,7 +237344,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/pages.ts",
-            "line": 521,
+            "line": 522,
             "column": 3,
             "module": "pages"
           }
@@ -237523,7 +237355,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/pages.ts",
-            "line": 521,
+            "line": 522,
             "column": 3,
             "module": "pages"
           }
@@ -237534,7 +237366,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/pages.ts",
-            "line": 521,
+            "line": 522,
             "column": 3,
             "module": "pages"
           }
@@ -237602,10 +237434,10 @@
       "references": [
         {
           "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 170,
-          "column": 24,
-          "symbol": "SampleLibraryPage",
+          "path": "src/pages/SampleLibrary/Controls.tsx",
+          "line": 50,
+          "column": 20,
+          "symbol": "SampleLibraryControls",
           "defaultMessage": "All data",
           "defaultMessageExpression": null
         }
@@ -237617,9 +237449,9 @@
           "placeholders": [],
           "locations": [
             {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 170,
-              "column": 24,
+              "path": "src/pages/SampleLibrary/Controls.tsx",
+              "line": 50,
+              "column": 20,
               "kind": "formatMessage"
             }
           ]
@@ -237685,19 +237517,10 @@
       "references": [
         {
           "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/columns.tsx",
-          "line": 220,
-          "column": 15,
-          "symbol": "getSampleLibraryColumns",
-          "defaultMessage": "Enterprise data",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 186,
-          "column": 24,
-          "symbol": "SampleLibraryPage",
+          "path": "src/pages/SampleLibrary/Controls.tsx",
+          "line": 66,
+          "column": 20,
+          "symbol": "SampleLibraryControls",
           "defaultMessage": "Enterprise data",
           "defaultMessageExpression": null
         }
@@ -237709,15 +237532,9 @@
           "placeholders": [],
           "locations": [
             {
-              "path": "src/pages/SampleLibrary/columns.tsx",
-              "line": 220,
-              "column": 15,
-              "kind": "formatMessage"
-            },
-            {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 186,
-              "column": 24,
+              "path": "src/pages/SampleLibrary/Controls.tsx",
+              "line": 66,
+              "column": 20,
               "kind": "formatMessage"
             }
           ]
@@ -237783,19 +237600,10 @@
       "references": [
         {
           "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/columns.tsx",
-          "line": 216,
-          "column": 15,
-          "symbol": "getSampleLibraryColumns",
-          "defaultMessage": "Literature data",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 178,
-          "column": 24,
-          "symbol": "SampleLibraryPage",
+          "path": "src/pages/SampleLibrary/Controls.tsx",
+          "line": 58,
+          "column": 20,
+          "symbol": "SampleLibraryControls",
           "defaultMessage": "Literature data",
           "defaultMessageExpression": null
         }
@@ -237807,15 +237615,9 @@
           "placeholders": [],
           "locations": [
             {
-              "path": "src/pages/SampleLibrary/columns.tsx",
-              "line": 216,
-              "column": 15,
-              "kind": "formatMessage"
-            },
-            {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 178,
-              "column": 24,
+              "path": "src/pages/SampleLibrary/Controls.tsx",
+              "line": 58,
+              "column": 20,
               "kind": "formatMessage"
             }
           ]
@@ -237839,7 +237641,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/pages.ts",
-            "line": 526,
+            "line": 527,
             "column": 3,
             "module": "pages"
           }
@@ -237850,7 +237652,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/pages.ts",
-            "line": 526,
+            "line": 527,
             "column": 3,
             "module": "pages"
           }
@@ -237861,7 +237663,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/pages.ts",
-            "line": 526,
+            "line": 527,
             "column": 3,
             "module": "pages"
           }
@@ -237872,7 +237674,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/pages.ts",
-            "line": 526,
+            "line": 527,
             "column": 3,
             "module": "pages"
           }
@@ -237881,19 +237683,19 @@
       "references": [
         {
           "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 113,
-          "column": 15,
-          "symbol": "confirmPublish",
+          "path": "src/pages/Processes/index.tsx",
+          "line": 791,
+          "column": 29,
+          "symbol": "TableList",
           "defaultMessage": "Publish",
           "defaultMessageExpression": null
         },
         {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 245,
-          "column": 22,
-          "symbol": "SampleLibraryPage",
+          "kind": "FormattedMessage",
+          "path": "src/pages/Processes/index.tsx",
+          "line": 820,
+          "column": 17,
+          "symbol": "TableList",
           "defaultMessage": "Publish",
           "defaultMessageExpression": null
         }
@@ -237905,16 +237707,16 @@
           "placeholders": [],
           "locations": [
             {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 113,
-              "column": 15,
+              "path": "src/pages/Processes/index.tsx",
+              "line": 791,
+              "column": 29,
               "kind": "formatMessage"
             },
             {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 245,
-              "column": 22,
-              "kind": "formatMessage"
+              "path": "src/pages/Processes/index.tsx",
+              "line": 820,
+              "column": 17,
+              "kind": "FormattedMessage"
             }
           ]
         }
@@ -237937,7 +237739,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/pages.ts",
-            "line": 529,
+            "line": 530,
             "column": 3,
             "module": "pages"
           }
@@ -237948,7 +237750,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/pages.ts",
-            "line": 529,
+            "line": 530,
             "column": 3,
             "module": "pages"
           }
@@ -237959,7 +237761,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/pages.ts",
-            "line": 529,
+            "line": 530,
             "column": 3,
             "module": "pages"
           }
@@ -237970,7 +237772,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/pages.ts",
-            "line": 529,
+            "line": 530,
             "column": 3,
             "module": "pages"
           }
@@ -237979,10 +237781,10 @@
       "references": [
         {
           "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 108,
-          "column": 16,
-          "symbol": "confirmPublish",
+          "path": "src/pages/Processes/index.tsx",
+          "line": 786,
+          "column": 30,
+          "symbol": "TableList",
           "defaultMessage": "Publishing records the selected exact versions and does not change their state.",
           "defaultMessageExpression": null
         }
@@ -237994,9 +237796,9 @@
           "placeholders": [],
           "locations": [
             {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 108,
-              "column": 16,
+              "path": "src/pages/Processes/index.tsx",
+              "line": 786,
+              "column": 30,
               "kind": "formatMessage"
             }
           ]
@@ -238020,7 +237822,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/pages.ts",
-            "line": 528,
+            "line": 529,
             "column": 3,
             "module": "pages"
           }
@@ -238031,7 +237833,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/pages.ts",
-            "line": 528,
+            "line": 529,
             "column": 3,
             "module": "pages"
           }
@@ -238042,7 +237844,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/pages.ts",
-            "line": 528,
+            "line": 529,
             "column": 3,
             "module": "pages"
           }
@@ -238053,7 +237855,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/pages.ts",
-            "line": 528,
+            "line": 529,
             "column": 3,
             "module": "pages"
           }
@@ -238062,10 +237864,10 @@
       "references": [
         {
           "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 104,
-          "column": 14,
-          "symbol": "confirmPublish",
+          "path": "src/pages/Processes/index.tsx",
+          "line": 782,
+          "column": 28,
+          "symbol": "TableList",
           "defaultMessage": "Publish selected Processes?",
           "defaultMessageExpression": null
         }
@@ -238077,9 +237879,9 @@
           "placeholders": [],
           "locations": [
             {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 104,
-              "column": 14,
+              "path": "src/pages/Processes/index.tsx",
+              "line": 782,
+              "column": 28,
               "kind": "formatMessage"
             }
           ]
@@ -238103,7 +237905,7 @@
           "placeholders": ["count"],
           "source": {
             "path": "src/locales/en-US/pages.ts",
-            "line": 530,
+            "line": 531,
             "column": 3,
             "module": "pages"
           }
@@ -238114,7 +237916,7 @@
           "placeholders": ["count"],
           "source": {
             "path": "src/locales/zh-CN/pages.ts",
-            "line": 530,
+            "line": 531,
             "column": 3,
             "module": "pages"
           }
@@ -238125,7 +237927,7 @@
           "placeholders": ["count"],
           "source": {
             "path": "src/locales/de-DE/pages.ts",
-            "line": 530,
+            "line": 531,
             "column": 3,
             "module": "pages"
           }
@@ -238136,7 +237938,7 @@
           "placeholders": ["count"],
           "source": {
             "path": "src/locales/fr-FR/pages.ts",
-            "line": 530,
+            "line": 531,
             "column": 3,
             "module": "pages"
           }
@@ -238145,10 +237947,10 @@
       "references": [
         {
           "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 124,
-          "column": 13,
-          "symbol": "confirmPublish",
+          "path": "src/pages/Processes/index.tsx",
+          "line": 802,
+          "column": 27,
+          "symbol": "TableList",
           "defaultMessage": "Published {count} Process versions",
           "defaultMessageExpression": null
         }
@@ -238160,9 +237962,9 @@
           "placeholders": ["count"],
           "locations": [
             {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 124,
-              "column": 13,
+              "path": "src/pages/Processes/index.tsx",
+              "line": 802,
+              "column": 27,
               "kind": "formatMessage"
             }
           ]
@@ -238171,7 +237973,7 @@
     },
     {
       "id": "pages.sampleLibrary.publish.tooltip",
-      "category": "active-static",
+      "category": "reserved",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["pages"],
@@ -238186,7 +237988,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/pages.ts",
-            "line": 527,
+            "line": 528,
             "column": 3,
             "module": "pages"
           }
@@ -238197,7 +237999,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/pages.ts",
-            "line": 527,
+            "line": 528,
             "column": 3,
             "module": "pages"
           }
@@ -238208,7 +238010,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/pages.ts",
-            "line": 527,
+            "line": 528,
             "column": 3,
             "module": "pages"
           }
@@ -238219,42 +238021,18 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/pages.ts",
-            "line": 527,
+            "line": 528,
             "column": 3,
             "module": "pages"
           }
         }
       },
-      "references": [
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 233,
-          "column": 26,
-          "symbol": "SampleLibraryPage",
-          "defaultMessage": "Publish selected Process versions",
-          "defaultMessageExpression": null
-        }
-      ],
-      "defaultMessages": [
-        {
-          "value": "Publish selected Process versions",
-          "argumentSignature": [],
-          "placeholders": [],
-          "locations": [
-            {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 233,
-              "column": 26,
-              "kind": "formatMessage"
-            }
-          ]
-        }
-      ]
+      "references": [],
+      "defaultMessages": []
     },
     {
       "id": "pages.sampleLibrary.selected",
-      "category": "active-static",
+      "category": "reserved",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["pages"],
@@ -238269,7 +238047,7 @@
           "placeholders": ["count"],
           "source": {
             "path": "src/locales/en-US/pages.ts",
-            "line": 531,
+            "line": 532,
             "column": 3,
             "module": "pages"
           }
@@ -238280,7 +238058,7 @@
           "placeholders": ["count"],
           "source": {
             "path": "src/locales/zh-CN/pages.ts",
-            "line": 531,
+            "line": 532,
             "column": 3,
             "module": "pages"
           }
@@ -238291,7 +238069,7 @@
           "placeholders": ["count"],
           "source": {
             "path": "src/locales/de-DE/pages.ts",
-            "line": 531,
+            "line": 532,
             "column": 3,
             "module": "pages"
           }
@@ -238302,38 +238080,14 @@
           "placeholders": ["count"],
           "source": {
             "path": "src/locales/fr-FR/pages.ts",
-            "line": 531,
+            "line": 532,
             "column": 3,
             "module": "pages"
           }
         }
       },
-      "references": [
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 284,
-          "column": 17,
-          "symbol": "SampleLibraryPage",
-          "defaultMessage": "Selected {count}",
-          "defaultMessageExpression": null
-        }
-      ],
-      "defaultMessages": [
-        {
-          "value": "Selected {count}",
-          "argumentSignature": [{ "name": "count", "type": "simple" }],
-          "placeholders": ["count"],
-          "locations": [
-            {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 284,
-              "column": 17,
-              "kind": "formatMessage"
-            }
-          ]
-        }
-      ]
+      "references": [],
+      "defaultMessages": []
     },
     {
       "id": "pages.sampleLibrary.status.all",
@@ -238394,10 +238148,10 @@
       "references": [
         {
           "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 206,
-          "column": 30,
-          "symbol": "SampleLibraryPage",
+          "path": "src/pages/SampleLibrary/Controls.tsx",
+          "line": 82,
+          "column": 22,
+          "symbol": "SampleLibraryControls",
           "defaultMessage": "All status",
           "defaultMessageExpression": null
         }
@@ -238409,9 +238163,9 @@
           "placeholders": [],
           "locations": [
             {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 206,
-              "column": 30,
+              "path": "src/pages/SampleLibrary/Controls.tsx",
+              "line": 82,
+              "column": 22,
               "kind": "formatMessage"
             }
           ]
@@ -238435,7 +238189,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/pages.ts",
-            "line": 517,
+            "line": 518,
             "column": 3,
             "module": "pages"
           }
@@ -238446,7 +238200,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/pages.ts",
-            "line": 517,
+            "line": 518,
             "column": 3,
             "module": "pages"
           }
@@ -238457,13 +238211,111 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/pages.ts",
-            "line": 517,
+            "line": 518,
             "column": 3,
             "module": "pages"
           }
         },
         "fr-FR": {
           "value": "Publié",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/fr-FR/pages.ts",
+            "line": 518,
+            "column": 3,
+            "module": "pages"
+          }
+        }
+      },
+      "references": [
+        {
+          "kind": "FormattedMessage",
+          "path": "src/pages/Processes/index.tsx",
+          "line": 342,
+          "column": 19,
+          "symbol": "processColumns",
+          "defaultMessage": "Published",
+          "defaultMessageExpression": null
+        },
+        {
+          "kind": "formatMessage",
+          "path": "src/pages/SampleLibrary/Controls.tsx",
+          "line": 89,
+          "column": 22,
+          "symbol": "SampleLibraryControls",
+          "defaultMessage": "Published",
+          "defaultMessageExpression": null
+        }
+      ],
+      "defaultMessages": [
+        {
+          "value": "Published",
+          "argumentSignature": [],
+          "placeholders": [],
+          "locations": [
+            {
+              "path": "src/pages/Processes/index.tsx",
+              "line": 342,
+              "column": 19,
+              "kind": "FormattedMessage"
+            },
+            {
+              "path": "src/pages/SampleLibrary/Controls.tsx",
+              "line": 89,
+              "column": 22,
+              "kind": "formatMessage"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pages.sampleLibrary.status.title",
+      "category": "active-static",
+      "dynamicFamilies": [],
+      "moduleOwnership": {
+        "en-US": ["pages"],
+        "zh-CN": ["pages"],
+        "de-DE": ["pages"],
+        "fr-FR": ["pages"]
+      },
+      "translations": {
+        "en-US": {
+          "value": "Publication",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/en-US/pages.ts",
+            "line": 517,
+            "column": 3,
+            "module": "pages"
+          }
+        },
+        "zh-CN": {
+          "value": "发布状态",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/zh-CN/pages.ts",
+            "line": 517,
+            "column": 3,
+            "module": "pages"
+          }
+        },
+        "de-DE": {
+          "value": "Veröffentlichung",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/de-DE/pages.ts",
+            "line": 517,
+            "column": 3,
+            "module": "pages"
+          }
+        },
+        "fr-FR": {
+          "value": "Publication",
           "argumentSignature": [],
           "placeholders": [],
           "source": {
@@ -238476,41 +238328,26 @@
       },
       "references": [
         {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/columns.tsx",
-          "line": 239,
+          "kind": "FormattedMessage",
+          "path": "src/pages/Processes/index.tsx",
+          "line": 331,
           "column": 15,
-          "symbol": "getSampleLibraryColumns",
-          "defaultMessage": "Published",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 213,
-          "column": 30,
-          "symbol": "SampleLibraryPage",
-          "defaultMessage": "Published",
+          "symbol": "processColumns",
+          "defaultMessage": "Publication",
           "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
         {
-          "value": "Published",
+          "value": "Publication",
           "argumentSignature": [],
           "placeholders": [],
           "locations": [
             {
-              "path": "src/pages/SampleLibrary/columns.tsx",
-              "line": 239,
+              "path": "src/pages/Processes/index.tsx",
+              "line": 331,
               "column": 15,
-              "kind": "formatMessage"
-            },
-            {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 213,
-              "column": 30,
-              "kind": "formatMessage"
+              "kind": "FormattedMessage"
             }
           ]
         }
@@ -238533,7 +238370,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/pages.ts",
-            "line": 518,
+            "line": 519,
             "column": 3,
             "module": "pages"
           }
@@ -238544,7 +238381,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/pages.ts",
-            "line": 518,
+            "line": 519,
             "column": 3,
             "module": "pages"
           }
@@ -238555,7 +238392,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/pages.ts",
-            "line": 518,
+            "line": 519,
             "column": 3,
             "module": "pages"
           }
@@ -238566,7 +238403,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/pages.ts",
-            "line": 518,
+            "line": 519,
             "column": 3,
             "module": "pages"
           }
@@ -238574,20 +238411,20 @@
       },
       "references": [
         {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/columns.tsx",
-          "line": 243,
-          "column": 15,
-          "symbol": "getSampleLibraryColumns",
+          "kind": "FormattedMessage",
+          "path": "src/pages/Processes/index.tsx",
+          "line": 349,
+          "column": 19,
+          "symbol": "processColumns",
           "defaultMessage": "Unpublished",
           "defaultMessageExpression": null
         },
         {
           "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 220,
-          "column": 30,
-          "symbol": "SampleLibraryPage",
+          "path": "src/pages/SampleLibrary/Controls.tsx",
+          "line": 96,
+          "column": 22,
+          "symbol": "SampleLibraryControls",
           "defaultMessage": "Unpublished",
           "defaultMessageExpression": null
         }
@@ -238599,15 +238436,15 @@
           "placeholders": [],
           "locations": [
             {
-              "path": "src/pages/SampleLibrary/columns.tsx",
-              "line": 243,
-              "column": 15,
-              "kind": "formatMessage"
+              "path": "src/pages/Processes/index.tsx",
+              "line": 349,
+              "column": 19,
+              "kind": "FormattedMessage"
             },
             {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 220,
-              "column": 30,
+              "path": "src/pages/SampleLibrary/Controls.tsx",
+              "line": 96,
+              "column": 22,
               "kind": "formatMessage"
             }
           ]
@@ -238616,7 +238453,7 @@
     },
     {
       "id": "pages.sampleLibrary.title",
-      "category": "active-static",
+      "category": "reserved",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["pages"],
@@ -238670,36 +238507,12 @@
           }
         }
       },
-      "references": [
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 152,
-          "column": 14,
-          "symbol": "SampleLibraryPage",
-          "defaultMessage": "Sample Library",
-          "defaultMessageExpression": null
-        }
-      ],
-      "defaultMessages": [
-        {
-          "value": "Sample Library",
-          "argumentSignature": [],
-          "placeholders": [],
-          "locations": [
-            {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 152,
-              "column": 14,
-              "kind": "formatMessage"
-            }
-          ]
-        }
-      ]
+      "references": [],
+      "defaultMessages": []
     },
     {
       "id": "pages.sampleLibrary.type.contacts",
-      "category": "active-static",
+      "category": "reserved",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["pages"],
@@ -238753,36 +238566,12 @@
           }
         }
       },
-      "references": [
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 66,
-          "column": 14,
-          "symbol": "getTypeTitle",
-          "defaultMessage": "Contacts",
-          "defaultMessageExpression": null
-        }
-      ],
-      "defaultMessages": [
-        {
-          "value": "Contacts",
-          "argumentSignature": [],
-          "placeholders": [],
-          "locations": [
-            {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 66,
-              "column": 14,
-              "kind": "formatMessage"
-            }
-          ]
-        }
-      ]
+      "references": [],
+      "defaultMessages": []
     },
     {
       "id": "pages.sampleLibrary.type.flowproperties",
-      "category": "active-static",
+      "category": "reserved",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["pages"],
@@ -238836,36 +238625,12 @@
           }
         }
       },
-      "references": [
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 51,
-          "column": 14,
-          "symbol": "getTypeTitle",
-          "defaultMessage": "Flow Properties",
-          "defaultMessageExpression": null
-        }
-      ],
-      "defaultMessages": [
-        {
-          "value": "Flow Properties",
-          "argumentSignature": [],
-          "placeholders": [],
-          "locations": [
-            {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 51,
-              "column": 14,
-              "kind": "formatMessage"
-            }
-          ]
-        }
-      ]
+      "references": [],
+      "defaultMessages": []
     },
     {
       "id": "pages.sampleLibrary.type.flows",
-      "category": "active-static",
+      "category": "reserved",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["pages"],
@@ -238919,36 +238684,12 @@
           }
         }
       },
-      "references": [
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 46,
-          "column": 14,
-          "symbol": "getTypeTitle",
-          "defaultMessage": "Flows",
-          "defaultMessageExpression": null
-        }
-      ],
-      "defaultMessages": [
-        {
-          "value": "Flows",
-          "argumentSignature": [],
-          "placeholders": [],
-          "locations": [
-            {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 46,
-              "column": 14,
-              "kind": "formatMessage"
-            }
-          ]
-        }
-      ]
+      "references": [],
+      "defaultMessages": []
     },
     {
       "id": "pages.sampleLibrary.type.lifecyclemodels",
-      "category": "active-static",
+      "category": "reserved",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["pages"],
@@ -239002,36 +238743,12 @@
           }
         }
       },
-      "references": [
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 36,
-          "column": 14,
-          "symbol": "getTypeTitle",
-          "defaultMessage": "Life Cycle Models",
-          "defaultMessageExpression": null
-        }
-      ],
-      "defaultMessages": [
-        {
-          "value": "Life Cycle Models",
-          "argumentSignature": [],
-          "placeholders": [],
-          "locations": [
-            {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 36,
-              "column": 14,
-              "kind": "formatMessage"
-            }
-          ]
-        }
-      ]
+      "references": [],
+      "defaultMessages": []
     },
     {
       "id": "pages.sampleLibrary.type.processes",
-      "category": "active-static",
+      "category": "reserved",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["pages"],
@@ -239085,36 +238802,12 @@
           }
         }
       },
-      "references": [
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 41,
-          "column": 14,
-          "symbol": "getTypeTitle",
-          "defaultMessage": "Processes",
-          "defaultMessageExpression": null
-        }
-      ],
-      "defaultMessages": [
-        {
-          "value": "Processes",
-          "argumentSignature": [],
-          "placeholders": [],
-          "locations": [
-            {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 41,
-              "column": 14,
-              "kind": "formatMessage"
-            }
-          ]
-        }
-      ]
+      "references": [],
+      "defaultMessages": []
     },
     {
       "id": "pages.sampleLibrary.type.sources",
-      "category": "active-static",
+      "category": "reserved",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["pages"],
@@ -239168,36 +238861,12 @@
           }
         }
       },
-      "references": [
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 61,
-          "column": 14,
-          "symbol": "getTypeTitle",
-          "defaultMessage": "Sources",
-          "defaultMessageExpression": null
-        }
-      ],
-      "defaultMessages": [
-        {
-          "value": "Sources",
-          "argumentSignature": [],
-          "placeholders": [],
-          "locations": [
-            {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 61,
-              "column": 14,
-              "kind": "formatMessage"
-            }
-          ]
-        }
-      ]
+      "references": [],
+      "defaultMessages": []
     },
     {
       "id": "pages.sampleLibrary.type.unitgroups",
-      "category": "active-static",
+      "category": "reserved",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["pages"],
@@ -239251,32 +238920,8 @@
           }
         }
       },
-      "references": [
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 56,
-          "column": 14,
-          "symbol": "getTypeTitle",
-          "defaultMessage": "Unit Groups",
-          "defaultMessageExpression": null
-        }
-      ],
-      "defaultMessages": [
-        {
-          "value": "Unit Groups",
-          "argumentSignature": [],
-          "placeholders": [],
-          "locations": [
-            {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 56,
-              "column": 14,
-              "kind": "formatMessage"
-            }
-          ]
-        }
-      ]
+      "references": [],
+      "defaultMessages": []
     },
     {
       "id": "pages.search.keyWord",
@@ -239383,7 +239028,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Contacts/index.tsx",
-          "line": 369,
+          "line": 370,
           "column": 23,
           "symbol": "TableList",
           "defaultMessage": null,
@@ -239428,7 +239073,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Flowproperties/index.tsx",
-          "line": 369,
+          "line": 370,
           "column": 23,
           "symbol": "TableList",
           "defaultMessage": null,
@@ -239473,7 +239118,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Flows/index.tsx",
-          "line": 469,
+          "line": 470,
           "column": 23,
           "symbol": "TableList",
           "defaultMessage": null,
@@ -239536,7 +239181,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/LifeCycleModels/index.tsx",
-          "line": 389,
+          "line": 390,
           "column": 23,
           "symbol": "TableList",
           "defaultMessage": null,
@@ -239545,7 +239190,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Processes/index.tsx",
-          "line": 566,
+          "line": 648,
           "column": 23,
           "symbol": "TableList",
           "defaultMessage": null,
@@ -239599,7 +239244,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Sources/index.tsx",
-          "line": 364,
+          "line": 365,
           "column": 23,
           "symbol": "TableList",
           "defaultMessage": null,
@@ -239644,7 +239289,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Unitgroups/index.tsx",
-          "line": 349,
+          "line": 350,
           "column": 23,
           "symbol": "TableList",
           "defaultMessage": null,
@@ -239713,7 +239358,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Contacts/index.tsx",
-          "line": 380,
+          "line": 381,
           "column": 15,
           "symbol": "TableList",
           "defaultMessage": "AI Recommendation",
@@ -239722,7 +239367,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Flowproperties/index.tsx",
-          "line": 380,
+          "line": 381,
           "column": 15,
           "symbol": "TableList",
           "defaultMessage": "AI Recommendation",
@@ -239749,7 +239394,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Flows/index.tsx",
-          "line": 485,
+          "line": 486,
           "column": 15,
           "symbol": "TableList",
           "defaultMessage": "AI Recommendation",
@@ -239803,7 +239448,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/LifeCycleModels/index.tsx",
-          "line": 405,
+          "line": 406,
           "column": 15,
           "symbol": "TableList",
           "defaultMessage": "AI Recommendation",
@@ -239812,7 +239457,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Processes/index.tsx",
-          "line": 582,
+          "line": 664,
           "column": 15,
           "symbol": "TableList",
           "defaultMessage": "AI Recommendation",
@@ -239821,7 +239466,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Sources/index.tsx",
-          "line": 375,
+          "line": 376,
           "column": 15,
           "symbol": "TableList",
           "defaultMessage": "AI Recommendation",
@@ -239830,7 +239475,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Unitgroups/index.tsx",
-          "line": 360,
+          "line": 361,
           "column": 15,
           "symbol": "TableList",
           "defaultMessage": "AI Recommendation",
@@ -239845,13 +239490,13 @@
           "locations": [
             {
               "path": "src/pages/Contacts/index.tsx",
-              "line": 380,
+              "line": 381,
               "column": 15,
               "kind": "FormattedMessage"
             },
             {
               "path": "src/pages/Flowproperties/index.tsx",
-              "line": 380,
+              "line": 381,
               "column": 15,
               "kind": "FormattedMessage"
             },
@@ -239869,7 +239514,7 @@
             },
             {
               "path": "src/pages/Flows/index.tsx",
-              "line": 485,
+              "line": 486,
               "column": 15,
               "kind": "FormattedMessage"
             },
@@ -239905,25 +239550,25 @@
             },
             {
               "path": "src/pages/LifeCycleModels/index.tsx",
-              "line": 405,
+              "line": 406,
               "column": 15,
               "kind": "FormattedMessage"
             },
             {
               "path": "src/pages/Processes/index.tsx",
-              "line": 582,
+              "line": 664,
               "column": 15,
               "kind": "FormattedMessage"
             },
             {
               "path": "src/pages/Sources/index.tsx",
-              "line": 375,
+              "line": 376,
               "column": 15,
               "kind": "FormattedMessage"
             },
             {
               "path": "src/pages/Unitgroups/index.tsx",
-              "line": 360,
+              "line": 361,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -239991,7 +239636,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Contacts/index.tsx",
-          "line": 368,
+          "line": 369,
           "column": 23,
           "symbol": "TableList",
           "defaultMessage": null,
@@ -240000,7 +239645,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Flowproperties/index.tsx",
-          "line": 368,
+          "line": 369,
           "column": 23,
           "symbol": "TableList",
           "defaultMessage": null,
@@ -240027,7 +239672,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Flows/index.tsx",
-          "line": 468,
+          "line": 469,
           "column": 23,
           "symbol": "TableList",
           "defaultMessage": null,
@@ -240063,7 +239708,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/LifeCycleModels/index.tsx",
-          "line": 388,
+          "line": 389,
           "column": 23,
           "symbol": "TableList",
           "defaultMessage": null,
@@ -240072,7 +239717,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Processes/index.tsx",
-          "line": 565,
+          "line": 647,
           "column": 23,
           "symbol": "TableList",
           "defaultMessage": null,
@@ -240081,7 +239726,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Sources/index.tsx",
-          "line": 363,
+          "line": 364,
           "column": 23,
           "symbol": "TableList",
           "defaultMessage": null,
@@ -240090,7 +239735,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Unitgroups/index.tsx",
-          "line": 348,
+          "line": 349,
           "column": 23,
           "symbol": "TableList",
           "defaultMessage": null,
@@ -240159,7 +239804,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Contacts/index.tsx",
-          "line": 387,
+          "line": 388,
           "column": 17,
           "symbol": "TableList",
           "defaultMessage": "Reference Lookup",
@@ -240168,7 +239813,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Flowproperties/index.tsx",
-          "line": 387,
+          "line": 388,
           "column": 17,
           "symbol": "TableList",
           "defaultMessage": "Reference Lookup",
@@ -240177,7 +239822,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Flows/index.tsx",
-          "line": 497,
+          "line": 498,
           "column": 17,
           "symbol": "TableList",
           "defaultMessage": "Reference Lookup",
@@ -240186,7 +239831,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/LifeCycleModels/index.tsx",
-          "line": 417,
+          "line": 418,
           "column": 17,
           "symbol": "TableList",
           "defaultMessage": "Reference Lookup",
@@ -240195,7 +239840,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Processes/index.tsx",
-          "line": 594,
+          "line": 676,
           "column": 17,
           "symbol": "TableList",
           "defaultMessage": "Reference Lookup",
@@ -240204,7 +239849,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Sources/index.tsx",
-          "line": 382,
+          "line": 383,
           "column": 17,
           "symbol": "TableList",
           "defaultMessage": "Reference Lookup",
@@ -240213,7 +239858,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Unitgroups/index.tsx",
-          "line": 367,
+          "line": 368,
           "column": 17,
           "symbol": "TableList",
           "defaultMessage": "Reference Lookup",
@@ -240228,43 +239873,43 @@
           "locations": [
             {
               "path": "src/pages/Contacts/index.tsx",
-              "line": 387,
+              "line": 388,
               "column": 17,
               "kind": "FormattedMessage"
             },
             {
               "path": "src/pages/Flowproperties/index.tsx",
-              "line": 387,
+              "line": 388,
               "column": 17,
               "kind": "FormattedMessage"
             },
             {
               "path": "src/pages/Flows/index.tsx",
-              "line": 497,
+              "line": 498,
               "column": 17,
               "kind": "FormattedMessage"
             },
             {
               "path": "src/pages/LifeCycleModels/index.tsx",
-              "line": 417,
+              "line": 418,
               "column": 17,
               "kind": "FormattedMessage"
             },
             {
               "path": "src/pages/Processes/index.tsx",
-              "line": 594,
+              "line": 676,
               "column": 17,
               "kind": "FormattedMessage"
             },
             {
               "path": "src/pages/Sources/index.tsx",
-              "line": 382,
+              "line": 383,
               "column": 17,
               "kind": "FormattedMessage"
             },
             {
               "path": "src/pages/Unitgroups/index.tsx",
-              "line": 367,
+              "line": 368,
               "column": 17,
               "kind": "FormattedMessage"
             }
@@ -240332,7 +239977,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Contacts/index.tsx",
-          "line": 366,
+          "line": 367,
           "column": 21,
           "symbol": "TableList",
           "defaultMessage": null,
@@ -240341,7 +239986,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Flowproperties/index.tsx",
-          "line": 366,
+          "line": 367,
           "column": 21,
           "symbol": "TableList",
           "defaultMessage": null,
@@ -240350,7 +239995,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Flows/index.tsx",
-          "line": 466,
+          "line": 467,
           "column": 21,
           "symbol": "TableList",
           "defaultMessage": null,
@@ -240359,7 +240004,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/LifeCycleModels/index.tsx",
-          "line": 386,
+          "line": 387,
           "column": 21,
           "symbol": "TableList",
           "defaultMessage": null,
@@ -240368,7 +240013,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Processes/index.tsx",
-          "line": 563,
+          "line": 645,
           "column": 21,
           "symbol": "TableList",
           "defaultMessage": null,
@@ -240377,7 +240022,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Sources/index.tsx",
-          "line": 361,
+          "line": 362,
           "column": 21,
           "symbol": "TableList",
           "defaultMessage": null,
@@ -240386,7 +240031,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Unitgroups/index.tsx",
-          "line": 346,
+          "line": 347,
           "column": 21,
           "symbol": "TableList",
           "defaultMessage": null,
@@ -246608,15 +246253,6 @@
       },
       "references": [
         {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/columns.tsx",
-          "line": 176,
-          "column": 11,
-          "symbol": "getSampleLibraryColumns",
-          "defaultMessage": "Publication type",
-          "defaultMessageExpression": null
-        },
-        {
           "kind": "FormattedMessage",
           "path": "src/pages/Sources/Components/select/drawer.tsx",
           "line": 180,
@@ -246628,7 +246264,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Sources/index.tsx",
-          "line": 261,
+          "line": 262,
           "column": 9,
           "symbol": "sourceColumns",
           "defaultMessage": "Publication type",
@@ -246642,12 +246278,6 @@
           "placeholders": [],
           "locations": [
             {
-              "path": "src/pages/SampleLibrary/columns.tsx",
-              "line": 176,
-              "column": 11,
-              "kind": "formatMessage"
-            },
-            {
               "path": "src/pages/Sources/Components/select/drawer.tsx",
               "line": 180,
               "column": 9,
@@ -246655,7 +246285,7 @@
             },
             {
               "path": "src/pages/Sources/index.tsx",
-              "line": 261,
+              "line": 262,
               "column": 9,
               "kind": "FormattedMessage"
             }
@@ -250611,7 +250241,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Processes/index.tsx",
-          "line": 169,
+          "line": 197,
           "column": 20,
           "symbol": "typeOfDataSetFilter",
           "defaultMessage": null,
@@ -250925,7 +250555,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Contacts/index.tsx",
-          "line": 253,
+          "line": 254,
           "column": 9,
           "symbol": "contactColumns",
           "defaultMessage": "Classification",
@@ -250943,7 +250573,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Flowproperties/index.tsx",
-          "line": 220,
+          "line": 221,
           "column": 9,
           "symbol": "flowpropertiesColumns",
           "defaultMessage": "Classification",
@@ -250961,7 +250591,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Flows/index.tsx",
-          "line": 199,
+          "line": 200,
           "column": 9,
           "symbol": "flowsColumns",
           "defaultMessage": "Classification",
@@ -250997,7 +250627,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/LifeCycleModels/index.tsx",
-          "line": 177,
+          "line": 178,
           "column": 9,
           "symbol": "processColumns",
           "defaultMessage": "Classification",
@@ -251015,36 +250645,9 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Processes/index.tsx",
-          "line": 196,
+          "line": 224,
           "column": 9,
           "symbol": "processColumns",
-          "defaultMessage": "Classification",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/columns.tsx",
-          "line": 61,
-          "column": 9,
-          "symbol": "getSampleLibraryColumns",
-          "defaultMessage": "Classification",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/columns.tsx",
-          "line": 105,
-          "column": 9,
-          "symbol": "getSampleLibraryColumns",
-          "defaultMessage": "Classification",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/columns.tsx",
-          "line": 135,
-          "column": 9,
-          "symbol": "getSampleLibraryColumns",
           "defaultMessage": "Classification",
           "defaultMessageExpression": null
         },
@@ -251060,7 +250663,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Sources/index.tsx",
-          "line": 249,
+          "line": 250,
           "column": 9,
           "symbol": "sourceColumns",
           "defaultMessage": "Classification",
@@ -251078,7 +250681,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Unitgroups/index.tsx",
-          "line": 219,
+          "line": 220,
           "column": 9,
           "symbol": "unitGroupColumns",
           "defaultMessage": "Classification",
@@ -251099,7 +250702,7 @@
             },
             {
               "path": "src/pages/Contacts/index.tsx",
-              "line": 253,
+              "line": 254,
               "column": 9,
               "kind": "FormattedMessage"
             },
@@ -251111,7 +250714,7 @@
             },
             {
               "path": "src/pages/Flowproperties/index.tsx",
-              "line": 220,
+              "line": 221,
               "column": 9,
               "kind": "FormattedMessage"
             },
@@ -251123,7 +250726,7 @@
             },
             {
               "path": "src/pages/Flows/index.tsx",
-              "line": 199,
+              "line": 200,
               "column": 9,
               "kind": "FormattedMessage"
             },
@@ -251147,7 +250750,7 @@
             },
             {
               "path": "src/pages/LifeCycleModels/index.tsx",
-              "line": 177,
+              "line": 178,
               "column": 9,
               "kind": "FormattedMessage"
             },
@@ -251159,27 +250762,9 @@
             },
             {
               "path": "src/pages/Processes/index.tsx",
-              "line": 196,
+              "line": 224,
               "column": 9,
               "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/SampleLibrary/columns.tsx",
-              "line": 61,
-              "column": 9,
-              "kind": "formatMessage"
-            },
-            {
-              "path": "src/pages/SampleLibrary/columns.tsx",
-              "line": 105,
-              "column": 9,
-              "kind": "formatMessage"
-            },
-            {
-              "path": "src/pages/SampleLibrary/columns.tsx",
-              "line": 135,
-              "column": 9,
-              "kind": "formatMessage"
             },
             {
               "path": "src/pages/Sources/Components/select/drawer.tsx",
@@ -251189,7 +250774,7 @@
             },
             {
               "path": "src/pages/Sources/index.tsx",
-              "line": 249,
+              "line": 250,
               "column": 9,
               "kind": "FormattedMessage"
             },
@@ -251201,7 +250786,7 @@
             },
             {
               "path": "src/pages/Unitgroups/index.tsx",
-              "line": 219,
+              "line": 220,
               "column": 9,
               "kind": "FormattedMessage"
             }
@@ -251494,7 +251079,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Contacts/index.tsx",
-          "line": 238,
+          "line": 239,
           "column": 14,
           "symbol": "contactColumns",
           "defaultMessage": "Index",
@@ -251512,7 +251097,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Flowproperties/index.tsx",
-          "line": 206,
+          "line": 207,
           "column": 14,
           "symbol": "flowpropertiesColumns",
           "defaultMessage": "Index",
@@ -251548,7 +251133,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Flows/index.tsx",
-          "line": 167,
+          "line": 168,
           "column": 14,
           "symbol": "flowsColumns",
           "defaultMessage": "Index",
@@ -251611,7 +251196,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/LifeCycleModels/index.tsx",
-          "line": 160,
+          "line": 161,
           "column": 14,
           "symbol": "processColumns",
           "defaultMessage": "Index",
@@ -251656,7 +251241,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Processes/index.tsx",
-          "line": 179,
+          "line": 207,
           "column": 14,
           "symbol": "processColumns",
           "defaultMessage": "Index",
@@ -251690,15 +251275,6 @@
           "defaultMessageExpression": null
         },
         {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/columns.tsx",
-          "line": 46,
-          "column": 14,
-          "symbol": "columns",
-          "defaultMessage": "Index",
-          "defaultMessageExpression": null
-        },
-        {
           "kind": "FormattedMessage",
           "path": "src/pages/Sources/Components/select/drawer.tsx",
           "line": 160,
@@ -251710,7 +251286,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Sources/index.tsx",
-          "line": 234,
+          "line": 235,
           "column": 14,
           "symbol": "sourceColumns",
           "defaultMessage": "Index",
@@ -251746,7 +251322,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Unitgroups/index.tsx",
-          "line": 188,
+          "line": 189,
           "column": 9,
           "symbol": "unitGroupColumns",
           "defaultMessage": "Index",
@@ -251767,7 +251343,7 @@
             },
             {
               "path": "src/pages/Contacts/index.tsx",
-              "line": 238,
+              "line": 239,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -251779,7 +251355,7 @@
             },
             {
               "path": "src/pages/Flowproperties/index.tsx",
-              "line": 206,
+              "line": 207,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -251803,7 +251379,7 @@
             },
             {
               "path": "src/pages/Flows/index.tsx",
-              "line": 167,
+              "line": 168,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -251845,7 +251421,7 @@
             },
             {
               "path": "src/pages/LifeCycleModels/index.tsx",
-              "line": 160,
+              "line": 161,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -251875,7 +251451,7 @@
             },
             {
               "path": "src/pages/Processes/index.tsx",
-              "line": 179,
+              "line": 207,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -251898,12 +251474,6 @@
               "kind": "FormattedMessage"
             },
             {
-              "path": "src/pages/SampleLibrary/columns.tsx",
-              "line": 46,
-              "column": 14,
-              "kind": "formatMessage"
-            },
-            {
               "path": "src/pages/Sources/Components/select/drawer.tsx",
               "line": 160,
               "column": 14,
@@ -251911,7 +251481,7 @@
             },
             {
               "path": "src/pages/Sources/index.tsx",
-              "line": 234,
+              "line": 235,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -251935,7 +251505,7 @@
             },
             {
               "path": "src/pages/Unitgroups/index.tsx",
-              "line": 188,
+              "line": 189,
               "column": 9,
               "kind": "FormattedMessage"
             }
@@ -252119,7 +251689,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Contacts/index.tsx",
-          "line": 244,
+          "line": 245,
           "column": 14,
           "symbol": "contactColumns",
           "defaultMessage": "Name",
@@ -252137,7 +251707,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Flowproperties/index.tsx",
-          "line": 212,
+          "line": 213,
           "column": 14,
           "symbol": "flowpropertiesColumns",
           "defaultMessage": "Name",
@@ -252155,7 +251725,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Flows/index.tsx",
-          "line": 173,
+          "line": 174,
           "column": 14,
           "symbol": "flowsColumns",
           "defaultMessage": "Name",
@@ -252191,7 +251761,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/LifeCycleModels/index.tsx",
-          "line": 166,
+          "line": 167,
           "column": 14,
           "symbol": "processColumns",
           "defaultMessage": "Name",
@@ -252254,18 +251824,9 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Processes/index.tsx",
-          "line": 185,
+          "line": 213,
           "column": 14,
           "symbol": "processColumns",
-          "defaultMessage": "Name",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/columns.tsx",
-          "line": 51,
-          "column": 7,
-          "symbol": "columns",
           "defaultMessage": "Name",
           "defaultMessageExpression": null
         },
@@ -252281,7 +251842,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Sources/index.tsx",
-          "line": 240,
+          "line": 241,
           "column": 14,
           "symbol": "sourceColumns",
           "defaultMessage": "Name",
@@ -252317,7 +251878,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Unitgroups/index.tsx",
-          "line": 195,
+          "line": 196,
           "column": 9,
           "symbol": "unitGroupColumns",
           "defaultMessage": "Name",
@@ -252344,7 +251905,7 @@
             },
             {
               "path": "src/pages/Contacts/index.tsx",
-              "line": 244,
+              "line": 245,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -252356,7 +251917,7 @@
             },
             {
               "path": "src/pages/Flowproperties/index.tsx",
-              "line": 212,
+              "line": 213,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -252368,7 +251929,7 @@
             },
             {
               "path": "src/pages/Flows/index.tsx",
-              "line": 173,
+              "line": 174,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -252392,7 +251953,7 @@
             },
             {
               "path": "src/pages/LifeCycleModels/index.tsx",
-              "line": 166,
+              "line": 167,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -252434,15 +251995,9 @@
             },
             {
               "path": "src/pages/Processes/index.tsx",
-              "line": 185,
+              "line": 213,
               "column": 14,
               "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/SampleLibrary/columns.tsx",
-              "line": 51,
-              "column": 7,
-              "kind": "formatMessage"
             },
             {
               "path": "src/pages/Sources/Components/select/drawer.tsx",
@@ -252452,7 +252007,7 @@
             },
             {
               "path": "src/pages/Sources/index.tsx",
-              "line": 240,
+              "line": 241,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -252476,7 +252031,7 @@
             },
             {
               "path": "src/pages/Unitgroups/index.tsx",
-              "line": 195,
+              "line": 196,
               "column": 9,
               "kind": "FormattedMessage"
             }
@@ -252562,7 +252117,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Contacts/index.tsx",
-          "line": 326,
+          "line": 327,
           "column": 14,
           "symbol": "contactColumns",
           "defaultMessage": "Actions",
@@ -252580,7 +252135,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Flowproperties/index.tsx",
-          "line": 320,
+          "line": 321,
           "column": 14,
           "symbol": "flowpropertiesColumns",
           "defaultMessage": "Actions",
@@ -252616,7 +252171,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Flows/index.tsx",
-          "line": 291,
+          "line": 292,
           "column": 14,
           "symbol": "flowsColumns",
           "defaultMessage": "Actions",
@@ -252670,7 +252225,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/LifeCycleModels/index.tsx",
-          "line": 250,
+          "line": 251,
           "column": 14,
           "symbol": "processColumns",
           "defaultMessage": "Actions",
@@ -252715,7 +252270,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Processes/index.tsx",
-          "line": 302,
+          "line": 362,
           "column": 14,
           "symbol": "processColumns",
           "defaultMessage": "Actions",
@@ -252740,15 +252295,6 @@
           "defaultMessageExpression": null
         },
         {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/columns.tsx",
-          "line": 263,
-          "column": 14,
-          "symbol": "getSampleLibraryColumns",
-          "defaultMessage": "Actions",
-          "defaultMessageExpression": null
-        },
-        {
           "kind": "FormattedMessage",
           "path": "src/pages/Sources/Components/select/drawer.tsx",
           "line": 221,
@@ -252760,7 +252306,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Sources/index.tsx",
-          "line": 325,
+          "line": 326,
           "column": 14,
           "symbol": "sourceColumns",
           "defaultMessage": "Actions",
@@ -252796,7 +252342,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Unitgroups/index.tsx",
-          "line": 301,
+          "line": 302,
           "column": 9,
           "symbol": "unitGroupColumns",
           "defaultMessage": "Actions",
@@ -252823,7 +252369,7 @@
             },
             {
               "path": "src/pages/Contacts/index.tsx",
-              "line": 326,
+              "line": 327,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -252835,7 +252381,7 @@
             },
             {
               "path": "src/pages/Flowproperties/index.tsx",
-              "line": 320,
+              "line": 321,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -252859,7 +252405,7 @@
             },
             {
               "path": "src/pages/Flows/index.tsx",
-              "line": 291,
+              "line": 292,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -252895,7 +252441,7 @@
             },
             {
               "path": "src/pages/LifeCycleModels/index.tsx",
-              "line": 250,
+              "line": 251,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -252925,7 +252471,7 @@
             },
             {
               "path": "src/pages/Processes/index.tsx",
-              "line": 302,
+              "line": 362,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -252942,12 +252488,6 @@
               "kind": "FormattedMessage"
             },
             {
-              "path": "src/pages/SampleLibrary/columns.tsx",
-              "line": 263,
-              "column": 14,
-              "kind": "formatMessage"
-            },
-            {
               "path": "src/pages/Sources/Components/select/drawer.tsx",
               "line": 221,
               "column": 14,
@@ -252955,7 +252495,7 @@
             },
             {
               "path": "src/pages/Sources/index.tsx",
-              "line": 325,
+              "line": 326,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -252979,7 +252519,7 @@
             },
             {
               "path": "src/pages/Unitgroups/index.tsx",
-              "line": 301,
+              "line": 302,
               "column": 9,
               "kind": "FormattedMessage"
             }
@@ -253056,7 +252596,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Contacts/index.tsx",
-          "line": 316,
+          "line": 317,
           "column": 14,
           "symbol": "contactColumns",
           "defaultMessage": "Updated at",
@@ -253065,7 +252605,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Flowproperties/index.tsx",
-          "line": 310,
+          "line": 311,
           "column": 14,
           "symbol": "flowpropertiesColumns",
           "defaultMessage": "Updated at",
@@ -253074,7 +252614,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Flows/index.tsx",
-          "line": 283,
+          "line": 284,
           "column": 14,
           "symbol": "flowsColumns",
           "defaultMessage": "Updated at",
@@ -253101,7 +252641,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/LifeCycleModels/index.tsx",
-          "line": 240,
+          "line": 241,
           "column": 14,
           "symbol": "processColumns",
           "defaultMessage": "Updated at",
@@ -253110,18 +252650,9 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Processes/index.tsx",
-          "line": 292,
+          "line": 320,
           "column": 14,
           "symbol": "processColumns",
-          "defaultMessage": "Updated at",
-          "defaultMessageExpression": null
-        },
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/columns.tsx",
-          "line": 254,
-          "column": 14,
-          "symbol": "getSampleLibraryColumns",
           "defaultMessage": "Updated at",
           "defaultMessageExpression": null
         },
@@ -253137,7 +252668,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Sources/index.tsx",
-          "line": 317,
+          "line": 318,
           "column": 14,
           "symbol": "sourceColumns",
           "defaultMessage": "Updated at",
@@ -253146,7 +252677,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Unitgroups/index.tsx",
-          "line": 286,
+          "line": 287,
           "column": 9,
           "symbol": "unitGroupColumns",
           "defaultMessage": "Updated at",
@@ -253167,19 +252698,19 @@
             },
             {
               "path": "src/pages/Contacts/index.tsx",
-              "line": 316,
+              "line": 317,
               "column": 14,
               "kind": "FormattedMessage"
             },
             {
               "path": "src/pages/Flowproperties/index.tsx",
-              "line": 310,
+              "line": 311,
               "column": 14,
               "kind": "FormattedMessage"
             },
             {
               "path": "src/pages/Flows/index.tsx",
-              "line": 283,
+              "line": 284,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -253197,21 +252728,15 @@
             },
             {
               "path": "src/pages/LifeCycleModels/index.tsx",
-              "line": 240,
+              "line": 241,
               "column": 14,
               "kind": "FormattedMessage"
             },
             {
               "path": "src/pages/Processes/index.tsx",
-              "line": 292,
+              "line": 320,
               "column": 14,
               "kind": "FormattedMessage"
-            },
-            {
-              "path": "src/pages/SampleLibrary/columns.tsx",
-              "line": 254,
-              "column": 14,
-              "kind": "formatMessage"
             },
             {
               "path": "src/pages/Sources/Components/select/drawer.tsx",
@@ -253221,13 +252746,13 @@
             },
             {
               "path": "src/pages/Sources/index.tsx",
-              "line": 317,
+              "line": 318,
               "column": 14,
               "kind": "FormattedMessage"
             },
             {
               "path": "src/pages/Unitgroups/index.tsx",
-              "line": 286,
+              "line": 287,
               "column": 9,
               "kind": "FormattedMessage"
             }
@@ -253313,7 +252838,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Contacts/index.tsx",
-          "line": 271,
+          "line": 272,
           "column": 14,
           "symbol": "contactColumns",
           "defaultMessage": "Version",
@@ -253331,7 +252856,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Flowproperties/index.tsx",
-          "line": 257,
+          "line": 258,
           "column": 14,
           "symbol": "flowpropertiesColumns",
           "defaultMessage": "Version",
@@ -253358,7 +252883,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Flows/index.tsx",
-          "line": 228,
+          "line": 229,
           "column": 14,
           "symbol": "flowsColumns",
           "defaultMessage": "Version",
@@ -253421,7 +252946,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/LifeCycleModels/index.tsx",
-          "line": 188,
+          "line": 189,
           "column": 14,
           "symbol": "processColumns",
           "defaultMessage": "Version",
@@ -253457,7 +252982,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Processes/index.tsx",
-          "line": 236,
+          "line": 264,
           "column": 14,
           "symbol": "processColumns",
           "defaultMessage": "Version",
@@ -253473,15 +252998,6 @@
           "defaultMessageExpression": null
         },
         {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/columns.tsx",
-          "line": 201,
-          "column": 7,
-          "symbol": "getSampleLibraryColumns",
-          "defaultMessage": "Version",
-          "defaultMessageExpression": null
-        },
-        {
           "kind": "FormattedMessage",
           "path": "src/pages/Sources/Components/select/drawer.tsx",
           "line": 187,
@@ -253493,7 +253009,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Sources/index.tsx",
-          "line": 272,
+          "line": 273,
           "column": 14,
           "symbol": "sourceColumns",
           "defaultMessage": "Version",
@@ -253511,7 +253027,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Unitgroups/index.tsx",
-          "line": 233,
+          "line": 234,
           "column": 14,
           "symbol": "unitGroupColumns",
           "defaultMessage": "Version",
@@ -253538,7 +253054,7 @@
             },
             {
               "path": "src/pages/Contacts/index.tsx",
-              "line": 271,
+              "line": 272,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -253550,7 +253066,7 @@
             },
             {
               "path": "src/pages/Flowproperties/index.tsx",
-              "line": 257,
+              "line": 258,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -253568,7 +253084,7 @@
             },
             {
               "path": "src/pages/Flows/index.tsx",
-              "line": 228,
+              "line": 229,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -253610,7 +253126,7 @@
             },
             {
               "path": "src/pages/LifeCycleModels/index.tsx",
-              "line": 188,
+              "line": 189,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -253634,7 +253150,7 @@
             },
             {
               "path": "src/pages/Processes/index.tsx",
-              "line": 236,
+              "line": 264,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -253645,12 +253161,6 @@
               "kind": "FormattedMessage"
             },
             {
-              "path": "src/pages/SampleLibrary/columns.tsx",
-              "line": 201,
-              "column": 7,
-              "kind": "formatMessage"
-            },
-            {
               "path": "src/pages/Sources/Components/select/drawer.tsx",
               "line": 187,
               "column": 14,
@@ -253658,7 +253168,7 @@
             },
             {
               "path": "src/pages/Sources/index.tsx",
-              "line": 272,
+              "line": 273,
               "column": 14,
               "kind": "FormattedMessage"
             },
@@ -253670,7 +253180,7 @@
             },
             {
               "path": "src/pages/Unitgroups/index.tsx",
-              "line": 233,
+              "line": 234,
               "column": 14,
               "kind": "FormattedMessage"
             }
@@ -260611,7 +260121,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Unitgroups/index.tsx",
-          "line": 400,
+          "line": 401,
           "column": 17,
           "symbol": "TableList",
           "defaultMessage": "Need to add or supplement unit groups? Contact an administrator.",
@@ -260626,7 +260136,7 @@
           "locations": [
             {
               "path": "src/pages/Unitgroups/index.tsx",
-              "line": 400,
+              "line": 401,
               "column": 17,
               "kind": "FormattedMessage"
             }
@@ -261255,15 +260765,6 @@
       },
       "references": [
         {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/columns.tsx",
-          "line": 163,
-          "column": 11,
-          "symbol": "getSampleLibraryColumns",
-          "defaultMessage": "Quantitative reference",
-          "defaultMessageExpression": null
-        },
-        {
           "kind": "FormattedMessage",
           "path": "src/pages/Unitgroups/Components/form.tsx",
           "line": 305,
@@ -261329,7 +260830,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Unitgroups/index.tsx",
-          "line": 204,
+          "line": 205,
           "column": 9,
           "symbol": "unitGroupColumns",
           "defaultMessage": "Quantitative reference",
@@ -261342,12 +260843,6 @@
           "argumentSignature": [],
           "placeholders": [],
           "locations": [
-            {
-              "path": "src/pages/SampleLibrary/columns.tsx",
-              "line": 163,
-              "column": 11,
-              "kind": "formatMessage"
-            },
             {
               "path": "src/pages/Unitgroups/Components/form.tsx",
               "line": 305,
@@ -261392,7 +260887,7 @@
             },
             {
               "path": "src/pages/Unitgroups/index.tsx",
-              "line": 204,
+              "line": 205,
               "column": 9,
               "kind": "FormattedMessage"
             }
@@ -281831,7 +281326,7 @@
       "count": 1,
       "file": "src/pages/Utils/index.tsx",
       "expression": "rule.messageKey",
-      "locations": ["48:16"],
+      "locations": ["50:16"],
       "category": "active-dynamic",
       "family": "schemaValidation",
       "reviewStatus": "reviewed"

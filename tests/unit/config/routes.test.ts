@@ -38,7 +38,6 @@ describe('route access config', () => {
         .map((route) => ({
           ...route,
           path: route.path.replace('/tgdata', '/sample-library'),
-          component: './SampleLibrary',
         })),
     ]);
     expect(sampleLibrary?.routes?.filter((route) => route.component)).toHaveLength(7);

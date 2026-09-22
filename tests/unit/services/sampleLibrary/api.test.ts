@@ -41,6 +41,7 @@ describe('sample library API', () => {
       sample_origin_filter: 'enterprise',
       sample_publication_status_filter: 'published',
     });
+    expect(getSampleLibraryRpcFilters('tg')).toEqual({});
     expect(withSampleLibrarySearchFilters('sl', { classification: ['steel'] })).toEqual({
       classification: ['steel'],
       __sampleLibraryOrigin: 'enterprise',

@@ -514,6 +514,7 @@ export default {
   'pages.sampleLibrary.origin.literature': 'Literaturdaten',
   'pages.sampleLibrary.origin.enterprise': 'Unternehmensdaten',
   'pages.sampleLibrary.status.all': 'Alle Status',
+  'pages.sampleLibrary.status.title': 'Veröffentlichung',
   'pages.sampleLibrary.status.published': 'Veröffentlicht',
   'pages.sampleLibrary.status.unpublished': 'Nicht veröffentlicht',
   'pages.sampleLibrary.column.name': 'Name',

@@ -2175,14 +2175,19 @@
       },
       "viewState": "dataset-routes-origin-and-publication-filters",
       "trigger": "Open every Sample Library child route as a data product manager, switch origin filters, filter Process publication status, select unpublished Process versions, publish them, and open every existing detail drawer without navigation.",
-      "component": "src/pages/SampleLibrary/index.tsx",
+      "component": "src/pages/Processes/index.tsx",
       "accessContext": "authenticated standard-user route-access boundary; data-product-manager-role-required for the internal page",
       "copySources": {
         "sourcePaths": [
           "config/routes.ts",
-          "src/pages/SampleLibrary/index.tsx",
-          "src/pages/SampleLibrary/columns.tsx",
-          "src/pages/SampleLibrary/DetailButton.tsx",
+          "src/pages/SampleLibrary/Controls.tsx",
+          "src/pages/LifeCycleModels/index.tsx",
+          "src/pages/Processes/index.tsx",
+          "src/pages/Flows/index.tsx",
+          "src/pages/Flowproperties/index.tsx",
+          "src/pages/Unitgroups/index.tsx",
+          "src/pages/Sources/index.tsx",
+          "src/pages/Contacts/index.tsx",
           "src/components/AccessDenied/index.tsx"
         ],
         "localeMessageIds": [],
@@ -2215,9 +2220,8 @@
         "requiredEvidenceScope": "access-boundary-observed",
         "focusedTests": [
           "tests/unit/config/routes.test.ts",
-          "tests/unit/pages/SampleLibrary/columns.test.tsx",
-          "tests/unit/pages/SampleLibrary/model.test.ts",
-          "tests/unit/pages/SampleLibrary/DetailButton.test.tsx"
+          "tests/unit/services/sampleLibrary/api.test.ts",
+          "tests/unit/pages/Processes/Components/view.test.tsx"
         ],
         "plannedBrowserAssertions": [
           "data product manager can traverse every localized child route and open details without leaving that route"

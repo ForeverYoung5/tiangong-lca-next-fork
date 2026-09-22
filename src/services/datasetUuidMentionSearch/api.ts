@@ -1,4 +1,4 @@
-import { getSampleLibraryFilters } from '@/services/sampleLibrary/api';
+import { getSampleLibraryFilters } from '@/services/sampleLibrary/filters';
 
 export type DatasetUuidMentionEntityKind =
   'flow' | 'process' | 'lifecyclemodel' | 'source' | 'contact' | 'unitgroup' | 'flowproperty';
@@ -126,6 +126,7 @@ export async function searchDatasetJsonUuidMentions({
     return { data: [], success: true };
   }
 
+  const sampleFilters = dataSource === 'sl' ? getSampleLibraryFilters() : undefined;
   const result = await supabase.rpc('search_dataset_json_uuid_mentions', {
     p_data_source: dataSource,
     p_limit: limit,
@@ -134,9 +135,12 @@ export async function searchDatasetJsonUuidMentions({
     p_team_id_filter: teamIdFilter,
     p_this_user_id: session.data.session.user?.id ?? '',
     p_uuid: normalizedUuid,
-    p_sample_origin_filter: dataSource === 'sl' ? getSampleLibraryFilters().origin : 'all',
-    p_sample_publication_status_filter:
-      dataSource === 'sl' ? getSampleLibraryFilters().publicationStatus : 'all',
+    ...(sampleFilters
+      ? {
+          p_sample_origin_filter: sampleFilters.origin,
+          p_sample_publication_status_filter: sampleFilters.publicationStatus,
+        }
+      : {}),
   } as never);
 
   if (result.error) {
