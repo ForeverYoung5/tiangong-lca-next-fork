@@ -43,8 +43,8 @@ checkPaths:
   - scripts/reference-data/**
   - .github/workflows/**
 lastReviewedAt: 2026-09-22
-lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
-lastReviewedNote: 'Reviewed for Platform #1111: the exact SDK dependency and installed-package Process review contract advance to 0.3.1; pre-push ownership and trigger policy are unchanged.'
+lastReviewedCommit: 29be1e3e8d4e3eb6fd8ddc2da496c47196f509a3
+lastReviewedNote: 'Reviewed for Platform #1118 after merging current dev: Sample Library service, route, drawer, locale, surface-registry, and production-request guard changes are covered by the existing full pre-push gate.'
 ---
 
 # Pre-Push Gate Policy
