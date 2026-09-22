@@ -86,6 +86,23 @@ describe('datasetUuidMentionSearch service', () => {
     });
   });
 
+  it('passes the current sample-library filters to the shared UUID search RPC', async () => {
+    await searchDatasetJsonUuidMentions({
+      dataSource: 'sl',
+      sourceEntityKinds: ['process'],
+      uuid: 'd1380000-0000-4000-8000-000000000001',
+    });
+
+    expect(supabaseMock.rpc).toHaveBeenCalledWith(
+      'search_dataset_json_uuid_mentions',
+      expect.objectContaining({
+        p_data_source: 'sl',
+        p_sample_origin_filter: 'all',
+        p_sample_publication_status_filter: 'all',
+      }),
+    );
+  });
+
   it('preserves new backend entity kinds for the UI localized fallback', async () => {
     supabaseMock.rpc.mockResolvedValue({
       data: [
@@ -274,6 +291,25 @@ describe('datasetUuidMentionSearch service', () => {
         uuid: 'd1380000-0000-4000-8000-000000000001',
       }),
     ).resolves.toEqual({ data: [], success: true });
+  });
+
+  it('propagates search failures through the synthetic page contract', async () => {
+    supabaseMock.auth.getSession.mockResolvedValue({ data: { session: null } });
+
+    await expect(
+      searchDatasetJsonUuidMentionPage({
+        dataSource: 'tg',
+        sourceEntityKinds: ['process'],
+        uuid: 'd1380000-0000-4000-8000-000000000001',
+      }),
+    ).resolves.toEqual({
+      capped: false,
+      data: [],
+      error: 'not_authenticated',
+      page: 1,
+      success: false,
+      total: 0,
+    });
   });
 
   it('builds bounded synthetic pages from the existing limit-only RPC', async () => {

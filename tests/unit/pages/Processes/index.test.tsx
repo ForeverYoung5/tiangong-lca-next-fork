@@ -1277,4 +1277,15 @@ describe('ProcessesPage', () => {
     expect(mockModalConfirm).toHaveBeenCalled();
     expect(message.success).toHaveBeenCalledWith('Published {count} Process versions');
   });
+
+  it('renders an unpublished sample-library Process when no publication receipt exists', async () => {
+    mockLocation = { pathname: '/sample-library/processes', search: '' };
+    mockGetDataSource.mockReturnValue('sl');
+    mockGetSampleLibraryProcessPublicationMap.mockResolvedValue(new Map());
+
+    renderWithProviders(<ProcessesPage />);
+
+    expect(await screen.findByText('Unpublished')).toBeInTheDocument();
+    expect(screen.getByTestId('process-view')).toHaveTextContent('proc-1');
+  });
 });
