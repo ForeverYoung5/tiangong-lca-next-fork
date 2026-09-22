@@ -20,6 +20,7 @@ const AUTHENTICATED_STORAGE_READ_PATH =
   /^\/storage\/v1\/(?:object|render\/image)\/authenticated\/[^/]+\/.+/u;
 const ENCODED_PATH_SEPARATOR = /%(?:2f|5c)/iu;
 export const AUDITED_READ_ONLY_RPC_NAMES = [
+  'qry_sample_library_datasets_v1',
   'get_latest_contact_versions',
   'get_latest_flow_versions',
   'get_latest_flowproperty_versions',
@@ -60,6 +61,9 @@ export const AUDITED_READ_ONLY_RPC_NAMES = [
   'search_processes',
   'search_sources',
   'search_unitgroups',
+] as const;
+export const AUDITED_BLOCKED_MUTATING_RPC_NAMES = [
+  'cmd_sample_library_publish_processes_v1',
 ] as const;
 const READ_ONLY_RPC_NAMES = new Set<string>(AUDITED_READ_ONLY_RPC_NAMES);
 const READ_ONLY_EDGE_FUNCTIONS = new Set([

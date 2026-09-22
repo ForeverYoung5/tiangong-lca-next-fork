@@ -14,6 +14,7 @@ import {
 import {
   assertAuditedSyntheticReadRequest,
   assertLedgerControlledSaveDraftClosure,
+  AUDITED_BLOCKED_MUTATING_RPC_NAMES,
   AUDITED_READ_ONLY_RPC_NAMES,
   classifyProductionRequest,
   installReadOnlyProductionGuard,
@@ -470,6 +471,13 @@ describe('production browser request guard', () => {
     );
   });
 
+  it.each(AUDITED_BLOCKED_MUTATING_RPC_NAMES)(
+    'blocks the audited mutating RPC %s from read-only production runs',
+    (rpcName) => {
+      expect(classify('POST', `/rest/v1/rpc/${rpcName}`, '{}')).toBe('block');
+    },
+  );
+
   it.each(['get_latest_unreviewed', 'qry_unreviewed', 'search_unreviewed'])(
     'does not infer read safety from the %s prefix',
     (rpcName) => {
@@ -486,7 +494,9 @@ describe('production browser request guard', () => {
           ),
         ].map((match) => match[1]),
     );
-    expect([...new Set(rpcNames)].sort()).toEqual([...AUDITED_READ_ONLY_RPC_NAMES].sort());
+    expect([...new Set(rpcNames)].sort()).toEqual(
+      [...AUDITED_READ_ONLY_RPC_NAMES, ...AUDITED_BLOCKED_MUTATING_RPC_NAMES].sort(),
+    );
   });
 
   it.each([
