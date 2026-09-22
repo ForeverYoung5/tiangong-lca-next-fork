@@ -52,6 +52,33 @@ describe('sample library API', () => {
     });
   });
 
+  it('normalizes invalid filters and accepts non-object shared-search input', () => {
+    window.history.replaceState(
+      {},
+      '',
+      '/sample-library/processes?origin=invalid&publicationStatus=invalid',
+    );
+    expect(getSampleLibraryFilters()).toEqual({ origin: 'all', publicationStatus: 'all' });
+    expect(withSampleLibrarySearchFilters('sl', null)).toEqual({
+      __sampleLibraryOrigin: 'all',
+      __sampleLibraryPublicationStatus: 'all',
+    });
+
+    window.history.replaceState(
+      {},
+      '',
+      '/sample-library/processes?origin=literature&publicationStatus=unpublished',
+    );
+    expect(getSampleLibraryFilters()).toEqual({
+      origin: 'literature',
+      publicationStatus: 'unpublished',
+    });
+    expect(withSampleLibrarySearchFilters('sl', 'ignored')).toEqual({
+      __sampleLibraryOrigin: 'literature',
+      __sampleLibraryPublicationStatus: 'unpublished',
+    });
+  });
+
   it('maps exact Process publication status for a shared search page', async () => {
     mockRpc.mockResolvedValue({
       data: {
@@ -86,5 +113,34 @@ describe('sample library API', () => {
     await expect(publishSampleLibraryProcesses([])).rejects.toThrow(
       'Unable to publish selected Processes',
     );
+  });
+
+  it('uses an RPC message or code when the publish envelope is rejected', async () => {
+    mockRpc.mockResolvedValueOnce({ data: { ok: false, message: 'not allowed' }, error: null });
+    await expect(publishSampleLibraryProcesses([])).rejects.toThrow('not allowed');
+
+    mockRpc.mockResolvedValueOnce({
+      data: { ok: false, code: 'sample_library_denied' },
+      error: null,
+    });
+    await expect(publishSampleLibraryProcesses([])).rejects.toThrow('sample_library_denied');
+  });
+
+  it('returns an empty publication map without calling the database', async () => {
+    await expect(getSampleLibraryProcessPublicationMap([])).resolves.toEqual(new Map());
+    expect(mockRpc).not.toHaveBeenCalled();
+  });
+
+  it('propagates publication-map transport and envelope failures', async () => {
+    const error = new Error('offline');
+    mockRpc.mockResolvedValueOnce({ data: null, error });
+    await expect(
+      getSampleLibraryProcessPublicationMap([{ id: 'process-1', version: '01.00.000' }]),
+    ).rejects.toBe(error);
+
+    mockRpc.mockResolvedValueOnce({ data: null, error: null });
+    await expect(
+      getSampleLibraryProcessPublicationMap([{ id: 'process-1', version: '01.00.000' }]),
+    ).rejects.toThrow('Unable to load sample-library publication status');
   });
 });

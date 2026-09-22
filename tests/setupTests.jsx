@@ -157,7 +157,9 @@ class Worker {
   }
 }
 
-window.Worker = Worker;
+if (typeof window !== 'undefined') {
+  window.Worker = Worker;
+}
 
 /* eslint-disable global-require */
 if (typeof window !== 'undefined') {
@@ -244,38 +246,40 @@ afterAll(() => {
   );
 });
 
-Object.defineProperty(global.window.console, 'error', {
-  writable: true,
-  configurable: true,
-  value: (...rest) => {
-    const logStr = rest.map((item) => (typeof item === 'string' ? item : String(item))).join(' ');
-    const isActWarning =
-      logStr.includes('was not wrapped in act(...)') &&
-      (logStr.includes('inside a test') || logStr.includes('not wrapped in act'));
+if (typeof window !== 'undefined') {
+  Object.defineProperty(window.console, 'error', {
+    writable: true,
+    configurable: true,
+    value: (...rest) => {
+      const logStr = rest.map((item) => (typeof item === 'string' ? item : String(item))).join(' ');
+      const isActWarning =
+        logStr.includes('was not wrapped in act(...)') &&
+        (logStr.includes('inside a test') || logStr.includes('not wrapped in act'));
 
-    const shouldSuppressReactWarning =
-      !isActWarning &&
-      [
-        'Warning: findDOMNode is deprecated',
-        'Warning: Each child in a list should have a unique "key" prop.',
-        'Warning: Cannot update a component',
-      ].some((prefix) => logStr.startsWith(prefix));
+      const shouldSuppressReactWarning =
+        !isActWarning &&
+        [
+          'Warning: findDOMNode is deprecated',
+          'Warning: Each child in a list should have a unique "key" prop.',
+          'Warning: Cannot update a component',
+        ].some((prefix) => logStr.startsWith(prefix));
 
-    if (shouldSuppressReactWarning) {
-      return;
-    }
-
-    if (isActWarning) {
-      actWarningsThisTest += 1;
-
-      const testName = global.expect?.getState?.().currentTestName;
-      actWarningRecords.push({ testName, message: logStr });
-
-      if (!shouldFailOnActWarning) {
+      if (shouldSuppressReactWarning) {
         return;
       }
-    }
 
-    errorLog(...rest);
-  },
-});
+      if (isActWarning) {
+        actWarningsThisTest += 1;
+
+        const testName = global.expect?.getState?.().currentTestName;
+        actWarningRecords.push({ testName, message: logStr });
+
+        if (!shouldFailOnActWarning) {
+          return;
+        }
+      }
+
+      errorLog(...rest);
+    },
+  });
+}
