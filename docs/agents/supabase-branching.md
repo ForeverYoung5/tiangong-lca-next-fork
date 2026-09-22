@@ -23,8 +23,8 @@ checkPaths:
   - playwright.config.ts
   - tests/e2e/i18n/**
 lastReviewedAt: 2026-09-22
-lastReviewedCommit: 29be1e3e8d4e3eb6fd8ddc2da496c47196f509a3
-lastReviewedNote: 'Reviewed Platform #1118 after merging current dev: Sample Library uses explicit query and command RPCs while preserving Supabase environment, authorization, and backend ownership boundaries.'
+lastReviewedCommit: 796485fe332bc092e2b4cc8176854a0f3f199dda
+lastReviewedNote: 'Reviewed Platform #1118: the seven Sample Library views continue to use the existing query and Process publication RPCs; no database schema, environment, authorization, or backend ownership change is required.'
 ---
 
 # Supabase Environment And Database Workflow

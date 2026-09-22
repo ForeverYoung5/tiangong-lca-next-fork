@@ -43,8 +43,8 @@ checkPaths:
   - scripts/reference-data/**
   - .github/workflows/**
 lastReviewedAt: 2026-09-22
-lastReviewedCommit: 29be1e3e8d4e3eb6fd8ddc2da496c47196f509a3
-lastReviewedNote: 'Reviewed for Platform #1118 after merging current dev: Sample Library service, route, drawer, locale, surface-registry, and production-request guard changes are covered by the existing full pre-push gate.'
+lastReviewedCommit: 796485fe332bc092e2b4cc8176854a0f3f199dda
+lastReviewedNote: 'Reviewed for Platform #1118: Sample Library child routes, responsive columns, drawer reuse, locale evidence, and existing service boundaries remain covered by the current full pre-push gate.'
 ---
 
 # Pre-Push Gate Policy

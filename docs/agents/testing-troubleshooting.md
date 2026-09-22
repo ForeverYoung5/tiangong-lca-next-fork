@@ -40,8 +40,8 @@ checkPaths:
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
 lastReviewedAt: 2026-09-22
-lastReviewedCommit: 29be1e3e8d4e3eb6fd8ddc2da496c47196f509a3
-lastReviewedNote: 'Reviewed for Platform #1118 after merging current dev: Sample Library introduces no new troubleshooting workflow; existing focused tests and full gate remain authoritative.'
+lastReviewedCommit: 796485fe332bc092e2b4cc8176854a0f3f199dda
+lastReviewedNote: 'Reviewed for Platform #1118: Sample Library introduces no new troubleshooting workflow; the existing Watchman-free focused Jest fallback and full gate remain authoritative.'
 ---
 
 # Testing Troubleshooting

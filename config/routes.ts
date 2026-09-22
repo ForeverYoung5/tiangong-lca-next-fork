@@ -311,7 +311,54 @@ export default [
     name: 'sampleLibrary',
     access: 'canDataProductManager',
     icon: 'BookOutlined',
-    component: './SampleLibrary',
+    routes: [
+      {
+        path: '/sample-library',
+        redirect: '/sample-library/models',
+      },
+      {
+        name: 'models',
+        path: '/sample-library/models',
+        icon: 'AppstoreAddOutlined',
+        component: './SampleLibrary',
+      },
+      {
+        name: 'processes',
+        path: '/sample-library/processes',
+        icon: 'ShareAltOutlined',
+        component: './SampleLibrary',
+      },
+      {
+        name: 'flows',
+        path: '/sample-library/flows',
+        icon: 'NodeExpandOutlined',
+        component: './SampleLibrary',
+      },
+      {
+        name: 'flowproperties',
+        path: '/sample-library/flowproperties',
+        icon: 'ControlOutlined',
+        component: './SampleLibrary',
+      },
+      {
+        name: 'unitgroups',
+        path: '/sample-library/unitgroups',
+        icon: 'RetweetOutlined',
+        component: './SampleLibrary',
+      },
+      {
+        name: 'sources',
+        path: '/sample-library/sources',
+        icon: 'PaperClipOutlined',
+        component: './SampleLibrary',
+      },
+      {
+        name: 'contacts',
+        path: '/sample-library/contacts',
+        icon: 'TeamOutlined',
+        component: './SampleLibrary',
+      },
+    ],
   },
   {
     path: '/data-processing',

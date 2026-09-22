@@ -44,8 +44,8 @@ checkPaths:
   - scripts/i18n/locale-delivery.mjs
   - .github/workflows/**
 lastReviewedAt: 2026-09-22
-lastReviewedCommit: 29be1e3e8d4e3eb6fd8ddc2da496c47196f509a3
-lastReviewedNote: 'Reviewed for Platform #1118 after merging current dev: focused Sample Library route, service, model, drawer, production-request and locale proofs complement the unchanged full build/lint/coverage gate.'
+lastReviewedCommit: 796485fe332bc092e2b4cc8176854a0f3f199dda
+lastReviewedNote: 'Reviewed for Platform #1118: focused Sample Library child-route, model, drawer, service, and locale-contract proofs complement the unchanged lint, typecheck, build, and pre-push gate.'
 related:
   - ../AGENTS.md
   - ../.docpact/config.yaml

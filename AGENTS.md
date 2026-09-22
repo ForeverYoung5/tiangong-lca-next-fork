@@ -46,8 +46,8 @@ checkPaths:
   - .husky/pre-push
   - .github/workflows/**
 lastReviewedAt: 2026-09-22
-lastReviewedCommit: 29be1e3e8d4e3eb6fd8ddc2da496c47196f509a3
-lastReviewedNote: 'Reviewed for Platform #1118 after merging current dev: the Sample Library remains inside the product surface, reuses existing dataset detail drawers, and does not change repository ownership, bootstrap, branch, or delivery rules.'
+lastReviewedCommit: 796485fe332bc092e2b4cc8176854a0f3f199dda
+lastReviewedNote: 'Reviewed for Platform #1118: the Sample Library first-level menu and seven child dataset views remain inside the product surface, reuse existing detail drawers, and do not change repository ownership, bootstrap, branch, or delivery rules.'
 related:
   - .docpact/config.yaml
   - docs/agents/repo-validation.md

@@ -1,8 +1,8 @@
 version: 1
 layout: repo
 lastReviewedAt: "2026-09-22"
-lastReviewedCommit: "29be1e3e8d4e3eb6fd8ddc2da496c47196f509a3"
-lastReviewedNote: 'Reviewed for Platform #1118 after merging current dev: Sample Library routing, data-manager access, reused detail drawers, and query/command boundaries fit the existing ownership and governance rules.'
+lastReviewedCommit: "796485fe332bc092e2b4cc8176854a0f3f199dda"
+lastReviewedNote: 'Reviewed for Platform #1118: the Sample Library first-level menu now owns seven dataset child routes, while data-manager access, reused detail drawers, and existing query/command boundaries remain unchanged.'
 
 # Keep path-level ownership, routing intents, and governed-doc rules here.
 # AGENTS.md keeps the entry-level repo contract and minimal execution summary.

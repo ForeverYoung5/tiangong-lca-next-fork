@@ -43,8 +43,8 @@ checkPaths:
   - .github/workflows/build.yml
   - .nvmrc
 lastReviewedAt: 2026-09-22
-lastReviewedCommit: 29be1e3e8d4e3eb6fd8ddc2da496c47196f509a3
-lastReviewedNote: 'Reviewed for Platform #1118 after merging current dev: Sample Library source, tests, and generated locale evidence use the existing bootstrap and default work loop.'
+lastReviewedCommit: 796485fe332bc092e2b4cc8176854a0f3f199dda
+lastReviewedNote: 'Reviewed for Platform #1118: the Sample Library seven-route UI, focused tests, generated locale evidence, and production build use the existing bootstrap and default work loop.'
 ---
 
 # Development Bootstrap

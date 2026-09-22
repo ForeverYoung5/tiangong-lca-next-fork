@@ -44,8 +44,8 @@ checkPaths:
   - pnpm-workspace.yaml
   - Dockerfile.app
 lastReviewedAt: 2026-09-22
-lastReviewedCommit: 29be1e3e8d4e3eb6fd8ddc2da496c47196f509a3
-lastReviewedNote: 'Reviewed for Platform #1118 after merging current dev: Sample Library adds focused contract and component coverage without changing the long-term testing strategy.'
+lastReviewedCommit: 796485fe332bc092e2b4cc8176854a0f3f199dda
+lastReviewedNote: 'Reviewed for Platform #1118: Sample Library adds focused seven-route, display-model, drawer, service, and locale-contract coverage without changing the long-term testing strategy.'
 ---
 
 # Testing Strategy

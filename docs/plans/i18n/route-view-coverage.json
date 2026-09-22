@@ -425,7 +425,7 @@
       "schemaVersion": "tiangong.i18n-semantic-e2e-evidence.v2",
       "schemaPath": "docs/plans/i18n/semantic-e2e-evidence.schema.json",
       "evidencePath": ".local/e2e-release/semantic-e2e-evidence.json",
-      "requiredAssertionCount": 59,
+      "requiredAssertionCount": 66,
       "requiredLocales": ["zh-CN", "en-US", "de-DE", "fr-FR"],
       "requiredBrowsers": ["chromium", "firefox", "webkit"],
       "browserCoverage": {
@@ -1053,17 +1053,87 @@
         "messageIds": ["menu.tedata", "menu.tgdata.contacts"]
       }
     },
-    "rv.sample-library.catalog-and-drawers": {
+    "rv.sample-library.root-redirect": {
+      "kind": "role-boundary",
+      "session": "authenticated",
+      "navigate": { "hashPath": "/sample-library", "hashQuery": {} },
+      "expected": { "hashPath": "/sample-library/models", "hashQuery": {} },
+      "boundary": {
+        "selector": "[data-testid='access-denied']",
+        "messageIds": ["pages.accessDenied.message"]
+      }
+    },
+    "rv.sample-library.models": {
       "kind": "role-boundary",
       "session": "authenticated",
       "navigate": {
-        "hashPath": "/sample-library",
+        "hashPath": "/sample-library/models",
         "hashQuery": {}
       },
       "expected": {
-        "hashPath": "/sample-library",
+        "hashPath": "/sample-library/models",
         "hashQuery": {}
       },
+      "boundary": {
+        "selector": "[data-testid='access-denied']",
+        "messageIds": ["pages.accessDenied.message"]
+      }
+    },
+    "rv.sample-library.processes": {
+      "kind": "role-boundary",
+      "session": "authenticated",
+      "navigate": { "hashPath": "/sample-library/processes", "hashQuery": {} },
+      "expected": { "hashPath": "/sample-library/processes", "hashQuery": {} },
+      "boundary": {
+        "selector": "[data-testid='access-denied']",
+        "messageIds": ["pages.accessDenied.message"]
+      }
+    },
+    "rv.sample-library.flows": {
+      "kind": "role-boundary",
+      "session": "authenticated",
+      "navigate": { "hashPath": "/sample-library/flows", "hashQuery": {} },
+      "expected": { "hashPath": "/sample-library/flows", "hashQuery": {} },
+      "boundary": {
+        "selector": "[data-testid='access-denied']",
+        "messageIds": ["pages.accessDenied.message"]
+      }
+    },
+    "rv.sample-library.flowproperties": {
+      "kind": "role-boundary",
+      "session": "authenticated",
+      "navigate": { "hashPath": "/sample-library/flowproperties", "hashQuery": {} },
+      "expected": { "hashPath": "/sample-library/flowproperties", "hashQuery": {} },
+      "boundary": {
+        "selector": "[data-testid='access-denied']",
+        "messageIds": ["pages.accessDenied.message"]
+      }
+    },
+    "rv.sample-library.unitgroups": {
+      "kind": "role-boundary",
+      "session": "authenticated",
+      "navigate": { "hashPath": "/sample-library/unitgroups", "hashQuery": {} },
+      "expected": { "hashPath": "/sample-library/unitgroups", "hashQuery": {} },
+      "boundary": {
+        "selector": "[data-testid='access-denied']",
+        "messageIds": ["pages.accessDenied.message"]
+      }
+    },
+    "rv.sample-library.sources": {
+      "kind": "role-boundary",
+      "session": "authenticated",
+      "navigate": { "hashPath": "/sample-library/sources", "hashQuery": {} },
+      "expected": { "hashPath": "/sample-library/sources", "hashQuery": {} },
+      "boundary": {
+        "selector": "[data-testid='access-denied']",
+        "messageIds": ["pages.accessDenied.message"]
+      }
+    },
+    "rv.sample-library.contacts": {
+      "kind": "role-boundary",
+      "session": "authenticated",
+      "navigate": { "hashPath": "/sample-library/contacts", "hashQuery": {} },
+      "expected": { "hashPath": "/sample-library/contacts", "hashQuery": {} },
       "boundary": {
         "selector": "[data-testid='access-denied']",
         "messageIds": ["pages.accessDenied.message"]
@@ -2083,18 +2153,35 @@
     },
     {
       "id": "sample-library",
-      "routes": ["/sample-library"],
+      "routes": [
+        "/sample-library",
+        "/sample-library/models",
+        "/sample-library/processes",
+        "/sample-library/flows",
+        "/sample-library/flowproperties",
+        "/sample-library/unitgroups",
+        "/sample-library/sources",
+        "/sample-library/contacts"
+      ],
       "executableAssertionIds": {
-        "/sample-library": "rv.sample-library.catalog-and-drawers"
+        "/sample-library": "rv.sample-library.root-redirect",
+        "/sample-library/models": "rv.sample-library.models",
+        "/sample-library/processes": "rv.sample-library.processes",
+        "/sample-library/flows": "rv.sample-library.flows",
+        "/sample-library/flowproperties": "rv.sample-library.flowproperties",
+        "/sample-library/unitgroups": "rv.sample-library.unitgroups",
+        "/sample-library/sources": "rv.sample-library.sources",
+        "/sample-library/contacts": "rv.sample-library.contacts"
       },
-      "viewState": "dataset-tabs-origin-and-publication-filters",
-      "trigger": "Open Sample Library as a data product manager, switch all seven dataset tabs and origin filters, filter Process publication status, select unpublished Process versions, publish them, and open every existing detail drawer without navigation.",
+      "viewState": "dataset-routes-origin-and-publication-filters",
+      "trigger": "Open every Sample Library child route as a data product manager, switch origin filters, filter Process publication status, select unpublished Process versions, publish them, and open every existing detail drawer without navigation.",
       "component": "src/pages/SampleLibrary/index.tsx",
       "accessContext": "authenticated standard-user route-access boundary; data-product-manager-role-required for the internal page",
       "copySources": {
         "sourcePaths": [
           "config/routes.ts",
           "src/pages/SampleLibrary/index.tsx",
+          "src/pages/SampleLibrary/columns.tsx",
           "src/pages/SampleLibrary/DetailButton.tsx",
           "src/components/AccessDenied/index.tsx"
         ],
@@ -2121,18 +2208,19 @@
       "targetCoverage": {
         "localeScope": "all-registry-locales",
         "ownership": "shared locale catalog and existing localized dataset detail drawers",
-        "structureAudit": "exact route, seven dataset tabs, three origin modes, Process publication filters/actions, and drawer-only detail behavior",
+        "structureAudit": "seven exact dataset child routes, three origin modes, Process publication filters/actions, responsive data-list parity, and drawer-only detail behavior",
         "missingContent": 0
       },
       "proof": {
         "requiredEvidenceScope": "access-boundary-observed",
         "focusedTests": [
           "tests/unit/config/routes.test.ts",
+          "tests/unit/pages/SampleLibrary/columns.test.tsx",
           "tests/unit/pages/SampleLibrary/model.test.ts",
           "tests/unit/pages/SampleLibrary/DetailButton.test.tsx"
         ],
         "plannedBrowserAssertions": [
-          "data product manager can traverse every localized tab and open details without changing the route"
+          "data product manager can traverse every localized child route and open details without leaving that route"
         ]
       },
       "unownedStaticContent": 0,

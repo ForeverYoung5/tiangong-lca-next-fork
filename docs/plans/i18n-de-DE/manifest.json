@@ -3,7 +3,7 @@
   "source": {
     "baseRef": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
     "baseCommit": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
-    "auditedInputDigest": "d69dce1d0684fc9840675a26822d60ea9b1ae46cccc058066c22735d42e90637",
+    "auditedInputDigest": "2fe990ae5098de0db59ca86baf83fa32b8b66aeeeb25ab4ca007b92dac5dd8c4",
     "auditedInputDigestAlgorithm": "sha256(path\\0content\\0)",
     "repository": "tiangong-lca/platform"
   },
@@ -69,13 +69,13 @@
   "summary": {
     "localeCount": 4,
     "localeLeafModuleCounts": { "en-US": 31, "zh-CN": 31, "de-DE": 31, "fr-FR": 31 },
-    "localeUniqueKeyCounts": { "en-US": 3419, "zh-CN": 3419, "de-DE": 3419, "fr-FR": 3419 },
-    "canonicalCandidateKeyCount": 3419,
-    "activeStaticKeyCount": 2269,
+    "localeUniqueKeyCounts": { "en-US": 3426, "zh-CN": 3426, "de-DE": 3426, "fr-FR": 3426 },
+    "canonicalCandidateKeyCount": 3426,
+    "activeStaticKeyCount": 2264,
     "activeDynamicKeyCount": 321,
-    "reservedKeyCount": 829,
-    "productionSourceFileCount": 470,
-    "literalReferenceCount": 4204,
+    "reservedKeyCount": 841,
+    "productionSourceFileCount": 471,
+    "literalReferenceCount": 4217,
     "dynamicCallsiteCount": 33,
     "dynamicCallsiteSummaryCount": 33,
     "registeredDynamicCallsiteCount": 33,
@@ -25664,7 +25664,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 44,
+            "line": 51,
             "column": 3,
             "module": "menu"
           }
@@ -25675,7 +25675,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 44,
+            "line": 51,
             "column": 3,
             "module": "menu"
           }
@@ -25686,7 +25686,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 44,
+            "line": 51,
             "column": 3,
             "module": "menu"
           }
@@ -25697,7 +25697,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 44,
+            "line": 51,
             "column": 3,
             "module": "menu"
           }
@@ -25723,7 +25723,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 45,
+            "line": 52,
             "column": 3,
             "module": "menu"
           }
@@ -25734,7 +25734,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 45,
+            "line": 52,
             "column": 3,
             "module": "menu"
           }
@@ -25745,7 +25745,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 45,
+            "line": 52,
             "column": 3,
             "module": "menu"
           }
@@ -25756,7 +25756,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 45,
+            "line": 52,
             "column": 3,
             "module": "menu"
           }
@@ -25801,7 +25801,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 51,
+            "line": 58,
             "column": 3,
             "module": "menu"
           }
@@ -25812,7 +25812,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 51,
+            "line": 58,
             "column": 3,
             "module": "menu"
           }
@@ -25823,7 +25823,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 51,
+            "line": 58,
             "column": 3,
             "module": "menu"
           }
@@ -25834,7 +25834,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 51,
+            "line": 58,
             "column": 3,
             "module": "menu"
           }
@@ -25884,7 +25884,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 47,
+            "line": 54,
             "column": 3,
             "module": "menu"
           }
@@ -25895,7 +25895,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 47,
+            "line": 54,
             "column": 3,
             "module": "menu"
           }
@@ -25906,7 +25906,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 47,
+            "line": 54,
             "column": 3,
             "module": "menu"
           }
@@ -25917,7 +25917,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 47,
+            "line": 54,
             "column": 3,
             "module": "menu"
           }
@@ -25943,7 +25943,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 48,
+            "line": 55,
             "column": 3,
             "module": "menu"
           }
@@ -25954,7 +25954,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 48,
+            "line": 55,
             "column": 3,
             "module": "menu"
           }
@@ -25965,7 +25965,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 48,
+            "line": 55,
             "column": 3,
             "module": "menu"
           }
@@ -25976,7 +25976,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 48,
+            "line": 55,
             "column": 3,
             "module": "menu"
           }
@@ -26002,7 +26002,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 46,
+            "line": 53,
             "column": 3,
             "module": "menu"
           }
@@ -26013,7 +26013,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 46,
+            "line": 53,
             "column": 3,
             "module": "menu"
           }
@@ -26024,7 +26024,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 46,
+            "line": 53,
             "column": 3,
             "module": "menu"
           }
@@ -26035,7 +26035,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 46,
+            "line": 53,
             "column": 3,
             "module": "menu"
           }
@@ -26100,7 +26100,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 55,
+            "line": 62,
             "column": 3,
             "module": "menu"
           }
@@ -26111,7 +26111,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 55,
+            "line": 62,
             "column": 3,
             "module": "menu"
           }
@@ -26122,7 +26122,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 55,
+            "line": 62,
             "column": 3,
             "module": "menu"
           }
@@ -26133,7 +26133,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 55,
+            "line": 62,
             "column": 3,
             "module": "menu"
           }
@@ -26183,7 +26183,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 49,
+            "line": 56,
             "column": 3,
             "module": "menu"
           }
@@ -26194,7 +26194,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 49,
+            "line": 56,
             "column": 3,
             "module": "menu"
           }
@@ -26205,7 +26205,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 49,
+            "line": 56,
             "column": 3,
             "module": "menu"
           }
@@ -26216,7 +26216,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 49,
+            "line": 56,
             "column": 3,
             "module": "menu"
           }
@@ -26242,7 +26242,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 52,
+            "line": 59,
             "column": 3,
             "module": "menu"
           }
@@ -26253,7 +26253,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 52,
+            "line": 59,
             "column": 3,
             "module": "menu"
           }
@@ -26264,7 +26264,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 52,
+            "line": 59,
             "column": 3,
             "module": "menu"
           }
@@ -26275,7 +26275,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 52,
+            "line": 59,
             "column": 3,
             "module": "menu"
           }
@@ -26355,7 +26355,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 50,
+            "line": 57,
             "column": 3,
             "module": "menu"
           }
@@ -26366,7 +26366,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 50,
+            "line": 57,
             "column": 3,
             "module": "menu"
           }
@@ -26377,7 +26377,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 50,
+            "line": 57,
             "column": 3,
             "module": "menu"
           }
@@ -26388,7 +26388,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 50,
+            "line": 57,
             "column": 3,
             "module": "menu"
           }
@@ -26414,7 +26414,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 101,
+            "line": 108,
             "column": 3,
             "module": "menu"
           }
@@ -26425,7 +26425,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 101,
+            "line": 108,
             "column": 3,
             "module": "menu"
           }
@@ -26436,7 +26436,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 101,
+            "line": 108,
             "column": 3,
             "module": "menu"
           }
@@ -26447,7 +26447,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 101,
+            "line": 108,
             "column": 3,
             "module": "menu"
           }
@@ -26497,7 +26497,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 109,
+            "line": 116,
             "column": 3,
             "module": "menu"
           }
@@ -26508,7 +26508,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 109,
+            "line": 116,
             "column": 3,
             "module": "menu"
           }
@@ -26519,7 +26519,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 109,
+            "line": 116,
             "column": 3,
             "module": "menu"
           }
@@ -26530,7 +26530,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 109,
+            "line": 116,
             "column": 3,
             "module": "menu"
           }
@@ -26556,7 +26556,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 106,
+            "line": 113,
             "column": 3,
             "module": "menu"
           }
@@ -26567,7 +26567,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 106,
+            "line": 113,
             "column": 3,
             "module": "menu"
           }
@@ -26578,7 +26578,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 106,
+            "line": 113,
             "column": 3,
             "module": "menu"
           }
@@ -26589,7 +26589,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 106,
+            "line": 113,
             "column": 3,
             "module": "menu"
           }
@@ -26615,7 +26615,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 105,
+            "line": 112,
             "column": 3,
             "module": "menu"
           }
@@ -26626,7 +26626,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 105,
+            "line": 112,
             "column": 3,
             "module": "menu"
           }
@@ -26637,7 +26637,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 105,
+            "line": 112,
             "column": 3,
             "module": "menu"
           }
@@ -26648,7 +26648,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 105,
+            "line": 112,
             "column": 3,
             "module": "menu"
           }
@@ -26674,7 +26674,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 102,
+            "line": 109,
             "column": 3,
             "module": "menu"
           }
@@ -26685,7 +26685,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 102,
+            "line": 109,
             "column": 3,
             "module": "menu"
           }
@@ -26696,7 +26696,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 102,
+            "line": 109,
             "column": 3,
             "module": "menu"
           }
@@ -26707,7 +26707,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 102,
+            "line": 109,
             "column": 3,
             "module": "menu"
           }
@@ -26733,7 +26733,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 104,
+            "line": 111,
             "column": 3,
             "module": "menu"
           }
@@ -26744,7 +26744,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 104,
+            "line": 111,
             "column": 3,
             "module": "menu"
           }
@@ -26755,7 +26755,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 104,
+            "line": 111,
             "column": 3,
             "module": "menu"
           }
@@ -26766,7 +26766,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 104,
+            "line": 111,
             "column": 3,
             "module": "menu"
           }
@@ -26792,7 +26792,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 103,
+            "line": 110,
             "column": 3,
             "module": "menu"
           }
@@ -26803,7 +26803,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 103,
+            "line": 110,
             "column": 3,
             "module": "menu"
           }
@@ -26814,7 +26814,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 103,
+            "line": 110,
             "column": 3,
             "module": "menu"
           }
@@ -26825,7 +26825,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 103,
+            "line": 110,
             "column": 3,
             "module": "menu"
           }
@@ -26851,7 +26851,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 108,
+            "line": 115,
             "column": 3,
             "module": "menu"
           }
@@ -26862,7 +26862,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 108,
+            "line": 115,
             "column": 3,
             "module": "menu"
           }
@@ -26873,7 +26873,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 108,
+            "line": 115,
             "column": 3,
             "module": "menu"
           }
@@ -26884,7 +26884,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 108,
+            "line": 115,
             "column": 3,
             "module": "menu"
           }
@@ -26910,7 +26910,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 107,
+            "line": 114,
             "column": 3,
             "module": "menu"
           }
@@ -26921,7 +26921,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 107,
+            "line": 114,
             "column": 3,
             "module": "menu"
           }
@@ -26932,7 +26932,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 107,
+            "line": 114,
             "column": 3,
             "module": "menu"
           }
@@ -26943,7 +26943,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 107,
+            "line": 114,
             "column": 3,
             "module": "menu"
           }
@@ -27381,7 +27381,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 57,
+            "line": 64,
             "column": 3,
             "module": "menu"
           }
@@ -27392,7 +27392,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 57,
+            "line": 64,
             "column": 3,
             "module": "menu"
           }
@@ -27403,7 +27403,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 57,
+            "line": 64,
             "column": 3,
             "module": "menu"
           }
@@ -27414,7 +27414,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 57,
+            "line": 64,
             "column": 3,
             "module": "menu"
           }
@@ -27440,7 +27440,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 58,
+            "line": 65,
             "column": 3,
             "module": "menu"
           }
@@ -27451,7 +27451,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 58,
+            "line": 65,
             "column": 3,
             "module": "menu"
           }
@@ -27462,7 +27462,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 58,
+            "line": 65,
             "column": 3,
             "module": "menu"
           }
@@ -27473,7 +27473,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 58,
+            "line": 65,
             "column": 3,
             "module": "menu"
           }
@@ -27499,7 +27499,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 60,
+            "line": 67,
             "column": 3,
             "module": "menu"
           }
@@ -27510,7 +27510,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 60,
+            "line": 67,
             "column": 3,
             "module": "menu"
           }
@@ -27521,7 +27521,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 60,
+            "line": 67,
             "column": 3,
             "module": "menu"
           }
@@ -27532,7 +27532,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 60,
+            "line": 67,
             "column": 3,
             "module": "menu"
           }
@@ -27558,7 +27558,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 59,
+            "line": 66,
             "column": 3,
             "module": "menu"
           }
@@ -27569,7 +27569,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 59,
+            "line": 66,
             "column": 3,
             "module": "menu"
           }
@@ -27580,7 +27580,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 59,
+            "line": 66,
             "column": 3,
             "module": "menu"
           }
@@ -27591,7 +27591,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 59,
+            "line": 66,
             "column": 3,
             "module": "menu"
           }
@@ -27617,7 +27617,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 73,
+            "line": 80,
             "column": 3,
             "module": "menu"
           }
@@ -27628,7 +27628,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 73,
+            "line": 80,
             "column": 3,
             "module": "menu"
           }
@@ -27639,7 +27639,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 73,
+            "line": 80,
             "column": 3,
             "module": "menu"
           }
@@ -27650,7 +27650,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 73,
+            "line": 80,
             "column": 3,
             "module": "menu"
           }
@@ -27700,7 +27700,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 81,
+            "line": 88,
             "column": 3,
             "module": "menu"
           }
@@ -27711,7 +27711,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 81,
+            "line": 88,
             "column": 3,
             "module": "menu"
           }
@@ -27722,7 +27722,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 81,
+            "line": 88,
             "column": 3,
             "module": "menu"
           }
@@ -27733,7 +27733,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 81,
+            "line": 88,
             "column": 3,
             "module": "menu"
           }
@@ -27759,7 +27759,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 78,
+            "line": 85,
             "column": 3,
             "module": "menu"
           }
@@ -27770,7 +27770,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 78,
+            "line": 85,
             "column": 3,
             "module": "menu"
           }
@@ -27781,7 +27781,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 78,
+            "line": 85,
             "column": 3,
             "module": "menu"
           }
@@ -27792,7 +27792,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 78,
+            "line": 85,
             "column": 3,
             "module": "menu"
           }
@@ -27818,7 +27818,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 77,
+            "line": 84,
             "column": 3,
             "module": "menu"
           }
@@ -27829,7 +27829,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 77,
+            "line": 84,
             "column": 3,
             "module": "menu"
           }
@@ -27840,7 +27840,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 77,
+            "line": 84,
             "column": 3,
             "module": "menu"
           }
@@ -27851,7 +27851,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 77,
+            "line": 84,
             "column": 3,
             "module": "menu"
           }
@@ -27877,7 +27877,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 74,
+            "line": 81,
             "column": 3,
             "module": "menu"
           }
@@ -27888,7 +27888,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 74,
+            "line": 81,
             "column": 3,
             "module": "menu"
           }
@@ -27899,7 +27899,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 74,
+            "line": 81,
             "column": 3,
             "module": "menu"
           }
@@ -27910,7 +27910,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 74,
+            "line": 81,
             "column": 3,
             "module": "menu"
           }
@@ -27936,7 +27936,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 76,
+            "line": 83,
             "column": 3,
             "module": "menu"
           }
@@ -27947,7 +27947,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 76,
+            "line": 83,
             "column": 3,
             "module": "menu"
           }
@@ -27958,7 +27958,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 76,
+            "line": 83,
             "column": 3,
             "module": "menu"
           }
@@ -27969,7 +27969,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 76,
+            "line": 83,
             "column": 3,
             "module": "menu"
           }
@@ -27995,7 +27995,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 75,
+            "line": 82,
             "column": 3,
             "module": "menu"
           }
@@ -28006,7 +28006,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 75,
+            "line": 82,
             "column": 3,
             "module": "menu"
           }
@@ -28017,7 +28017,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 75,
+            "line": 82,
             "column": 3,
             "module": "menu"
           }
@@ -28028,7 +28028,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 75,
+            "line": 82,
             "column": 3,
             "module": "menu"
           }
@@ -28054,7 +28054,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 80,
+            "line": 87,
             "column": 3,
             "module": "menu"
           }
@@ -28065,7 +28065,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 80,
+            "line": 87,
             "column": 3,
             "module": "menu"
           }
@@ -28076,7 +28076,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 80,
+            "line": 87,
             "column": 3,
             "module": "menu"
           }
@@ -28087,7 +28087,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 80,
+            "line": 87,
             "column": 3,
             "module": "menu"
           }
@@ -28113,7 +28113,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 79,
+            "line": 86,
             "column": 3,
             "module": "menu"
           }
@@ -28124,7 +28124,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 79,
+            "line": 86,
             "column": 3,
             "module": "menu"
           }
@@ -28135,7 +28135,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 79,
+            "line": 86,
             "column": 3,
             "module": "menu"
           }
@@ -28146,7 +28146,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 79,
+            "line": 86,
             "column": 3,
             "module": "menu"
           }
@@ -28172,7 +28172,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 39,
+            "line": 46,
             "column": 3,
             "module": "menu"
           }
@@ -28183,7 +28183,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 39,
+            "line": 46,
             "column": 3,
             "module": "menu"
           }
@@ -28194,7 +28194,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 39,
+            "line": 46,
             "column": 3,
             "module": "menu"
           }
@@ -28205,7 +28205,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 39,
+            "line": 46,
             "column": 3,
             "module": "menu"
           }
@@ -28231,7 +28231,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 15,
+            "line": 22,
             "column": 3,
             "module": "menu"
           }
@@ -28242,7 +28242,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 15,
+            "line": 22,
             "column": 3,
             "module": "menu"
           }
@@ -28253,7 +28253,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 15,
+            "line": 22,
             "column": 3,
             "module": "menu"
           }
@@ -28264,7 +28264,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 15,
+            "line": 22,
             "column": 3,
             "module": "menu"
           }
@@ -28290,7 +28290,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 16,
+            "line": 23,
             "column": 3,
             "module": "menu"
           }
@@ -28301,7 +28301,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 16,
+            "line": 23,
             "column": 3,
             "module": "menu"
           }
@@ -28312,7 +28312,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 16,
+            "line": 23,
             "column": 3,
             "module": "menu"
           }
@@ -28323,7 +28323,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 16,
+            "line": 23,
             "column": 3,
             "module": "menu"
           }
@@ -28349,7 +28349,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 17,
+            "line": 24,
             "column": 3,
             "module": "menu"
           }
@@ -28360,7 +28360,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 17,
+            "line": 24,
             "column": 3,
             "module": "menu"
           }
@@ -28371,7 +28371,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 17,
+            "line": 24,
             "column": 3,
             "module": "menu"
           }
@@ -28382,7 +28382,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 17,
+            "line": 24,
             "column": 3,
             "module": "menu"
           }
@@ -28408,7 +28408,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 41,
+            "line": 48,
             "column": 3,
             "module": "menu"
           }
@@ -28419,7 +28419,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 41,
+            "line": 48,
             "column": 3,
             "module": "menu"
           }
@@ -28430,7 +28430,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 41,
+            "line": 48,
             "column": 3,
             "module": "menu"
           }
@@ -28441,7 +28441,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 41,
+            "line": 48,
             "column": 3,
             "module": "menu"
           }
@@ -28467,7 +28467,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 40,
+            "line": 47,
             "column": 3,
             "module": "menu"
           }
@@ -28478,7 +28478,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 40,
+            "line": 47,
             "column": 3,
             "module": "menu"
           }
@@ -28489,7 +28489,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 40,
+            "line": 47,
             "column": 3,
             "module": "menu"
           }
@@ -28500,7 +28500,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 40,
+            "line": 47,
             "column": 3,
             "module": "menu"
           }
@@ -28526,7 +28526,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 42,
+            "line": 49,
             "column": 3,
             "module": "menu"
           }
@@ -28537,7 +28537,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 42,
+            "line": 49,
             "column": 3,
             "module": "menu"
           }
@@ -28548,7 +28548,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 42,
+            "line": 49,
             "column": 3,
             "module": "menu"
           }
@@ -28559,7 +28559,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 42,
+            "line": 49,
             "column": 3,
             "module": "menu"
           }
@@ -28585,7 +28585,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 43,
+            "line": 50,
             "column": 3,
             "module": "menu"
           }
@@ -28596,7 +28596,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 43,
+            "line": 50,
             "column": 3,
             "module": "menu"
           }
@@ -28607,7 +28607,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 43,
+            "line": 50,
             "column": 3,
             "module": "menu"
           }
@@ -28618,7 +28618,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 43,
+            "line": 50,
             "column": 3,
             "module": "menu"
           }
@@ -28644,7 +28644,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 18,
+            "line": 25,
             "column": 3,
             "module": "menu"
           }
@@ -28655,7 +28655,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 18,
+            "line": 25,
             "column": 3,
             "module": "menu"
           }
@@ -28666,7 +28666,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 18,
+            "line": 25,
             "column": 3,
             "module": "menu"
           }
@@ -28677,7 +28677,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 18,
+            "line": 25,
             "column": 3,
             "module": "menu"
           }
@@ -28703,7 +28703,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 24,
+            "line": 31,
             "column": 3,
             "module": "menu"
           }
@@ -28714,7 +28714,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 24,
+            "line": 31,
             "column": 3,
             "module": "menu"
           }
@@ -28725,7 +28725,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 24,
+            "line": 31,
             "column": 3,
             "module": "menu"
           }
@@ -28736,7 +28736,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 24,
+            "line": 31,
             "column": 3,
             "module": "menu"
           }
@@ -28762,7 +28762,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 19,
+            "line": 26,
             "column": 3,
             "module": "menu"
           }
@@ -28773,7 +28773,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 19,
+            "line": 26,
             "column": 3,
             "module": "menu"
           }
@@ -28784,7 +28784,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 19,
+            "line": 26,
             "column": 3,
             "module": "menu"
           }
@@ -28795,7 +28795,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 19,
+            "line": 26,
             "column": 3,
             "module": "menu"
           }
@@ -28821,7 +28821,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 20,
+            "line": 27,
             "column": 3,
             "module": "menu"
           }
@@ -28832,7 +28832,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 20,
+            "line": 27,
             "column": 3,
             "module": "menu"
           }
@@ -28843,7 +28843,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 20,
+            "line": 27,
             "column": 3,
             "module": "menu"
           }
@@ -28854,7 +28854,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 20,
+            "line": 27,
             "column": 3,
             "module": "menu"
           }
@@ -28880,7 +28880,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 22,
+            "line": 29,
             "column": 3,
             "module": "menu"
           }
@@ -28891,7 +28891,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 22,
+            "line": 29,
             "column": 3,
             "module": "menu"
           }
@@ -28902,7 +28902,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 22,
+            "line": 29,
             "column": 3,
             "module": "menu"
           }
@@ -28913,7 +28913,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 22,
+            "line": 29,
             "column": 3,
             "module": "menu"
           }
@@ -28939,7 +28939,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 21,
+            "line": 28,
             "column": 3,
             "module": "menu"
           }
@@ -28950,7 +28950,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 21,
+            "line": 28,
             "column": 3,
             "module": "menu"
           }
@@ -28961,7 +28961,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 21,
+            "line": 28,
             "column": 3,
             "module": "menu"
           }
@@ -28972,7 +28972,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 21,
+            "line": 28,
             "column": 3,
             "module": "menu"
           }
@@ -28998,7 +28998,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 23,
+            "line": 30,
             "column": 3,
             "module": "menu"
           }
@@ -29009,7 +29009,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 23,
+            "line": 30,
             "column": 3,
             "module": "menu"
           }
@@ -29020,7 +29020,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 23,
+            "line": 30,
             "column": 3,
             "module": "menu"
           }
@@ -29031,7 +29031,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 23,
+            "line": 30,
             "column": 3,
             "module": "menu"
           }
@@ -29116,7 +29116,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 66,
+            "line": 73,
             "column": 3,
             "module": "menu"
           }
@@ -29127,7 +29127,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 66,
+            "line": 73,
             "column": 3,
             "module": "menu"
           }
@@ -29138,7 +29138,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 66,
+            "line": 73,
             "column": 3,
             "module": "menu"
           }
@@ -29149,7 +29149,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 66,
+            "line": 73,
             "column": 3,
             "module": "menu"
           }
@@ -29185,7 +29185,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 25,
+            "line": 32,
             "column": 3,
             "module": "menu"
           }
@@ -29196,7 +29196,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 25,
+            "line": 32,
             "column": 3,
             "module": "menu"
           }
@@ -29207,7 +29207,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 25,
+            "line": 32,
             "column": 3,
             "module": "menu"
           }
@@ -29218,7 +29218,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 25,
+            "line": 32,
             "column": 3,
             "module": "menu"
           }
@@ -29244,7 +29244,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 27,
+            "line": 34,
             "column": 3,
             "module": "menu"
           }
@@ -29255,7 +29255,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 27,
+            "line": 34,
             "column": 3,
             "module": "menu"
           }
@@ -29266,7 +29266,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 27,
+            "line": 34,
             "column": 3,
             "module": "menu"
           }
@@ -29277,7 +29277,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 27,
+            "line": 34,
             "column": 3,
             "module": "menu"
           }
@@ -29303,7 +29303,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 28,
+            "line": 35,
             "column": 3,
             "module": "menu"
           }
@@ -29314,7 +29314,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 28,
+            "line": 35,
             "column": 3,
             "module": "menu"
           }
@@ -29325,7 +29325,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 28,
+            "line": 35,
             "column": 3,
             "module": "menu"
           }
@@ -29336,7 +29336,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 28,
+            "line": 35,
             "column": 3,
             "module": "menu"
           }
@@ -29362,7 +29362,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 29,
+            "line": 36,
             "column": 3,
             "module": "menu"
           }
@@ -29373,7 +29373,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 29,
+            "line": 36,
             "column": 3,
             "module": "menu"
           }
@@ -29384,7 +29384,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 29,
+            "line": 36,
             "column": 3,
             "module": "menu"
           }
@@ -29395,7 +29395,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 29,
+            "line": 36,
             "column": 3,
             "module": "menu"
           }
@@ -29421,7 +29421,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 32,
+            "line": 39,
             "column": 3,
             "module": "menu"
           }
@@ -29432,7 +29432,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 32,
+            "line": 39,
             "column": 3,
             "module": "menu"
           }
@@ -29443,7 +29443,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 32,
+            "line": 39,
             "column": 3,
             "module": "menu"
           }
@@ -29454,7 +29454,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 32,
+            "line": 39,
             "column": 3,
             "module": "menu"
           }
@@ -29480,7 +29480,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 30,
+            "line": 37,
             "column": 3,
             "module": "menu"
           }
@@ -29491,7 +29491,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 30,
+            "line": 37,
             "column": 3,
             "module": "menu"
           }
@@ -29502,7 +29502,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 30,
+            "line": 37,
             "column": 3,
             "module": "menu"
           }
@@ -29513,7 +29513,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 30,
+            "line": 37,
             "column": 3,
             "module": "menu"
           }
@@ -29539,7 +29539,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 31,
+            "line": 38,
             "column": 3,
             "module": "menu"
           }
@@ -29550,7 +29550,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 31,
+            "line": 38,
             "column": 3,
             "module": "menu"
           }
@@ -29561,7 +29561,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 31,
+            "line": 38,
             "column": 3,
             "module": "menu"
           }
@@ -29572,7 +29572,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 31,
+            "line": 38,
             "column": 3,
             "module": "menu"
           }
@@ -29598,7 +29598,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 26,
+            "line": 33,
             "column": 3,
             "module": "menu"
           }
@@ -29609,7 +29609,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 26,
+            "line": 33,
             "column": 3,
             "module": "menu"
           }
@@ -29620,7 +29620,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 26,
+            "line": 33,
             "column": 3,
             "module": "menu"
           }
@@ -29631,7 +29631,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 26,
+            "line": 33,
             "column": 3,
             "module": "menu"
           }
@@ -29740,7 +29740,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 53,
+            "line": 60,
             "column": 3,
             "module": "menu"
           }
@@ -29751,7 +29751,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 53,
+            "line": 60,
             "column": 3,
             "module": "menu"
           }
@@ -29762,7 +29762,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 53,
+            "line": 60,
             "column": 3,
             "module": "menu"
           }
@@ -29773,7 +29773,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 53,
+            "line": 60,
             "column": 3,
             "module": "menu"
           }
@@ -29847,7 +29847,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 56,
+            "line": 63,
             "column": 3,
             "module": "menu"
           }
@@ -29858,7 +29858,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 56,
+            "line": 63,
             "column": 3,
             "module": "menu"
           }
@@ -29869,7 +29869,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 56,
+            "line": 63,
             "column": 3,
             "module": "menu"
           }
@@ -29880,7 +29880,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 56,
+            "line": 63,
             "column": 3,
             "module": "menu"
           }
@@ -29965,7 +29965,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 61,
+            "line": 68,
             "column": 3,
             "module": "menu"
           }
@@ -29976,7 +29976,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 61,
+            "line": 68,
             "column": 3,
             "module": "menu"
           }
@@ -29987,7 +29987,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 61,
+            "line": 68,
             "column": 3,
             "module": "menu"
           }
@@ -29998,7 +29998,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 61,
+            "line": 68,
             "column": 3,
             "module": "menu"
           }
@@ -30048,7 +30048,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 72,
+            "line": 79,
             "column": 3,
             "module": "menu"
           }
@@ -30059,7 +30059,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 72,
+            "line": 79,
             "column": 3,
             "module": "menu"
           }
@@ -30070,7 +30070,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 72,
+            "line": 79,
             "column": 3,
             "module": "menu"
           }
@@ -30081,7 +30081,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 72,
+            "line": 79,
             "column": 3,
             "module": "menu"
           }
@@ -30117,7 +30117,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 69,
+            "line": 76,
             "column": 3,
             "module": "menu"
           }
@@ -30128,7 +30128,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 69,
+            "line": 76,
             "column": 3,
             "module": "menu"
           }
@@ -30139,7 +30139,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 69,
+            "line": 76,
             "column": 3,
             "module": "menu"
           }
@@ -30150,7 +30150,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 69,
+            "line": 76,
             "column": 3,
             "module": "menu"
           }
@@ -30186,7 +30186,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 68,
+            "line": 75,
             "column": 3,
             "module": "menu"
           }
@@ -30197,7 +30197,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 68,
+            "line": 75,
             "column": 3,
             "module": "menu"
           }
@@ -30208,7 +30208,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 68,
+            "line": 75,
             "column": 3,
             "module": "menu"
           }
@@ -30219,7 +30219,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 68,
+            "line": 75,
             "column": 3,
             "module": "menu"
           }
@@ -30255,7 +30255,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 62,
+            "line": 69,
             "column": 3,
             "module": "menu"
           }
@@ -30266,7 +30266,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 62,
+            "line": 69,
             "column": 3,
             "module": "menu"
           }
@@ -30277,7 +30277,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 62,
+            "line": 69,
             "column": 3,
             "module": "menu"
           }
@@ -30288,7 +30288,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 62,
+            "line": 69,
             "column": 3,
             "module": "menu"
           }
@@ -30314,7 +30314,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 65,
+            "line": 72,
             "column": 3,
             "module": "menu"
           }
@@ -30325,7 +30325,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 65,
+            "line": 72,
             "column": 3,
             "module": "menu"
           }
@@ -30336,7 +30336,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 65,
+            "line": 72,
             "column": 3,
             "module": "menu"
           }
@@ -30347,7 +30347,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 65,
+            "line": 72,
             "column": 3,
             "module": "menu"
           }
@@ -30373,7 +30373,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 64,
+            "line": 71,
             "column": 3,
             "module": "menu"
           }
@@ -30384,7 +30384,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 64,
+            "line": 71,
             "column": 3,
             "module": "menu"
           }
@@ -30395,7 +30395,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 64,
+            "line": 71,
             "column": 3,
             "module": "menu"
           }
@@ -30406,7 +30406,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 64,
+            "line": 71,
             "column": 3,
             "module": "menu"
           }
@@ -30432,7 +30432,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 63,
+            "line": 70,
             "column": 3,
             "module": "menu"
           }
@@ -30443,7 +30443,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 63,
+            "line": 70,
             "column": 3,
             "module": "menu"
           }
@@ -30454,7 +30454,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 63,
+            "line": 70,
             "column": 3,
             "module": "menu"
           }
@@ -30465,7 +30465,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 63,
+            "line": 70,
             "column": 3,
             "module": "menu"
           }
@@ -30491,7 +30491,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 71,
+            "line": 78,
             "column": 3,
             "module": "menu"
           }
@@ -30502,7 +30502,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 71,
+            "line": 78,
             "column": 3,
             "module": "menu"
           }
@@ -30513,7 +30513,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 71,
+            "line": 78,
             "column": 3,
             "module": "menu"
           }
@@ -30524,7 +30524,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 71,
+            "line": 78,
             "column": 3,
             "module": "menu"
           }
@@ -30560,7 +30560,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 70,
+            "line": 77,
             "column": 3,
             "module": "menu"
           }
@@ -30571,7 +30571,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 70,
+            "line": 77,
             "column": 3,
             "module": "menu"
           }
@@ -30582,7 +30582,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 70,
+            "line": 77,
             "column": 3,
             "module": "menu"
           }
@@ -30593,7 +30593,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 70,
+            "line": 77,
             "column": 3,
             "module": "menu"
           }
@@ -30629,7 +30629,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 111,
+            "line": 118,
             "column": 3,
             "module": "menu"
           }
@@ -30640,7 +30640,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 111,
+            "line": 118,
             "column": 3,
             "module": "menu"
           }
@@ -30651,7 +30651,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 111,
+            "line": 118,
             "column": 3,
             "module": "menu"
           }
@@ -30662,7 +30662,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 111,
+            "line": 118,
             "column": 3,
             "module": "menu"
           }
@@ -30712,7 +30712,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 67,
+            "line": 74,
             "column": 3,
             "module": "menu"
           }
@@ -30723,7 +30723,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 67,
+            "line": 74,
             "column": 3,
             "module": "menu"
           }
@@ -30734,7 +30734,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 67,
+            "line": 74,
             "column": 3,
             "module": "menu"
           }
@@ -30745,7 +30745,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 67,
+            "line": 74,
             "column": 3,
             "module": "menu"
           }
@@ -30781,7 +30781,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 33,
+            "line": 40,
             "column": 3,
             "module": "menu"
           }
@@ -30792,7 +30792,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 33,
+            "line": 40,
             "column": 3,
             "module": "menu"
           }
@@ -30803,7 +30803,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 33,
+            "line": 40,
             "column": 3,
             "module": "menu"
           }
@@ -30814,7 +30814,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 33,
+            "line": 40,
             "column": 3,
             "module": "menu"
           }
@@ -30840,7 +30840,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 35,
+            "line": 42,
             "column": 3,
             "module": "menu"
           }
@@ -30851,7 +30851,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 35,
+            "line": 42,
             "column": 3,
             "module": "menu"
           }
@@ -30862,7 +30862,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 35,
+            "line": 42,
             "column": 3,
             "module": "menu"
           }
@@ -30873,7 +30873,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 35,
+            "line": 42,
             "column": 3,
             "module": "menu"
           }
@@ -30899,7 +30899,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 34,
+            "line": 41,
             "column": 3,
             "module": "menu"
           }
@@ -30910,7 +30910,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 34,
+            "line": 41,
             "column": 3,
             "module": "menu"
           }
@@ -30921,7 +30921,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 34,
+            "line": 41,
             "column": 3,
             "module": "menu"
           }
@@ -30932,7 +30932,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 34,
+            "line": 41,
             "column": 3,
             "module": "menu"
           }
@@ -31076,7 +31076,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 36,
+            "line": 43,
             "column": 3,
             "module": "menu"
           }
@@ -31087,7 +31087,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 36,
+            "line": 43,
             "column": 3,
             "module": "menu"
           }
@@ -31098,7 +31098,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 36,
+            "line": 43,
             "column": 3,
             "module": "menu"
           }
@@ -31109,7 +31109,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 36,
+            "line": 43,
             "column": 3,
             "module": "menu"
           }
@@ -31135,7 +31135,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 38,
+            "line": 45,
             "column": 3,
             "module": "menu"
           }
@@ -31146,7 +31146,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 38,
+            "line": 45,
             "column": 3,
             "module": "menu"
           }
@@ -31157,7 +31157,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 38,
+            "line": 45,
             "column": 3,
             "module": "menu"
           }
@@ -31168,7 +31168,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 38,
+            "line": 45,
             "column": 3,
             "module": "menu"
           }
@@ -31194,7 +31194,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 37,
+            "line": 44,
             "column": 3,
             "module": "menu"
           }
@@ -31205,7 +31205,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 37,
+            "line": 44,
             "column": 3,
             "module": "menu"
           }
@@ -31216,7 +31216,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 37,
+            "line": 44,
             "column": 3,
             "module": "menu"
           }
@@ -31227,7 +31227,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 37,
+            "line": 44,
             "column": 3,
             "module": "menu"
           }
@@ -31253,7 +31253,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 54,
+            "line": 61,
             "column": 3,
             "module": "menu"
           }
@@ -31264,7 +31264,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 54,
+            "line": 61,
             "column": 3,
             "module": "menu"
           }
@@ -31275,7 +31275,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 54,
+            "line": 61,
             "column": 3,
             "module": "menu"
           }
@@ -31286,7 +31286,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 54,
+            "line": 61,
             "column": 3,
             "module": "menu"
           }
@@ -31394,6 +31394,419 @@
       "defaultMessages": []
     },
     {
+      "id": "menu.sampleLibrary.contacts",
+      "category": "reserved",
+      "dynamicFamilies": [],
+      "moduleOwnership": {
+        "en-US": ["menu"],
+        "zh-CN": ["menu"],
+        "de-DE": ["menu"],
+        "fr-FR": ["menu"]
+      },
+      "translations": {
+        "en-US": {
+          "value": "Contacts",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/en-US/menu.ts",
+            "line": 21,
+            "column": 3,
+            "module": "menu"
+          }
+        },
+        "zh-CN": {
+          "value": "联系人",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/zh-CN/menu.ts",
+            "line": 21,
+            "column": 3,
+            "module": "menu"
+          }
+        },
+        "de-DE": {
+          "value": "Kontakte",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/de-DE/menu.ts",
+            "line": 21,
+            "column": 3,
+            "module": "menu"
+          }
+        },
+        "fr-FR": {
+          "value": "Contacts",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/fr-FR/menu.ts",
+            "line": 21,
+            "column": 3,
+            "module": "menu"
+          }
+        }
+      },
+      "references": [],
+      "defaultMessages": []
+    },
+    {
+      "id": "menu.sampleLibrary.flowproperties",
+      "category": "reserved",
+      "dynamicFamilies": [],
+      "moduleOwnership": {
+        "en-US": ["menu"],
+        "zh-CN": ["menu"],
+        "de-DE": ["menu"],
+        "fr-FR": ["menu"]
+      },
+      "translations": {
+        "en-US": {
+          "value": "Flow Properties",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/en-US/menu.ts",
+            "line": 18,
+            "column": 3,
+            "module": "menu"
+          }
+        },
+        "zh-CN": {
+          "value": "流属性",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/zh-CN/menu.ts",
+            "line": 18,
+            "column": 3,
+            "module": "menu"
+          }
+        },
+        "de-DE": {
+          "value": "Flusseigenschaften",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/de-DE/menu.ts",
+            "line": 18,
+            "column": 3,
+            "module": "menu"
+          }
+        },
+        "fr-FR": {
+          "value": "Propriétés de flux",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/fr-FR/menu.ts",
+            "line": 18,
+            "column": 3,
+            "module": "menu"
+          }
+        }
+      },
+      "references": [],
+      "defaultMessages": []
+    },
+    {
+      "id": "menu.sampleLibrary.flows",
+      "category": "reserved",
+      "dynamicFamilies": [],
+      "moduleOwnership": {
+        "en-US": ["menu"],
+        "zh-CN": ["menu"],
+        "de-DE": ["menu"],
+        "fr-FR": ["menu"]
+      },
+      "translations": {
+        "en-US": {
+          "value": "Flows",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/en-US/menu.ts",
+            "line": 17,
+            "column": 3,
+            "module": "menu"
+          }
+        },
+        "zh-CN": {
+          "value": "流",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/zh-CN/menu.ts",
+            "line": 17,
+            "column": 3,
+            "module": "menu"
+          }
+        },
+        "de-DE": {
+          "value": "Flüsse",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/de-DE/menu.ts",
+            "line": 17,
+            "column": 3,
+            "module": "menu"
+          }
+        },
+        "fr-FR": {
+          "value": "Flux",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/fr-FR/menu.ts",
+            "line": 17,
+            "column": 3,
+            "module": "menu"
+          }
+        }
+      },
+      "references": [],
+      "defaultMessages": []
+    },
+    {
+      "id": "menu.sampleLibrary.models",
+      "category": "reserved",
+      "dynamicFamilies": [],
+      "moduleOwnership": {
+        "en-US": ["menu"],
+        "zh-CN": ["menu"],
+        "de-DE": ["menu"],
+        "fr-FR": ["menu"]
+      },
+      "translations": {
+        "en-US": {
+          "value": "Models",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/en-US/menu.ts",
+            "line": 15,
+            "column": 3,
+            "module": "menu"
+          }
+        },
+        "zh-CN": {
+          "value": "模型",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/zh-CN/menu.ts",
+            "line": 15,
+            "column": 3,
+            "module": "menu"
+          }
+        },
+        "de-DE": {
+          "value": "Lebenszyklusmodelle",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/de-DE/menu.ts",
+            "line": 15,
+            "column": 3,
+            "module": "menu"
+          }
+        },
+        "fr-FR": {
+          "value": "Modèles",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/fr-FR/menu.ts",
+            "line": 15,
+            "column": 3,
+            "module": "menu"
+          }
+        }
+      },
+      "references": [],
+      "defaultMessages": []
+    },
+    {
+      "id": "menu.sampleLibrary.processes",
+      "category": "reserved",
+      "dynamicFamilies": [],
+      "moduleOwnership": {
+        "en-US": ["menu"],
+        "zh-CN": ["menu"],
+        "de-DE": ["menu"],
+        "fr-FR": ["menu"]
+      },
+      "translations": {
+        "en-US": {
+          "value": "Processes",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/en-US/menu.ts",
+            "line": 16,
+            "column": 3,
+            "module": "menu"
+          }
+        },
+        "zh-CN": {
+          "value": "过程",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/zh-CN/menu.ts",
+            "line": 16,
+            "column": 3,
+            "module": "menu"
+          }
+        },
+        "de-DE": {
+          "value": "Prozesse",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/de-DE/menu.ts",
+            "line": 16,
+            "column": 3,
+            "module": "menu"
+          }
+        },
+        "fr-FR": {
+          "value": "Processus",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/fr-FR/menu.ts",
+            "line": 16,
+            "column": 3,
+            "module": "menu"
+          }
+        }
+      },
+      "references": [],
+      "defaultMessages": []
+    },
+    {
+      "id": "menu.sampleLibrary.sources",
+      "category": "reserved",
+      "dynamicFamilies": [],
+      "moduleOwnership": {
+        "en-US": ["menu"],
+        "zh-CN": ["menu"],
+        "de-DE": ["menu"],
+        "fr-FR": ["menu"]
+      },
+      "translations": {
+        "en-US": {
+          "value": "Sources",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/en-US/menu.ts",
+            "line": 20,
+            "column": 3,
+            "module": "menu"
+          }
+        },
+        "zh-CN": {
+          "value": "来源",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/zh-CN/menu.ts",
+            "line": 20,
+            "column": 3,
+            "module": "menu"
+          }
+        },
+        "de-DE": {
+          "value": "Quelldatensätze",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/de-DE/menu.ts",
+            "line": 20,
+            "column": 3,
+            "module": "menu"
+          }
+        },
+        "fr-FR": {
+          "value": "Sources",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/fr-FR/menu.ts",
+            "line": 20,
+            "column": 3,
+            "module": "menu"
+          }
+        }
+      },
+      "references": [],
+      "defaultMessages": []
+    },
+    {
+      "id": "menu.sampleLibrary.unitgroups",
+      "category": "reserved",
+      "dynamicFamilies": [],
+      "moduleOwnership": {
+        "en-US": ["menu"],
+        "zh-CN": ["menu"],
+        "de-DE": ["menu"],
+        "fr-FR": ["menu"]
+      },
+      "translations": {
+        "en-US": {
+          "value": "Unit Groups",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/en-US/menu.ts",
+            "line": 19,
+            "column": 3,
+            "module": "menu"
+          }
+        },
+        "zh-CN": {
+          "value": "单位组",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/zh-CN/menu.ts",
+            "line": 19,
+            "column": 3,
+            "module": "menu"
+          }
+        },
+        "de-DE": {
+          "value": "Einheitengruppen",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/de-DE/menu.ts",
+            "line": 19,
+            "column": 3,
+            "module": "menu"
+          }
+        },
+        "fr-FR": {
+          "value": "Groupes d’unités",
+          "argumentSignature": [],
+          "placeholders": [],
+          "source": {
+            "path": "src/locales/fr-FR/menu.ts",
+            "line": 19,
+            "column": 3,
+            "module": "menu"
+          }
+        }
+      },
+      "references": [],
+      "defaultMessages": []
+    },
+    {
       "id": "menu.teamlist",
       "category": "reserved",
       "dynamicFamilies": [],
@@ -31410,7 +31823,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 91,
+            "line": 98,
             "column": 3,
             "module": "menu"
           }
@@ -31421,7 +31834,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 91,
+            "line": 98,
             "column": 3,
             "module": "menu"
           }
@@ -31432,7 +31845,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 91,
+            "line": 98,
             "column": 3,
             "module": "menu"
           }
@@ -31443,7 +31856,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 91,
+            "line": 98,
             "column": 3,
             "module": "menu"
           }
@@ -31469,7 +31882,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 92,
+            "line": 99,
             "column": 3,
             "module": "menu"
           }
@@ -31480,7 +31893,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 92,
+            "line": 99,
             "column": 3,
             "module": "menu"
           }
@@ -31491,7 +31904,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 92,
+            "line": 99,
             "column": 3,
             "module": "menu"
           }
@@ -31502,7 +31915,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 92,
+            "line": 99,
             "column": 3,
             "module": "menu"
           }
@@ -31552,7 +31965,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 100,
+            "line": 107,
             "column": 3,
             "module": "menu"
           }
@@ -31563,7 +31976,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 100,
+            "line": 107,
             "column": 3,
             "module": "menu"
           }
@@ -31574,7 +31987,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 100,
+            "line": 107,
             "column": 3,
             "module": "menu"
           }
@@ -31585,7 +31998,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 100,
+            "line": 107,
             "column": 3,
             "module": "menu"
           }
@@ -31611,7 +32024,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 97,
+            "line": 104,
             "column": 3,
             "module": "menu"
           }
@@ -31622,7 +32035,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 97,
+            "line": 104,
             "column": 3,
             "module": "menu"
           }
@@ -31633,7 +32046,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 97,
+            "line": 104,
             "column": 3,
             "module": "menu"
           }
@@ -31644,7 +32057,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 97,
+            "line": 104,
             "column": 3,
             "module": "menu"
           }
@@ -31670,7 +32083,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 96,
+            "line": 103,
             "column": 3,
             "module": "menu"
           }
@@ -31681,7 +32094,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 96,
+            "line": 103,
             "column": 3,
             "module": "menu"
           }
@@ -31692,7 +32105,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 96,
+            "line": 103,
             "column": 3,
             "module": "menu"
           }
@@ -31703,7 +32116,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 96,
+            "line": 103,
             "column": 3,
             "module": "menu"
           }
@@ -31729,7 +32142,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 93,
+            "line": 100,
             "column": 3,
             "module": "menu"
           }
@@ -31740,7 +32153,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 93,
+            "line": 100,
             "column": 3,
             "module": "menu"
           }
@@ -31751,7 +32164,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 93,
+            "line": 100,
             "column": 3,
             "module": "menu"
           }
@@ -31762,7 +32175,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 93,
+            "line": 100,
             "column": 3,
             "module": "menu"
           }
@@ -31788,7 +32201,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 95,
+            "line": 102,
             "column": 3,
             "module": "menu"
           }
@@ -31799,7 +32212,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 95,
+            "line": 102,
             "column": 3,
             "module": "menu"
           }
@@ -31810,7 +32223,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 95,
+            "line": 102,
             "column": 3,
             "module": "menu"
           }
@@ -31821,7 +32234,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 95,
+            "line": 102,
             "column": 3,
             "module": "menu"
           }
@@ -31847,7 +32260,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 94,
+            "line": 101,
             "column": 3,
             "module": "menu"
           }
@@ -31858,7 +32271,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 94,
+            "line": 101,
             "column": 3,
             "module": "menu"
           }
@@ -31869,7 +32282,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 94,
+            "line": 101,
             "column": 3,
             "module": "menu"
           }
@@ -31880,7 +32293,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 94,
+            "line": 101,
             "column": 3,
             "module": "menu"
           }
@@ -31906,7 +32319,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 99,
+            "line": 106,
             "column": 3,
             "module": "menu"
           }
@@ -31917,7 +32330,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 99,
+            "line": 106,
             "column": 3,
             "module": "menu"
           }
@@ -31928,7 +32341,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 99,
+            "line": 106,
             "column": 3,
             "module": "menu"
           }
@@ -31939,7 +32352,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 99,
+            "line": 106,
             "column": 3,
             "module": "menu"
           }
@@ -31965,7 +32378,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 98,
+            "line": 105,
             "column": 3,
             "module": "menu"
           }
@@ -31976,7 +32389,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 98,
+            "line": 105,
             "column": 3,
             "module": "menu"
           }
@@ -31987,7 +32400,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 98,
+            "line": 105,
             "column": 3,
             "module": "menu"
           }
@@ -31998,7 +32411,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 98,
+            "line": 105,
             "column": 3,
             "module": "menu"
           }
@@ -32024,7 +32437,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 82,
+            "line": 89,
             "column": 3,
             "module": "menu"
           }
@@ -32035,7 +32448,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 82,
+            "line": 89,
             "column": 3,
             "module": "menu"
           }
@@ -32046,7 +32459,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 82,
+            "line": 89,
             "column": 3,
             "module": "menu"
           }
@@ -32057,7 +32470,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 82,
+            "line": 89,
             "column": 3,
             "module": "menu"
           }
@@ -32107,7 +32520,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 90,
+            "line": 97,
             "column": 3,
             "module": "menu"
           }
@@ -32118,7 +32531,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 90,
+            "line": 97,
             "column": 3,
             "module": "menu"
           }
@@ -32129,7 +32542,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 90,
+            "line": 97,
             "column": 3,
             "module": "menu"
           }
@@ -32140,7 +32553,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 90,
+            "line": 97,
             "column": 3,
             "module": "menu"
           }
@@ -32190,7 +32603,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 87,
+            "line": 94,
             "column": 3,
             "module": "menu"
           }
@@ -32201,7 +32614,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 87,
+            "line": 94,
             "column": 3,
             "module": "menu"
           }
@@ -32212,7 +32625,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 87,
+            "line": 94,
             "column": 3,
             "module": "menu"
           }
@@ -32223,7 +32636,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 87,
+            "line": 94,
             "column": 3,
             "module": "menu"
           }
@@ -32273,7 +32686,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 86,
+            "line": 93,
             "column": 3,
             "module": "menu"
           }
@@ -32284,7 +32697,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 86,
+            "line": 93,
             "column": 3,
             "module": "menu"
           }
@@ -32295,7 +32708,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 86,
+            "line": 93,
             "column": 3,
             "module": "menu"
           }
@@ -32306,7 +32719,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 86,
+            "line": 93,
             "column": 3,
             "module": "menu"
           }
@@ -32356,7 +32769,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 83,
+            "line": 90,
             "column": 3,
             "module": "menu"
           }
@@ -32367,7 +32780,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 83,
+            "line": 90,
             "column": 3,
             "module": "menu"
           }
@@ -32378,7 +32791,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 83,
+            "line": 90,
             "column": 3,
             "module": "menu"
           }
@@ -32389,7 +32802,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 83,
+            "line": 90,
             "column": 3,
             "module": "menu"
           }
@@ -32415,7 +32828,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 85,
+            "line": 92,
             "column": 3,
             "module": "menu"
           }
@@ -32426,7 +32839,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 85,
+            "line": 92,
             "column": 3,
             "module": "menu"
           }
@@ -32437,7 +32850,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 85,
+            "line": 92,
             "column": 3,
             "module": "menu"
           }
@@ -32448,7 +32861,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 85,
+            "line": 92,
             "column": 3,
             "module": "menu"
           }
@@ -32498,7 +32911,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 84,
+            "line": 91,
             "column": 3,
             "module": "menu"
           }
@@ -32509,7 +32922,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 84,
+            "line": 91,
             "column": 3,
             "module": "menu"
           }
@@ -32520,7 +32933,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 84,
+            "line": 91,
             "column": 3,
             "module": "menu"
           }
@@ -32531,7 +32944,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 84,
+            "line": 91,
             "column": 3,
             "module": "menu"
           }
@@ -32581,7 +32994,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 89,
+            "line": 96,
             "column": 3,
             "module": "menu"
           }
@@ -32592,7 +33005,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 89,
+            "line": 96,
             "column": 3,
             "module": "menu"
           }
@@ -32603,7 +33016,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 89,
+            "line": 96,
             "column": 3,
             "module": "menu"
           }
@@ -32614,7 +33027,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 89,
+            "line": 96,
             "column": 3,
             "module": "menu"
           }
@@ -32664,7 +33077,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/en-US/menu.ts",
-            "line": 88,
+            "line": 95,
             "column": 3,
             "module": "menu"
           }
@@ -32675,7 +33088,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/zh-CN/menu.ts",
-            "line": 88,
+            "line": 95,
             "column": 3,
             "module": "menu"
           }
@@ -32686,7 +33099,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/de-DE/menu.ts",
-            "line": 88,
+            "line": 95,
             "column": 3,
             "module": "menu"
           }
@@ -32697,7 +33110,7 @@
           "placeholders": [],
           "source": {
             "path": "src/locales/fr-FR/menu.ts",
-            "line": 88,
+            "line": 95,
             "column": 3,
             "module": "menu"
           }
@@ -59510,6 +59923,15 @@
           "symbol": "contactColumns",
           "defaultMessage": "E-mail",
           "defaultMessageExpression": null
+        },
+        {
+          "kind": "formatMessage",
+          "path": "src/pages/SampleLibrary/columns.tsx",
+          "line": 189,
+          "column": 11,
+          "symbol": "getSampleLibraryColumns",
+          "defaultMessage": "E-mail",
+          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -59541,6 +59963,12 @@
               "line": 264,
               "column": 14,
               "kind": "FormattedMessage"
+            },
+            {
+              "path": "src/pages/SampleLibrary/columns.tsx",
+              "line": 189,
+              "column": 11,
+              "kind": "formatMessage"
             }
           ]
         }
@@ -82695,6 +83123,15 @@
           "symbol": "FlowsColumns",
           "defaultMessage": "CAS Number",
           "defaultMessageExpression": null
+        },
+        {
+          "kind": "formatMessage",
+          "path": "src/pages/SampleLibrary/columns.tsx",
+          "line": 115,
+          "column": 9,
+          "symbol": "getSampleLibraryColumns",
+          "defaultMessage": "CAS Number",
+          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -82720,6 +83157,12 @@
               "line": 175,
               "column": 14,
               "kind": "FormattedMessage"
+            },
+            {
+              "path": "src/pages/SampleLibrary/columns.tsx",
+              "line": 115,
+              "column": 9,
+              "kind": "formatMessage"
             }
           ]
         }
@@ -83297,6 +83740,15 @@
           "symbol": "FlowsColumns",
           "defaultMessage": "Flow type",
           "defaultMessageExpression": null
+        },
+        {
+          "kind": "formatMessage",
+          "path": "src/pages/SampleLibrary/columns.tsx",
+          "line": 98,
+          "column": 9,
+          "symbol": "getSampleLibraryColumns",
+          "defaultMessage": "Flow type",
+          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -83322,6 +83774,12 @@
               "line": 161,
               "column": 14,
               "kind": "FormattedMessage"
+            },
+            {
+              "path": "src/pages/SampleLibrary/columns.tsx",
+              "line": 98,
+              "column": 9,
+              "kind": "formatMessage"
             }
           ]
         }
@@ -83451,6 +83909,15 @@
           "symbol": "flowsColumns",
           "defaultMessage": "Location of supply",
           "defaultMessageExpression": null
+        },
+        {
+          "kind": "formatMessage",
+          "path": "src/pages/SampleLibrary/columns.tsx",
+          "line": 122,
+          "column": 9,
+          "symbol": "getSampleLibraryColumns",
+          "defaultMessage": "Location of supply",
+          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -83464,6 +83931,12 @@
               "line": 220,
               "column": 9,
               "kind": "FormattedMessage"
+            },
+            {
+              "path": "src/pages/SampleLibrary/columns.tsx",
+              "line": 122,
+              "column": 9,
+              "kind": "formatMessage"
             }
           ]
         }
@@ -94491,6 +94964,15 @@
           "defaultMessageExpression": null
         },
         {
+          "kind": "formatMessage",
+          "path": "src/pages/SampleLibrary/columns.tsx",
+          "line": 148,
+          "column": 11,
+          "symbol": "getSampleLibraryColumns",
+          "defaultMessage": "Reference unit",
+          "defaultMessageExpression": null
+        },
+        {
           "kind": "FormattedMessage",
           "path": "src/pages/Unitgroups/Components/select/descriptionMini.tsx",
           "line": 58,
@@ -94562,6 +95044,12 @@
               "line": 117,
               "column": 9,
               "kind": "FormattedMessage"
+            },
+            {
+              "path": "src/pages/SampleLibrary/columns.tsx",
+              "line": 148,
+              "column": 11,
+              "kind": "formatMessage"
             },
             {
               "path": "src/pages/Unitgroups/Components/select/descriptionMini.tsx",
@@ -175284,6 +175772,15 @@
           "symbol": "processColumns",
           "defaultMessage": "Location",
           "defaultMessageExpression": null
+        },
+        {
+          "kind": "formatMessage",
+          "path": "src/pages/SampleLibrary/columns.tsx",
+          "line": 88,
+          "column": 9,
+          "symbol": "getSampleLibraryColumns",
+          "defaultMessage": "Location",
+          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -175309,6 +175806,12 @@
               "line": 229,
               "column": 14,
               "kind": "FormattedMessage"
+            },
+            {
+              "path": "src/pages/SampleLibrary/columns.tsx",
+              "line": 88,
+              "column": 9,
+              "kind": "formatMessage"
             }
           ]
         }
@@ -180948,6 +181451,15 @@
           "symbol": "processColumns",
           "defaultMessage": "Reference year",
           "defaultMessageExpression": null
+        },
+        {
+          "kind": "formatMessage",
+          "path": "src/pages/SampleLibrary/columns.tsx",
+          "line": 81,
+          "column": 9,
+          "symbol": "getSampleLibraryColumns",
+          "defaultMessage": "Reference year",
+          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -180973,6 +181485,12 @@
               "line": 222,
               "column": 14,
               "kind": "FormattedMessage"
+            },
+            {
+              "path": "src/pages/SampleLibrary/columns.tsx",
+              "line": 81,
+              "column": 9,
+              "kind": "formatMessage"
             }
           ]
         }
@@ -213861,6 +214379,15 @@
           "symbol": "defaultTabContent",
           "defaultMessage": "Dataset type",
           "defaultMessageExpression": null
+        },
+        {
+          "kind": "formatMessage",
+          "path": "src/pages/SampleLibrary/columns.tsx",
+          "line": 71,
+          "column": 9,
+          "symbol": "getSampleLibraryColumns",
+          "defaultMessage": "Dataset type",
+          "defaultMessageExpression": null
         }
       ],
       "defaultMessages": [
@@ -213904,6 +214431,12 @@
               "line": 745,
               "column": 19,
               "kind": "FormattedMessage"
+            },
+            {
+              "path": "src/pages/SampleLibrary/columns.tsx",
+              "line": 71,
+              "column": 9,
+              "kind": "formatMessage"
             }
           ]
         }
@@ -236526,8 +237059,8 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 371,
-          "column": 14,
+          "line": 294,
+          "column": 20,
           "symbol": "SampleLibraryPage",
           "defaultMessage": "Clear",
           "defaultMessageExpression": null
@@ -236541,8 +237074,8 @@
           "locations": [
             {
               "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 371,
-              "column": 14,
+              "line": 294,
+              "column": 20,
               "kind": "formatMessage"
             }
           ]
@@ -236551,7 +237084,7 @@
     },
     {
       "id": "pages.sampleLibrary.column.actions",
-      "category": "active-static",
+      "category": "reserved",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["pages"],
@@ -236605,36 +237138,12 @@
           }
         }
       },
-      "references": [
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 118,
-          "column": 16,
-          "symbol": "columns",
-          "defaultMessage": "Actions",
-          "defaultMessageExpression": null
-        }
-      ],
-      "defaultMessages": [
-        {
-          "value": "Actions",
-          "argumentSignature": [],
-          "placeholders": [],
-          "locations": [
-            {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 118,
-              "column": 16,
-              "kind": "formatMessage"
-            }
-          ]
-        }
-      ]
+      "references": [],
+      "defaultMessages": []
     },
     {
       "id": "pages.sampleLibrary.column.id",
-      "category": "active-static",
+      "category": "reserved",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["pages"],
@@ -236688,36 +237197,12 @@
           }
         }
       },
-      "references": [
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 49,
-          "column": 16,
-          "symbol": "columns",
-          "defaultMessage": "UUID",
-          "defaultMessageExpression": null
-        }
-      ],
-      "defaultMessages": [
-        {
-          "value": "UUID",
-          "argumentSignature": [],
-          "placeholders": [],
-          "locations": [
-            {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 49,
-              "column": 16,
-              "kind": "formatMessage"
-            }
-          ]
-        }
-      ]
+      "references": [],
+      "defaultMessages": []
     },
     {
       "id": "pages.sampleLibrary.column.modifiedAt",
-      "category": "active-static",
+      "category": "reserved",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["pages"],
@@ -236771,36 +237256,12 @@
           }
         }
       },
-      "references": [
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 109,
-          "column": 16,
-          "symbol": "columns",
-          "defaultMessage": "Modified at",
-          "defaultMessageExpression": null
-        }
-      ],
-      "defaultMessages": [
-        {
-          "value": "Modified at",
-          "argumentSignature": [],
-          "placeholders": [],
-          "locations": [
-            {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 109,
-              "column": 16,
-              "kind": "formatMessage"
-            }
-          ]
-        }
-      ]
+      "references": [],
+      "defaultMessages": []
     },
     {
       "id": "pages.sampleLibrary.column.name",
-      "category": "active-static",
+      "category": "reserved",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["pages"],
@@ -236854,32 +237315,8 @@
           }
         }
       },
-      "references": [
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 40,
-          "column": 16,
-          "symbol": "columns",
-          "defaultMessage": "Name",
-          "defaultMessageExpression": null
-        }
-      ],
-      "defaultMessages": [
-        {
-          "value": "Name",
-          "argumentSignature": [],
-          "placeholders": [],
-          "locations": [
-            {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 40,
-              "column": 16,
-              "kind": "formatMessage"
-            }
-          ]
-        }
-      ]
+      "references": [],
+      "defaultMessages": []
     },
     {
       "id": "pages.sampleLibrary.column.origin",
@@ -236940,10 +237377,10 @@
       "references": [
         {
           "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 63,
-          "column": 16,
-          "symbol": "columns",
+          "path": "src/pages/SampleLibrary/columns.tsx",
+          "line": 208,
+          "column": 14,
+          "symbol": "getSampleLibraryColumns",
           "defaultMessage": "Origin",
           "defaultMessageExpression": null
         }
@@ -236955,9 +237392,9 @@
           "placeholders": [],
           "locations": [
             {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 63,
-              "column": 16,
+              "path": "src/pages/SampleLibrary/columns.tsx",
+              "line": 208,
+              "column": 14,
               "kind": "formatMessage"
             }
           ]
@@ -237023,10 +237460,10 @@
       "references": [
         {
           "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 86,
-          "column": 22,
-          "symbol": "columns",
+          "path": "src/pages/SampleLibrary/columns.tsx",
+          "line": 231,
+          "column": 14,
+          "symbol": "getSampleLibraryColumns",
           "defaultMessage": "Publication status",
           "defaultMessageExpression": null
         }
@@ -237038,9 +237475,9 @@
           "placeholders": [],
           "locations": [
             {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 86,
-              "column": 22,
+              "path": "src/pages/SampleLibrary/columns.tsx",
+              "line": 231,
+              "column": 14,
               "kind": "formatMessage"
             }
           ]
@@ -237049,7 +237486,7 @@
     },
     {
       "id": "pages.sampleLibrary.column.version",
-      "category": "active-static",
+      "category": "reserved",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["pages"],
@@ -237103,32 +237540,8 @@
           }
         }
       },
-      "references": [
-        {
-          "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 55,
-          "column": 16,
-          "symbol": "columns",
-          "defaultMessage": "Version",
-          "defaultMessageExpression": null
-        }
-      ],
-      "defaultMessages": [
-        {
-          "value": "Version",
-          "argumentSignature": [],
-          "placeholders": [],
-          "locations": [
-            {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 55,
-              "column": 16,
-              "kind": "formatMessage"
-            }
-          ]
-        }
-      ]
+      "references": [],
+      "defaultMessages": []
     },
     {
       "id": "pages.sampleLibrary.origin.all",
@@ -237190,8 +237603,8 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 247,
-          "column": 22,
+          "line": 170,
+          "column": 24,
           "symbol": "SampleLibraryPage",
           "defaultMessage": "All data",
           "defaultMessageExpression": null
@@ -237205,8 +237618,8 @@
           "locations": [
             {
               "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 247,
-              "column": 22,
+              "line": 170,
+              "column": 24,
               "kind": "formatMessage"
             }
           ]
@@ -237272,18 +237685,18 @@
       "references": [
         {
           "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 76,
-          "column": 17,
-          "symbol": "columns",
+          "path": "src/pages/SampleLibrary/columns.tsx",
+          "line": 220,
+          "column": 15,
+          "symbol": "getSampleLibraryColumns",
           "defaultMessage": "Enterprise data",
           "defaultMessageExpression": null
         },
         {
           "kind": "formatMessage",
           "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 263,
-          "column": 22,
+          "line": 186,
+          "column": 24,
           "symbol": "SampleLibraryPage",
           "defaultMessage": "Enterprise data",
           "defaultMessageExpression": null
@@ -237296,15 +237709,15 @@
           "placeholders": [],
           "locations": [
             {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 76,
-              "column": 17,
+              "path": "src/pages/SampleLibrary/columns.tsx",
+              "line": 220,
+              "column": 15,
               "kind": "formatMessage"
             },
             {
               "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 263,
-              "column": 22,
+              "line": 186,
+              "column": 24,
               "kind": "formatMessage"
             }
           ]
@@ -237370,18 +237783,18 @@
       "references": [
         {
           "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 72,
-          "column": 17,
-          "symbol": "columns",
+          "path": "src/pages/SampleLibrary/columns.tsx",
+          "line": 216,
+          "column": 15,
+          "symbol": "getSampleLibraryColumns",
           "defaultMessage": "Literature data",
           "defaultMessageExpression": null
         },
         {
           "kind": "formatMessage",
           "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 255,
-          "column": 22,
+          "line": 178,
+          "column": 24,
           "symbol": "SampleLibraryPage",
           "defaultMessage": "Literature data",
           "defaultMessageExpression": null
@@ -237394,15 +237807,15 @@
           "placeholders": [],
           "locations": [
             {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 72,
-              "column": 17,
+              "path": "src/pages/SampleLibrary/columns.tsx",
+              "line": 216,
+              "column": 15,
               "kind": "formatMessage"
             },
             {
               "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 255,
-              "column": 22,
+              "line": 178,
+              "column": 24,
               "kind": "formatMessage"
             }
           ]
@@ -237469,7 +237882,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 143,
+          "line": 113,
           "column": 15,
           "symbol": "confirmPublish",
           "defaultMessage": "Publish",
@@ -237478,8 +237891,8 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 321,
-          "column": 16,
+          "line": 245,
+          "column": 22,
           "symbol": "SampleLibraryPage",
           "defaultMessage": "Publish",
           "defaultMessageExpression": null
@@ -237493,14 +237906,14 @@
           "locations": [
             {
               "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 143,
+              "line": 113,
               "column": 15,
               "kind": "formatMessage"
             },
             {
               "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 321,
-              "column": 16,
+              "line": 245,
+              "column": 22,
               "kind": "formatMessage"
             }
           ]
@@ -237567,7 +237980,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 138,
+          "line": 108,
           "column": 16,
           "symbol": "confirmPublish",
           "defaultMessage": "Publishing records the selected exact versions and does not change their state.",
@@ -237582,7 +237995,7 @@
           "locations": [
             {
               "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 138,
+              "line": 108,
               "column": 16,
               "kind": "formatMessage"
             }
@@ -237650,7 +238063,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 134,
+          "line": 104,
           "column": 14,
           "symbol": "confirmPublish",
           "defaultMessage": "Publish selected Processes?",
@@ -237665,7 +238078,7 @@
           "locations": [
             {
               "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 134,
+              "line": 104,
               "column": 14,
               "kind": "formatMessage"
             }
@@ -237733,7 +238146,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 154,
+          "line": 124,
           "column": 13,
           "symbol": "confirmPublish",
           "defaultMessage": "Published {count} Process versions",
@@ -237748,7 +238161,7 @@
           "locations": [
             {
               "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 154,
+              "line": 124,
               "column": 13,
               "kind": "formatMessage"
             }
@@ -237816,8 +238229,8 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 309,
-          "column": 20,
+          "line": 233,
+          "column": 26,
           "symbol": "SampleLibraryPage",
           "defaultMessage": "Publish selected Process versions",
           "defaultMessageExpression": null
@@ -237831,8 +238244,8 @@
           "locations": [
             {
               "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 309,
-              "column": 20,
+              "line": 233,
+              "column": 26,
               "kind": "formatMessage"
             }
           ]
@@ -237899,8 +238312,8 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 364,
-          "column": 11,
+          "line": 284,
+          "column": 17,
           "symbol": "SampleLibraryPage",
           "defaultMessage": "Selected {count}",
           "defaultMessageExpression": null
@@ -237914,8 +238327,8 @@
           "locations": [
             {
               "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 364,
-              "column": 11,
+              "line": 284,
+              "column": 17,
               "kind": "formatMessage"
             }
           ]
@@ -237982,8 +238395,8 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 281,
-          "column": 24,
+          "line": 206,
+          "column": 30,
           "symbol": "SampleLibraryPage",
           "defaultMessage": "All status",
           "defaultMessageExpression": null
@@ -237997,8 +238410,8 @@
           "locations": [
             {
               "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 281,
-              "column": 24,
+              "line": 206,
+              "column": 30,
               "kind": "formatMessage"
             }
           ]
@@ -238064,18 +238477,18 @@
       "references": [
         {
           "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 95,
-          "column": 23,
-          "symbol": "columns",
+          "path": "src/pages/SampleLibrary/columns.tsx",
+          "line": 239,
+          "column": 15,
+          "symbol": "getSampleLibraryColumns",
           "defaultMessage": "Published",
           "defaultMessageExpression": null
         },
         {
           "kind": "formatMessage",
           "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 288,
-          "column": 24,
+          "line": 213,
+          "column": 30,
           "symbol": "SampleLibraryPage",
           "defaultMessage": "Published",
           "defaultMessageExpression": null
@@ -238088,15 +238501,15 @@
           "placeholders": [],
           "locations": [
             {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 95,
-              "column": 23,
+              "path": "src/pages/SampleLibrary/columns.tsx",
+              "line": 239,
+              "column": 15,
               "kind": "formatMessage"
             },
             {
               "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 288,
-              "column": 24,
+              "line": 213,
+              "column": 30,
               "kind": "formatMessage"
             }
           ]
@@ -238162,18 +238575,18 @@
       "references": [
         {
           "kind": "formatMessage",
-          "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 99,
-          "column": 23,
-          "symbol": "columns",
+          "path": "src/pages/SampleLibrary/columns.tsx",
+          "line": 243,
+          "column": 15,
+          "symbol": "getSampleLibraryColumns",
           "defaultMessage": "Unpublished",
           "defaultMessageExpression": null
         },
         {
           "kind": "formatMessage",
           "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 295,
-          "column": 24,
+          "line": 220,
+          "column": 30,
           "symbol": "SampleLibraryPage",
           "defaultMessage": "Unpublished",
           "defaultMessageExpression": null
@@ -238186,15 +238599,15 @@
           "placeholders": [],
           "locations": [
             {
-              "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 99,
-              "column": 23,
+              "path": "src/pages/SampleLibrary/columns.tsx",
+              "line": 243,
+              "column": 15,
               "kind": "formatMessage"
             },
             {
               "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 295,
-              "column": 24,
+              "line": 220,
+              "column": 30,
               "kind": "formatMessage"
             }
           ]
@@ -238261,7 +238674,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 176,
+          "line": 152,
           "column": 14,
           "symbol": "SampleLibraryPage",
           "defaultMessage": "Sample Library",
@@ -238276,7 +238689,7 @@
           "locations": [
             {
               "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 176,
+              "line": 152,
               "column": 14,
               "kind": "formatMessage"
             }
@@ -238344,9 +238757,9 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 228,
-          "column": 20,
-          "symbol": "SampleLibraryPage",
+          "line": 66,
+          "column": 14,
+          "symbol": "getTypeTitle",
           "defaultMessage": "Contacts",
           "defaultMessageExpression": null
         }
@@ -238359,8 +238772,8 @@
           "locations": [
             {
               "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 228,
-              "column": 20,
+              "line": 66,
+              "column": 14,
               "kind": "formatMessage"
             }
           ]
@@ -238427,9 +238840,9 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 207,
-          "column": 20,
-          "symbol": "SampleLibraryPage",
+          "line": 51,
+          "column": 14,
+          "symbol": "getTypeTitle",
           "defaultMessage": "Flow Properties",
           "defaultMessageExpression": null
         }
@@ -238442,8 +238855,8 @@
           "locations": [
             {
               "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 207,
-              "column": 20,
+              "line": 51,
+              "column": 14,
               "kind": "formatMessage"
             }
           ]
@@ -238510,9 +238923,9 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 200,
-          "column": 20,
-          "symbol": "SampleLibraryPage",
+          "line": 46,
+          "column": 14,
+          "symbol": "getTypeTitle",
           "defaultMessage": "Flows",
           "defaultMessageExpression": null
         }
@@ -238525,8 +238938,8 @@
           "locations": [
             {
               "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 200,
-              "column": 20,
+              "line": 46,
+              "column": 14,
               "kind": "formatMessage"
             }
           ]
@@ -238593,9 +239006,9 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 186,
-          "column": 20,
-          "symbol": "SampleLibraryPage",
+          "line": 36,
+          "column": 14,
+          "symbol": "getTypeTitle",
           "defaultMessage": "Life Cycle Models",
           "defaultMessageExpression": null
         }
@@ -238608,8 +239021,8 @@
           "locations": [
             {
               "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 186,
-              "column": 20,
+              "line": 36,
+              "column": 14,
               "kind": "formatMessage"
             }
           ]
@@ -238676,9 +239089,9 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 193,
-          "column": 20,
-          "symbol": "SampleLibraryPage",
+          "line": 41,
+          "column": 14,
+          "symbol": "getTypeTitle",
           "defaultMessage": "Processes",
           "defaultMessageExpression": null
         }
@@ -238691,8 +239104,8 @@
           "locations": [
             {
               "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 193,
-              "column": 20,
+              "line": 41,
+              "column": 14,
               "kind": "formatMessage"
             }
           ]
@@ -238759,9 +239172,9 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 221,
-          "column": 20,
-          "symbol": "SampleLibraryPage",
+          "line": 61,
+          "column": 14,
+          "symbol": "getTypeTitle",
           "defaultMessage": "Sources",
           "defaultMessageExpression": null
         }
@@ -238774,8 +239187,8 @@
           "locations": [
             {
               "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 221,
-              "column": 20,
+              "line": 61,
+              "column": 14,
               "kind": "formatMessage"
             }
           ]
@@ -238842,9 +239255,9 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/SampleLibrary/index.tsx",
-          "line": 214,
-          "column": 20,
-          "symbol": "SampleLibraryPage",
+          "line": 56,
+          "column": 14,
+          "symbol": "getTypeTitle",
           "defaultMessage": "Unit Groups",
           "defaultMessageExpression": null
         }
@@ -238857,8 +239270,8 @@
           "locations": [
             {
               "path": "src/pages/SampleLibrary/index.tsx",
-              "line": 214,
-              "column": 20,
+              "line": 56,
+              "column": 14,
               "kind": "formatMessage"
             }
           ]
@@ -246195,6 +246608,15 @@
       },
       "references": [
         {
+          "kind": "formatMessage",
+          "path": "src/pages/SampleLibrary/columns.tsx",
+          "line": 176,
+          "column": 11,
+          "symbol": "getSampleLibraryColumns",
+          "defaultMessage": "Publication type",
+          "defaultMessageExpression": null
+        },
+        {
           "kind": "FormattedMessage",
           "path": "src/pages/Sources/Components/select/drawer.tsx",
           "line": 180,
@@ -246219,6 +246641,12 @@
           "argumentSignature": [],
           "placeholders": [],
           "locations": [
+            {
+              "path": "src/pages/SampleLibrary/columns.tsx",
+              "line": 176,
+              "column": 11,
+              "kind": "formatMessage"
+            },
             {
               "path": "src/pages/Sources/Components/select/drawer.tsx",
               "line": 180,
@@ -250594,6 +251022,33 @@
           "defaultMessageExpression": null
         },
         {
+          "kind": "formatMessage",
+          "path": "src/pages/SampleLibrary/columns.tsx",
+          "line": 61,
+          "column": 9,
+          "symbol": "getSampleLibraryColumns",
+          "defaultMessage": "Classification",
+          "defaultMessageExpression": null
+        },
+        {
+          "kind": "formatMessage",
+          "path": "src/pages/SampleLibrary/columns.tsx",
+          "line": 105,
+          "column": 9,
+          "symbol": "getSampleLibraryColumns",
+          "defaultMessage": "Classification",
+          "defaultMessageExpression": null
+        },
+        {
+          "kind": "formatMessage",
+          "path": "src/pages/SampleLibrary/columns.tsx",
+          "line": 135,
+          "column": 9,
+          "symbol": "getSampleLibraryColumns",
+          "defaultMessage": "Classification",
+          "defaultMessageExpression": null
+        },
+        {
           "kind": "FormattedMessage",
           "path": "src/pages/Sources/Components/select/drawer.tsx",
           "line": 172,
@@ -250707,6 +251162,24 @@
               "line": 196,
               "column": 9,
               "kind": "FormattedMessage"
+            },
+            {
+              "path": "src/pages/SampleLibrary/columns.tsx",
+              "line": 61,
+              "column": 9,
+              "kind": "formatMessage"
+            },
+            {
+              "path": "src/pages/SampleLibrary/columns.tsx",
+              "line": 105,
+              "column": 9,
+              "kind": "formatMessage"
+            },
+            {
+              "path": "src/pages/SampleLibrary/columns.tsx",
+              "line": 135,
+              "column": 9,
+              "kind": "formatMessage"
             },
             {
               "path": "src/pages/Sources/Components/select/drawer.tsx",
@@ -251217,6 +251690,15 @@
           "defaultMessageExpression": null
         },
         {
+          "kind": "formatMessage",
+          "path": "src/pages/SampleLibrary/columns.tsx",
+          "line": 46,
+          "column": 14,
+          "symbol": "columns",
+          "defaultMessage": "Index",
+          "defaultMessageExpression": null
+        },
+        {
           "kind": "FormattedMessage",
           "path": "src/pages/Sources/Components/select/drawer.tsx",
           "line": 160,
@@ -251414,6 +251896,12 @@
               "line": 176,
               "column": 14,
               "kind": "FormattedMessage"
+            },
+            {
+              "path": "src/pages/SampleLibrary/columns.tsx",
+              "line": 46,
+              "column": 14,
+              "kind": "formatMessage"
             },
             {
               "path": "src/pages/Sources/Components/select/drawer.tsx",
@@ -251773,6 +252261,15 @@
           "defaultMessageExpression": null
         },
         {
+          "kind": "formatMessage",
+          "path": "src/pages/SampleLibrary/columns.tsx",
+          "line": 51,
+          "column": 7,
+          "symbol": "columns",
+          "defaultMessage": "Name",
+          "defaultMessageExpression": null
+        },
+        {
           "kind": "FormattedMessage",
           "path": "src/pages/Sources/Components/select/drawer.tsx",
           "line": 166,
@@ -251940,6 +252437,12 @@
               "line": 185,
               "column": 14,
               "kind": "FormattedMessage"
+            },
+            {
+              "path": "src/pages/SampleLibrary/columns.tsx",
+              "line": 51,
+              "column": 7,
+              "kind": "formatMessage"
             },
             {
               "path": "src/pages/Sources/Components/select/drawer.tsx",
@@ -252237,6 +252740,15 @@
           "defaultMessageExpression": null
         },
         {
+          "kind": "formatMessage",
+          "path": "src/pages/SampleLibrary/columns.tsx",
+          "line": 263,
+          "column": 14,
+          "symbol": "getSampleLibraryColumns",
+          "defaultMessage": "Actions",
+          "defaultMessageExpression": null
+        },
+        {
           "kind": "FormattedMessage",
           "path": "src/pages/Sources/Components/select/drawer.tsx",
           "line": 221,
@@ -252430,6 +252942,12 @@
               "kind": "FormattedMessage"
             },
             {
+              "path": "src/pages/SampleLibrary/columns.tsx",
+              "line": 263,
+              "column": 14,
+              "kind": "formatMessage"
+            },
+            {
               "path": "src/pages/Sources/Components/select/drawer.tsx",
               "line": 221,
               "column": 14,
@@ -252599,6 +253117,15 @@
           "defaultMessageExpression": null
         },
         {
+          "kind": "formatMessage",
+          "path": "src/pages/SampleLibrary/columns.tsx",
+          "line": 254,
+          "column": 14,
+          "symbol": "getSampleLibraryColumns",
+          "defaultMessage": "Updated at",
+          "defaultMessageExpression": null
+        },
+        {
           "kind": "FormattedMessage",
           "path": "src/pages/Sources/Components/select/drawer.tsx",
           "line": 214,
@@ -252679,6 +253206,12 @@
               "line": 292,
               "column": 14,
               "kind": "FormattedMessage"
+            },
+            {
+              "path": "src/pages/SampleLibrary/columns.tsx",
+              "line": 254,
+              "column": 14,
+              "kind": "formatMessage"
             },
             {
               "path": "src/pages/Sources/Components/select/drawer.tsx",
@@ -252940,6 +253473,15 @@
           "defaultMessageExpression": null
         },
         {
+          "kind": "formatMessage",
+          "path": "src/pages/SampleLibrary/columns.tsx",
+          "line": 201,
+          "column": 7,
+          "symbol": "getSampleLibraryColumns",
+          "defaultMessage": "Version",
+          "defaultMessageExpression": null
+        },
+        {
           "kind": "FormattedMessage",
           "path": "src/pages/Sources/Components/select/drawer.tsx",
           "line": 187,
@@ -253101,6 +253643,12 @@
               "line": 89,
               "column": 14,
               "kind": "FormattedMessage"
+            },
+            {
+              "path": "src/pages/SampleLibrary/columns.tsx",
+              "line": 201,
+              "column": 7,
+              "kind": "formatMessage"
             },
             {
               "path": "src/pages/Sources/Components/select/drawer.tsx",
@@ -260707,6 +261255,15 @@
       },
       "references": [
         {
+          "kind": "formatMessage",
+          "path": "src/pages/SampleLibrary/columns.tsx",
+          "line": 163,
+          "column": 11,
+          "symbol": "getSampleLibraryColumns",
+          "defaultMessage": "Quantitative reference",
+          "defaultMessageExpression": null
+        },
+        {
           "kind": "FormattedMessage",
           "path": "src/pages/Unitgroups/Components/form.tsx",
           "line": 305,
@@ -260785,6 +261342,12 @@
           "argumentSignature": [],
           "placeholders": [],
           "locations": [
+            {
+              "path": "src/pages/SampleLibrary/columns.tsx",
+              "line": 163,
+              "column": 11,
+              "kind": "formatMessage"
+            },
             {
               "path": "src/pages/Unitgroups/Components/form.tsx",
               "line": 305,

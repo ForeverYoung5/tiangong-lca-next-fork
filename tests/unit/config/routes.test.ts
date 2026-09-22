@@ -24,11 +24,24 @@ describe('route access config', () => {
   });
 
   it('protects the sample library with data product manager access', () => {
-    expect(routes.find((route) => route.path === '/sample-library')).toMatchObject({
+    const sampleLibrary = routes.find((route) => route.path === '/sample-library');
+
+    expect(sampleLibrary).toMatchObject({
       access: 'canDataProductManager',
-      component: './SampleLibrary',
       name: 'sampleLibrary',
     });
+    expect(sampleLibrary?.routes).toEqual([
+      { path: '/sample-library', redirect: '/sample-library/models' },
+      ...routes
+        .find((route) => route.path === '/tgdata')!
+        .routes!.filter((route) => route.component)
+        .map((route) => ({
+          ...route,
+          path: route.path.replace('/tgdata', '/sample-library'),
+          component: './SampleLibrary',
+        })),
+    ]);
+    expect(sampleLibrary?.routes?.filter((route) => route.component)).toHaveLength(7);
   });
 
   it('places data processing after the user and team data modules', () => {

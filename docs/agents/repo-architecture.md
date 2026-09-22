@@ -26,8 +26,8 @@ checkPaths:
   - config/docs-capture/**
   - tests/e2e/i18n/**
 lastReviewedAt: 2026-09-22
-lastReviewedCommit: 29be1e3e8d4e3eb6fd8ddc2da496c47196f509a3
-lastReviewedNote: 'Reviewed Platform #1118 after merging current dev: Sample Library adds one data-manager route, reads a bounded seven-type DTO, publishes exact Process versions, and reuses all existing detail drawers without navigation.'
+lastReviewedCommit: 796485fe332bc092e2b4cc8176854a0f3f199dda
+lastReviewedNote: 'Reviewed Platform #1118: Sample Library is one data-manager first-level menu with seven dataset child routes, reads the existing bounded DTO, publishes exact Process versions, and reuses all existing detail drawers without navigation.'
 related:
   - ../AGENTS.md
   - ../.docpact/config.yaml

@@ -57,8 +57,8 @@ checkPaths:
   - .github/workflows/build.yml
   - package.json
 lastReviewedAt: 2026-09-22
-lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
-lastReviewedNote: 'Reviewed Platform #1109 follow-up: shared review views remove one duplicate ProTable and locale-materialized implementation surface; generated locale artifacts were refreshed idempotently, while language, validation, gate, and testing policy remain unchanged.'
+lastReviewedCommit: 796485fe332bc092e2b4cc8176854a0f3f199dda
+lastReviewedNote: 'Reviewed Platform #1118: seven Sample Library leaf routes extend configured route coverage from 56 to 63 and executable assertions from 59 to 66; generated locale artifacts were refreshed idempotently while language, gate, and testing policy remain unchanged.'
 baselineObservedAt: 2026-07-18
 related:
   - ../../AGENTS.md
