@@ -6,9 +6,14 @@ import {
   getProcessTableUuidMentionSearch,
   process_hybrid_search,
 } from '@/services/processes/api';
-import { BarChartOutlined } from '@ant-design/icons';
+import {
+  getSampleLibraryProcessPublicationMap,
+  publishSampleLibraryProcesses,
+} from '@/services/sampleLibrary/api';
+import { BarChartOutlined, CloudUploadOutlined } from '@ant-design/icons';
 
-import { Card, Checkbox, Col, Input, Row, Select, Space, App } from 'antd';
+import { App, Button, Card, Checkbox, Col, Input, Row, Select, Space, Tag } from 'antd';
+import type { Key } from 'react';
 import { useEffect, useRef, useState } from 'react';
 import { FormattedMessage, history, useIntl, useLocation } from 'umi';
 
@@ -37,6 +42,7 @@ import {
 } from '@/components/ResponsiveDataList';
 import TableFilter from '@/components/TableFilter';
 import ToolBarButton from '@/components/ToolBarButton';
+import SampleLibraryControls from '@/pages/SampleLibrary/Controls';
 import LifeCycleModelCreate from '@/pages/LifeCycleModels/Components/create';
 import LifeCycleModelEdit from '@/pages/LifeCycleModels/Components/edit';
 import LifeCycleModelView from '@/pages/LifeCycleModels/Components/view';
@@ -103,7 +109,7 @@ type ProcessTableRequestParams = LocaleAwareTableParams & {
 };
 
 const TableList: FC = () => {
-  const { message } = App.useApp();
+  const { message, modal } = App.useApp();
   const [keyWord, setKeyWord] = useState('');
   const [searchRevision, setSearchRevision] = useState(0);
   const [stateCode, setStateCode] = useState<string | number>('all');
@@ -117,6 +123,9 @@ const TableList: FC = () => {
   const [viewDrawerVisible, setViewDrawerVisible] = useState<boolean>(false);
   const [editId, setEditId] = useState<string>('');
   const [editVersion, setEditVersion] = useState<string>('');
+  const [sampleSelectedRowKeys, setSampleSelectedRowKeys] = useState<Key[]>([]);
+  const [sampleSelectedRows, setSampleSelectedRows] = useState<ProcessTable[]>([]);
+  const [samplePublishing, setSamplePublishing] = useState(false);
   const isMobileDataList = useResponsiveDataListMobile();
   const location = useLocation();
   const dataSource = getDataSource(location.pathname);
@@ -144,9 +153,28 @@ const TableList: FC = () => {
     success?: boolean;
     total?: number;
   }) => {
-    if (dataSource !== 'my' || !Array.isArray(result.data)) {
+    if (!Array.isArray(result.data)) {
       return result;
     }
+
+    if (dataSource === 'sl') {
+      const publicationMap = await getSampleLibraryProcessPublicationMap(
+        result.data.map(({ id, version }) => ({ id, version })),
+      );
+      return {
+        ...result,
+        data: result.data.map((row) => {
+          const publication = publicationMap.get(`${row.id}-${row.version}`);
+          return {
+            ...row,
+            published: publication?.published ?? false,
+            publishedAt: publication?.publishedAt ?? null,
+          };
+        }),
+      };
+    }
+
+    if (dataSource !== 'my') return result;
 
     return {
       ...result,
@@ -295,6 +323,38 @@ const TableList: FC = () => {
       sorter: false,
       search: false,
     },
+    ...(dataSource === 'sl'
+      ? [
+          {
+            ...dataListTextColumn<ProcessTable>(120, DATA_LIST_COLUMN_RESPONSIVE.desktop),
+            title: (
+              <FormattedMessage
+                id='pages.sampleLibrary.status.title'
+                defaultMessage='Publication'
+              />
+            ),
+            dataIndex: 'published',
+            sorter: false,
+            search: false,
+            render: (_: unknown, row: ProcessTable) =>
+              row.published ? (
+                <Tag color='green'>
+                  <FormattedMessage
+                    id='pages.sampleLibrary.status.published'
+                    defaultMessage='Published'
+                  />
+                </Tag>
+              ) : (
+                <Tag>
+                  <FormattedMessage
+                    id='pages.sampleLibrary.status.unpublished'
+                    defaultMessage='Unpublished'
+                  />
+                </Tag>
+              ),
+          } as ProColumns<ProcessTable>,
+        ]
+      : []),
     {
       ...dataListActionColumn<ProcessTable>(
         isMobileDataList ? 72 : dataSource === 'my' ? 204 : 168,
@@ -417,6 +477,28 @@ const TableList: FC = () => {
                 buttonType={'icon'}
                 actionRef={actionRef}
                 setViewDrawerVisible={() => {}}
+              />
+            </ResponsiveDataListActions>,
+          ];
+        }
+        if (dataSource === 'sl') {
+          return [
+            <ResponsiveDataListActions key={0} isMobile={isMobileDataList}>
+              <ProcessView
+                id={row.id}
+                version={row.version}
+                buttonType={'icon'}
+                lang={lang}
+                disabled={false}
+                actionRef={actionRef}
+              />
+              <LifeCycleModelView
+                disabled={!row.modelId}
+                id={row.modelId}
+                version={modelVersion}
+                lang={lang}
+                buttonType={'iconModel'}
+                actionRef={actionRef}
               />
             </ResponsiveDataListActions>,
           ];
@@ -612,6 +694,17 @@ const TableList: FC = () => {
           </>
         }
         actionRef={actionRef}
+        rowSelection={
+          dataSource === 'sl'
+            ? {
+                selectedRowKeys: sampleSelectedRowKeys,
+                onChange: (keys, rows) => {
+                  setSampleSelectedRowKeys(keys);
+                  setSampleSelectedRows(rows);
+                },
+              }
+            : undefined
+        }
         dataSource={tableDataSource}
         onDataSourceChange={setTableDataSource}
         params={{
@@ -667,6 +760,70 @@ const TableList: FC = () => {
           ...getReferenceLookupPaginationProps(referenceLookup),
         }}
         toolBarRender={() => {
+          if (dataSource === 'sl') {
+            return [
+              <SampleLibraryControls
+                key='sample-library-controls'
+                actionRef={actionRef}
+                processes
+                onFiltersChange={() => {
+                  setSampleSelectedRowKeys([]);
+                  setSampleSelectedRows([]);
+                }}
+              />,
+              <Button
+                key='sample-library-publish'
+                type='primary'
+                icon={<CloudUploadOutlined />}
+                disabled={sampleSelectedRowKeys.length === 0}
+                loading={samplePublishing}
+                onClick={() => {
+                  modal.confirm({
+                    title: intl.formatMessage({
+                      id: 'pages.sampleLibrary.publish.confirmTitle',
+                      defaultMessage: 'Publish selected Processes?',
+                    }),
+                    content: intl.formatMessage({
+                      id: 'pages.sampleLibrary.publish.confirmContent',
+                      defaultMessage:
+                        'Publishing records the selected exact versions and does not change their state.',
+                    }),
+                    okText: intl.formatMessage({
+                      id: 'pages.sampleLibrary.publish.action',
+                      defaultMessage: 'Publish',
+                    }),
+                    onOk: async () => {
+                      setSamplePublishing(true);
+                      try {
+                        const result = await publishSampleLibraryProcesses(
+                          sampleSelectedRows.map(({ id, version }) => ({ id, version })),
+                        );
+                        message.success(
+                          intl.formatMessage(
+                            {
+                              id: 'pages.sampleLibrary.publish.success',
+                              defaultMessage: 'Published {count} Process versions',
+                            },
+                            { count: result.publishedCount },
+                          ),
+                        );
+                        setSampleSelectedRowKeys([]);
+                        setSampleSelectedRows([]);
+                        actionRef.current?.reload();
+                      } finally {
+                        setSamplePublishing(false);
+                      }
+                    },
+                  });
+                }}
+              >
+                <FormattedMessage
+                  id='pages.sampleLibrary.publish.action'
+                  defaultMessage='Publish'
+                />
+              </Button>,
+            ];
+          }
           if (dataSource === 'my') {
             const filters = [
               <span key={3}>{typeOfDataSetFilter(isMobileDataList ? 120 : 160)}</span>,

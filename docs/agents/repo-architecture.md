@@ -26,7 +26,7 @@ checkPaths:
   - config/docs-capture/**
   - tests/e2e/i18n/**
 lastReviewedAt: 2026-09-22
-lastReviewedCommit: 796485fe332bc092e2b4cc8176854a0f3f199dda
+lastReviewedCommit: 97efc371c84f9cb8d73a87646f64697d671f2938
 lastReviewedNote: 'Reviewed Platform #1118: Sample Library is one data-manager first-level menu with seven dataset child routes, reads the existing bounded DTO, publishes exact Process versions, and reuses all existing detail drawers without navigation.'
 related:
   - ../AGENTS.md

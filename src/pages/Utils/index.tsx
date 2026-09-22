@@ -14,6 +14,8 @@ export function getDataTitle(dataSource: string) {
     return <FormattedMessage id='menu.codata' defaultMessage='Commercial Data' />;
   } else if (dataSource === 'te') {
     return <FormattedMessage id='menu.tedata' defaultMessage='Team Data' />;
+  } else if (dataSource === 'sl') {
+    return <FormattedMessage id='menu.sampleLibrary' defaultMessage='Sample Library' />;
   }
   return '';
 }

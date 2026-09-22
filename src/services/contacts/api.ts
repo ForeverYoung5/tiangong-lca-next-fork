@@ -7,6 +7,10 @@ import {
 } from '../general/util';
 
 import { supabase } from '@/services/supabase';
+import {
+  getSampleLibraryRpcFilters,
+  withSampleLibrarySearchFilters,
+} from '@/services/sampleLibrary/api';
 import { normalizeDeleteCommandResult } from '@/services/supabase/data';
 import type { SortOrder } from 'antd/es/table/interface';
 import { getCachedClassificationData } from '../classifications/cache';
@@ -305,7 +309,8 @@ export async function getContactTableAll(
     state_code_filter: typeof stateCode === 'number' ? stateCode : null,
     sort_by: normalizeContactSortBy(sortBy),
     sort_direction: normalizeContactSortDirection(orderBy),
-  });
+    ...getSampleLibraryRpcFilters(dataSource),
+  } as never);
 
   if (result.error) {
     console.log('error', result.error);
@@ -360,7 +365,7 @@ export async function getContactTablePgroongaSearch(
 
     result = await supabase.rpc('search_contacts', {
       query_text: queryText,
-      filter_condition: filterCondition,
+      filter_condition: withSampleLibrarySearchFilters(dataSource, filterCondition),
       page_size: params.pageSize ?? 10,
       page_current: params.current ?? 1,
       data_source: dataSource,

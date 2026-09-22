@@ -21,6 +21,7 @@ import {
   useResponsiveDataListMobile,
 } from '@/components/ResponsiveDataList';
 import TableFilter from '@/components/TableFilter';
+import SampleLibraryControls from '@/pages/SampleLibrary/Controls';
 import { attachStateCodesToRows } from '@/services/general/api';
 import {
   getServiceQueryLanguage,
@@ -454,6 +455,9 @@ const TableList: FC = () => {
           ...getReferenceLookupPaginationProps(referenceLookup),
         }}
         toolBarRender={() => {
+          if (dataSource === 'sl') {
+            return [<SampleLibraryControls key='sample-library-controls' actionRef={actionRef} />];
+          }
           if (dataSource === 'my') {
             const filters = [
               <TableFilter

@@ -1,3 +1,5 @@
+import { getSampleLibraryFilters } from '@/services/sampleLibrary/api';
+
 export type DatasetUuidMentionEntityKind =
   'flow' | 'process' | 'lifecyclemodel' | 'source' | 'contact' | 'unitgroup' | 'flowproperty';
 
@@ -132,7 +134,10 @@ export async function searchDatasetJsonUuidMentions({
     p_team_id_filter: teamIdFilter,
     p_this_user_id: session.data.session.user?.id ?? '',
     p_uuid: normalizedUuid,
-  });
+    p_sample_origin_filter: dataSource === 'sl' ? getSampleLibraryFilters().origin : 'all',
+    p_sample_publication_status_filter:
+      dataSource === 'sl' ? getSampleLibraryFilters().publicationStatus : 'all',
+  } as never);
 
   if (result.error) {
     return {

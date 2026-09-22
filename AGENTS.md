@@ -46,7 +46,7 @@ checkPaths:
   - .husky/pre-push
   - .github/workflows/**
 lastReviewedAt: 2026-09-22
-lastReviewedCommit: 796485fe332bc092e2b4cc8176854a0f3f199dda
+lastReviewedCommit: 97efc371c84f9cb8d73a87646f64697d671f2938
 lastReviewedNote: 'Reviewed for Platform #1118: the Sample Library first-level menu and seven child dataset views remain inside the product surface, reuse existing detail drawers, and do not change repository ownership, bootstrap, branch, or delivery rules.'
 related:
   - .docpact/config.yaml

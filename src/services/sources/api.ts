@@ -7,6 +7,10 @@ import {
 } from '../general/util';
 
 import { supabase } from '@/services/supabase';
+import {
+  getSampleLibraryRpcFilters,
+  withSampleLibrarySearchFilters,
+} from '@/services/sampleLibrary/api';
 import { normalizeDeleteCommandResult } from '@/services/supabase/data';
 import { publicEntity } from '@/services/supabase/public';
 import type { SortOrder } from 'antd/es/table/interface';
@@ -305,7 +309,8 @@ export async function getSourceTableAll(
     state_code_filter: typeof stateCode === 'number' ? stateCode : null,
     sort_by: normalizeSourceSortBy(sortBy),
     sort_direction: normalizeSourceSortDirection(orderBy),
-  });
+    ...getSampleLibraryRpcFilters(dataSource),
+  } as never);
 
   if (result?.error) {
     console.log('error', result?.error);
@@ -363,7 +368,7 @@ export async function getSourceTablePgroongaSearch(
       typeof stateCode === 'number'
         ? {
             query_text: queryText,
-            filter_condition: filterCondition,
+            filter_condition: withSampleLibrarySearchFilters(dataSource, filterCondition),
             page_size: params.pageSize ?? 10,
             page_current: params.current ?? 1,
             data_source: dataSource,
@@ -373,7 +378,7 @@ export async function getSourceTablePgroongaSearch(
           }
         : {
             query_text: queryText,
-            filter_condition: filterCondition,
+            filter_condition: withSampleLibrarySearchFilters(dataSource, filterCondition),
             page_size: params.pageSize ?? 10,
             page_current: params.current ?? 1,
             data_source: dataSource,

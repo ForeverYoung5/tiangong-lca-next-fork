@@ -14,6 +14,10 @@ import {
 } from '@/services/general/api';
 import { type SupportedContentLanguage } from '@/services/general/contentLanguageRegistry';
 import { supabase } from '@/services/supabase';
+import {
+  getSampleLibraryRpcFilters,
+  withSampleLibrarySearchFilters,
+} from '@/services/sampleLibrary/api';
 import { publicEntity } from '@/services/supabase/public';
 import { isRuleVerificationPassed } from '@/utils/ruleVerification';
 import { FunctionRegion } from '@supabase/supabase-js';
@@ -824,7 +828,8 @@ export async function getLifeCycleModelTableAll(
     state_code_filter: typeof stateCode === 'number' ? stateCode : null,
     sort_by: normalizeLifeCycleModelSortBy(sortBy),
     sort_direction: normalizeLifeCycleModelSortDirection(orderBy),
-  });
+    ...getSampleLibraryRpcFilters(dataSource),
+  } as never);
 
   const result = {
     ...rpcResult,
@@ -932,7 +937,7 @@ export async function getLifeCycleModelTablePgroongaSearch(
       typeof stateCode === 'number'
         ? {
             query_text: queryText,
-            filter_condition: filterCondition,
+            filter_condition: withSampleLibrarySearchFilters(dataSource, filterCondition),
             page_size: params.pageSize ?? 10,
             page_current: params.current ?? 1,
             data_source: dataSource,
@@ -942,7 +947,7 @@ export async function getLifeCycleModelTablePgroongaSearch(
           }
         : {
             query_text: queryText,
-            filter_condition: filterCondition,
+            filter_condition: withSampleLibrarySearchFilters(dataSource, filterCondition),
             page_size: params.pageSize ?? 10,
             page_current: params.current ?? 1,
             data_source: dataSource,
@@ -1067,7 +1072,7 @@ export async function lifeCycleModel_hybrid_search(
   let result: any = {};
   const bodyParams: Record<string, any> = {
     query: queryText,
-    filter_condition: filterCondition,
+    filter_condition: withSampleLibrarySearchFilters(dataSource, filterCondition),
     data_source: dataSource,
     page_size: params.pageSize ?? 10,
     page_current: params.current ?? 1,

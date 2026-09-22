@@ -9,6 +9,10 @@ import {
 } from '../general/util';
 
 import { supabase } from '@/services/supabase';
+import {
+  getSampleLibraryRpcFilters,
+  withSampleLibrarySearchFilters,
+} from '@/services/sampleLibrary/api';
 import { normalizeDeleteCommandResult } from '@/services/supabase/data';
 import { publicEntity } from '@/services/supabase/public';
 import { FunctionRegion } from '@supabase/supabase-js';
@@ -385,10 +389,11 @@ export async function getFlowTableAll(
     this_user_id: session.data.session?.user?.id ?? '',
     team_id_filter: teamId,
     state_code_filter: typeof stateCode === 'number' ? stateCode : null,
-    filter_condition: filters ?? {},
+    filter_condition: withSampleLibrarySearchFilters(dataSource, filters ?? {}),
     sort_by: normalizeFlowSortBy(sortBy),
     sort_direction: normalizeFlowSortDirection(orderBy),
-  });
+    ...getSampleLibraryRpcFilters(dataSource),
+  } as never);
 
   const result = {
     ...rpcResult,
@@ -514,7 +519,7 @@ export async function getFlowTablePgroongaSearch(
       typeof stateCode === 'number'
         ? {
             query_text: queryText,
-            filter_condition: filter,
+            filter_condition: withSampleLibrarySearchFilters(dataSource, filter),
             page_size: params.pageSize ?? 10,
             page_current: params.current ?? 1,
             data_source: dataSource,
@@ -524,7 +529,7 @@ export async function getFlowTablePgroongaSearch(
           }
         : {
             query_text: queryText,
-            filter_condition: filter,
+            filter_condition: withSampleLibrarySearchFilters(dataSource, filter),
             page_size: params.pageSize ?? 10,
             page_current: params.current ?? 1,
             data_source: dataSource,
@@ -724,7 +729,7 @@ export async function flow_hybrid_search(
     query,
     version_scope: 'matched',
     match_count: 200,
-    filter_condition: filterCondition,
+    filter_condition: withSampleLibrarySearchFilters(dataSource, filterCondition),
     data_source: dataSource,
     page_size: params.pageSize ?? 10,
     page_current: params.current ?? 1,

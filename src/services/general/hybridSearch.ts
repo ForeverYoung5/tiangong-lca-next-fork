@@ -1,4 +1,5 @@
 import { supabase } from '@/services/supabase';
+import { withSampleLibrarySearchFilters } from '@/services/sampleLibrary/api';
 import { FunctionRegion } from '@supabase/supabase-js';
 
 export type FoundationHybridSearchFunctionName =
@@ -69,7 +70,7 @@ export async function invokeFoundationHybridSearch<
 
   const body: Record<string, unknown> = {
     query: options.queryText,
-    filter_condition: options.filterCondition,
+    filter_condition: withSampleLibrarySearchFilters(options.dataSource, options.filterCondition),
     data_source: options.dataSource,
     page_size: options.params.pageSize ?? 10,
     page_current: page,

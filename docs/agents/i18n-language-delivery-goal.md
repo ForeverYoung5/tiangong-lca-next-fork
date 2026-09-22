@@ -57,7 +57,7 @@ checkPaths:
   - .github/workflows/build.yml
   - package.json
 lastReviewedAt: 2026-09-22
-lastReviewedCommit: 796485fe332bc092e2b4cc8176854a0f3f199dda
+lastReviewedCommit: 97efc371c84f9cb8d73a87646f64697d671f2938
 lastReviewedNote: 'Reviewed Platform #1118: seven Sample Library leaf routes extend configured route coverage from 56 to 63 and executable assertions from 59 to 66; generated locale artifacts were refreshed idempotently while language, gate, and testing policy remain unchanged.'
 baselineObservedAt: 2026-07-18
 related:

@@ -21,6 +21,10 @@ import { type SupportedContentLanguage } from '@/services/general/contentLanguag
 import { getLifeCyclesByIdAndVersion } from '@/services/lifeCycleModels/api';
 import { supabase } from '@/services/supabase';
 import {
+  getSampleLibraryRpcFilters,
+  withSampleLibrarySearchFilters,
+} from '@/services/sampleLibrary/api';
+import {
   normalizeDeleteCommandResult,
   type SupabaseMutationResult,
 } from '@/services/supabase/data';
@@ -557,7 +561,8 @@ export async function getProcessTableAll(
     type_of_data_set_filter: typeOfDataSet ?? 'all',
     sort_by: normalizeProcessSortBy(sortBy),
     sort_direction: normalizeProcessSortDirection(orderBy),
-  });
+    ...getSampleLibraryRpcFilters(dataSource),
+  } as never);
 
   const result = {
     ...rpcResult,
@@ -858,7 +863,7 @@ export async function getProcessTablePgroongaSearch(
   }
   const requestParams: { [key: string]: any } = {
     query_text: queryText,
-    filter_condition: filterCondition,
+    filter_condition: withSampleLibrarySearchFilters(dataSource, filterCondition),
     page_size: params.pageSize ?? 10,
     page_current: params.current ?? 1,
     data_source: dataSource,
@@ -869,7 +874,7 @@ export async function getProcessTablePgroongaSearch(
     query_terms: [queryText],
     owner_draft_only: ownerDraftOnly,
   };
-  const result = await supabase.rpc('search_processes', requestParams);
+  const result = await supabase.rpc('search_processes', requestParams as never);
   if (result.error) {
     console.log('error', result.error);
   }
@@ -1281,7 +1286,7 @@ export async function process_hybrid_search(
     query: queryText,
     version_scope: 'matched',
     match_count: 200,
-    filter_condition: filterCondition,
+    filter_condition: withSampleLibrarySearchFilters(dataSource, filterCondition),
     data_source: dataSource,
     page_size: params.pageSize ?? 10,
     page_current: params.current ?? 1,

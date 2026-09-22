@@ -6,40 +6,15 @@ jest.mock('@/services/supabase', () => ({
 }));
 
 import {
-  getSampleLibraryDatasets,
+  getSampleLibraryFilters,
+  getSampleLibraryProcessPublicationMap,
+  getSampleLibraryRpcFilters,
   publishSampleLibraryProcesses,
+  withSampleLibrarySearchFilters,
 } from '@/services/sampleLibrary/api';
 
 describe('sample library API', () => {
   beforeEach(() => jest.clearAllMocks());
-
-  it('maps the manager catalog request and unwraps its page', async () => {
-    const page = {
-      datasetType: 'processes',
-      page: 2,
-      pageSize: 20,
-      total: 21,
-      items: [],
-    };
-    mockRpc.mockResolvedValue({ data: { ok: true, data: page }, error: null });
-
-    await expect(
-      getSampleLibraryDatasets({
-        datasetType: 'processes',
-        origin: 'literature',
-        publicationStatus: 'unpublished',
-        pageSize: 20,
-        pageCurrent: 2,
-      }),
-    ).resolves.toEqual(page);
-    expect(mockRpc).toHaveBeenCalledWith('qry_sample_library_datasets_v1', {
-      p_dataset_type: 'processes',
-      p_origin: 'literature',
-      p_publication_status: 'unpublished',
-      p_page_size: 20,
-      p_page_current: 2,
-    });
-  });
 
   it('publishes exact Process identities and versions', async () => {
     const result = { requestedCount: 1, publishedCount: 1, alreadyPublishedCount: 0 };
@@ -52,40 +27,57 @@ describe('sample library API', () => {
     });
   });
 
-  it.each([
-    [
-      'query transport error',
-      () =>
-        getSampleLibraryDatasets({
-          datasetType: 'contacts',
-          origin: 'all',
-          publicationStatus: 'all',
-          pageSize: 20,
-          pageCurrent: 1,
-        }),
-    ],
-    ['publish transport error', () => publishSampleLibraryProcesses([])],
-  ])('propagates a %s', async (_label, invoke) => {
-    const error = new Error('offline');
-    mockRpc.mockResolvedValue({ data: null, error });
-    await expect(invoke()).rejects.toBe(error);
+  it('adds independent sl controls without changing other data sources', () => {
+    window.history.replaceState(
+      {},
+      '',
+      '/sample-library/processes?origin=enterprise&publicationStatus=published',
+    );
+    expect(getSampleLibraryFilters()).toEqual({
+      origin: 'enterprise',
+      publicationStatus: 'published',
+    });
+    expect(getSampleLibraryRpcFilters('sl')).toEqual({
+      sample_origin_filter: 'enterprise',
+      sample_publication_status_filter: 'published',
+    });
+    expect(withSampleLibrarySearchFilters('sl', { classification: ['steel'] })).toEqual({
+      classification: ['steel'],
+      __sampleLibraryOrigin: 'enterprise',
+      __sampleLibraryPublicationStatus: 'published',
+    });
+    expect(withSampleLibrarySearchFilters('tg', { classification: ['steel'] })).toEqual({
+      classification: ['steel'],
+    });
   });
 
-  it.each([
-    [{ ok: false, message: 'denied' }, 'denied'],
-    [{ ok: false, code: 'bad_request' }, 'bad_request'],
-    [null, 'Unable to load sample library'],
-  ])('fails closed for query envelope %#', async (data, expected) => {
-    mockRpc.mockResolvedValue({ data, error: null });
-    await expect(
-      getSampleLibraryDatasets({
-        datasetType: 'flows',
-        origin: 'all',
-        publicationStatus: 'all',
-        pageSize: 20,
-        pageCurrent: 1,
-      }),
-    ).rejects.toThrow(expected);
+  it('maps exact Process publication status for a shared search page', async () => {
+    mockRpc.mockResolvedValue({
+      data: {
+        ok: true,
+        data: [
+          {
+            id: '68400000-0000-4000-8000-000000000010',
+            version: '01.00.000',
+            published: true,
+            publishedAt: '2026-09-22T00:00:00Z',
+          },
+        ],
+      },
+      error: null,
+    });
+    const result = await getSampleLibraryProcessPublicationMap([
+      { id: '68400000-0000-4000-8000-000000000010', version: '01.00.000' },
+    ]);
+    expect(result.get('68400000-0000-4000-8000-000000000010-01.00.000')).toEqual(
+      expect.objectContaining({ published: true }),
+    );
+  });
+
+  it('propagates a publish transport error', async () => {
+    const error = new Error('offline');
+    mockRpc.mockResolvedValue({ data: null, error });
+    await expect(publishSampleLibraryProcesses([])).rejects.toBe(error);
   });
 
   it('uses the publication fallback when its envelope has no diagnostic', async () => {
