@@ -23,6 +23,7 @@ describe('Utils page helpers', () => {
         {getDataTitle('ex')}
         {getDataTitle('co')}
         {getDataTitle('te')}
+        {getDataTitle('sl')}
       </>,
     );
 
@@ -31,6 +32,7 @@ describe('Utils page helpers', () => {
     expect(screen.getByText('Example Data')).toBeInTheDocument();
     expect(screen.getByText('Commercial Data')).toBeInTheDocument();
     expect(screen.getByText('Team Data')).toBeInTheDocument();
+    expect(screen.getByText('Sample Library')).toBeInTheDocument();
     expect(getDataTitle('unknown')).toBe('');
   });
 

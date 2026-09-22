@@ -30,6 +30,9 @@ const mockGetProcessTableAll = jest.fn();
 const mockGetProcessTablePgroongaSearch = jest.fn();
 const mockGetProcessTableUuidMentionSearch = jest.fn();
 const mockProcessHybridSearch = jest.fn();
+const mockGetSampleLibraryProcessPublicationMap = jest.fn();
+const mockPublishSampleLibraryProcesses = jest.fn();
+const mockModalConfirm = jest.fn();
 const mockContributeProcess = jest.fn();
 const mockContributeLifeCycleModel = jest.fn();
 const mockGetDataSource = jest.fn(() => 'my');
@@ -60,6 +63,22 @@ jest.mock('@/services/processes/api', () => ({
   getProcessTableUuidMentionSearch: (...args: any[]) =>
     mockGetProcessTableUuidMentionSearch(...args),
   process_hybrid_search: (...args: any[]) => mockProcessHybridSearch(...args),
+}));
+
+jest.mock('@/services/sampleLibrary/api', () => ({
+  __esModule: true,
+  getSampleLibraryProcessPublicationMap: (...args: any[]) =>
+    mockGetSampleLibraryProcessPublicationMap(...args),
+  publishSampleLibraryProcesses: (...args: any[]) => mockPublishSampleLibraryProcesses(...args),
+}));
+
+jest.mock('@/pages/SampleLibrary/Controls', () => ({
+  __esModule: true,
+  default: ({ onFiltersChange }: any) => (
+    <button type='button' onClick={() => onFiltersChange?.()}>
+      sample-library-controls
+    </button>
+  ),
 }));
 
 jest.mock('@/services/lifeCycleModels/api', () => ({
@@ -252,8 +271,8 @@ jest.mock('antd', () => {
 
   const ConfigProvider = ({ children }: any) => <div>{children}</div>;
   const Card = ({ children }: any) => <section>{children}</section>;
-  const Button = ({ children, icon, onClick }: any) => (
-    <button type='button' onClick={onClick}>
+  const Button = ({ children, disabled, icon, loading, onClick }: any) => (
+    <button type='button' disabled={disabled || loading} onClick={onClick}>
       {icon}
       {children}
     </button>
@@ -279,6 +298,7 @@ jest.mock('antd', () => {
   const Col = ({ children }: any) => <div>{children}</div>;
   const Row = ({ children }: any) => <div>{children}</div>;
   const Space = ({ children }: any) => <div>{children}</div>;
+  const Tag = ({ children }: any) => <span>{children}</span>;
   const Tooltip = ({ children, title }: any) => (
     <div>
       {toText(title)}
@@ -331,6 +351,7 @@ jest.mock('antd', () => {
       Select,
       Row,
       Space,
+      Tag,
       Tooltip,
       message,
       theme,
@@ -340,6 +361,7 @@ jest.mock('antd', () => {
       App: {
         useApp: () => ({
           message: antdModuleMock.message,
+          modal: { confirm: (...args: any[]) => mockModalConfirm(...args) },
         }),
       },
     };
@@ -372,6 +394,7 @@ jest.mock('@ant-design/pro-components', () => {
     optionsRender,
     rowKey,
     params,
+    rowSelection,
   }: any) => {
     const [rows, setRows] = React.useState<any[]>([]);
     const requestRef = React.useRef(request);
@@ -431,6 +454,19 @@ jest.mock('@ant-design/pro-components', () => {
         </div>
         <div data-testid='options-with-undefined'>{optionsRender?.({}, undefined)}</div>
         <div>{toolBarRender?.()}</div>
+        {rowSelection ? (
+          <button
+            type='button'
+            onClick={() =>
+              rowSelection.onChange?.(
+                rows.map((row: any) => `${row.id}-${row.version}`),
+                rows,
+              )
+            }
+          >
+            select-sample-rows
+          </button>
+        ) : null}
         {rows.map((row: any, rowIndex: number) => (
           <div key={rowKey ? rowKey(row) : `${row.id}-${rowIndex}`}>
             {columns.map((column: any, columnIndex: number) => (
@@ -491,6 +527,13 @@ describe('ProcessesPage', () => {
     mockGetProcessTablePgroongaSearch.mockResolvedValue({ data: [], success: true });
     mockGetProcessTableUuidMentionSearch.mockResolvedValue({ data: [], success: true, total: 0 });
     mockProcessHybridSearch.mockResolvedValue({ data: [], success: true });
+    mockGetSampleLibraryProcessPublicationMap.mockResolvedValue(new Map());
+    mockPublishSampleLibraryProcesses.mockResolvedValue({
+      requestedCount: 1,
+      publishedCount: 1,
+      alreadyPublishedCount: 0,
+    });
+    mockModalConfirm.mockImplementation(({ onOk }: any) => onOk?.());
     message.success.mockReset();
     message.error.mockReset();
   });
@@ -1110,8 +1153,8 @@ describe('ProcessesPage', () => {
     );
   });
 
-  it('falls back to an empty table result when the process list request returns undefined', async () => {
-    mockGetProcessTableAll.mockResolvedValueOnce(undefined);
+  it('falls back to an empty table result when the process list response omits data', async () => {
+    mockGetProcessTableAll.mockResolvedValueOnce({ success: true });
 
     renderWithProviders(<ProcessesPage />);
 
@@ -1201,5 +1244,37 @@ describe('ProcessesPage', () => {
     await waitFor(() => expect(mockGetProcessTableAll).toHaveBeenCalled());
     await waitFor(() => expect(message.error).toHaveBeenCalledWith('Failed to load process list.'));
     expect(screen.queryAllByTestId('process-view')).toHaveLength(0);
+  });
+
+  it('loads publication state and publishes selected sample-library Process versions', async () => {
+    mockLocation = { pathname: '/sample-library/processes', search: '' };
+    mockGetDataSource.mockReturnValue('sl');
+    mockGetSampleLibraryProcessPublicationMap.mockResolvedValue(
+      new Map([['proc-1-1.0.0', { published: true, publishedAt: '2026-09-22T00:00:00.000Z' }]]),
+    );
+
+    renderWithProviders(<ProcessesPage />);
+
+    await waitFor(() =>
+      expect(mockGetSampleLibraryProcessPublicationMap).toHaveBeenCalledWith([
+        { id: 'proc-1', version: '1.0.0' },
+      ]),
+    );
+    expect(await screen.findByText('Published')).toBeInTheDocument();
+    expect(screen.getByTestId('process-view')).toHaveTextContent('proc-1');
+
+    await userEvent.click(screen.getByRole('button', { name: 'sample-library-controls' }));
+    await userEvent.click(screen.getByRole('button', { name: 'select-sample-rows' }));
+    const publishButton = screen.getByRole('button', { name: /publish/i });
+    await waitFor(() => expect(publishButton).toBeEnabled());
+    await userEvent.click(publishButton);
+
+    await waitFor(() =>
+      expect(mockPublishSampleLibraryProcesses).toHaveBeenCalledWith([
+        { id: 'proc-1', version: '1.0.0' },
+      ]),
+    );
+    expect(mockModalConfirm).toHaveBeenCalled();
+    expect(message.success).toHaveBeenCalledWith('Published {count} Process versions');
   });
 });

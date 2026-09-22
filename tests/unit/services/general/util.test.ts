@@ -1936,6 +1936,7 @@ describe('General Utility Functions', () => {
 
   describe('getDataSource', () => {
     it('should identify data source from pathname', () => {
+      expect(getDataSource('/sample-library/flows')).toBe('sl');
       expect(getDataSource('/mydata/flows')).toBe('my');
       expect(getDataSource('/tgdata/processes')).toBe('tg');
       expect(getDataSource('/exampledata/processes')).toBe('ex');

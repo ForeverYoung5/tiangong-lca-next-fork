@@ -9,6 +9,11 @@ jest.mock('@/contexts/AntdAppContext', () => ({
     action(jest.requireMock('antd').App.useApp()),
 }));
 
+jest.mock('@/pages/SampleLibrary/Controls', () => ({
+  __esModule: true,
+  default: () => <div data-testid='sample-library-controls'>sample-library-controls</div>,
+}));
+
 const toText = (node: any): string => {
   if (node === null || node === undefined) return '';
   if (typeof node === 'string' || typeof node === 'number') return String(node);
@@ -765,5 +770,15 @@ describe('SourcesPage', () => {
     renderWithProviders(<SourcesPage />);
 
     expect(await screen.findByText('-')).toBeInTheDocument();
+  });
+
+  it('renders the shared sample-library toolbar', async () => {
+    mockLocation = { pathname: '/sample-library/sources', search: '' };
+    mockGetDataSource.mockReturnValue('sl');
+
+    renderWithProviders(<SourcesPage />);
+
+    await waitFor(() => expect(mockGetSourceTableAll).toHaveBeenCalled());
+    expect(screen.getByTestId('sample-library-controls')).toBeInTheDocument();
   });
 });
