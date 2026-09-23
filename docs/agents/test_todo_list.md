@@ -41,7 +41,7 @@ checkPaths:
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
 lastReviewedAt: 2026-09-23
-lastReviewedCommit: 3558ce3d3fa59e7c1b1aff098b01f955beadd9df
+lastReviewedCommit: 050ecde5a9674e7175d329eb9f45a2cb9cc3cf03
 lastReviewedNote: 'Reviewed for Platform #1118: Sample Library child-route resolution, display extraction, drawer reuse, and service fallback branches are covered and do not reopen the coverage queue.'
 ---
 

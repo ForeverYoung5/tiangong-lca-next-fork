@@ -2,7 +2,7 @@ import type { ActionType } from '@ant-design/pro-components';
 import { AppstoreOutlined, BankOutlined, BookOutlined } from '@ant-design/icons';
 import { Button, Select, Tooltip } from 'antd';
 import type { ReactNode, RefObject } from 'react';
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { history, useIntl, useLocation } from 'umi';
 import {
   getSampleLibraryFilters,
@@ -22,6 +22,11 @@ export default function SampleLibraryControls({
   const intl = useIntl();
   const location = useLocation();
   const filters = useMemo(() => getSampleLibraryFilters(), [location.search]);
+  const [displayedOrigin, setDisplayedOrigin] = useState<SampleLibraryOrigin>(filters.origin);
+
+  useEffect(() => {
+    setDisplayedOrigin(filters.origin);
+  }, [filters.origin]);
 
   if (!location.pathname.startsWith('/sample-library')) return null;
 
@@ -67,7 +72,7 @@ export default function SampleLibraryControls({
       next: 'all',
     },
   };
-  const originControl = originControls[filters.origin];
+  const originControl = originControls[displayedOrigin];
 
   return (
     <>
@@ -107,7 +112,10 @@ export default function SampleLibraryControls({
           type='text'
           aria-label={originControl.label}
           icon={originControl.icon}
-          onClick={() => update({ origin: originControl.next })}
+          onClick={() => {
+            setDisplayedOrigin(originControl.next);
+            update({ origin: originControl.next });
+          }}
         />
       </Tooltip>
     </>

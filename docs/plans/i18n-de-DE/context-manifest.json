@@ -5,8 +5,8 @@
     "repository": "tiangong-lca/platform",
     "baselineSha": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
     "sourceManifestPath": "docs/plans/i18n-de-DE/manifest.json",
-    "sourceManifestDigest": "425bf768de9cc41ecbf25c70dc7b0c6215c0c1f347bcb27e6ad037c645dda9f0",
-    "auditedInputDigest": "739b8852c4c3458783e46c5e060f368cfb655269c6d81bd6a3d73eab29b90ac0"
+    "sourceManifestDigest": "149d260f9355a93196e3790d9854d99a36a16b33eea1616a30b36f1d3a29ddaf",
+    "auditedInputDigest": "a942b1b8838cef8d48b00f203566ba420d11f5da3243b8efb6469c99856e9f7a"
   },
   "inventory": {
     "sourceMessageCount": 3427,
@@ -47,7 +47,7 @@
     "messageCount": 3427,
     "completeCount": 3427,
     "blockedCount": 0,
-    "dossierDigest": "c223a969b45f478d02b02b9545fcfa8f01ee66a6124677eb6cd7b7ccf14a1d61",
+    "dossierDigest": "11bfaf9ef723d0fceb31a5bad3e88c975a827d9df0f00110d1c5bb6d706f691c",
     "catalogDigest": "5e503de2d492e40bd1703f8f0c18634060c408dffa41dcf6bd05d27acca666bc",
     "moduleCount": 32,
     "moduleDigest": "3b4f2df2201d552cc6e09b75bcebf64a30ac3511d401d79c50d4eb6e806195d3",
@@ -144,7 +144,7 @@
         "focusedVariantCount": 8
       },
       "sourceFileCount": 38,
-      "sourceEvidenceDigest": "5a011eea46987faf7e0e2726701d2ddba6c522b4d05a8e30f1a839e5879ea772",
+      "sourceEvidenceDigest": "ecc7296dcac324f6aebf6674f261afdc2252526668577cb4710135ffab1bd199",
       "rowEvidence": [
         {
           "executableAssertionId": "rv.root.redirect-to-welcome",
@@ -1221,7 +1221,7 @@
           "route": "/sample-library",
           "viewState": "dataset-routes-origin-and-publication-filters",
           "requiredEvidenceScope": "access-boundary-observed",
-          "sourceDigest": "5b599fc0673cf14917716bc124e1f6b1b010ef2113a13d46e083573f0a43f2fa",
+          "sourceDigest": "371991795c02956acfc3ef218b0d556e23010447be5e74f890251903deeac36b",
           "focusedTestDigest": "39c9568b417ef351da3bba6b694cdc5532ea9d1386dd4e6be8dca7229847d1f1",
           "plannedBrowserAssertionCount": 1,
           "plannedBrowserAssertionDigest": "85848739f1bdf9eeffe4e561709db728aee08386714805415bceca124a9bbe98",
@@ -1239,7 +1239,7 @@
           "route": "/sample-library/models",
           "viewState": "dataset-routes-origin-and-publication-filters",
           "requiredEvidenceScope": "access-boundary-observed",
-          "sourceDigest": "5b599fc0673cf14917716bc124e1f6b1b010ef2113a13d46e083573f0a43f2fa",
+          "sourceDigest": "371991795c02956acfc3ef218b0d556e23010447be5e74f890251903deeac36b",
           "focusedTestDigest": "39c9568b417ef351da3bba6b694cdc5532ea9d1386dd4e6be8dca7229847d1f1",
           "plannedBrowserAssertionCount": 1,
           "plannedBrowserAssertionDigest": "85848739f1bdf9eeffe4e561709db728aee08386714805415bceca124a9bbe98",
@@ -1257,7 +1257,7 @@
           "route": "/sample-library/processes",
           "viewState": "dataset-routes-origin-and-publication-filters",
           "requiredEvidenceScope": "access-boundary-observed",
-          "sourceDigest": "5b599fc0673cf14917716bc124e1f6b1b010ef2113a13d46e083573f0a43f2fa",
+          "sourceDigest": "371991795c02956acfc3ef218b0d556e23010447be5e74f890251903deeac36b",
           "focusedTestDigest": "39c9568b417ef351da3bba6b694cdc5532ea9d1386dd4e6be8dca7229847d1f1",
           "plannedBrowserAssertionCount": 1,
           "plannedBrowserAssertionDigest": "85848739f1bdf9eeffe4e561709db728aee08386714805415bceca124a9bbe98",
@@ -1275,7 +1275,7 @@
           "route": "/sample-library/flows",
           "viewState": "dataset-routes-origin-and-publication-filters",
           "requiredEvidenceScope": "access-boundary-observed",
-          "sourceDigest": "5b599fc0673cf14917716bc124e1f6b1b010ef2113a13d46e083573f0a43f2fa",
+          "sourceDigest": "371991795c02956acfc3ef218b0d556e23010447be5e74f890251903deeac36b",
           "focusedTestDigest": "39c9568b417ef351da3bba6b694cdc5532ea9d1386dd4e6be8dca7229847d1f1",
           "plannedBrowserAssertionCount": 1,
           "plannedBrowserAssertionDigest": "85848739f1bdf9eeffe4e561709db728aee08386714805415bceca124a9bbe98",
@@ -1293,7 +1293,7 @@
           "route": "/sample-library/flowproperties",
           "viewState": "dataset-routes-origin-and-publication-filters",
           "requiredEvidenceScope": "access-boundary-observed",
-          "sourceDigest": "5b599fc0673cf14917716bc124e1f6b1b010ef2113a13d46e083573f0a43f2fa",
+          "sourceDigest": "371991795c02956acfc3ef218b0d556e23010447be5e74f890251903deeac36b",
           "focusedTestDigest": "39c9568b417ef351da3bba6b694cdc5532ea9d1386dd4e6be8dca7229847d1f1",
           "plannedBrowserAssertionCount": 1,
           "plannedBrowserAssertionDigest": "85848739f1bdf9eeffe4e561709db728aee08386714805415bceca124a9bbe98",
@@ -1311,7 +1311,7 @@
           "route": "/sample-library/unitgroups",
           "viewState": "dataset-routes-origin-and-publication-filters",
           "requiredEvidenceScope": "access-boundary-observed",
-          "sourceDigest": "5b599fc0673cf14917716bc124e1f6b1b010ef2113a13d46e083573f0a43f2fa",
+          "sourceDigest": "371991795c02956acfc3ef218b0d556e23010447be5e74f890251903deeac36b",
           "focusedTestDigest": "39c9568b417ef351da3bba6b694cdc5532ea9d1386dd4e6be8dca7229847d1f1",
           "plannedBrowserAssertionCount": 1,
           "plannedBrowserAssertionDigest": "85848739f1bdf9eeffe4e561709db728aee08386714805415bceca124a9bbe98",
@@ -1329,7 +1329,7 @@
           "route": "/sample-library/sources",
           "viewState": "dataset-routes-origin-and-publication-filters",
           "requiredEvidenceScope": "access-boundary-observed",
-          "sourceDigest": "5b599fc0673cf14917716bc124e1f6b1b010ef2113a13d46e083573f0a43f2fa",
+          "sourceDigest": "371991795c02956acfc3ef218b0d556e23010447be5e74f890251903deeac36b",
           "focusedTestDigest": "39c9568b417ef351da3bba6b694cdc5532ea9d1386dd4e6be8dca7229847d1f1",
           "plannedBrowserAssertionCount": 1,
           "plannedBrowserAssertionDigest": "85848739f1bdf9eeffe4e561709db728aee08386714805415bceca124a9bbe98",
@@ -1347,7 +1347,7 @@
           "route": "/sample-library/contacts",
           "viewState": "dataset-routes-origin-and-publication-filters",
           "requiredEvidenceScope": "access-boundary-observed",
-          "sourceDigest": "5b599fc0673cf14917716bc124e1f6b1b010ef2113a13d46e083573f0a43f2fa",
+          "sourceDigest": "371991795c02956acfc3ef218b0d556e23010447be5e74f890251903deeac36b",
           "focusedTestDigest": "39c9568b417ef351da3bba6b694cdc5532ea9d1386dd4e6be8dca7229847d1f1",
           "plannedBrowserAssertionCount": 1,
           "plannedBrowserAssertionDigest": "85848739f1bdf9eeffe4e561709db728aee08386714805415bceca124a9bbe98",
@@ -1420,7 +1420,7 @@
           "unownedVisibleLiteralCount": 0
         }
       ],
-      "rowEvidenceDigest": "206eeb736d88b161be1b5bb25b2a17d5743c7b1e9dc3f505c59b3586088ce777",
+      "rowEvidenceDigest": "86ef01916973cd5d82c92ac5f9ad7f78fb7d50b0c322c4d508ef2438a9f73f3f",
       "blockedDerivedStateCount": 0,
       "unownedVisibleLiteralCount": 0
     }
@@ -1444,5 +1444,5 @@
     "docs/plans/i18n-de-DE/style-guide.md": "b139bb9cc48a23f9b9f69efc44611daba4684c3495aa5cf4fb0ac57e3ab3994f"
   },
   "blockedContext": [],
-  "contextDigest": "642bbf29800030064fc277eff1a8b9608c81ef77826739e62464c87e15e038dd"
+  "contextDigest": "72d6edfa18cdc2863a5e722027825be62e856006fc850f4d7bc27a5f600fa0bb"
 }

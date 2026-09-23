@@ -67,7 +67,7 @@ describe('SampleLibraryControls', () => {
     const onFiltersChange = jest.fn();
     const actionRef = { current: { reload, setPageInfo } } as any;
 
-    const view = render(
+    render(
       <SampleLibraryControls actionRef={actionRef} processes onFiltersChange={onFiltersChange} />,
     );
 
@@ -87,11 +87,6 @@ describe('SampleLibraryControls', () => {
     expect(setPageInfo).toHaveBeenCalledWith({ current: 1 });
     expect(reload).toHaveBeenCalledTimes(1);
 
-    mockLocation = { pathname: '/sample-library/processes', search: '?origin=literature' };
-    window.history.replaceState({}, '', `${mockLocation.pathname}${mockLocation.search}`);
-    view.rerender(
-      <SampleLibraryControls actionRef={actionRef} processes onFiltersChange={onFiltersChange} />,
-    );
     expect(screen.getByTestId('origin-tooltip')).toHaveAttribute('data-title', 'Literature data');
     expect(screen.getByRole('button', { name: /literature data/i })).toHaveTextContent(
       'literature-icon',
@@ -99,11 +94,6 @@ describe('SampleLibraryControls', () => {
     fireEvent.click(screen.getByRole('button', { name: /literature data/i }));
     expect(mockReplace).toHaveBeenLastCalledWith('/sample-library/processes?origin=enterprise');
 
-    mockLocation = { pathname: '/sample-library/processes', search: '?origin=enterprise' };
-    window.history.replaceState({}, '', `${mockLocation.pathname}${mockLocation.search}`);
-    view.rerender(
-      <SampleLibraryControls actionRef={actionRef} processes onFiltersChange={onFiltersChange} />,
-    );
     expect(screen.getByTestId('origin-tooltip')).toHaveAttribute('data-title', 'Enterprise data');
     expect(screen.getByRole('button', { name: /enterprise data/i })).toHaveTextContent(
       'enterprise-icon',
@@ -113,6 +103,19 @@ describe('SampleLibraryControls', () => {
     expect(onFiltersChange).toHaveBeenCalledTimes(3);
     expect(setPageInfo).toHaveBeenCalledTimes(3);
     expect(reload).toHaveBeenCalledTimes(3);
+  });
+
+  it('syncs the displayed origin when the URL changes externally', () => {
+    const view = render(<SampleLibraryControls actionRef={{ current: undefined }} processes />);
+
+    mockLocation = { pathname: '/sample-library/processes', search: '?origin=enterprise' };
+    window.history.replaceState({}, '', `${mockLocation.pathname}${mockLocation.search}`);
+    view.rerender(<SampleLibraryControls actionRef={{ current: undefined }} processes />);
+
+    expect(screen.getByTestId('origin-tooltip')).toHaveAttribute('data-title', 'Enterprise data');
+    expect(screen.getByRole('button', { name: /enterprise data/i })).toHaveTextContent(
+      'enterprise-icon',
+    );
   });
 
   it('removes all-valued filters while preserving unrelated query parameters', () => {

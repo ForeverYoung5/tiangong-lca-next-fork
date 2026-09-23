@@ -3,7 +3,7 @@
   "locale": "en-US",
   "validationClosure": {
     "baselineSha": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
-    "auditedInputDigest": "739b8852c4c3458783e46c5e060f368cfb655269c6d81bd6a3d73eab29b90ac0",
+    "auditedInputDigest": "a942b1b8838cef8d48b00f203566ba420d11f5da3243b8efb6469c99856e9f7a",
     "validatedMessageCount": 3427,
     "validatedModules": [
       "$entry",
@@ -42,9 +42,9 @@
     "highRiskMessageCount": 1553,
     "highRiskMessageDigest": "66dd7852fa445c446eddf9e34d87c1892266d53e5892fedcc5bfb6f98b1bf7de",
     "catalogDigest": "54b1b0bdcf1ec2b8f04e56bfd2fb2b22533d4a3bd04ac514eccdcc0ec4848fcd",
-    "dossierDigest": "d7c081de92bdda377227025260b2bb9c565c14a3442dfa64363597027ede0540",
+    "dossierDigest": "2f7242eb8fa1ee2f94994d0f4fef4ded08a978993bfb0245b2fe5a9c4a96e12f",
     "typedContentDossierDigest": "93ff72bef2323e7a766f111c3945669da9e0f3fc6c961dfebe977787d5d8b158",
-    "routeEvidenceDigest": "206eeb736d88b161be1b5bb25b2a17d5743c7b1e9dc3f505c59b3586088ce777",
+    "routeEvidenceDigest": "86ef01916973cd5d82c92ac5f9ad7f78fb7d50b0c322c4d508ef2438a9f73f3f",
     "scope": "deterministic structure only; semantic translation and rendered route review are separate production blockers owned by #635"
   },
   "validationLanes": [
@@ -98,7 +98,7 @@
         "messageDigest": "dce3ee7db6a1a35a89d162db366e477afff35f65014e7adcd8910b5d51f084d6",
         "highRiskMessageCount": 1553,
         "highRiskMessageDigest": "66dd7852fa445c446eddf9e34d87c1892266d53e5892fedcc5bfb6f98b1bf7de",
-        "dossierDigest": "d7c081de92bdda377227025260b2bb9c565c14a3442dfa64363597027ede0540",
+        "dossierDigest": "2f7242eb8fa1ee2f94994d0f4fef4ded08a978993bfb0245b2fe5a9c4a96e12f",
         "checks": {
           "nonEmptyTargets": true,
           "icuArgumentSignatureParity": true,
@@ -113,5 +113,5 @@
     }
   ],
   "blockedItems": [],
-  "validationDigest": "451573abe791bc8ffa96b6b020e33badf603af146d5fee1a3dc6e9cd664f0b77"
+  "validationDigest": "dd1db65c750211ad574102a42fcb552165f191aa2ca2f19d59cc2cc5dcc0d354"
 }
