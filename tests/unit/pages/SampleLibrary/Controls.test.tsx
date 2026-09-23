@@ -23,15 +23,15 @@ jest.mock('@ant-design/icons', () => ({
 
 jest.mock('antd', () => ({
   __esModule: true,
-  Segmented: ({ options, onChange, value }: any) => (
-    <div data-testid='origin' data-value={value}>
-      {options.map((option: any) => (
-        <button key={option.value} type='button' onClick={() => onChange(option.value)}>
-          {option.icon}
-          {option.label}
-        </button>
-      ))}
-    </div>
+  Button: ({ 'aria-label': ariaLabel, icon, onClick }: any) => (
+    <button type='button' aria-label={ariaLabel} onClick={onClick}>
+      {icon}
+    </button>
+  ),
+  Tooltip: ({ children, title }: any) => (
+    <span data-testid='origin-tooltip' data-title={title}>
+      {children}
+    </span>
   ),
   Select: ({ options, onChange, value }: any) => (
     <select
@@ -61,24 +61,52 @@ describe('SampleLibraryControls', () => {
     expect(container).toBeEmptyDOMElement();
   });
 
-  it('updates the origin filter and resets the shared table', () => {
+  it('cycles the icon-only origin filter and resets the shared table', () => {
     const reload = jest.fn();
     const setPageInfo = jest.fn();
     const onFiltersChange = jest.fn();
     const actionRef = { current: { reload, setPageInfo } } as any;
 
-    render(
+    const view = render(
       <SampleLibraryControls actionRef={actionRef} processes onFiltersChange={onFiltersChange} />,
     );
 
-    expect(screen.getByTestId('origin')).toHaveAttribute('data-value', 'all');
+    expect(screen.getByTestId('origin-tooltip')).toHaveAttribute('data-title', 'All data');
+    expect(screen.getByRole('button', { name: /all data/i })).toHaveTextContent('all-icon');
     expect(screen.getByLabelText('publication-status')).toHaveValue('all');
-    fireEvent.click(screen.getByRole('button', { name: /literature data/i }));
+    fireEvent.click(screen.getByRole('button', { name: /all data/i }));
 
     expect(mockReplace).toHaveBeenCalledWith('/sample-library/processes?origin=literature');
     expect(onFiltersChange).toHaveBeenCalledTimes(1);
     expect(setPageInfo).toHaveBeenCalledWith({ current: 1 });
     expect(reload).toHaveBeenCalledTimes(1);
+
+    mockLocation = { pathname: '/sample-library/processes', search: '?origin=literature' };
+    window.history.replaceState({}, '', `${mockLocation.pathname}${mockLocation.search}`);
+    view.rerender(
+      <SampleLibraryControls actionRef={actionRef} processes onFiltersChange={onFiltersChange} />,
+    );
+    expect(screen.getByTestId('origin-tooltip')).toHaveAttribute('data-title', 'Literature data');
+    expect(screen.getByRole('button', { name: /literature data/i })).toHaveTextContent(
+      'literature-icon',
+    );
+    fireEvent.click(screen.getByRole('button', { name: /literature data/i }));
+    expect(mockReplace).toHaveBeenLastCalledWith('/sample-library/processes?origin=enterprise');
+
+    mockLocation = { pathname: '/sample-library/processes', search: '?origin=enterprise' };
+    window.history.replaceState({}, '', `${mockLocation.pathname}${mockLocation.search}`);
+    view.rerender(
+      <SampleLibraryControls actionRef={actionRef} processes onFiltersChange={onFiltersChange} />,
+    );
+    expect(screen.getByTestId('origin-tooltip')).toHaveAttribute('data-title', 'Enterprise data');
+    expect(screen.getByRole('button', { name: /enterprise data/i })).toHaveTextContent(
+      'enterprise-icon',
+    );
+    fireEvent.click(screen.getByRole('button', { name: /enterprise data/i }));
+    expect(mockReplace).toHaveBeenLastCalledWith('/sample-library/processes');
+    expect(onFiltersChange).toHaveBeenCalledTimes(3);
+    expect(setPageInfo).toHaveBeenCalledTimes(3);
+    expect(reload).toHaveBeenCalledTimes(3);
   });
 
   it('removes all-valued filters while preserving unrelated query parameters', () => {
@@ -91,7 +119,7 @@ describe('SampleLibraryControls', () => {
 
     render(<SampleLibraryControls actionRef={{ current: { reload } } as any} processes />);
 
-    fireEvent.click(screen.getByRole('button', { name: /all data/i }));
+    fireEvent.click(screen.getByRole('button', { name: /enterprise data/i }));
     expect(mockReplace).toHaveBeenLastCalledWith(
       '/sample-library/processes?publicationStatus=published&keyword=steel',
     );
@@ -111,7 +139,7 @@ describe('SampleLibraryControls', () => {
 
     expect(screen.queryByLabelText('publication-status')).not.toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: /all data/i }));
-    expect(mockReplace).toHaveBeenCalledWith('/sample-library/flows');
+    expect(mockReplace).toHaveBeenCalledWith('/sample-library/flows?origin=literature');
   });
 
   it('sets the unpublished filter', () => {

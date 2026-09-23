@@ -1,7 +1,7 @@
 import type { ActionType } from '@ant-design/pro-components';
 import { AppstoreOutlined, BankOutlined, BookOutlined } from '@ant-design/icons';
-import { Segmented, Select } from 'antd';
-import type { RefObject } from 'react';
+import { Button, Select, Tooltip } from 'antd';
+import type { ReactNode, RefObject } from 'react';
 import { useMemo } from 'react';
 import { history, useIntl, useLocation } from 'umi';
 import {
@@ -38,39 +38,47 @@ export default function SampleLibraryControls({
     actionRef.current?.reload();
   };
 
+  const originControls: Record<
+    SampleLibraryOrigin,
+    { icon: ReactNode; label: string; next: SampleLibraryOrigin }
+  > = {
+    all: {
+      icon: <AppstoreOutlined />,
+      label: intl.formatMessage({
+        id: 'pages.sampleLibrary.origin.all',
+        defaultMessage: 'All data',
+      }),
+      next: 'literature',
+    },
+    literature: {
+      icon: <BookOutlined />,
+      label: intl.formatMessage({
+        id: 'pages.sampleLibrary.origin.literature',
+        defaultMessage: 'Literature data',
+      }),
+      next: 'enterprise',
+    },
+    enterprise: {
+      icon: <BankOutlined />,
+      label: intl.formatMessage({
+        id: 'pages.sampleLibrary.origin.enterprise',
+        defaultMessage: 'Enterprise data',
+      }),
+      next: 'all',
+    },
+  };
+  const originControl = originControls[filters.origin];
+
   return (
     <>
-      <Segmented<SampleLibraryOrigin>
-        key='sample-library-origin'
-        value={filters.origin}
-        options={[
-          {
-            value: 'all',
-            icon: <AppstoreOutlined />,
-            label: intl.formatMessage({
-              id: 'pages.sampleLibrary.origin.all',
-              defaultMessage: 'All data',
-            }),
-          },
-          {
-            value: 'literature',
-            icon: <BookOutlined />,
-            label: intl.formatMessage({
-              id: 'pages.sampleLibrary.origin.literature',
-              defaultMessage: 'Literature data',
-            }),
-          },
-          {
-            value: 'enterprise',
-            icon: <BankOutlined />,
-            label: intl.formatMessage({
-              id: 'pages.sampleLibrary.origin.enterprise',
-              defaultMessage: 'Enterprise data',
-            }),
-          },
-        ]}
-        onChange={(origin) => update({ origin })}
-      />
+      <Tooltip key='sample-library-origin' title={originControl.label}>
+        <Button
+          type='text'
+          aria-label={originControl.label}
+          icon={originControl.icon}
+          onClick={() => update({ origin: originControl.next })}
+        />
+      </Tooltip>
       {processes ? (
         <Select<SampleLibraryPublicationStatus>
           key='sample-library-publication-status'

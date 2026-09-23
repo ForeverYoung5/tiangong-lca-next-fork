@@ -43,8 +43,8 @@ checkPaths:
   - scripts/typescript-native-parser.*
   - scripts/i18n/locale-delivery.mjs
   - .github/workflows/**
-lastReviewedAt: 2026-09-22
-lastReviewedCommit: 97efc371c84f9cb8d73a87646f64697d671f2938
+lastReviewedAt: 2026-09-23
+lastReviewedCommit: d2ffa619010ce7aa099e32d6359d9342fabf53b3
 lastReviewedNote: 'Reviewed for Platform #1118: focused Sample Library child-route, model, drawer, service, and locale-contract proofs complement the unchanged lint, typecheck, build, and pre-push gate.'
 related:
   - ../AGENTS.md
