@@ -1,5 +1,6 @@
 import SampleLibraryControls from '@/pages/SampleLibrary/Controls';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { getSampleLibraryRpcFilters } from '@/services/sampleLibrary/filters';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 
 const mockReplace = jest.fn();
 let mockLocation = { pathname: '/sample-library/processes', search: '' };
@@ -51,6 +52,7 @@ jest.mock('antd', () => ({
 describe('SampleLibraryControls', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    mockReplace.mockReset();
     mockLocation = { pathname: '/sample-library/processes', search: '' };
     window.history.replaceState({}, '', '/sample-library/processes');
   });
@@ -61,7 +63,7 @@ describe('SampleLibraryControls', () => {
     expect(container).toBeEmptyDOMElement();
   });
 
-  it('cycles the icon-only origin filter and resets the shared table', () => {
+  it('cycles the icon-only origin filter and resets the shared table', async () => {
     const reload = jest.fn();
     const setPageInfo = jest.fn();
     const onFiltersChange = jest.fn();
@@ -84,7 +86,7 @@ describe('SampleLibraryControls', () => {
 
     expect(mockReplace).toHaveBeenCalledWith('/sample-library/processes?origin=literature');
     expect(onFiltersChange).toHaveBeenCalledTimes(1);
-    expect(setPageInfo).toHaveBeenCalledWith({ current: 1 });
+    await waitFor(() => expect(setPageInfo).toHaveBeenCalledWith({ current: 1 }));
     expect(reload).toHaveBeenCalledTimes(1);
 
     expect(screen.getByTestId('origin-tooltip')).toHaveAttribute('data-title', 'Literature data');
@@ -93,6 +95,7 @@ describe('SampleLibraryControls', () => {
     );
     fireEvent.click(screen.getByRole('button', { name: /literature data/i }));
     expect(mockReplace).toHaveBeenLastCalledWith('/sample-library/processes?origin=enterprise');
+    await waitFor(() => expect(reload).toHaveBeenCalledTimes(2));
 
     expect(screen.getByTestId('origin-tooltip')).toHaveAttribute('data-title', 'Enterprise data');
     expect(screen.getByRole('button', { name: /enterprise data/i })).toHaveTextContent(
@@ -101,8 +104,26 @@ describe('SampleLibraryControls', () => {
     fireEvent.click(screen.getByRole('button', { name: /enterprise data/i }));
     expect(mockReplace).toHaveBeenLastCalledWith('/sample-library/processes');
     expect(onFiltersChange).toHaveBeenCalledTimes(3);
-    expect(setPageInfo).toHaveBeenCalledTimes(3);
+    await waitFor(() => expect(setPageInfo).toHaveBeenCalledTimes(3));
     expect(reload).toHaveBeenCalledTimes(3);
+  });
+
+  it('reloads only after the next origin is available to request builders', async () => {
+    const observedOrigins: string[] = [];
+    mockReplace.mockImplementation((url: string) => {
+      queueMicrotask(() => window.history.replaceState({}, '', url));
+    });
+    const reload = jest.fn(() => {
+      observedOrigins.push(
+        getSampleLibraryRpcFilters('sl').sample_origin_filter ?? 'missing-origin-filter',
+      );
+    });
+
+    render(<SampleLibraryControls actionRef={{ current: { reload } } as any} processes />);
+    fireEvent.click(screen.getByRole('button', { name: /all data/i }));
+
+    await waitFor(() => expect(reload).toHaveBeenCalledTimes(1));
+    expect(observedOrigins).toEqual(['literature']);
   });
 
   it('syncs the displayed origin when the URL changes externally', () => {
@@ -118,7 +139,7 @@ describe('SampleLibraryControls', () => {
     );
   });
 
-  it('removes all-valued filters while preserving unrelated query parameters', () => {
+  it('removes all-valued filters while preserving unrelated query parameters', async () => {
     mockLocation = {
       pathname: '/sample-library/processes',
       search: '?origin=enterprise&publicationStatus=published&keyword=steel',
@@ -137,7 +158,7 @@ describe('SampleLibraryControls', () => {
     expect(mockReplace).toHaveBeenLastCalledWith(
       '/sample-library/processes?origin=enterprise&keyword=steel',
     );
-    expect(reload).toHaveBeenCalledTimes(2);
+    await waitFor(() => expect(reload).toHaveBeenCalledTimes(2));
   });
 
   it('keeps non-process pages origin-only and supports an empty query string', () => {

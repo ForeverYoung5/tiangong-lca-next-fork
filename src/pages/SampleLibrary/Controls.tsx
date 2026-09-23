@@ -39,8 +39,10 @@ export default function SampleLibraryControls({
     else params.set('publicationStatus', value.publicationStatus);
     history.replace(`${location.pathname}${params.size ? `?${params}` : ''}`);
     onFiltersChange?.();
-    actionRef.current?.setPageInfo?.({ current: 1 });
-    actionRef.current?.reload();
+    queueMicrotask(() => {
+      actionRef.current?.setPageInfo?.({ current: 1 });
+      actionRef.current?.reload();
+    });
   };
 
   const originControls: Record<
