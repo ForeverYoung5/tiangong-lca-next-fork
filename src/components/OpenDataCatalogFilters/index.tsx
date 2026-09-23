@@ -1,29 +1,16 @@
+import { AppstoreOutlined, BankOutlined, FileTextOutlined } from '@ant-design/icons';
+import ToolBarButton from '@/components/ToolBarButton';
 import {
   DEFAULT_OPEN_DATA_FILTERS,
   type OpenDataCatalogFilters as OpenDataCatalogFilterValue,
   type OpenDataPublicationFilter,
   type OpenDataSourceFilter,
 } from '@/services/openDataCatalog/types';
-import { Space, Tooltip } from 'antd';
+import { Select, Space } from 'antd';
 import type { FC, ReactNode } from 'react';
 import { useIntl } from 'umi';
 
-const CatalogIcon: FC<{ kind: OpenDataSourceFilter }> = ({ kind }) => (
-  <svg aria-hidden='true' focusable='false' height='1em' viewBox='0 0 16 16' width='1em'>
-    {kind === 'all' && (
-      <path d='M1 1h6v6H1V1Zm8 0h6v6H9V1ZM1 9h6v6H1V9Zm8 0h6v6H9V9Z' fill='currentColor' />
-    )}
-    {kind === 'literature' && (
-      <path
-        d='M3 1h7l3 3v11H3V1Zm7 1.5V5h2.5L10 2.5ZM5 8h6V7H5v1Zm0 3h6v-1H5v1Z'
-        fill='currentColor'
-      />
-    )}
-    {kind === 'enterprise' && (
-      <path d='M2 15V5l6-4 6 4v10h-3v-4H5v4H2Zm3-8h2V5H5v2Zm4 0h2V5H9v2Z' fill='currentColor' />
-    )}
-  </svg>
-);
+import './index.less';
 
 type Props = {
   includePublication?: boolean;
@@ -48,15 +35,7 @@ const OpenDataCatalogFilters: FC<Props> = ({
         id: 'pages.openData.source.all',
         defaultMessage: 'All data',
       }),
-      icon: <CatalogIcon kind='all' />,
-    },
-    {
-      value: 'literature',
-      label: intl.formatMessage({
-        id: 'pages.openData.source.literature',
-        defaultMessage: 'Literature data',
-      }),
-      icon: <CatalogIcon kind='literature' />,
+      icon: <AppstoreOutlined />,
     },
     {
       value: 'enterprise',
@@ -64,7 +43,15 @@ const OpenDataCatalogFilters: FC<Props> = ({
         id: 'pages.openData.source.enterprise',
         defaultMessage: 'Enterprise data',
       }),
-      icon: <CatalogIcon kind='enterprise' />,
+      icon: <BankOutlined />,
+    },
+    {
+      value: 'literature',
+      label: intl.formatMessage({
+        id: 'pages.openData.source.literature',
+        defaultMessage: 'Literature data',
+      }),
+      icon: <FileTextOutlined />,
     },
   ];
   const publicationOptions: Array<{ label: string; value: OpenDataPublicationFilter }> = [
@@ -90,62 +77,35 @@ const OpenDataCatalogFilters: FC<Props> = ({
       }),
     },
   ];
+  const sourceOptionIndex = sourceOptions.findIndex(
+    (option) => option.value === value.sourceFilter,
+  );
+  const currentSourceOption = sourceOptions[sourceOptionIndex];
+  const nextSourceOption =
+    sourceOptions[(Math.max(sourceOptionIndex, 0) + 1) % sourceOptions.length];
 
   return (
     <Space size={8}>
-      <span
-        role='group'
-        aria-label={intl.formatMessage({
-          id: 'pages.openData.source.filter',
-          defaultMessage: 'Data source filter',
-        })}
-      >
-        {sourceOptions.map((option) => (
-          <Tooltip key={option.value} title={option.label}>
-            <button
-              type='button'
-              aria-label={option.label}
-              aria-pressed={value.sourceFilter === option.value}
-              style={{
-                alignItems: 'center',
-                background: value.sourceFilter === option.value ? '#1677ff' : 'transparent',
-                border: '1px solid #d9d9d9',
-                color: value.sourceFilter === option.value ? '#fff' : 'inherit',
-                cursor: 'pointer',
-                display: 'inline-flex',
-                height: 32,
-                justifyContent: 'center',
-                width: 32,
-              }}
-              onClick={() => onChange({ ...value, sourceFilter: option.value })}
-            >
-              {option.icon}
-            </button>
-          </Tooltip>
-        ))}
-      </span>
       {includePublication && (
-        <select
+        <Select<OpenDataPublicationFilter>
           aria-label={intl.formatMessage({
             id: 'pages.openData.publication.filter',
             defaultMessage: 'Publication filter',
           })}
           value={value.publicationFilter ?? 'all'}
+          options={publicationOptions}
           style={{ minWidth: 150 }}
-          onChange={(event) =>
-            onChange({
-              ...value,
-              publicationFilter: event.target.value as OpenDataPublicationFilter,
-            })
-          }
-        >
-          {publicationOptions.map((option) => (
-            <option key={option.value} value={option.value}>
-              {option.label}
-            </option>
-          ))}
-        </select>
+          onChange={(publicationFilter) => onChange({ ...value, publicationFilter })}
+        />
       )}
+      <span className='tg-open-data-catalog-source-filter'>
+        <ToolBarButton
+          placement='option'
+          icon={currentSourceOption.icon}
+          tooltip={currentSourceOption.label}
+          onClick={() => onChange({ ...value, sourceFilter: nextSourceOption.value })}
+        />
+      </span>
     </Space>
   );
 };

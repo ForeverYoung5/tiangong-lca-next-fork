@@ -3,7 +3,7 @@
   "locale": "en-US",
   "validationClosure": {
     "baselineSha": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
-    "auditedInputDigest": "a606f551bd21897b2175ea610964ccc22b6ea262200b00972e50921e38e92a2d",
+    "auditedInputDigest": "f214ca09c758b1879a3102dde103b4964b466d725d705f034d32c4417d115ec0",
     "validatedMessageCount": 3402,
     "validatedModules": [
       "$entry",
@@ -42,9 +42,9 @@
     "highRiskMessageCount": 1550,
     "highRiskMessageDigest": "de8ec65bf1b7cd73133cf055a764ecaba5c06317cf8177bb4e146bfe02ca282d",
     "catalogDigest": "ef38c90f9fa5b260e4dd9cf309bb4bdada772e4f6926df09964d10e659c03170",
-    "dossierDigest": "9dcbbd1c25facff43e43f112c3a3f7c8059af32ce40697d92e6c63478c2ba3de",
+    "dossierDigest": "61f578fac7ccc056087ce4c5302fa1f35a2f9da409f0ee55784b0283d740b57e",
     "typedContentDossierDigest": "93ff72bef2323e7a766f111c3945669da9e0f3fc6c961dfebe977787d5d8b158",
-    "routeEvidenceDigest": "c2cd7592590ea879bf1e5b4993b2c04bf9f21459fc0d27fca8e4c1ecd9d16067",
+    "routeEvidenceDigest": "58ed9a30dbe06025f3c83ffbc21e8c5f70a18556c97f9432f53a174a3b609f3e",
     "scope": "deterministic structure only; semantic translation and rendered route review are separate production blockers owned by #635"
   },
   "validationLanes": [
@@ -98,7 +98,7 @@
         "messageDigest": "89fa9fb508b8cab4b692112c6f7e78286ef7c40e8c1f5edde1f3973bb45b0909",
         "highRiskMessageCount": 1550,
         "highRiskMessageDigest": "de8ec65bf1b7cd73133cf055a764ecaba5c06317cf8177bb4e146bfe02ca282d",
-        "dossierDigest": "9dcbbd1c25facff43e43f112c3a3f7c8059af32ce40697d92e6c63478c2ba3de",
+        "dossierDigest": "61f578fac7ccc056087ce4c5302fa1f35a2f9da409f0ee55784b0283d740b57e",
         "checks": {
           "nonEmptyTargets": true,
           "icuArgumentSignatureParity": true,
@@ -113,5 +113,5 @@
     }
   ],
   "blockedItems": [],
-  "validationDigest": "2005e1048eda9f584a56b0b1b5a7f18b51d3a1d3c4fa4441c269097330a44c67"
+  "validationDigest": "5298de9be48ff2b8300026fb9564f0649f37f45f077762a4fed4eddec1525bbe"
 }

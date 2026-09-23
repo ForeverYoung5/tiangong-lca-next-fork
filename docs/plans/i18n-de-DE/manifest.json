@@ -3,7 +3,7 @@
   "source": {
     "baseRef": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
     "baseCommit": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
-    "auditedInputDigest": "a606f551bd21897b2175ea610964ccc22b6ea262200b00972e50921e38e92a2d",
+    "auditedInputDigest": "f214ca09c758b1879a3102dde103b4964b466d725d705f034d32c4417d115ec0",
     "auditedInputDigestAlgorithm": "sha256(path\\0content\\0)",
     "repository": "tiangong-lca/platform"
   },
@@ -71,11 +71,11 @@
     "localeLeafModuleCounts": { "en-US": 31, "zh-CN": 31, "de-DE": 31, "fr-FR": 31 },
     "localeUniqueKeyCounts": { "en-US": 3402, "zh-CN": 3402, "de-DE": 3402, "fr-FR": 3402 },
     "canonicalCandidateKeyCount": 3402,
-    "activeStaticKeyCount": 2253,
+    "activeStaticKeyCount": 2252,
     "activeDynamicKeyCount": 321,
-    "reservedKeyCount": 828,
+    "reservedKeyCount": 829,
     "productionSourceFileCount": 469,
-    "literalReferenceCount": 4185,
+    "literalReferenceCount": 4184,
     "dynamicCallsiteCount": 33,
     "dynamicCallsiteSummaryCount": 33,
     "registeredDynamicCallsiteCount": 33,
@@ -146675,7 +146675,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/OpenDataCatalogFilters/index.tsx",
-          "line": 73,
+          "line": 60,
           "column": 14,
           "symbol": "publicationOptions",
           "defaultMessage": "All publication states",
@@ -146690,7 +146690,7 @@
           "locations": [
             {
               "path": "src/components/OpenDataCatalogFilters/index.tsx",
-              "line": 73,
+              "line": 60,
               "column": 14,
               "kind": "formatMessage"
             }
@@ -146841,7 +146841,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/OpenDataCatalogFilters/index.tsx",
-          "line": 129,
+          "line": 91,
           "column": 23,
           "symbol": "OpenDataCatalogFilters",
           "defaultMessage": "Publication filter",
@@ -146856,7 +146856,7 @@
           "locations": [
             {
               "path": "src/components/OpenDataCatalogFilters/index.tsx",
-              "line": 129,
+              "line": 91,
               "column": 23,
               "kind": "formatMessage"
             }
@@ -146924,7 +146924,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Processes/index.tsx",
-          "line": 839,
+          "line": 833,
           "column": 24,
           "symbol": "TableList",
           "defaultMessage": "Publish selected ({count})",
@@ -146939,7 +146939,7 @@
           "locations": [
             {
               "path": "src/pages/Processes/index.tsx",
-              "line": 839,
+              "line": 833,
               "column": 24,
               "kind": "formatMessage"
             }
@@ -147007,7 +147007,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/OpenDataCatalogFilters/index.tsx",
-          "line": 80,
+          "line": 67,
           "column": 14,
           "symbol": "publicationOptions",
           "defaultMessage": "Published",
@@ -147031,7 +147031,7 @@
           "locations": [
             {
               "path": "src/components/OpenDataCatalogFilters/index.tsx",
-              "line": 80,
+              "line": 67,
               "column": 14,
               "kind": "formatMessage"
             },
@@ -147271,7 +147271,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/OpenDataCatalogFilters/index.tsx",
-          "line": 87,
+          "line": 74,
           "column": 14,
           "symbol": "publicationOptions",
           "defaultMessage": "Unpublished",
@@ -147295,7 +147295,7 @@
           "locations": [
             {
               "path": "src/components/OpenDataCatalogFilters/index.tsx",
-              "line": 87,
+              "line": 74,
               "column": 14,
               "kind": "formatMessage"
             },
@@ -147369,7 +147369,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/OpenDataCatalogFilters/index.tsx",
-          "line": 47,
+          "line": 34,
           "column": 14,
           "symbol": "sourceOptions",
           "defaultMessage": "All data",
@@ -147384,7 +147384,7 @@
           "locations": [
             {
               "path": "src/components/OpenDataCatalogFilters/index.tsx",
-              "line": 47,
+              "line": 34,
               "column": 14,
               "kind": "formatMessage"
             }
@@ -147452,7 +147452,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/OpenDataCatalogFilters/index.tsx",
-          "line": 63,
+          "line": 42,
           "column": 14,
           "symbol": "sourceOptions",
           "defaultMessage": "Enterprise data",
@@ -147467,7 +147467,7 @@
           "locations": [
             {
               "path": "src/components/OpenDataCatalogFilters/index.tsx",
-              "line": 63,
+              "line": 42,
               "column": 14,
               "kind": "formatMessage"
             }
@@ -147477,7 +147477,7 @@
     },
     {
       "id": "pages.openData.source.filter",
-      "category": "active-static",
+      "category": "reserved",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["pages_general"],
@@ -147531,32 +147531,8 @@
           }
         }
       },
-      "references": [
-        {
-          "kind": "formatMessage",
-          "path": "src/components/OpenDataCatalogFilters/index.tsx",
-          "line": 98,
-          "column": 21,
-          "symbol": "OpenDataCatalogFilters",
-          "defaultMessage": "Data source filter",
-          "defaultMessageExpression": null
-        }
-      ],
-      "defaultMessages": [
-        {
-          "value": "Data source filter",
-          "argumentSignature": [],
-          "placeholders": [],
-          "locations": [
-            {
-              "path": "src/components/OpenDataCatalogFilters/index.tsx",
-              "line": 98,
-              "column": 21,
-              "kind": "formatMessage"
-            }
-          ]
-        }
-      ]
+      "references": [],
+      "defaultMessages": []
     },
     {
       "id": "pages.openData.source.literature",
@@ -147618,7 +147594,7 @@
         {
           "kind": "formatMessage",
           "path": "src/components/OpenDataCatalogFilters/index.tsx",
-          "line": 55,
+          "line": 50,
           "column": 14,
           "symbol": "sourceOptions",
           "defaultMessage": "Literature data",
@@ -147633,7 +147609,7 @@
           "locations": [
             {
               "path": "src/components/OpenDataCatalogFilters/index.tsx",
-              "line": 55,
+              "line": 50,
               "column": 14,
               "kind": "formatMessage"
             }

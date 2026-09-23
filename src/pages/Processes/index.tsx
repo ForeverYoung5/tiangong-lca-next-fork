@@ -821,12 +821,6 @@ const TableList: FC = () => {
               <span key='process-type-filter'>
                 {typeOfDataSetFilter(isMobileDataList ? 120 : 160)}
               </span>,
-              <OpenDataCatalogFilters
-                key='open-data-filters'
-                includePublication
-                value={openDataFilters}
-                onChange={setOpenDataFilters}
-              />,
               ...(canPublishOpenData
                 ? [
                     <Button
@@ -846,6 +840,12 @@ const TableList: FC = () => {
                     </Button>,
                   ]
                 : []),
+              <OpenDataCatalogFilters
+                key='open-data-filters'
+                includePublication
+                value={openDataFilters}
+                onChange={setOpenDataFilters}
+              />,
             ];
           }
           return [<span key={0}>{typeOfDataSetFilter(isMobileDataList ? 120 : 160)}</span>];

@@ -309,9 +309,13 @@ jest.mock('antd', () => {
     </div>
   );
   const Input = { Search };
-  const Select = ({ onChange }: any) => (
-    <button type='button' onClick={() => onChange?.('gate to gate')}>
-      dataset-filter
+  const Select = ({ 'aria-label': ariaLabel, onChange }: any) => (
+    <button
+      type='button'
+      aria-label={ariaLabel ?? 'dataset-filter'}
+      onClick={() => onChange?.(ariaLabel ? 'published' : 'gate to gate')}
+    >
+      {ariaLabel ?? 'dataset-filter'}
     </button>
   );
   const message = {
