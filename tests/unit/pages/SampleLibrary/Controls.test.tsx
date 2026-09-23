@@ -54,7 +54,7 @@ describe('SampleLibraryControls', () => {
     jest.clearAllMocks();
     mockReplace.mockReset();
     mockLocation = { pathname: '/sample-library/processes', search: '' };
-    window.history.replaceState({}, '', '/sample-library/processes');
+    window.history.replaceState({}, '', '/#/sample-library/processes');
   });
 
   it('does not render outside the sample library', () => {
@@ -111,7 +111,7 @@ describe('SampleLibraryControls', () => {
   it('reloads only after the next origin is available to request builders', async () => {
     const observedOrigins: string[] = [];
     mockReplace.mockImplementation((url: string) => {
-      queueMicrotask(() => window.history.replaceState({}, '', url));
+      queueMicrotask(() => window.history.replaceState({}, '', `/#${url}`));
     });
     const reload = jest.fn(() => {
       observedOrigins.push(

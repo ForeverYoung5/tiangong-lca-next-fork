@@ -12,11 +12,16 @@ const normalizeOrigin = (value: string | null): SampleLibraryOrigin =>
 const normalizePublicationStatus = (value: string | null): SampleLibraryPublicationStatus =>
   value === 'published' || value === 'unpublished' ? value : 'all';
 
-export function getSampleLibraryFilters(): SampleLibraryFilters {
-  if (typeof window === 'undefined') {
-    return { origin: 'all', publicationStatus: 'all' };
-  }
-  const params = new URLSearchParams(window.location.search);
+const getCurrentRouteSearch = () => {
+  if (typeof window === 'undefined') return '';
+  const hashSearchIndex = window.location.hash.indexOf('?');
+  return hashSearchIndex >= 0
+    ? window.location.hash.slice(hashSearchIndex)
+    : window.location.search;
+};
+
+export function getSampleLibraryFilters(search = getCurrentRouteSearch()): SampleLibraryFilters {
+  const params = new URLSearchParams(search);
   return {
     origin: normalizeOrigin(params.get('origin')),
     publicationStatus: normalizePublicationStatus(params.get('publicationStatus')),

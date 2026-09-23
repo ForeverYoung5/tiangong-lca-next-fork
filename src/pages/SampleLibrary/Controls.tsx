@@ -21,7 +21,7 @@ export default function SampleLibraryControls({
 }) {
   const intl = useIntl();
   const location = useLocation();
-  const filters = useMemo(() => getSampleLibraryFilters(), [location.search]);
+  const filters = useMemo(() => getSampleLibraryFilters(location.search), [location.search]);
   const [displayedOrigin, setDisplayedOrigin] = useState<SampleLibraryOrigin>(filters.origin);
 
   useEffect(() => {

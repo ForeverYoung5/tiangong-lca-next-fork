@@ -188,6 +188,7 @@ const sampleId = '12345678-1234-1234-1234-123456789012';
 const sampleVersion = '01.00.000';
 
 beforeEach(() => {
+  window.history.replaceState({}, '', '/#/');
   mockFrom.mockReset();
   mockAuthGetSession.mockReset();
   mockFunctionsInvoke.mockReset();
@@ -819,6 +820,36 @@ describe('getProcessDetail', () => {
 });
 
 describe('getProcessTableAll', () => {
+  it('passes hash-route sample-library filters to the latest-version RPC', async () => {
+    window.history.replaceState(
+      {},
+      '',
+      '/#/sample-library/processes?origin=enterprise&publicationStatus=published',
+    );
+    mockAuthGetSession.mockResolvedValue({
+      data: { session: { user: { id: 'sample-manager' } } },
+    });
+    createQueryBuilder({ data: [], count: 0 });
+
+    await processesApi.getProcessTableAll(
+      { current: 1, pageSize: 10 },
+      {},
+      'en',
+      'sl',
+      [],
+      undefined,
+      'all',
+    );
+
+    expect(mockRpc).toHaveBeenLastCalledWith(
+      'get_latest_process_versions',
+      expect.objectContaining({
+        sample_origin_filter: 'enterprise',
+        sample_publication_status_filter: 'published',
+      }),
+    );
+  });
+
   it('transforms records with location and classification mapping', async () => {
     const queryResult = {
       data: [

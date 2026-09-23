@@ -14,7 +14,10 @@ import {
 } from '@/services/sampleLibrary/api';
 
 describe('sample library API', () => {
-  beforeEach(() => jest.clearAllMocks());
+  beforeEach(() => {
+    jest.clearAllMocks();
+    window.history.replaceState({}, '', '/#/sample-library/processes');
+  });
 
   it('publishes exact Process identities and versions', async () => {
     const result = { requestedCount: 1, publishedCount: 1, alreadyPublishedCount: 0 };
@@ -31,7 +34,7 @@ describe('sample library API', () => {
     window.history.replaceState(
       {},
       '',
-      '/sample-library/processes?origin=enterprise&publicationStatus=published',
+      '/#/sample-library/processes?origin=enterprise&publicationStatus=published',
     );
     expect(getSampleLibraryFilters()).toEqual({
       origin: 'enterprise',
@@ -56,7 +59,7 @@ describe('sample library API', () => {
     window.history.replaceState(
       {},
       '',
-      '/sample-library/processes?origin=invalid&publicationStatus=invalid',
+      '/#/sample-library/processes?origin=invalid&publicationStatus=invalid',
     );
     expect(getSampleLibraryFilters()).toEqual({ origin: 'all', publicationStatus: 'all' });
     expect(withSampleLibrarySearchFilters('sl', null)).toEqual({
@@ -67,7 +70,7 @@ describe('sample library API', () => {
     window.history.replaceState(
       {},
       '',
-      '/sample-library/processes?origin=literature&publicationStatus=unpublished',
+      '/#/sample-library/processes?origin=literature&publicationStatus=unpublished',
     );
     expect(getSampleLibraryFilters()).toEqual({
       origin: 'literature',
@@ -76,6 +79,19 @@ describe('sample library API', () => {
     expect(withSampleLibrarySearchFilters('sl', 'ignored')).toEqual({
       __sampleLibraryOrigin: 'literature',
       __sampleLibraryPublicationStatus: 'unpublished',
+    });
+  });
+
+  it('falls back to the browser query when the hash route has no query', () => {
+    window.history.replaceState(
+      {},
+      '',
+      '/?origin=literature&publicationStatus=published#/sample-library/processes',
+    );
+
+    expect(getSampleLibraryFilters()).toEqual({
+      origin: 'literature',
+      publicationStatus: 'published',
     });
   });
 

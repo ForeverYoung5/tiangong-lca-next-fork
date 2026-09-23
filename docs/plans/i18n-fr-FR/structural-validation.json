@@ -3,7 +3,7 @@
   "locale": "fr-FR",
   "validationClosure": {
     "baselineSha": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
-    "auditedInputDigest": "e934d12c0baeb8abe752a59c71cd575b1f11e1267581c7103fbd26c6cef66551",
+    "auditedInputDigest": "090adc9c0f490724511cc3a595b3257108aa7a9e9270bdbe3a588260898ff7be",
     "validatedMessageCount": 3427,
     "validatedModules": [
       "$entry",
@@ -42,9 +42,9 @@
     "highRiskMessageCount": 1553,
     "highRiskMessageDigest": "66dd7852fa445c446eddf9e34d87c1892266d53e5892fedcc5bfb6f98b1bf7de",
     "catalogDigest": "bb31b3798117e96c02c3c05e12429aa59f138f6b789f159f22dc7529ace6c0a3",
-    "dossierDigest": "efc551072c663a82e0cb589b0167c2418199c9f7184fbe9f84244bab3674e3cb",
+    "dossierDigest": "8b0a17cae9e7db3fe4f50dc7f04b74e522946db4d66c12587e8c04e7ba5f0d8f",
     "typedContentDossierDigest": "381b7b7af87d349151ab51d77de2402d93629029efa5ff964e45d5e00cddf454",
-    "routeEvidenceDigest": "07e2d697f1dc0f4569a42653bd31ee88868c555c77df7bde06d2e166bd59a81c",
+    "routeEvidenceDigest": "80ced84a36aad94618980fce4c5045dc36df66b0dd5d3459c230cb78a7b5b91a",
     "scope": "deterministic structure only; semantic translation and rendered route review are separate production blockers owned by #635"
   },
   "validationLanes": [
@@ -98,7 +98,7 @@
         "messageDigest": "dce3ee7db6a1a35a89d162db366e477afff35f65014e7adcd8910b5d51f084d6",
         "highRiskMessageCount": 1553,
         "highRiskMessageDigest": "66dd7852fa445c446eddf9e34d87c1892266d53e5892fedcc5bfb6f98b1bf7de",
-        "dossierDigest": "efc551072c663a82e0cb589b0167c2418199c9f7184fbe9f84244bab3674e3cb",
+        "dossierDigest": "8b0a17cae9e7db3fe4f50dc7f04b74e522946db4d66c12587e8c04e7ba5f0d8f",
         "checks": {
           "nonEmptyTargets": true,
           "icuArgumentSignatureParity": true,
@@ -113,5 +113,5 @@
     }
   ],
   "blockedItems": [],
-  "validationDigest": "ca9a5e5a0194d39b0675ddafdde8686c08ec29a492b8eb71d956e1182bc6ae35"
+  "validationDigest": "27cbb1eb76b24dc2d7259cae16eb570593c40c5dd241fbbd5105da2b5f50e26f"
 }

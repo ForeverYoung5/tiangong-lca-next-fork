@@ -22,8 +22,8 @@ checkPaths:
   - scripts/e2e/**
   - playwright.config.ts
   - tests/e2e/i18n/**
-lastReviewedAt: 2026-09-22
-lastReviewedCommit: 97efc371c84f9cb8d73a87646f64697d671f2938
+lastReviewedAt: 2026-09-23
+lastReviewedCommit: f32b4b6e95df062dfb34908fce7ceea4c45cf91b
 lastReviewedNote: 'Reviewed Platform #1118: the seven Sample Library views continue to use the existing query and Process publication RPCs; no database schema, environment, authorization, or backend ownership change is required.'
 ---
 
