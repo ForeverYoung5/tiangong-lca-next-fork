@@ -44,7 +44,7 @@ checkPaths:
   - .github/workflows/**
 lastReviewedAt: 2026-09-23
 lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
-lastReviewedNote: 'Reviewed for Platform #1120: focused Open Data service and component tests use the existing Jest path; pre-push ownership and trigger policy are unchanged.'
+lastReviewedNote: 'Reviewed for Platform #1120 after integrating current dev: focused Open Data service and component tests use the existing Jest path; pre-push ownership and trigger policy are unchanged.'
 ---
 
 # Pre-Push Gate Policy

@@ -45,7 +45,7 @@ checkPaths:
   - Dockerfile.app
 lastReviewedAt: 2026-09-23
 lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
-lastReviewedNote: 'Reviewed for Platform #1120: Open Data filter and publication coverage follows the existing unit/component strategy and does not change the long-term testing model.'
+lastReviewedNote: 'Reviewed for Platform #1120 after integrating current dev: Open Data filter and publication coverage follows the existing unit/component strategy and does not change the long-term testing model.'
 ---
 
 # Testing Strategy
