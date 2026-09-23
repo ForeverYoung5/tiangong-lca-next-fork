@@ -71,14 +71,6 @@ export default function SampleLibraryControls({
 
   return (
     <>
-      <Tooltip key='sample-library-origin' title={originControl.label}>
-        <Button
-          type='text'
-          aria-label={originControl.label}
-          icon={originControl.icon}
-          onClick={() => update({ origin: originControl.next })}
-        />
-      </Tooltip>
       {processes ? (
         <Select<SampleLibraryPublicationStatus>
           key='sample-library-publication-status'
@@ -110,6 +102,14 @@ export default function SampleLibraryControls({
           onChange={(publicationStatus) => update({ publicationStatus })}
         />
       ) : null}
+      <Tooltip key='sample-library-origin' title={originControl.label}>
+        <Button
+          type='text'
+          aria-label={originControl.label}
+          icon={originControl.icon}
+          onClick={() => update({ origin: originControl.next })}
+        />
+      </Tooltip>
     </>
   );
 }

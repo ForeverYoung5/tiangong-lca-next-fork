@@ -762,15 +762,6 @@ const TableList: FC = () => {
         toolBarRender={() => {
           if (dataSource === 'sl') {
             return [
-              <SampleLibraryControls
-                key='sample-library-controls'
-                actionRef={actionRef}
-                processes
-                onFiltersChange={() => {
-                  setSampleSelectedRowKeys([]);
-                  setSampleSelectedRows([]);
-                }}
-              />,
               <Button
                 key='sample-library-publish'
                 type='primary'
@@ -822,6 +813,15 @@ const TableList: FC = () => {
                   defaultMessage='Publish'
                 />
               </Button>,
+              <SampleLibraryControls
+                key='sample-library-controls'
+                actionRef={actionRef}
+                processes
+                onFiltersChange={() => {
+                  setSampleSelectedRowKeys([]);
+                  setSampleSelectedRows([]);
+                }}
+              />,
             ];
           }
           if (dataSource === 'my') {

@@ -1263,9 +1263,14 @@ describe('ProcessesPage', () => {
     expect(await screen.findByText('Published')).toBeInTheDocument();
     expect(screen.getByTestId('process-view')).toHaveTextContent('proc-1');
 
-    await userEvent.click(screen.getByRole('button', { name: 'sample-library-controls' }));
-    await userEvent.click(screen.getByRole('button', { name: 'select-sample-rows' }));
+    const sampleLibraryControls = screen.getByRole('button', { name: 'sample-library-controls' });
     const publishButton = screen.getByRole('button', { name: /publish/i });
+    expect(
+      publishButton.compareDocumentPosition(sampleLibraryControls) &
+        Node.DOCUMENT_POSITION_FOLLOWING,
+    ).toBeTruthy();
+    await userEvent.click(sampleLibraryControls);
+    await userEvent.click(screen.getByRole('button', { name: 'select-sample-rows' }));
     await waitFor(() => expect(publishButton).toBeEnabled());
     await userEvent.click(publishButton);
 

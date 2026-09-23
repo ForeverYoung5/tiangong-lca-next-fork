@@ -74,6 +74,12 @@ describe('SampleLibraryControls', () => {
     expect(screen.getByTestId('origin-tooltip')).toHaveAttribute('data-title', 'All data');
     expect(screen.getByRole('button', { name: /all data/i })).toHaveTextContent('all-icon');
     expect(screen.getByLabelText('publication-status')).toHaveValue('all');
+    expect(
+      screen
+        .getByLabelText('publication-status')
+        .compareDocumentPosition(screen.getByRole('button', { name: /all data/i })) &
+        Node.DOCUMENT_POSITION_FOLLOWING,
+    ).toBeTruthy();
     fireEvent.click(screen.getByRole('button', { name: /all data/i }));
 
     expect(mockReplace).toHaveBeenCalledWith('/sample-library/processes?origin=literature');

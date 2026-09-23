@@ -44,7 +44,7 @@ checkPaths:
   - scripts/i18n/locale-delivery.mjs
   - .github/workflows/**
 lastReviewedAt: 2026-09-23
-lastReviewedCommit: 04932f257451fbaf5d710e18886354da0142c8ba
+lastReviewedCommit: 3558ce3d3fa59e7c1b1aff098b01f955beadd9df
 lastReviewedNote: 'Reviewed for Platform #1118: focused Sample Library child-route, model, drawer, service, and locale-contract proofs complement the unchanged lint, typecheck, build, and pre-push gate.'
 related:
   - ../AGENTS.md
