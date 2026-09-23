@@ -44,7 +44,7 @@ checkPaths:
   - pnpm-workspace.yaml
   - Dockerfile.app
 lastReviewedAt: 2026-09-23
-lastReviewedCommit: d2ffa619010ce7aa099e32d6359d9342fabf53b3
+lastReviewedCommit: 04932f257451fbaf5d710e18886354da0142c8ba
 lastReviewedNote: 'Reviewed for Platform #1118: Sample Library adds focused seven-route, display-model, drawer, service, and locale-contract coverage without changing the long-term testing strategy.'
 ---
 

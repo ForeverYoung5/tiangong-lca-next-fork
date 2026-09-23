@@ -43,7 +43,7 @@ checkPaths:
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
 lastReviewedAt: 2026-09-23
-lastReviewedCommit: d2ffa619010ce7aa099e32d6359d9342fabf53b3
+lastReviewedCommit: 04932f257451fbaf5d710e18886354da0142c8ba
 lastReviewedNote: 'Reviewed for Platform #1118: Sample Library tests reuse existing route, service, drawer, responsive-table, and locale-contract patterns, including the guarded mutating RPC contract.'
 ---
 

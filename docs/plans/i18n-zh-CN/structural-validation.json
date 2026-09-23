@@ -3,7 +3,7 @@
   "locale": "zh-CN",
   "validationClosure": {
     "baselineSha": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
-    "auditedInputDigest": "7ef0a476ed0145e5ea2cb4446bbbc1fdb75b480d6effd79b864e58dbab2a7bee",
+    "auditedInputDigest": "b06cb81c33f833b952148a2b00618d2304383035427d5191ead40e168f091bf3",
     "validatedMessageCount": 3427,
     "validatedModules": [
       "$entry",
@@ -42,9 +42,9 @@
     "highRiskMessageCount": 1553,
     "highRiskMessageDigest": "66dd7852fa445c446eddf9e34d87c1892266d53e5892fedcc5bfb6f98b1bf7de",
     "catalogDigest": "47be4e5b2bf888ac20ce3cf7db7ad32c24d354ff1555e620d9aa0ece7b69e0a0",
-    "dossierDigest": "6111754e144173b92c626c7988887b8e8e25d704ab27e3edec01a3c95be32379",
+    "dossierDigest": "61aa0feaf9ec4de3b9b5c92a18162dda0cc3f9d8260c8904cb2ba97d38603ccd",
     "typedContentDossierDigest": "cea189a77b03f66042197c8383d684813c09e3a0356684d325e62eaf73af4c99",
-    "routeEvidenceDigest": "86b730098f43c03c6fb58ba60cc0fe2b4c6c9b29842fc60d4edb17baf08f16e8",
+    "routeEvidenceDigest": "96035810ee9bb29d304f4d30e805d3ff345b1e9152f3f6da9e66d79ab2d67afb",
     "scope": "deterministic structure only; semantic translation and rendered route review are separate production blockers owned by #635"
   },
   "validationLanes": [
@@ -98,7 +98,7 @@
         "messageDigest": "dce3ee7db6a1a35a89d162db366e477afff35f65014e7adcd8910b5d51f084d6",
         "highRiskMessageCount": 1553,
         "highRiskMessageDigest": "66dd7852fa445c446eddf9e34d87c1892266d53e5892fedcc5bfb6f98b1bf7de",
-        "dossierDigest": "6111754e144173b92c626c7988887b8e8e25d704ab27e3edec01a3c95be32379",
+        "dossierDigest": "61aa0feaf9ec4de3b9b5c92a18162dda0cc3f9d8260c8904cb2ba97d38603ccd",
         "checks": {
           "nonEmptyTargets": true,
           "icuArgumentSignatureParity": true,
@@ -113,5 +113,5 @@
     }
   ],
   "blockedItems": [],
-  "validationDigest": "dbbd558994533e6e7bde89adb2e804ffc03b9c0375cc7ef51ac5c8ae9c29e192"
+  "validationDigest": "c838cc316142e18c89b29ea3b8d0abdd5a9458356f7a9955bc006976a96f6f69"
 }

@@ -3,7 +3,7 @@
   "locale": "en-US",
   "validationClosure": {
     "baselineSha": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
-    "auditedInputDigest": "7ef0a476ed0145e5ea2cb4446bbbc1fdb75b480d6effd79b864e58dbab2a7bee",
+    "auditedInputDigest": "b06cb81c33f833b952148a2b00618d2304383035427d5191ead40e168f091bf3",
     "validatedMessageCount": 3427,
     "validatedModules": [
       "$entry",
@@ -42,9 +42,9 @@
     "highRiskMessageCount": 1553,
     "highRiskMessageDigest": "66dd7852fa445c446eddf9e34d87c1892266d53e5892fedcc5bfb6f98b1bf7de",
     "catalogDigest": "54b1b0bdcf1ec2b8f04e56bfd2fb2b22533d4a3bd04ac514eccdcc0ec4848fcd",
-    "dossierDigest": "217da33cd42ed4c314f2e83328b19adb92e452578b9622be548250918dd8ace7",
+    "dossierDigest": "092e6fc55635e1281ece19a78c76cb8d0a8e16dcc9c50cd4e416d53e394b8127",
     "typedContentDossierDigest": "93ff72bef2323e7a766f111c3945669da9e0f3fc6c961dfebe977787d5d8b158",
-    "routeEvidenceDigest": "86b730098f43c03c6fb58ba60cc0fe2b4c6c9b29842fc60d4edb17baf08f16e8",
+    "routeEvidenceDigest": "96035810ee9bb29d304f4d30e805d3ff345b1e9152f3f6da9e66d79ab2d67afb",
     "scope": "deterministic structure only; semantic translation and rendered route review are separate production blockers owned by #635"
   },
   "validationLanes": [
@@ -98,7 +98,7 @@
         "messageDigest": "dce3ee7db6a1a35a89d162db366e477afff35f65014e7adcd8910b5d51f084d6",
         "highRiskMessageCount": 1553,
         "highRiskMessageDigest": "66dd7852fa445c446eddf9e34d87c1892266d53e5892fedcc5bfb6f98b1bf7de",
-        "dossierDigest": "217da33cd42ed4c314f2e83328b19adb92e452578b9622be548250918dd8ace7",
+        "dossierDigest": "092e6fc55635e1281ece19a78c76cb8d0a8e16dcc9c50cd4e416d53e394b8127",
         "checks": {
           "nonEmptyTargets": true,
           "icuArgumentSignatureParity": true,
@@ -113,5 +113,5 @@
     }
   ],
   "blockedItems": [],
-  "validationDigest": "cbf618b8c55c66a13d651c9ac402c344101e39875abbcae34cd33b1c168b6873"
+  "validationDigest": "8ae2ab0cd071c0b593fdadaabf5bcc8bc42a3a72161a8a6b5df5c226d8b32faa"
 }
