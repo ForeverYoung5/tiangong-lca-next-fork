@@ -25,9 +25,9 @@ checkPaths:
   - playwright.config.ts
   - config/docs-capture/**
   - tests/e2e/i18n/**
-lastReviewedAt: 2026-09-21
+lastReviewedAt: 2026-09-23
 lastReviewedCommit: 25d57284565efb719c471df2bfdceb05dfc65717
-lastReviewedNote: 'Reviewed Platform #1109 after merging current dev: review action and input/output display parity use shared data-page views; the #1107 import-report behavior, repository contracts, validation, and testing policies remain unchanged.'
+lastReviewedNote: 'Reviewed Platform #1120: the Open Data catalog adds shared filter and RPC service modules within the existing page/service architecture; stable ownership boundaries are unchanged.'
 related:
   - ../AGENTS.md
   - ../.docpact/config.yaml

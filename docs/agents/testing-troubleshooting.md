@@ -39,9 +39,9 @@ checkPaths:
   - .github/workflows/build.yml
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
-lastReviewedAt: 2026-09-21
+lastReviewedAt: 2026-09-23
 lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
-lastReviewedNote: 'Reviewed for Platform #1115: the installed SDK recovery path now targets 0.4.0 and includes required Process general-comment qualification; the troubleshooting workflow is otherwise unchanged.'
+lastReviewedNote: 'Reviewed for Platform #1120: focused Open Data Jest tests use the existing no-watchman recovery path for the local ICU-linked Watchman failure; supported troubleshooting commands are unchanged.'
 ---
 
 # Testing Troubleshooting

@@ -22,9 +22,9 @@ checkPaths:
   - scripts/e2e/**
   - playwright.config.ts
   - tests/e2e/i18n/**
-lastReviewedAt: 2026-09-19
+lastReviewedAt: 2026-09-23
 lastReviewedCommit: ec64e2142f67874171bbd5ddb32f8aed581d9824
-lastReviewedNote: 'Reviewed Platform #1046 refinement: imports reconcile from the shared list only; terminal outcomes use green/orange/red, orphan records prevent full success, and reports resolve signed links only on click. Owner isolation, reload recovery and once-only data refresh are tested. Export/LCA behavior, ownership and gate policy remain unchanged; validation evidence is recorded in the task.'
+lastReviewedNote: 'Reviewed Platform #1120: frontend Open Data queries and publication commands preserve the database/Edge ownership boundary and existing environment-selection policy.'
 ---
 
 # Supabase Environment And Database Workflow

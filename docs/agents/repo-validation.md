@@ -43,9 +43,9 @@ checkPaths:
   - scripts/typescript-native-parser.*
   - scripts/i18n/locale-delivery.mjs
   - .github/workflows/**
-lastReviewedAt: 2026-09-21
+lastReviewedAt: 2026-09-23
 lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
-lastReviewedNote: 'Reviewed for Platform #1115: dependency qualification advances the exact installed TIDAS SDK to 0.4.0 and covers required Process general comments; the validation command matrix and gate policy are unchanged.'
+lastReviewedNote: 'Reviewed for Platform #1120: Open Data filters and Process publication are covered by focused Jest tests plus the existing lint and production-build gates; command and gate policy are unchanged.'
 related:
   - ../AGENTS.md
   - ../.docpact/config.yaml

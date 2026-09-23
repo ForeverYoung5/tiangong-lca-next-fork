@@ -57,6 +57,7 @@ export const AUDITED_READ_ONLY_RPC_NAMES = [
   'search_flowproperties',
   'search_flows',
   'search_lifecyclemodels',
+  'search_open_data_catalog',
   'search_processes',
   'search_sources',
   'search_unitgroups',

@@ -45,9 +45,9 @@ checkPaths:
   - .nvmrc
   - .husky/pre-push
   - .github/workflows/**
-lastReviewedAt: 2026-09-21
+lastReviewedAt: 2026-09-23
 lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
-lastReviewedNote: 'Reviewed for Platform #1115: the released TIDAS SDK 0.4.0 adds mapper-independent Process general-comment requiredness qualification; repository ownership, bootstrap, branch, and delivery rules are unchanged.'
+lastReviewedNote: 'Reviewed for Platform #1120: Open Data catalog filtering, Process selection, and publication UI follow the existing frontend ownership and delivery contracts; repository rules are unchanged.'
 related:
   - .docpact/config.yaml
   - docs/agents/repo-validation.md
