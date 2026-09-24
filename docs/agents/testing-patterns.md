@@ -43,7 +43,7 @@ checkPaths:
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
 lastReviewedAt: 2026-09-24
-lastReviewedCommit: 4023bdb2afd335143040957b641241467320ade7
+lastReviewedCommit: e45f2717
 lastReviewedNote: 'Reviewed for Platform #1122: existing component mocking and focused suite selection patterns cover the reviewer-profile workflow.'
 ---
 

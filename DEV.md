@@ -43,7 +43,7 @@ checkPaths:
   - .github/workflows/build.yml
   - .nvmrc
 lastReviewedAt: 2026-09-24
-lastReviewedCommit: 4023bdb2afd335143040957b641241467320ade7
+lastReviewedCommit: e45f2717
 lastReviewedNote: 'Reviewed for Platform #1122: reviewer-profile UI and service additions do not change local bootstrap or the default work loop.'
 ---
 

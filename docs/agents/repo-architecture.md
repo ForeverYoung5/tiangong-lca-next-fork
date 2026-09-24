@@ -26,7 +26,7 @@ checkPaths:
   - config/docs-capture/**
   - tests/e2e/i18n/**
 lastReviewedAt: 2026-09-24
-lastReviewedCommit: 4023bdb2afd335143040957b641241467320ade7
+lastReviewedCommit: e45f2717
 lastReviewedNote: 'Reviewed Platform #1122 reviewer-profile placement and Contact form reuse; frontend ownership and service boundaries remain unchanged.'
 related:
   - ../AGENTS.md

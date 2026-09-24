@@ -208,23 +208,28 @@ const ReviewerProfile = ({ status, loading, error, onRefresh }: Props) => {
           />
         )}
         {status?.contact && (
-          <Descriptions column={1}>
-            <Descriptions.Item
-              label={<FormattedMessage id='pages.review.reviewerProfile.contactId' />}
-            >
-              {status.contact['@refObjectId']}
-            </Descriptions.Item>
-            <Descriptions.Item
-              label={<FormattedMessage id='pages.review.reviewerProfile.version' />}
-            >
-              {status.contact['@version']}
-            </Descriptions.Item>
-            <Descriptions.Item label={<FormattedMessage id='pages.review.reviewerProfile.state' />}>
-              {status.ready
-                ? intl.formatMessage({ id: 'pages.review.reviewerProfile.ready' })
-                : intl.formatMessage({ id: 'pages.review.reviewerProfile.invalid' })}
-            </Descriptions.Item>
-          </Descriptions>
+          <Descriptions
+            column={1}
+            items={[
+              {
+                key: 'contactId',
+                label: <FormattedMessage id='pages.review.reviewerProfile.contactId' />,
+                children: status.contact['@refObjectId'],
+              },
+              {
+                key: 'version',
+                label: <FormattedMessage id='pages.review.reviewerProfile.version' />,
+                children: status.contact['@version'],
+              },
+              {
+                key: 'state',
+                label: <FormattedMessage id='pages.review.reviewerProfile.state' />,
+                children: status.ready
+                  ? intl.formatMessage({ id: 'pages.review.reviewerProfile.ready' })
+                  : intl.formatMessage({ id: 'pages.review.reviewerProfile.invalid' }),
+              },
+            ]}
+          />
         )}
       </Card>
       <Drawer

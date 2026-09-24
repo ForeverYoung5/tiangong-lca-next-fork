@@ -20,6 +20,7 @@ const AUTHENTICATED_STORAGE_READ_PATH =
   /^\/storage\/v1\/(?:object|render\/image)\/authenticated\/[^/]+\/.+/u;
 const ENCODED_PATH_SEPARATOR = /%(?:2f|5c)/iu;
 export const AUDITED_READ_ONLY_RPC_NAMES = [
+  'qry_review_get_my_contact_status',
   'get_latest_contact_versions',
   'get_latest_flow_versions',
   'get_latest_flowproperty_versions',

@@ -20,7 +20,7 @@ checkPaths:
   - src/pages/Review/**
   - src/pages/ManageSystem/**
 lastReviewedAt: 2026-09-24
-lastReviewedCommit: 4023bdb2afd335143040957b641241467320ade7
+lastReviewedCommit: e45f2717
 lastReviewedNote: 'Added the self-service Review Member profile onboarding and immutable open-data version-update boundary.'
 ---
 

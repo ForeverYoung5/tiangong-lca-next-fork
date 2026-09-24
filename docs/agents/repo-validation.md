@@ -44,7 +44,7 @@ checkPaths:
   - scripts/i18n/locale-delivery.mjs
   - .github/workflows/**
 lastReviewedAt: 2026-09-24
-lastReviewedCommit: 4023bdb2afd335143040957b641241467320ade7
+lastReviewedCommit: e45f2717
 lastReviewedNote: 'Reviewed for Platform #1122: reviewer-profile form, readiness gate, and email-only member addition use existing validation and gate ownership.'
 related:
   - ../AGENTS.md

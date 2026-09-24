@@ -46,7 +46,7 @@ checkPaths:
   - .husky/pre-push
   - .github/workflows/**
 lastReviewedAt: 2026-09-24
-lastReviewedCommit: 4023bdb2afd335143040957b641241467320ade7
+lastReviewedCommit: e45f2717
 lastReviewedNote: 'Reviewed for Platform #1122: the Review Management reviewer-profile workflow changes no repository ownership, bootstrap, branch, or delivery rules.'
 related:
   - .docpact/config.yaml
