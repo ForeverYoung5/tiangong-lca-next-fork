@@ -42,9 +42,9 @@ checkPaths:
   - .github/workflows/build.yml
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
-lastReviewedAt: 2026-09-21
-lastReviewedCommit: 4023bdb2afd335143040957b641241467320ade7
-lastReviewedNote: 'Reviewed for Platform #1107 after integrating Platform #1115: the task-center test exercises Tooltip guidance and retained import details while preserving the SDK 0.4.0 installed-package and reusable test-helper patterns.'
+lastReviewedAt: 2026-09-23
+lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
+lastReviewedNote: 'Reviewed for Platform #1120 after integrating current dev: the Open Data tests use existing mocked-service and semantic component interaction patterns; reusable guidance is unchanged.'
 ---
 
 # Testing Patterns Reference

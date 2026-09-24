@@ -43,9 +43,9 @@ checkPaths:
   - pnpm-lock.yaml
   - pnpm-workspace.yaml
   - Dockerfile.app
-lastReviewedAt: 2026-09-21
-lastReviewedCommit: 4023bdb2afd335143040957b641241467320ade7
-lastReviewedNote: 'Reviewed for Platform #1107 after integrating Platform #1115: focused task-center Tooltip and import-result recovery coverage fit the existing SDK 0.4.0 package contract and do not change the long-term testing strategy.'
+lastReviewedAt: 2026-09-23
+lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
+lastReviewedNote: 'Reviewed for Platform #1120 after integrating current dev: Open Data filter and publication coverage follows the existing unit/component strategy and does not change the long-term testing model.'
 ---
 
 # Testing Strategy

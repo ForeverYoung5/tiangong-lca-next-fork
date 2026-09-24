@@ -25,9 +25,9 @@ checkPaths:
   - playwright.config.ts
   - config/docs-capture/**
   - tests/e2e/i18n/**
-lastReviewedAt: 2026-09-21
-lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
-lastReviewedNote: 'Reviewed Platform #1107 supplemental delivery: terminal import rows use the bounded list projection first, recover missing outcomes through one package-detail read, and expose localized outcome counts without recurring import polling.'
+lastReviewedAt: 2026-09-23
+lastReviewedCommit: 25d57284565efb719c471df2bfdceb05dfc65717
+lastReviewedNote: 'Reviewed Platform #1120 after integrating current dev: the Open Data catalog adds shared filter and RPC service modules within the existing page/service architecture; stable ownership boundaries are unchanged.'
 related:
   - ../AGENTS.md
   - ../.docpact/config.yaml

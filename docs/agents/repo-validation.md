@@ -43,9 +43,9 @@ checkPaths:
   - scripts/typescript-native-parser.*
   - scripts/i18n/locale-delivery.mjs
   - .github/workflows/**
-lastReviewedAt: 2026-09-21
-lastReviewedCommit: 4023bdb2afd335143040957b641241467320ade7
-lastReviewedNote: 'Reviewed for Platform #1107 after integrating Platform #1115: focused proof covers one-time historical import-outcome recovery, fail-closed missing results, localized counts and Tooltip presentation, and the exact installed TIDAS SDK 0.4.0 Process general-comment contract; the validation command matrix and gate policy are unchanged.'
+lastReviewedAt: 2026-09-23
+lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
+lastReviewedNote: 'Reviewed for Platform #1120 after integrating current dev: Open Data filters and Process publication are covered by focused Jest tests plus the existing lint and production-build gates; command and gate policy are unchanged.'
 related:
   - ../AGENTS.md
   - ../.docpact/config.yaml

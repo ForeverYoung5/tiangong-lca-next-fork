@@ -39,9 +39,9 @@ checkPaths:
   - .github/workflows/build.yml
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
-lastReviewedAt: 2026-09-21
-lastReviewedCommit: 4023bdb2afd335143040957b641241467320ade7
-lastReviewedNote: 'Reviewed for Platform #1107 after integrating Platform #1115: the installed SDK recovery path remains on 0.4.0, and task-center Tooltip/result-recovery coverage introduces no new troubleshooting workflow.'
+lastReviewedAt: 2026-09-23
+lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
+lastReviewedNote: 'Reviewed for Platform #1120 after integrating current dev: focused Open Data Jest tests use the existing no-watchman recovery path; supported troubleshooting commands are unchanged.'
 ---
 
 # Testing Troubleshooting

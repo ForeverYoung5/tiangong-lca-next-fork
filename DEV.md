@@ -42,9 +42,9 @@ checkPaths:
   - .github/workflows/release-readiness.yml
   - .github/workflows/build.yml
   - .nvmrc
-lastReviewedAt: 2026-09-21
-lastReviewedCommit: 4023bdb2afd335143040957b641241467320ade7
-lastReviewedNote: 'Reviewed for Platform #1107 after integrating Platform #1115: the installed SDK contract remains at TIDAS SDK 0.4.0, and the task-center Tooltip update does not change local bootstrap or the default work loop.'
+lastReviewedAt: 2026-09-23
+lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
+lastReviewedNote: 'Reviewed for Platform #1120 after integrating current dev: Open Data catalog filters and Process publication use the existing local bootstrap and validation workflow; commands and prerequisites are unchanged.'
 ---
 
 # Development Bootstrap

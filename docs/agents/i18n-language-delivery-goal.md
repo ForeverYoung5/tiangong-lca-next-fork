@@ -56,9 +56,9 @@ checkPaths:
   - .github/workflows/i18n-semantic-e2e.yml
   - .github/workflows/build.yml
   - package.json
-lastReviewedAt: 2026-09-21
+lastReviewedAt: 2026-09-23
 lastReviewedCommit: 6aad37543b8bddac1edb85862d7979ce8f540f20
-lastReviewedNote: 'Reviewed Platform #1109 follow-up: shared review views remove one duplicate ProTable and locale-materialized implementation surface; generated locale artifacts were refreshed idempotently, while language, validation, gate, and testing policy remain unchanged.'
+lastReviewedNote: 'Reviewed Platform #1120: shared Open Data request helpers reuse existing localized dataset mapping; locale delivery, fallback, and release policy are unchanged.'
 baselineObservedAt: 2026-07-18
 related:
   - ../../AGENTS.md
