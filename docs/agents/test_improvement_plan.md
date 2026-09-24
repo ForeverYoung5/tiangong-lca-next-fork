@@ -43,9 +43,9 @@ checkPaths:
   - pnpm-lock.yaml
   - pnpm-workspace.yaml
   - Dockerfile.app
-lastReviewedAt: 2026-09-21
-lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
-lastReviewedNote: 'Reviewed for Platform #1115: SDK 0.4.0 general-comment qualification extends the existing mapper-independent package contract and does not change the long-term testing strategy.'
+lastReviewedAt: 2026-09-24
+lastReviewedCommit: 4023bdb2afd335143040957b641241467320ade7
+lastReviewedNote: 'Reviewed for Platform #1122: focused reviewer-profile and reusable Contact-form coverage does not change the long-term testing strategy.'
 ---
 
 # Testing Strategy

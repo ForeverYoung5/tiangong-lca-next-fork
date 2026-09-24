@@ -42,9 +42,9 @@ checkPaths:
   - .github/workflows/release-readiness.yml
   - .github/workflows/build.yml
   - .nvmrc
-lastReviewedAt: 2026-09-21
-lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
-lastReviewedNote: 'Reviewed for Platform #1115: the installed SDK contract now qualifies TIDAS SDK 0.4.0 and required Process general comments; local bootstrap and the default work loop are unchanged.'
+lastReviewedAt: 2026-09-24
+lastReviewedCommit: 4023bdb2afd335143040957b641241467320ade7
+lastReviewedNote: 'Reviewed for Platform #1122: reviewer-profile UI and service additions do not change local bootstrap or the default work loop.'
 ---
 
 # Development Bootstrap

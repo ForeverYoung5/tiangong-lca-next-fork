@@ -40,9 +40,9 @@ checkPaths:
   - .github/workflows/build.yml
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
-lastReviewedAt: 2026-09-21
-lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
-lastReviewedNote: 'Reviewed for Platform #1115: the current dependency qualification advances the installed TIDAS SDK to 0.4.0 and adds required Process general-comment proof without reopening the coverage queue.'
+lastReviewedAt: 2026-09-24
+lastReviewedCommit: 4023bdb2afd335143040957b641241467320ade7
+lastReviewedNote: 'Reviewed for Platform #1122: focused reviewer-profile coverage is included without reopening the broader coverage queue.'
 ---
 
 # Testing Execution State

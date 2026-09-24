@@ -42,9 +42,9 @@ checkPaths:
   - scripts/typescript-native-parser.*
   - scripts/reference-data/**
   - .github/workflows/**
-lastReviewedAt: 2026-09-21
-lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
-lastReviewedNote: 'Reviewed for Platform #1115: the exact SDK dependency and installed-package Process general-comment contract advance to 0.4.0; pre-push ownership and trigger policy are unchanged.'
+lastReviewedAt: 2026-09-24
+lastReviewedCommit: 4023bdb2afd335143040957b641241467320ade7
+lastReviewedNote: 'Reviewed for Platform #1122: reviewer-profile implementation does not change pre-push ownership or trigger policy.'
 ---
 
 # Pre-Push Gate Policy

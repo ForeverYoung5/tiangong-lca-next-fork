@@ -18,9 +18,9 @@ checkPaths:
   - docs/agents/data_audit_instruction.md
   - src/pages/Review/**
   - src/pages/ManageSystem/**
-lastReviewedAt: 2026-09-20
-lastReviewedCommit: 4c008bb04f8717af6c8ce2e62f61aaca19fc5062
-lastReviewedNote: 'Reviewed review input/output display parity against shared Process and LifeCycleModel data views. Audit transitions, ownership, validation requirements, and testing policy are unchanged.'
+lastReviewedAt: 2026-09-24
+lastReviewedCommit: 4023bdb2afd335143040957b641241467320ade7
+lastReviewedNote: 'Recorded the Review Member profile readiness gate; audit state transitions remain unchanged.'
 ---
 
 # Audit Status Reference
@@ -104,6 +104,8 @@ Process and Lifecycle Model Root Reviews retain their existing metadata form and
 Only Review Admin can manually start or read the joint pending-review quality diagnostic. The report combines completeness and numerical-stability information for the server-selected pending-review scope. It is evidence for operational judgment, not a workflow transition: `findings`, `not_evaluable`, request failure, and runtime failure do not block assignment, approval, rejection, or resubmission. Review Member does not see this control.
 
 ## Process Summary
+
+Before Review Members can access their task tabs, they must publish and bind a valid Contact through `My reviewer profile`. This readiness gate does not create or transition a Review.
 
 1. each of the seven edit pages shows one `Submit Review` action
 2. Process blocks only on editable current-record validation; no dataset type requires completeness or numerical-stability evidence to submit
