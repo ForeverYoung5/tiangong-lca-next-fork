@@ -231,6 +231,17 @@ describe('Review page', () => {
     expect(screen.getByRole('button', { name: 'pages.review.tabs.pending' })).toBeDisabled();
   });
 
+  it('does not select a member task tab while reviewer profile readiness is loading', async () => {
+    mockGetReviewUserRoleApi.mockResolvedValueOnce({ user_id: 'user-4', role: 'review-member' });
+    mockGetReviewerContactStatus.mockReturnValueOnce(new Promise(() => {}));
+
+    const view = render(<ReviewPage />);
+
+    await waitFor(() => expect(mockGetReviewerContactStatus).toHaveBeenCalledTimes(1));
+    expect(screen.queryByTestId('assignment-reviewed')).not.toBeInTheDocument();
+    view.unmount();
+  });
+
   it('logs errors from role loading and falls back to access denied', async () => {
     const consoleErrorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
     mockGetReviewUserRoleApi.mockRejectedValueOnce(new Error('load failed'));

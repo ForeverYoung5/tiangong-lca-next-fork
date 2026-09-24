@@ -44,7 +44,7 @@ checkPaths:
   - pnpm-workspace.yaml
   - Dockerfile.app
 lastReviewedAt: 2026-09-24
-lastReviewedCommit: e45f2717
+lastReviewedCommit: 99a85d56
 lastReviewedNote: 'Reviewed for Platform #1122: focused reviewer-profile and reusable Contact-form coverage does not change the long-term testing strategy.'
 ---
 

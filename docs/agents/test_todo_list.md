@@ -41,7 +41,7 @@ checkPaths:
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
 lastReviewedAt: 2026-09-24
-lastReviewedCommit: e45f2717
+lastReviewedCommit: 99a85d56
 lastReviewedNote: 'Reviewed for Platform #1122: focused reviewer-profile coverage is included without reopening the broader coverage queue.'
 ---
 

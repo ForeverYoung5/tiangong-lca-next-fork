@@ -43,7 +43,7 @@ checkPaths:
   - scripts/reference-data/**
   - .github/workflows/**
 lastReviewedAt: 2026-09-24
-lastReviewedCommit: e45f2717
+lastReviewedCommit: 99a85d56
 lastReviewedNote: 'Reviewed for Platform #1122: reviewer-profile implementation does not change pre-push ownership or trigger policy.'
 ---
 
