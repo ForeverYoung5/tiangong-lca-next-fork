@@ -40,8 +40,8 @@ checkPaths:
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
 lastReviewedAt: 2026-09-24
-lastReviewedCommit: 99a85d56
-lastReviewedNote: 'Reviewed for Platform #1122: reviewer-profile tests introduce no new troubleshooting path; existing jsdom and focused-test guidance remains authoritative.'
+lastReviewedCommit: ff088fc7
+lastReviewedNote: 'Reviewed the merged Open Data and Platform #1122 reviewer-profile tests; existing jsdom, no-watchman recovery, focused-test guidance, and supported commands remain authoritative.'
 ---
 
 # Testing Troubleshooting

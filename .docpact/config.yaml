@@ -1,8 +1,8 @@
 version: 1
 layout: repo
 lastReviewedAt: "2026-09-24"
-lastReviewedCommit: "99a85d56"
-lastReviewedNote: 'Reviewed for Platform #1122: Review Member Contact creation and version binding remain owned by Review Management; routing, ownership, coverage, and pre-push policy remain unchanged.'
+lastReviewedCommit: "ff088fc7"
+lastReviewedNote: 'Reviewed the merged Platform #1120 Open Data baseline and Platform #1122 reviewer-profile workflow; routing, ownership, coverage, and pre-push policy remain unchanged.'
 
 # Keep path-level ownership, routing intents, and governed-doc rules here.
 # AGENTS.md keeps the entry-level repo contract and minimal execution summary.

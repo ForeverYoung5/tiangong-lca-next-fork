@@ -46,8 +46,8 @@ checkPaths:
   - .husky/pre-push
   - .github/workflows/**
 lastReviewedAt: 2026-09-24
-lastReviewedCommit: 99a85d56
-lastReviewedNote: 'Reviewed for Platform #1122: the Review Management reviewer-profile workflow changes no repository ownership, bootstrap, branch, or delivery rules.'
+lastReviewedCommit: ff088fc7
+lastReviewedNote: 'Reviewed the merged Platform #1120 Open Data UI baseline and Platform #1122 Review Management reviewer-profile workflow; repository ownership, bootstrap, branch, and delivery rules remain unchanged.'
 related:
   - .docpact/config.yaml
   - docs/agents/repo-validation.md

@@ -43,8 +43,8 @@ checkPaths:
   - .github/workflows/build.yml
   - .nvmrc
 lastReviewedAt: 2026-09-24
-lastReviewedCommit: 99a85d56
-lastReviewedNote: 'Reviewed for Platform #1122: reviewer-profile UI and service additions do not change local bootstrap or the default work loop.'
+lastReviewedCommit: ff088fc7
+lastReviewedNote: 'Reviewed the merged Open Data baseline and reviewer-profile additions; local bootstrap, validation workflow, commands, and prerequisites remain unchanged.'
 ---
 
 # Development Bootstrap

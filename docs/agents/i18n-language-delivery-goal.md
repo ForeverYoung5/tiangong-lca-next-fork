@@ -57,8 +57,8 @@ checkPaths:
   - .github/workflows/build.yml
   - package.json
 lastReviewedAt: 2026-09-24
-lastReviewedCommit: e45f2717
-lastReviewedNote: 'Reviewed Platform #1109 follow-up: shared review views remove one duplicate ProTable and locale-materialized implementation surface; generated locale artifacts were refreshed idempotently, while language, validation, gate, and testing policy remain unchanged.'
+lastReviewedCommit: ff088fc7
+lastReviewedNote: 'Reviewed the merged Open Data localization baseline and Platform #1122 reviewer-profile messages; generated locale artifacts are refreshed idempotently while locale delivery, fallback, validation, and release policy remain unchanged.'
 baselineObservedAt: 2026-07-18
 related:
   - ../../AGENTS.md

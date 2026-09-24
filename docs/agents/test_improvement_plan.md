@@ -44,8 +44,8 @@ checkPaths:
   - pnpm-workspace.yaml
   - Dockerfile.app
 lastReviewedAt: 2026-09-24
-lastReviewedCommit: 99a85d56
-lastReviewedNote: 'Reviewed for Platform #1122: focused reviewer-profile and reusable Contact-form coverage does not change the long-term testing strategy.'
+lastReviewedCommit: ff088fc7
+lastReviewedNote: 'Reviewed the merged Open Data coverage and Platform #1122 reviewer-profile/Contact-form coverage; both follow the existing unit/component strategy and do not change the long-term testing model.'
 ---
 
 # Testing Strategy

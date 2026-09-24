@@ -41,8 +41,8 @@ checkPaths:
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
 lastReviewedAt: 2026-09-24
-lastReviewedCommit: 99a85d56
-lastReviewedNote: 'Reviewed for Platform #1122: focused reviewer-profile coverage is included without reopening the broader coverage queue.'
+lastReviewedCommit: ff088fc7
+lastReviewedNote: 'Reviewed the merged Open Data assertions and Platform #1122 reviewer-profile coverage; the full-coverage baseline remains closed with no reopened coverage queue.'
 ---
 
 # Testing Execution State

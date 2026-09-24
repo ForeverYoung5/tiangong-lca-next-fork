@@ -43,8 +43,8 @@ checkPaths:
   - scripts/reference-data/**
   - .github/workflows/**
 lastReviewedAt: 2026-09-24
-lastReviewedCommit: 99a85d56
-lastReviewedNote: 'Reviewed for Platform #1122: reviewer-profile implementation does not change pre-push ownership or trigger policy.'
+lastReviewedCommit: ff088fc7
+lastReviewedNote: 'Reviewed the merged Open Data tests and Platform #1122 reviewer-profile coverage; existing Jest paths, pre-push ownership, and trigger policy remain unchanged.'
 ---
 
 # Pre-Push Gate Policy
