@@ -44,7 +44,7 @@ checkPaths:
   - scripts/i18n/locale-delivery.mjs
   - .github/workflows/**
 lastReviewedAt: 2026-09-25
-lastReviewedCommit: f5cb936864021425c860778997983c81ba54ef7f
+lastReviewedCommit: 53d4e0e0992f621749b473e628099e6ca4e813b3
 lastReviewedNote: 'Reviewed the merged Open Data validation baseline and Platform #1122 reviewer-profile form, readiness gate, and email-only member addition; command and gate ownership remain unchanged.'
 related:
   - ../AGENTS.md

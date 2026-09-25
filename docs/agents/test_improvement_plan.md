@@ -44,7 +44,7 @@ checkPaths:
   - pnpm-workspace.yaml
   - Dockerfile.app
 lastReviewedAt: 2026-09-25
-lastReviewedCommit: f5cb936864021425c860778997983c81ba54ef7f
+lastReviewedCommit: 53d4e0e0992f621749b473e628099e6ca4e813b3
 lastReviewedNote: 'Reviewed the merged Open Data coverage and Platform #1122 reviewer-profile/Contact-form coverage; both follow the existing unit/component strategy and do not change the long-term testing model.'
 ---
 

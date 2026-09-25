@@ -5,8 +5,8 @@
     "repository": "tiangong-lca/platform",
     "baselineSha": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
     "sourceManifestPath": "docs/plans/i18n-de-DE/manifest.json",
-    "sourceManifestDigest": "054efcbd879f7d84e5caed78f7081785a5c72c3466e421073ad872474207ac7c",
-    "auditedInputDigest": "87591b09b06e2ae0576027bb2ba65e659d03671dd7ae0dcf802a993724270125"
+    "sourceManifestDigest": "d467589ea1a3f5c434ed0e252a674312188394b8de675c32b3dba395d5b3ee49",
+    "auditedInputDigest": "9bb63253cf3b12ae018b41a287d1395b0b25757336772b58254b0b684714ce8a"
   },
   "inventory": {
     "sourceMessageCount": 3430,
@@ -47,7 +47,7 @@
     "messageCount": 3430,
     "completeCount": 3430,
     "blockedCount": 0,
-    "dossierDigest": "732a08147e8a65fc0d4f082665fa4cc00f4fdcf03ec49779670efbf4e0a08aa9",
+    "dossierDigest": "a18bf5254004e1e56bfc8d6dab1a6547df6f35e28235a21b6bddc5158f031f35",
     "catalogDigest": "2eb9d14ddce6ceaf4ee8ddd880033f3725367d70ed3d7e5825465b70f810d5da",
     "moduleCount": 32,
     "moduleDigest": "3b4f2df2201d552cc6e09b75bcebf64a30ac3511d401d79c50d4eb6e806195d3",
@@ -67,9 +67,9 @@
       "destructive-or-rejecting-action": 48,
       "failure-or-invalid-input": 398,
       "interactive-ready": 569,
-      "retained-not-currently-reachable": 447,
+      "retained-not-currently-reachable": 448,
       "successful-completion": 193,
-      "visible": 1775
+      "visible": 1774
     },
     "riskCounts": { "high": 1578, "low": 1684, "medium": 168 },
     "highRiskMessageCount": 1578,
@@ -94,7 +94,7 @@
   },
   "usageIndex": {
     "source": "docs/plans/i18n-de-DE/manifest.json messages[*].references/moduleOwnership/dynamicFamilies",
-    "literalReferenceCount": 4204,
+    "literalReferenceCount": 4203,
     "dynamicCallsiteCount": 33,
     "glossaryRuleScope": "full target catalog at the automated quality gate",
     "onDemandCommand": "pnpm i18n:context:dossier --locale zh-CN --message <MESSAGE_ID>"
@@ -1318,5 +1318,5 @@
     "docs/plans/i18n-zh-CN/style-guide.md": "8da9e9fe011c1f93e682c7d22bfc580945de0e4cfd785115c5b5d2ed6585acfb"
   },
   "blockedContext": [],
-  "contextDigest": "2131a28469fb2ad16be69d07e4f84e83d3a9cce035ca10e03c594be30d14ce16"
+  "contextDigest": "acbef4cf6fb7b89f655e5215e75b9a5bb50099e79141718808f84e2b8849301d"
 }

@@ -3,7 +3,7 @@
   "source": {
     "baseRef": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
     "baseCommit": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
-    "auditedInputDigest": "87591b09b06e2ae0576027bb2ba65e659d03671dd7ae0dcf802a993724270125",
+    "auditedInputDigest": "9bb63253cf3b12ae018b41a287d1395b0b25757336772b58254b0b684714ce8a",
     "auditedInputDigestAlgorithm": "sha256(path\\0content\\0)",
     "repository": "tiangong-lca/platform"
   },
@@ -71,11 +71,11 @@
     "localeLeafModuleCounts": { "en-US": 31, "zh-CN": 31, "de-DE": 31, "fr-FR": 31 },
     "localeUniqueKeyCounts": { "en-US": 3430, "zh-CN": 3430, "de-DE": 3430, "fr-FR": 3430 },
     "canonicalCandidateKeyCount": 3430,
-    "activeStaticKeyCount": 2268,
+    "activeStaticKeyCount": 2267,
     "activeDynamicKeyCount": 321,
-    "reservedKeyCount": 841,
+    "reservedKeyCount": 842,
     "productionSourceFileCount": 472,
-    "literalReferenceCount": 4204,
+    "literalReferenceCount": 4203,
     "dynamicCallsiteCount": 33,
     "dynamicCallsiteSummaryCount": 33,
     "registeredDynamicCallsiteCount": 33,
@@ -225524,7 +225524,7 @@
     },
     {
       "id": "pages.review.members.email.addHint",
-      "category": "active-static",
+      "category": "reserved",
       "dynamicFamilies": [],
       "moduleOwnership": {
         "en-US": ["pages_review"],
@@ -225578,17 +225578,7 @@
           }
         }
       },
-      "references": [
-        {
-          "kind": "FormattedMessage",
-          "path": "src/pages/Review/Components/AddMemberModal.tsx",
-          "line": 68,
-          "column": 18,
-          "symbol": "AddMemberModal",
-          "defaultMessage": null,
-          "defaultMessageExpression": null
-        }
-      ],
+      "references": [],
       "defaultMessages": []
     },
     {
@@ -225651,7 +225641,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Review/Components/AddMemberModal.tsx",
-          "line": 76,
+          "line": 75,
           "column": 24,
           "symbol": "AddMemberModal",
           "defaultMessage": null,
@@ -225720,7 +225710,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Review/Components/AddMemberModal.tsx",
-          "line": 82,
+          "line": 81,
           "column": 26,
           "symbol": "AddMemberModal",
           "defaultMessage": null,
@@ -225789,7 +225779,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Review/Components/AddMemberModal.tsx",
-          "line": 72,
+          "line": 71,
           "column": 24,
           "symbol": "AddMemberModal",
           "defaultMessage": null,
