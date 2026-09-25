@@ -2,7 +2,7 @@ import { ContactForm } from '@/pages/Contacts/Components/form';
 import type { ContactDataSetObjectKeys, FormContact } from '@/services/contacts/data';
 import { genContactFromData } from '@/services/contacts/util';
 import { initVersion } from '@/services/general/data';
-import { formatDateTime, getLang } from '@/services/general/util';
+import { formatDateTime, getLang, getLangText } from '@/services/general/util';
 import {
   activateReviewerContact,
   type ReviewerContactStatus,
@@ -32,6 +32,12 @@ const ReviewerProfile = ({ status, loading, error, onRefresh }: Props) => {
   const [formData, setFormData] = useState<FormContact>();
   const creatingVersion = Boolean(status?.contact);
   const contactId = useMemo(() => status?.contact?.['@refObjectId'] ?? v4(), [status?.contact]);
+  const contactName = getLangText(
+    status?.dataset?.json_ordered?.contactDataSet?.contactInformation?.dataSetInformation?.[
+      'common:name'
+    ],
+    lang,
+  );
 
   const buildInitialData = () => {
     if (status?.dataset?.json_ordered?.contactDataSet) {
@@ -211,6 +217,11 @@ const ReviewerProfile = ({ status, loading, error, onRefresh }: Props) => {
           <Descriptions
             column={1}
             items={[
+              {
+                key: 'contactName',
+                label: <FormattedMessage id='pages.review.reviewerProfile.contactName' />,
+                children: contactName,
+              },
               {
                 key: 'contactId',
                 label: <FormattedMessage id='pages.review.reviewerProfile.contactId' />,

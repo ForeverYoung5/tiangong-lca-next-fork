@@ -43,7 +43,7 @@ checkPaths:
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
 lastReviewedAt: 2026-09-25
-lastReviewedCommit: 53d4e0e0992f621749b473e628099e6ca4e813b3
+lastReviewedCommit: 75e3e66b31c29df1ab3ab2ef970ebde8db5d9f11
 lastReviewedNote: 'Reviewed the merged Open Data tests and Platform #1122 reviewer-profile tests; both use existing mocked-service, semantic interaction, and focused-suite patterns.'
 ---
 

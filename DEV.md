@@ -43,7 +43,7 @@ checkPaths:
   - .github/workflows/build.yml
   - .nvmrc
 lastReviewedAt: 2026-09-25
-lastReviewedCommit: 53d4e0e0992f621749b473e628099e6ca4e813b3
+lastReviewedCommit: 75e3e66b31c29df1ab3ab2ef970ebde8db5d9f11
 lastReviewedNote: 'Reviewed the merged Open Data baseline and reviewer-profile additions; local bootstrap, validation workflow, commands, and prerequisites remain unchanged.'
 ---
 

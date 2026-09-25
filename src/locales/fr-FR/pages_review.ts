@@ -9,6 +9,7 @@ export default {
   'pages.review.reviewerProfile.create': "Créer le profil d'évaluateur",
   'pages.review.reviewerProfile.update': "Mettre à jour le profil d'évaluateur",
   'pages.review.reviewerProfile.required': "Complétez et publiez votre profil d'évaluateur avant de traiter des tâches d'évaluation.",
+  'pages.review.reviewerProfile.contactName': 'Nom du contact',
   'pages.review.reviewerProfile.contactId': 'ID du contact',
   'pages.review.reviewerProfile.version': 'Version actuelle',
   'pages.review.reviewerProfile.state': 'État',

@@ -24,6 +24,7 @@ jest.mock('@/services/contacts/util', () => ({
 jest.mock('@/services/general/util', () => ({
   formatDateTime: () => '2026-09-24T00:00:00Z',
   getLang: (locale: string) => `lang:${locale}`,
+  getLangText: (values: any[]) => values?.[0]?.['#text'] ?? '-',
 }));
 
 jest.mock('@/services/general/data', () => ({ initVersion: '01.00.000' }));
@@ -159,7 +160,16 @@ const readyStatus = {
     version: '01.00.000',
     state_code: 100,
     rule_verification: true,
-    json_ordered: { contactDataSet: { persisted: true } },
+    json_ordered: {
+      contactDataSet: {
+        persisted: true,
+        contactInformation: {
+          dataSetInformation: {
+            'common:name': [{ '@xml:lang': 'en', '#text': 'Alice Reviewer' }],
+          },
+        },
+      },
+    },
   },
 };
 
@@ -264,6 +274,10 @@ describe('ReviewerProfile', () => {
 
     expect(screen.getByTestId('descriptions')).toHaveTextContent('contact-1');
     expect(screen.getByTestId('descriptions')).toHaveTextContent(
+      'pages.review.reviewerProfile.contactName',
+    );
+    expect(screen.getByTestId('descriptions')).toHaveTextContent('Alice Reviewer');
+    expect(screen.getByTestId('descriptions')).toHaveTextContent(
       'pages.review.reviewerProfile.ready',
     );
     fireEvent.click(screen.getByRole('button', { name: /pages.review.reviewerProfile.update/ }));
@@ -271,7 +285,9 @@ describe('ReviewerProfile', () => {
     act(() => latestConfirm().onOk());
 
     await waitFor(() => expect(screen.getByTestId('drawer')).toBeInTheDocument());
-    expect(mockGenContactFromData).toHaveBeenCalledWith({ persisted: true });
+    expect(mockGenContactFromData).toHaveBeenCalledWith(
+      readyStatus.dataset.json_ordered.contactDataSet,
+    );
     expect(screen.getByTestId('contact-form')).toHaveAttribute('data-form-type', 'createVersion');
 
     fireEvent.click(

@@ -137,18 +137,6 @@ const Review = () => {
       ]
     : [
         {
-          key: 'reviewerProfile',
-          label: <FormattedMessage id='pages.review.tabs.reviewerProfile' />,
-          children: (
-            <ReviewerProfile
-              status={profileStatus}
-              loading={profileLoading}
-              error={profileError}
-              onRefresh={loadReviewerProfile}
-            />
-          ),
-        },
-        {
           key: 'reviewed',
           label: <FormattedMessage id='pages.review.tabs.reviewed' />,
           disabled: !profileReady,
@@ -177,6 +165,18 @@ const Review = () => {
               actionRef={rejectedTableRef}
               tableType='reviewer-rejected'
               userData={userData}
+            />
+          ),
+        },
+        {
+          key: 'reviewerProfile',
+          label: <FormattedMessage id='pages.review.tabs.reviewerProfile' />,
+          children: (
+            <ReviewerProfile
+              status={profileStatus}
+              loading={profileLoading}
+              error={profileError}
+              onRefresh={loadReviewerProfile}
             />
           ),
         },

@@ -10,6 +10,7 @@ export default {
   'pages.review.reviewerProfile.create': '完善审核员资料',
   'pages.review.reviewerProfile.update': '更新审核员资料',
   'pages.review.reviewerProfile.required': '完成并发布审核员资料后，才可以处理审核任务。',
+  'pages.review.reviewerProfile.contactName': '联系人名称',
   'pages.review.reviewerProfile.contactId': '联系人 ID',
   'pages.review.reviewerProfile.version': '当前版本',
   'pages.review.reviewerProfile.state': '状态',

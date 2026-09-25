@@ -9,6 +9,7 @@ export default {
   'pages.review.reviewerProfile.create': 'Prüfprofil anlegen',
   'pages.review.reviewerProfile.update': 'Prüfprofil aktualisieren',
   'pages.review.reviewerProfile.required': 'Vervollständigen und veröffentlichen Sie Ihr Prüfprofil, bevor Sie Prüfaufgaben bearbeiten.',
+  'pages.review.reviewerProfile.contactName': 'Kontaktname',
   'pages.review.reviewerProfile.contactId': 'Kontakt-ID',
   'pages.review.reviewerProfile.version': 'Aktuelle Version',
   'pages.review.reviewerProfile.state': 'Status',

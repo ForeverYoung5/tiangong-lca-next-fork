@@ -9,6 +9,7 @@ export default {
   'pages.review.reviewerProfile.create': 'Create reviewer profile',
   'pages.review.reviewerProfile.update': 'Update reviewer profile',
   'pages.review.reviewerProfile.required': 'Complete and publish your reviewer profile before handling review tasks.',
+  'pages.review.reviewerProfile.contactName': 'Contact name',
   'pages.review.reviewerProfile.contactId': 'Contact ID',
   'pages.review.reviewerProfile.version': 'Current version',
   'pages.review.reviewerProfile.state': 'Status',

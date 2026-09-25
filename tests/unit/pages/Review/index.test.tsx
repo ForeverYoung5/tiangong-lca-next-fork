@@ -193,9 +193,10 @@ describe('Review page', () => {
     expect(
       screen.queryByRole('button', { name: 'pages.review.tabs.unassigned' }),
     ).not.toBeInTheDocument();
-    expect(screen.getByRole('button', { name: 'pages.review.tabs.pending' })).toBeInTheDocument();
+    const pendingTab = screen.getByRole('button', { name: 'pages.review.tabs.pending' });
+    await waitFor(() => expect(pendingTab).toBeEnabled());
 
-    fireEvent.click(screen.getByRole('button', { name: 'pages.review.tabs.pending' }));
+    fireEvent.click(pendingTab);
 
     await waitFor(() => {
       expect(screen.getByTestId('assignment-pending')).toHaveTextContent('pending:review-member');
@@ -215,6 +216,12 @@ describe('Review page', () => {
       expect(screen.getByTestId('assignment-reviewed')).toHaveTextContent('reviewed:review-member');
       expect(assignmentReloads.reviewed).toHaveBeenCalledTimes(1);
     });
+    expect(screen.getAllByRole('button').map((button) => button.textContent)).toEqual([
+      'pages.review.tabs.reviewed',
+      'pages.review.tabs.pending',
+      'pages.review.tabs.rejected',
+      'pages.review.tabs.reviewerProfile',
+    ]);
   });
 
   it('gates review tasks and opens reviewer profile when profile is missing', async () => {
