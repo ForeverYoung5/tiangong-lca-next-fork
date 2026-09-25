@@ -46,7 +46,7 @@ checkPaths:
   - .husky/pre-push
   - .github/workflows/**
 lastReviewedAt: 2026-09-25
-lastReviewedCommit: 75e3e66b31c29df1ab3ab2ef970ebde8db5d9f11
+lastReviewedCommit: ae246ffe5d7d34e08a39cc3f423974cc267eed15
 lastReviewedNote: 'Reviewed the merged Platform #1120 Open Data UI baseline and Platform #1122 Review Management reviewer-profile workflow; repository ownership, bootstrap, branch, and delivery rules remain unchanged.'
 related:
   - .docpact/config.yaml

@@ -3,7 +3,7 @@
   "locale": "fr-FR",
   "validationClosure": {
     "baselineSha": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
-    "auditedInputDigest": "f9545450c2647a477614533702ba69f1ab4ccde1a875dc7bdef7c835a9b3af0e",
+    "auditedInputDigest": "caf6733ed51c56e7f133da0bb1c8cdd0eaa99557002a18750161f1b39d0055a6",
     "validatedMessageCount": 3431,
     "validatedModules": [
       "$entry",
@@ -41,8 +41,8 @@
     ],
     "highRiskMessageCount": 1579,
     "highRiskMessageDigest": "6519aee7c127576e7cf6f114f73af6e8e7ef272e5a5ef2ee81a1a0b0e2e9dfaa",
-    "catalogDigest": "33dcda2850da35db1ca1664708a80b7986ccbd02d781ea401fd0eff1fc97a8d3",
-    "dossierDigest": "6f553b8784e3cb5f96580956b148dbfc4656cce4408effb2ce318812f870da94",
+    "catalogDigest": "15cc15a5d59f48e4858d687967c5fc660afbe833c9916049d5b51abd14b184f6",
+    "dossierDigest": "66f892d54d1487045dbf3e3cc16352fee481ca3c5e50566488fd0e2438c1108f",
     "typedContentDossierDigest": "381b7b7af87d349151ab51d77de2402d93629029efa5ff964e45d5e00cddf454",
     "routeEvidenceDigest": "552f97ae42f9f705bc19997c4569bbab42f4ad951b059b531fba2b45dc5dfc91",
     "scope": "deterministic structure only; semantic translation and rendered route review are separate production blockers owned by #635"
@@ -98,7 +98,7 @@
         "messageDigest": "2927e0385ca2b643e99ef318300dd9b7aa908208e17f80575e115682253fbfb5",
         "highRiskMessageCount": 1579,
         "highRiskMessageDigest": "6519aee7c127576e7cf6f114f73af6e8e7ef272e5a5ef2ee81a1a0b0e2e9dfaa",
-        "dossierDigest": "6f553b8784e3cb5f96580956b148dbfc4656cce4408effb2ce318812f870da94",
+        "dossierDigest": "66f892d54d1487045dbf3e3cc16352fee481ca3c5e50566488fd0e2438c1108f",
         "checks": {
           "nonEmptyTargets": true,
           "icuArgumentSignatureParity": true,
@@ -113,5 +113,5 @@
     }
   ],
   "blockedItems": [],
-  "validationDigest": "c68049152c8089b7a7deca68d8e5d61cafc13938a5d5af5ec85625473ad7de58"
+  "validationDigest": "c789aad40a2e82ee3707f39bbdd66909ed668001394fdb77bdb84b193a5df9f2"
 }

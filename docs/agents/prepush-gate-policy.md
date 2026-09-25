@@ -43,7 +43,7 @@ checkPaths:
   - scripts/reference-data/**
   - .github/workflows/**
 lastReviewedAt: 2026-09-25
-lastReviewedCommit: 75e3e66b31c29df1ab3ab2ef970ebde8db5d9f11
+lastReviewedCommit: ae246ffe5d7d34e08a39cc3f423974cc267eed15
 lastReviewedNote: 'Reviewed the merged Open Data tests and Platform #1122 reviewer-profile coverage; existing Jest paths, pre-push ownership, and trigger policy remain unchanged.'
 ---
 

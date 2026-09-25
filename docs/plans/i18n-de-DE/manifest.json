@@ -3,7 +3,7 @@
   "source": {
     "baseRef": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
     "baseCommit": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
-    "auditedInputDigest": "f9545450c2647a477614533702ba69f1ab4ccde1a875dc7bdef7c835a9b3af0e",
+    "auditedInputDigest": "caf6733ed51c56e7f133da0bb1c8cdd0eaa99557002a18750161f1b39d0055a6",
     "auditedInputDigestAlgorithm": "sha256(path\\0content\\0)",
     "repository": "tiangong-lca/platform"
   },
@@ -233993,7 +233993,7 @@
       },
       "translations": {
         "en-US": {
-          "value": "My reviewer profile",
+          "value": "Reviewer profile",
           "argumentSignature": [],
           "placeholders": [],
           "source": {
@@ -234004,7 +234004,7 @@
           }
         },
         "zh-CN": {
-          "value": "我的审核员资料",
+          "value": "审核员资料",
           "argumentSignature": [],
           "placeholders": [],
           "source": {
@@ -234015,7 +234015,7 @@
           }
         },
         "de-DE": {
-          "value": "Mein Prüfprofil",
+          "value": "Prüfprofil",
           "argumentSignature": [],
           "placeholders": [],
           "source": {
@@ -234026,7 +234026,7 @@
           }
         },
         "fr-FR": {
-          "value": "Mon profil d'évaluateur",
+          "value": "Profil d'évaluateur",
           "argumentSignature": [],
           "placeholders": [],
           "source": {
@@ -237586,7 +237586,7 @@
       },
       "translations": {
         "en-US": {
-          "value": "My reviewer profile",
+          "value": "Reviewer profile",
           "argumentSignature": [],
           "placeholders": [],
           "source": {
@@ -237597,7 +237597,7 @@
           }
         },
         "zh-CN": {
-          "value": "我的审核员资料",
+          "value": "审核员资料",
           "argumentSignature": [],
           "placeholders": [],
           "source": {
@@ -237608,7 +237608,7 @@
           }
         },
         "de-DE": {
-          "value": "Mein Prüfprofil",
+          "value": "Prüfprofil",
           "argumentSignature": [],
           "placeholders": [],
           "source": {
@@ -237619,7 +237619,7 @@
           }
         },
         "fr-FR": {
-          "value": "Mon profil d'évaluateur",
+          "value": "Profil d'évaluateur",
           "argumentSignature": [],
           "placeholders": [],
           "source": {

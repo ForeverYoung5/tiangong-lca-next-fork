@@ -19,7 +19,7 @@ checkPaths:
   - src/pages/Review/**
   - src/pages/ManageSystem/**
 lastReviewedAt: 2026-09-25
-lastReviewedCommit: 75e3e66b31c29df1ab3ab2ef970ebde8db5d9f11
+lastReviewedCommit: ae246ffe5d7d34e08a39cc3f423974cc267eed15
 lastReviewedNote: 'Recorded the Review Member profile readiness gate; audit state transitions remain unchanged.'
 ---
 
