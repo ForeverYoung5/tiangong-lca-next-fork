@@ -18,8 +18,8 @@ checkPaths:
   - docs/agents/data_audit_instruction.md
   - src/pages/Review/**
   - src/pages/ManageSystem/**
-lastReviewedAt: 2026-09-24
-lastReviewedCommit: e45f2717
+lastReviewedAt: 2026-09-25
+lastReviewedCommit: f5cb936864021425c860778997983c81ba54ef7f
 lastReviewedNote: 'Recorded the Review Member profile readiness gate; audit state transitions remain unchanged.'
 ---
 

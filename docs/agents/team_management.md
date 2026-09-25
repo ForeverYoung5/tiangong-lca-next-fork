@@ -19,8 +19,8 @@ checkPaths:
   - src/pages/Teams/**
   - src/pages/Review/**
   - src/pages/ManageSystem/**
-lastReviewedAt: 2026-09-24
-lastReviewedCommit: e45f2717
+lastReviewedAt: 2026-09-25
+lastReviewedCommit: f5cb936864021425c860778997983c81ba54ef7f
 lastReviewedNote: 'Added the self-service Review Member profile onboarding and immutable open-data version-update boundary.'
 ---
 

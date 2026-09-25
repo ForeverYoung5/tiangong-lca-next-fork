@@ -42,8 +42,8 @@ checkPaths:
   - .github/workflows/release-readiness.yml
   - .github/workflows/build.yml
   - .nvmrc
-lastReviewedAt: 2026-09-24
-lastReviewedCommit: ff088fc7
+lastReviewedAt: 2026-09-25
+lastReviewedCommit: f5cb936864021425c860778997983c81ba54ef7f
 lastReviewedNote: 'Reviewed the merged Open Data baseline and reviewer-profile additions; local bootstrap, validation workflow, commands, and prerequisites remain unchanged.'
 ---
 

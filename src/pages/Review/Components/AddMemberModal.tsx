@@ -65,7 +65,6 @@ const AddMemberModal: React.FC<AddMemberModalProps> = ({ open, onCancel, onSucce
         <Form.Item
           name='email'
           label={<FormattedMessage id='pages.review.members.email' defaultMessage='Email' />}
-          extra={<FormattedMessage id='pages.review.members.email.addHint' />}
           rules={[
             {
               required: true,

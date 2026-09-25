@@ -58,6 +58,7 @@ describe('ReviewAddMemberModal', () => {
     expect(onSuccess).toHaveBeenCalled();
     expect(onCancel).toHaveBeenCalled();
     expect(mockMessageSuccess).toHaveBeenCalledWith('pages.review.members.addSuccess');
+    expect(screen.queryByText('pages.review.members.email.addHint')).not.toBeInTheDocument();
     expect(screen.queryByText(/contact/i)).not.toBeInTheDocument();
   });
 

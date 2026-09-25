@@ -39,8 +39,8 @@ checkPaths:
   - .github/workflows/build.yml
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
-lastReviewedAt: 2026-09-24
-lastReviewedCommit: ff088fc7
+lastReviewedAt: 2026-09-25
+lastReviewedCommit: f5cb936864021425c860778997983c81ba54ef7f
 lastReviewedNote: 'Reviewed the merged Open Data and Platform #1122 reviewer-profile tests; existing jsdom, no-watchman recovery, focused-test guidance, and supported commands remain authoritative.'
 ---
 
