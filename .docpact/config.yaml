@@ -1,7 +1,7 @@
 version: 1
 layout: repo
 lastReviewedAt: "2026-09-26"
-lastReviewedCommit: "abd93853304e376bd620164ad79666a8f0c83e10"
+lastReviewedCommit: "d98e9b3a01f4d0818883111b9da6e1b4974d41ba"
 lastReviewedNote: 'Reviewed for Platform #1111: the exact installed TIDAS SDK advances to 0.3.1 with mapper-independent Process review-array qualification; routing, ownership, coverage, and rule semantics are unchanged.'
 
 # Keep path-level ownership, routing intents, and governed-doc rules here.

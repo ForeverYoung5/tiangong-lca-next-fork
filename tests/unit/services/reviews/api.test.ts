@@ -811,6 +811,18 @@ describe('review workflow command wrappers', () => {
     });
     expect(result).toEqual({ data: eligibility, error: null });
   });
+
+  it('normalizes an empty batch eligibility response', async () => {
+    mockRpc.mockResolvedValueOnce({ data: null, error: null });
+
+    const result = await reviewsApi.getReviewBatchEligibility([], 'reviewer-reject');
+
+    expect(mockRpc).toHaveBeenCalledWith('qry_review_batch_eligibility_v1', {
+      p_review_ids: [],
+      p_operation: 'reviewer-reject',
+    });
+    expect(result).toEqual({ data: [], error: null });
+  });
 });
 
 describe('updateReviewApi', () => {
@@ -1143,6 +1155,7 @@ describe('getReviewsTableDataOfReviewMember', () => {
           review_state_code: -1,
           reviewer_id: ['reviewer-1'],
           comment_state_code: -1,
+          comment_modified_at: '2024-04-03T00:00:00.000Z',
           json: {
             data: {
               id: 'process-1',
@@ -1218,6 +1231,7 @@ describe('getReviewsTableDataOfReviewMember', () => {
       stateCode: -1,
       rootMatchesStatus: true,
       rootCanRead: true,
+      actorCommentModifiedAt: '2024-04-03T00:00:00.000Z',
       teamName: 'Team A',
       userName: 'reviewer@example.com',
       deadline: '2024-04-20T00:00:00.000Z',
