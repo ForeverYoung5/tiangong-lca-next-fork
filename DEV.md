@@ -43,7 +43,7 @@ checkPaths:
   - .github/workflows/build.yml
   - .nvmrc
 lastReviewedAt: 2026-09-26
-lastReviewedCommit: 6ea2083644c71db8fdb47694f8024b7d3876b96a
+lastReviewedCommit: 2c5f27662719e17e1db3570f2dcefc2aeeca017d
 lastReviewedNote: 'Reviewed for Platform #1111: the installed SDK contract now qualifies TIDAS SDK 0.3.1 and ordered Process reviews; local bootstrap and the default work loop are unchanged.'
 ---
 

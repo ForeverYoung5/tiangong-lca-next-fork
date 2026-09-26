@@ -556,7 +556,7 @@
           "viewState": "review-workbench",
           "requiredEvidenceScope": "access-boundary-observed",
           "sourceDigest": "2db30b7eb233a2cf535fec49ed330bd39b912fde391bbc3ca2994e498477f039",
-          "focusedTestDigest": "e33a89143d2b80a4adc333b9263bbf8cf6d77b0bce8a8cd07105bcbbde3c853d",
+          "focusedTestDigest": "4803a629116b35d9436e5efe1c11d85a18b02ce154298ef7613ab92c032a4f80",
           "plannedBrowserAssertionCount": 1,
           "plannedBrowserAssertionDigest": "5a8c72f83ffaf3ff28bf1ba10eb392dc9595f22dc25398575a67c71a636d6af4",
           "derivedMessageCount": 9,
@@ -1276,7 +1276,7 @@
           "unownedVisibleLiteralCount": 0
         }
       ],
-      "rowEvidenceDigest": "864c78d13dc21a275a4b40814785ba1cf76a72408e70d692a4a2ef8efda5418a",
+      "rowEvidenceDigest": "b79ac85a4b986a45b8a24b806674c7c04b342ef7666b6786baf7cc3fb3e36b71",
       "blockedDerivedStateCount": 0,
       "unownedVisibleLiteralCount": 0
     }
@@ -1300,5 +1300,5 @@
     "docs/plans/i18n-zh-CN/style-guide.md": "8da9e9fe011c1f93e682c7d22bfc580945de0e4cfd785115c5b5d2ed6585acfb"
   },
   "blockedContext": [],
-  "contextDigest": "40213d96becdf1d57d7b2c39cc7616a8093aa71133df8f0ebc97f9ebfad8afc4"
+  "contextDigest": "9d0e738d236bf2a46e60ad88d923dce647f94c33f3a7a0137e705234aeff76cf"
 }

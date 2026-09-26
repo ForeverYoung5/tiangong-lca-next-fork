@@ -46,7 +46,7 @@ checkPaths:
   - .husky/pre-push
   - .github/workflows/**
 lastReviewedAt: 2026-09-26
-lastReviewedCommit: 6ea2083644c71db8fdb47694f8024b7d3876b96a
+lastReviewedCommit: 2c5f27662719e17e1db3570f2dcefc2aeeca017d
 lastReviewedNote: 'Reviewed for Platform #1111: the released TIDAS SDK 0.3.1 replaces 0.2.0 and adds mapper-independent Process review-array qualification; repository ownership, bootstrap, branch, and delivery rules are unchanged.'
 related:
   - .docpact/config.yaml

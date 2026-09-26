@@ -359,8 +359,14 @@ describe('BatchReviewActions', () => {
 
   it('reports eligibility failures before opening a confirmation', async () => {
     eligibilityMock
-      .mockResolvedValueOnce({ data: [], error: new Error('approve preflight failed') })
-      .mockResolvedValueOnce({ data: [], error: new Error('reject preflight failed') });
+      .mockResolvedValueOnce({
+        data: [],
+        error: new Error('approve preflight failed'),
+      } as never)
+      .mockResolvedValueOnce({
+        data: [],
+        error: new Error('reject preflight failed'),
+      } as never);
 
     render(
       <BatchReviewActions
