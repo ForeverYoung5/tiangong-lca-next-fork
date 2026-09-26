@@ -56,9 +56,9 @@ checkPaths:
   - .github/workflows/i18n-semantic-e2e.yml
   - .github/workflows/build.yml
   - package.json
-lastReviewedAt: 2026-09-23
-lastReviewedCommit: 6aad37543b8bddac1edb85862d7979ce8f540f20
-lastReviewedNote: 'Reviewed Platform #1120: shared Open Data request helpers reuse existing localized dataset mapping; locale delivery, fallback, and release policy are unchanged.'
+lastReviewedAt: 2026-09-24
+lastReviewedCommit: ff088fc7
+lastReviewedNote: 'Reviewed the merged Open Data localization baseline and Platform #1122 reviewer-profile messages; generated locale artifacts are refreshed idempotently while locale delivery, fallback, validation, and release policy remain unchanged.'
 baselineObservedAt: 2026-07-18
 related:
   - ../../AGENTS.md

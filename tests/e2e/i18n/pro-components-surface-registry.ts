@@ -159,6 +159,7 @@ export const PRO_COMPONENT_SURFACE_FAMILIES = [
     sourcePaths: [
       'src/pages/LifeCycleModels/Components/toolbar/editTargetAmount.tsx',
       'src/pages/LifeCycleModels/Components/toolbar/eidtInfo.tsx',
+      'src/pages/Review/Components/ReviewerProfile.tsx',
       'src/pages/Review/Components/reviewLifeCycleModels/Components/toolbar/viewInfo.tsx',
       'src/pages/Review/Components/reviewProcess/index.tsx',
     ],
@@ -243,7 +244,7 @@ export const EXPECTED_PRO_COMPONENT_RUNTIME_COUNTS = {
   DragSortTable: 1,
   LoginForm: 3,
   PageContainer: 16,
-  ProForm: 27,
+  ProForm: 28,
   ProLayout: 3,
   ProTable: 67,
   SettingDrawer: 1,

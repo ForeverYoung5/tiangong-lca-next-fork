@@ -25,9 +25,9 @@ checkPaths:
   - playwright.config.ts
   - config/docs-capture/**
   - tests/e2e/i18n/**
-lastReviewedAt: 2026-09-23
-lastReviewedCommit: 25d57284565efb719c471df2bfdceb05dfc65717
-lastReviewedNote: 'Reviewed Platform #1120 after integrating current dev: the Open Data catalog adds shared filter and RPC service modules within the existing page/service architecture; stable ownership boundaries are unchanged.'
+lastReviewedAt: 2026-09-25
+lastReviewedCommit: ae246ffe5d7d34e08a39cc3f423974cc267eed15
+lastReviewedNote: 'Reviewed the merged Open Data page/service baseline and Platform #1122 reviewer-profile placement with Contact form reuse; frontend ownership and stable service boundaries remain unchanged.'
 related:
   - ../AGENTS.md
   - ../.docpact/config.yaml

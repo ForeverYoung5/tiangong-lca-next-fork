@@ -43,9 +43,9 @@ checkPaths:
   - pnpm-lock.yaml
   - pnpm-workspace.yaml
   - Dockerfile.app
-lastReviewedAt: 2026-09-23
-lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
-lastReviewedNote: 'Reviewed for Platform #1120 after integrating current dev: Open Data filter and publication coverage follows the existing unit/component strategy and does not change the long-term testing model.'
+lastReviewedAt: 2026-09-25
+lastReviewedCommit: ae246ffe5d7d34e08a39cc3f423974cc267eed15
+lastReviewedNote: 'Reviewed the merged Open Data coverage and Platform #1122 reviewer-profile/Contact-form coverage; both follow the existing unit/component strategy and do not change the long-term testing model.'
 ---
 
 # Testing Strategy

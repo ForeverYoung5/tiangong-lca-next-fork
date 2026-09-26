@@ -3,6 +3,7 @@ import ReviewPage from '@/pages/Review';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 
 const mockGetReviewUserRoleApi = jest.fn();
+const mockGetReviewerContactStatus = jest.fn();
 const assignmentReloads: Record<string, jest.Mock> = {};
 
 jest.mock('@umijs/max', () => ({
@@ -13,6 +14,18 @@ jest.mock('@umijs/max', () => ({
 jest.mock('@/services/roles/api', () => ({
   __esModule: true,
   getReviewUserRoleApi: (...args: any[]) => mockGetReviewUserRoleApi(...args),
+}));
+
+jest.mock('@/services/reviewerContacts/api', () => ({
+  __esModule: true,
+  getReviewerContactStatus: (...args: any[]) => mockGetReviewerContactStatus(...args),
+}));
+
+jest.mock('@/pages/Review/Components/ReviewerProfile', () => ({
+  __esModule: true,
+  default: ({ status }: any) => (
+    <div data-testid='reviewer-profile'>{status?.status ?? 'missing'}</div>
+  ),
 }));
 
 jest.mock('@/pages/Review/Components/AssignmentReview', () => ({
@@ -82,7 +95,12 @@ jest.mock('antd', () => {
       <div>
         <div>
           {items.map((item: any) => (
-            <button key={item.key} type='button' onClick={() => onChange?.(item.key)}>
+            <button
+              key={item.key}
+              type='button'
+              disabled={item.disabled}
+              onClick={() => onChange?.(item.key)}
+            >
               {typeof item.label === 'string' ? item.label : item.label}
             </button>
           ))}
@@ -103,6 +121,10 @@ jest.mock('antd', () => {
 describe('Review page', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    mockGetReviewerContactStatus.mockResolvedValue({
+      data: { status: 'ready', ready: true, contact: {}, dataset: {} },
+      error: null,
+    });
     Object.keys(assignmentReloads).forEach((key) => delete assignmentReloads[key]);
   });
 
@@ -171,9 +193,10 @@ describe('Review page', () => {
     expect(
       screen.queryByRole('button', { name: 'pages.review.tabs.unassigned' }),
     ).not.toBeInTheDocument();
-    expect(screen.getByRole('button', { name: 'pages.review.tabs.pending' })).toBeInTheDocument();
+    const pendingTab = screen.getByRole('button', { name: 'pages.review.tabs.pending' });
+    await waitFor(() => expect(pendingTab).toBeEnabled());
 
-    fireEvent.click(screen.getByRole('button', { name: 'pages.review.tabs.pending' }));
+    fireEvent.click(pendingTab);
 
     await waitFor(() => {
       expect(screen.getByTestId('assignment-pending')).toHaveTextContent('pending:review-member');
@@ -193,6 +216,37 @@ describe('Review page', () => {
       expect(screen.getByTestId('assignment-reviewed')).toHaveTextContent('reviewed:review-member');
       expect(assignmentReloads.reviewed).toHaveBeenCalledTimes(1);
     });
+    expect(screen.getAllByRole('button').map((button) => button.textContent)).toEqual([
+      'pages.review.tabs.reviewed',
+      'pages.review.tabs.pending',
+      'pages.review.tabs.rejected',
+      'pages.review.tabs.reviewerProfile',
+    ]);
+  });
+
+  it('gates review tasks and opens reviewer profile when profile is missing', async () => {
+    mockGetReviewUserRoleApi.mockResolvedValueOnce({ user_id: 'user-3', role: 'review-member' });
+    mockGetReviewerContactStatus.mockResolvedValueOnce({
+      data: { status: 'missing', ready: false, contact: null, dataset: null },
+      error: null,
+    });
+
+    render(<ReviewPage />);
+
+    expect(await screen.findByTestId('reviewer-profile')).toHaveTextContent('missing');
+    expect(screen.getByRole('button', { name: 'pages.review.tabs.reviewed' })).toBeDisabled();
+    expect(screen.getByRole('button', { name: 'pages.review.tabs.pending' })).toBeDisabled();
+  });
+
+  it('does not select a member task tab while reviewer profile readiness is loading', async () => {
+    mockGetReviewUserRoleApi.mockResolvedValueOnce({ user_id: 'user-4', role: 'review-member' });
+    mockGetReviewerContactStatus.mockReturnValueOnce(new Promise(() => {}));
+
+    const view = render(<ReviewPage />);
+
+    await waitFor(() => expect(mockGetReviewerContactStatus).toHaveBeenCalledTimes(1));
+    expect(screen.queryByTestId('assignment-reviewed')).not.toBeInTheDocument();
+    view.unmount();
   });
 
   it('logs errors from role loading and falls back to access denied', async () => {

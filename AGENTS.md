@@ -45,9 +45,9 @@ checkPaths:
   - .nvmrc
   - .husky/pre-push
   - .github/workflows/**
-lastReviewedAt: 2026-09-23
-lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
-lastReviewedNote: 'Reviewed for Platform #1120 after integrating current dev: Open Data catalog filtering, Process selection, and publication UI follow the existing frontend ownership and delivery contracts; repository rules are unchanged.'
+lastReviewedAt: 2026-09-25
+lastReviewedCommit: ae246ffe5d7d34e08a39cc3f423974cc267eed15
+lastReviewedNote: 'Reviewed the merged Platform #1120 Open Data UI baseline and Platform #1122 Review Management reviewer-profile workflow; repository ownership, bootstrap, branch, and delivery rules remain unchanged.'
 related:
   - .docpact/config.yaml
   - docs/agents/repo-validation.md

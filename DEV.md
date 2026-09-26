@@ -42,9 +42,9 @@ checkPaths:
   - .github/workflows/release-readiness.yml
   - .github/workflows/build.yml
   - .nvmrc
-lastReviewedAt: 2026-09-23
-lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
-lastReviewedNote: 'Reviewed for Platform #1120 after integrating current dev: Open Data catalog filters and Process publication use the existing local bootstrap and validation workflow; commands and prerequisites are unchanged.'
+lastReviewedAt: 2026-09-25
+lastReviewedCommit: ae246ffe5d7d34e08a39cc3f423974cc267eed15
+lastReviewedNote: 'Reviewed the merged Open Data baseline and reviewer-profile additions; local bootstrap, validation workflow, commands, and prerequisites remain unchanged.'
 ---
 
 # Development Bootstrap

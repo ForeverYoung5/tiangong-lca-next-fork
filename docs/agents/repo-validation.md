@@ -43,9 +43,9 @@ checkPaths:
   - scripts/typescript-native-parser.*
   - scripts/i18n/locale-delivery.mjs
   - .github/workflows/**
-lastReviewedAt: 2026-09-23
-lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
-lastReviewedNote: 'Reviewed for Platform #1120 after integrating current dev: Open Data filters and Process publication are covered by focused Jest tests plus the existing lint and production-build gates; command and gate policy are unchanged.'
+lastReviewedAt: 2026-09-25
+lastReviewedCommit: ae246ffe5d7d34e08a39cc3f423974cc267eed15
+lastReviewedNote: 'Reviewed the merged Open Data validation baseline and Platform #1122 reviewer-profile form, readiness gate, and email-only member addition; command and gate ownership remain unchanged.'
 related:
   - ../AGENTS.md
   - ../.docpact/config.yaml

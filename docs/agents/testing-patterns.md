@@ -42,9 +42,9 @@ checkPaths:
   - .github/workflows/build.yml
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
-lastReviewedAt: 2026-09-23
-lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
-lastReviewedNote: 'Reviewed for Platform #1120 after integrating current dev: the Open Data tests use existing mocked-service and semantic component interaction patterns; reusable guidance is unchanged.'
+lastReviewedAt: 2026-09-25
+lastReviewedCommit: ae246ffe5d7d34e08a39cc3f423974cc267eed15
+lastReviewedNote: 'Reviewed the merged Open Data tests and Platform #1122 reviewer-profile tests; both use existing mocked-service, semantic interaction, and focused-suite patterns.'
 ---
 
 # Testing Patterns Reference
