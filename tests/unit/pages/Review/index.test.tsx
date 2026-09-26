@@ -120,26 +120,32 @@ describe('Review page', () => {
     expect(screen.getByTestId('review-quality-diagnostic')).toHaveAttribute('data-open', 'true');
     fireEvent.click(screen.getByRole('button', { name: 'close-quality-diagnostic' }));
     expect(screen.getByTestId('review-quality-diagnostic')).toHaveAttribute('data-open', 'false');
-    expect(screen.getByRole('button', { name: 'pages.review.tabs.assigned' })).toBeInTheDocument();
-    expect(
-      screen.getByRole('button', { name: 'pages.review.tabs.rejectedTask' }),
-    ).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'In Progress' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Completed' })).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'pages.review.tabs.members' })).toBeInTheDocument();
+    expect(
+      screen
+        .getAllByRole('button')
+        .filter((button) => !button.textContent?.includes('quality'))
+        .slice(-1)[0],
+    ).toHaveTextContent('pages.review.tabs.members');
 
-    fireEvent.click(screen.getByRole('button', { name: 'pages.review.tabs.assigned' }));
+    fireEvent.click(screen.getByRole('button', { name: 'In Progress' }));
 
     await waitFor(() => {
-      expect(screen.getByTestId('assignment-assigned')).toHaveTextContent('assigned:review-admin');
+      expect(screen.getByTestId('assignment-in-progress')).toHaveTextContent(
+        'in-progress:review-admin',
+      );
     });
     fireEvent.click(screen.getByRole('button', { name: 'open-quality-diagnostic' }));
     expect(screen.getByTestId('review-quality-diagnostic')).toHaveAttribute('data-open', 'true');
     fireEvent.click(screen.getByRole('button', { name: 'close-quality-diagnostic' }));
 
-    fireEvent.click(screen.getByRole('button', { name: 'pages.review.tabs.rejectedTask' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Completed' }));
 
     await waitFor(() => {
-      expect(screen.getByTestId('assignment-admin-rejected')).toHaveTextContent(
-        'admin-rejected:review-admin',
+      expect(screen.getByTestId('assignment-completed')).toHaveTextContent(
+        'completed:review-admin',
       );
     });
 
@@ -157,41 +163,43 @@ describe('Review page', () => {
     });
   });
 
-  it('forces review members onto the reviewed tab without requiring an initial reload', async () => {
+  it('forces review members onto the pending tab without requiring an initial reload', async () => {
     mockGetReviewUserRoleApi.mockResolvedValueOnce({ user_id: 'user-2', role: 'review-member' });
 
     render(<ReviewPage />);
 
     await waitFor(() => {
-      expect(screen.getByTestId('assignment-reviewed')).toHaveTextContent('reviewed:review-member');
+      expect(screen.getByTestId('assignment-pending')).toHaveTextContent('pending:review-member');
     });
     expect(screen.queryByTestId('review-quality-diagnostic')).not.toBeInTheDocument();
-    expect(assignmentReloads.reviewed).not.toHaveBeenCalled();
+    expect(assignmentReloads.pending).not.toHaveBeenCalled();
 
     expect(
       screen.queryByRole('button', { name: 'pages.review.tabs.unassigned' }),
     ).not.toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'pages.review.tabs.pending' })).toBeInTheDocument();
 
+    fireEvent.click(screen.getByRole('button', { name: 'Submitted Opinions' }));
+
+    await waitFor(() => {
+      expect(screen.getByTestId('assignment-submitted')).toHaveTextContent(
+        'submitted:review-member',
+      );
+    });
+
+    fireEvent.click(screen.getByRole('button', { name: 'Completed' }));
+
+    await waitFor(() => {
+      expect(screen.getByTestId('assignment-completed')).toHaveTextContent(
+        'completed:review-member',
+      );
+    });
+
     fireEvent.click(screen.getByRole('button', { name: 'pages.review.tabs.pending' }));
 
     await waitFor(() => {
       expect(screen.getByTestId('assignment-pending')).toHaveTextContent('pending:review-member');
-    });
-
-    fireEvent.click(screen.getByRole('button', { name: 'pages.review.tabs.rejected' }));
-
-    await waitFor(() => {
-      expect(screen.getByTestId('assignment-reviewer-rejected')).toHaveTextContent(
-        'reviewer-rejected:review-member',
-      );
-    });
-
-    fireEvent.click(screen.getByRole('button', { name: 'pages.review.tabs.reviewed' }));
-
-    await waitFor(() => {
-      expect(screen.getByTestId('assignment-reviewed')).toHaveTextContent('reviewed:review-member');
-      expect(assignmentReloads.reviewed).toHaveBeenCalledTimes(1);
+      expect(assignmentReloads.pending).toHaveBeenCalledTimes(1);
     });
   });
 

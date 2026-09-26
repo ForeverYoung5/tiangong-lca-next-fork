@@ -628,8 +628,8 @@ describe('AssignmentReview', () => {
       expect(mockGetRootReviewReferenceProgress).toHaveBeenCalledWith('review-1'),
     );
     expect(screen.getByText('flows')).toBeInTheDocument();
-    expect(screen.getByText('1.0.0')).toBeInTheDocument();
-    expect(screen.getByText('Unassigned')).toBeInTheDocument();
+    expect(screen.getAllByText('1.0.0')).toHaveLength(2);
+    expect(screen.getAllByText('Unassigned')).toHaveLength(2);
     expect(screen.getByText('0/0')).toBeInTheDocument();
     expect(screen.queryByText('{"path":["process","flow"]}')).not.toBeInTheDocument();
   });
@@ -794,7 +794,7 @@ describe('AssignmentReview', () => {
     expect(await screen.findByTestId('batch-review-actions')).toHaveTextContent(
       'admin:true:["review-1"]',
     );
-    expect(screen.queryByTestId('select-reviewer')).not.toBeInTheDocument();
+    expect(screen.getByTestId('select-reviewer')).toHaveTextContent('assigned:["review-1"]');
   });
 
   it('shows reviewer opinion batch actions for pending selections', async () => {
@@ -1440,6 +1440,8 @@ describe('AssignmentReview', () => {
           userName: 'Owner',
           isFromLifeCycle: true,
           comments: [{ state_code: 0 }, { state_code: 1 }, { state_code: -3 }, { state_code: -2 }],
+          reviewerCount: 3,
+          completedReviewerCount: 2,
           json: {
             data: { id: 'model-3', version: '3.0.0' },
             user: { id: 'user-3' },
@@ -1468,8 +1470,8 @@ describe('AssignmentReview', () => {
 
     await waitFor(() => expect(screen.getByTestId('row-review-3')).toBeInTheDocument());
     expect(screen.getByText('2/3')).toBeInTheDocument();
-    expect(screen.getByTestId('review-lifecycle-detail')).toHaveTextContent(
-      'view:assigned:review-3',
+    expect(screen.getByTestId('simple-review-actions')).toHaveTextContent(
+      'review-3:admin:undefined',
     );
     expect(screen.getByTestId('review-progress')).toHaveTextContent('review-3:model');
   });
@@ -1484,6 +1486,9 @@ describe('AssignmentReview', () => {
           name: 'Assigned Process Review',
           userName: 'Owner',
           isFromLifeCycle: false,
+          targetTable: 'processes',
+          reviewerCount: 0,
+          completedReviewerCount: 0,
           json: {
             data: { id: 'process-3b', version: '3.1.0' },
             user: { id: 'user-3b' },
@@ -1503,8 +1508,8 @@ describe('AssignmentReview', () => {
 
     await waitFor(() => expect(screen.getByTestId('row-review-3b')).toBeInTheDocument());
     expect(screen.getByText('0/0')).toBeInTheDocument();
-    expect(screen.getByTestId('review-process-detail')).toHaveTextContent(
-      'view:assigned:review-3b:show',
+    expect(screen.getByTestId('simple-review-actions')).toHaveTextContent(
+      'review-3b:admin:processes',
     );
     expect(screen.getByTestId('review-progress')).toHaveTextContent('review-3b:process');
   });
@@ -1539,6 +1544,7 @@ describe('AssignmentReview', () => {
     expect(await screen.findByTestId('simple-review-actions')).toHaveTextContent(
       'review-contact:admin:contacts',
     );
+    await userEvent.click(screen.getByRole('button', { name: 'Contact Review' }));
     expect(screen.getByTestId('contact-view')).toHaveTextContent('contact-1:1.0.0:icon');
     expect(screen.queryByRole('link', { name: 'View' })).not.toBeInTheDocument();
 
@@ -1592,7 +1598,10 @@ describe('AssignmentReview', () => {
       />,
     );
 
-    expect(await screen.findByTestId('unitgroup-view')).toHaveTextContent('unitgroup-1:1.0.0:icon');
+    await userEvent.click(await screen.findByRole('button', { name: 'Unit group reference' }));
+    expect(screen.getByTestId('unitgroup-view')).toHaveTextContent('unitgroup-1:1.0.0:icon');
+    await userEvent.click(screen.getByRole('button', { name: 'Close' }));
+    await userEvent.click(screen.getByRole('button', { name: 'Flow property reference' }));
     expect(screen.getByTestId('flowproperty-view')).toHaveTextContent('flowproperty-1:2.0.0:icon');
     expect(await screen.findByTestId('row-review-unknown-reference')).toHaveTextContent(
       'Unknown reference',
@@ -2187,7 +2196,7 @@ describe('AssignmentReview', () => {
 
     await userEvent.click(await screen.findByRole('button', { name: 'expand-review-7' }));
 
-    expect(await screen.findByText('Unassigned')).toBeInTheDocument();
+    expect(await screen.findAllByText('Unassigned')).toHaveLength(2);
     expect(screen.queryByText('Approved')).not.toBeInTheDocument();
     expect(screen.queryByText('Rejected')).not.toBeInTheDocument();
     expect(screen.queryByText('2/2')).not.toBeInTheDocument();
@@ -2201,7 +2210,7 @@ describe('AssignmentReview', () => {
     );
   });
 
-  it('renders an approved reference in the reviewed member tab', async () => {
+  it('renders an approved reference in the completed member tab', async () => {
     mockGetRootReviewReferenceProgress.mockResolvedValueOnce({
       data: [
         {
@@ -2221,7 +2230,7 @@ describe('AssignmentReview', () => {
     render(
       <AssignmentReview
         userData={{ user_id: 'member-1', role: 'review-member' }}
-        tableType='reviewed'
+        tableType='completed'
         actionRef={{ current: { reload: jest.fn() } }}
       />,
     );
