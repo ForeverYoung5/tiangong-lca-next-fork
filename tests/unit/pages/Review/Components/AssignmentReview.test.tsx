@@ -629,7 +629,8 @@ describe('AssignmentReview', () => {
     );
     expect(screen.getByText('flows')).toBeInTheDocument();
     expect(screen.getAllByText('1.0.0')).toHaveLength(2);
-    expect(screen.getAllByText('Unassigned')).toHaveLength(2);
+    expect(screen.getByText('Unassigned Task')).toBeInTheDocument();
+    expect(screen.getByText('Unassigned')).toBeInTheDocument();
     expect(screen.getByText('0/0')).toBeInTheDocument();
     expect(screen.queryByText('{"path":["process","flow"]}')).not.toBeInTheDocument();
   });
@@ -2196,7 +2197,8 @@ describe('AssignmentReview', () => {
 
     await userEvent.click(await screen.findByRole('button', { name: 'expand-review-7' }));
 
-    expect(await screen.findAllByText('Unassigned')).toHaveLength(2);
+    expect(await screen.findByText('Unassigned Task')).toBeInTheDocument();
+    expect(screen.getByText('Unassigned')).toBeInTheDocument();
     expect(screen.queryByText('Approved')).not.toBeInTheDocument();
     expect(screen.queryByText('Rejected')).not.toBeInTheDocument();
     expect(screen.queryByText('2/2')).not.toBeInTheDocument();

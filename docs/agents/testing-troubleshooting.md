@@ -40,7 +40,7 @@ checkPaths:
   - .github/workflows/release-gate.yml
   - .github/workflows/release-readiness.yml
 lastReviewedAt: 2026-09-26
-lastReviewedCommit: 93d0ffc795e9fa13929adbe9810e4e0582f2a9d6
+lastReviewedCommit: d155edef768ba72485fd6258576ec6c5a7441942
 lastReviewedNote: 'Reviewed for Platform #1111: the installed SDK recovery path now targets 0.3.1 and includes ordered Process review-array qualification; the troubleshooting workflow is otherwise unchanged.'
 ---
 

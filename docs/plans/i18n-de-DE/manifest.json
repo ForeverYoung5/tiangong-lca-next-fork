@@ -3,7 +3,7 @@
   "source": {
     "baseRef": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
     "baseCommit": "c26f306e82ac66f50a56aafe8f89ea96c0b0c67d",
-    "auditedInputDigest": "f935f5647fa13ced612d81f92c8693c400f6ca6fd3694c52bcdddb4170fb7cc3",
+    "auditedInputDigest": "502447089b81c03fa9704c5955d13982c5d6c2985782f7faf95d584df500ac9d",
     "auditedInputDigestAlgorithm": "sha256(path\\0content\\0)",
     "repository": "tiangong-lca/platform"
   },
@@ -220247,7 +220247,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/ReviewTaskDetail.tsx",
-          "line": 119,
+          "line": 122,
           "column": 19,
           "symbol": "ReviewTaskDetail",
           "defaultMessage": "Actions",
@@ -220307,7 +220307,7 @@
             },
             {
               "path": "src/pages/Review/Components/ReviewTaskDetail.tsx",
-              "line": 119,
+              "line": 122,
               "column": 19,
               "kind": "FormattedMessage"
             },
@@ -222606,7 +222606,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/ReviewTaskDetail.tsx",
-          "line": 83,
+          "line": 86,
           "column": 15,
           "symbol": "ReviewTaskDetail",
           "defaultMessage": "Review data",
@@ -222621,7 +222621,7 @@
           "locations": [
             {
               "path": "src/pages/Review/Components/ReviewTaskDetail.tsx",
-              "line": 83,
+              "line": 86,
               "column": 15,
               "kind": "FormattedMessage"
             }
@@ -222689,7 +222689,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/ReviewTaskDetail.tsx",
-          "line": 88,
+          "line": 91,
           "column": 17,
           "symbol": "ReviewTaskDetail",
           "defaultMessage": "The submitted data is not available to this actor.",
@@ -222704,7 +222704,7 @@
           "locations": [
             {
               "path": "src/pages/Review/Components/ReviewTaskDetail.tsx",
-              "line": 88,
+              "line": 91,
               "column": 17,
               "kind": "FormattedMessage"
             }
@@ -222788,7 +222788,7 @@
         {
           "kind": "formatMessage",
           "path": "src/pages/Review/Components/ReviewTaskDetail.tsx",
-          "line": 101,
+          "line": 104,
           "column": 16,
           "symbol": "ReviewTaskDetail",
           "defaultMessage": "Approve: {approve}; reject: {reject}; pending: {pending}.",
@@ -222807,7 +222807,7 @@
           "locations": [
             {
               "path": "src/pages/Review/Components/ReviewTaskDetail.tsx",
-              "line": 101,
+              "line": 104,
               "column": 16,
               "kind": "formatMessage"
             }
@@ -222875,7 +222875,7 @@
         {
           "kind": "FormattedMessage",
           "path": "src/pages/Review/Components/ReviewTaskDetail.tsx",
-          "line": 95,
+          "line": 98,
           "column": 15,
           "symbol": "ReviewTaskDetail",
           "defaultMessage": "Reviewer opinions",
@@ -222890,7 +222890,7 @@
           "locations": [
             {
               "path": "src/pages/Review/Components/ReviewTaskDetail.tsx",
-              "line": 95,
+              "line": 98,
               "column": 15,
               "kind": "FormattedMessage"
             }
