@@ -44,7 +44,7 @@ checkPaths:
   - scripts/i18n/locale-delivery.mjs
   - .github/workflows/**
 lastReviewedAt: 2026-09-26
-lastReviewedCommit: d98e9b3a01f4d0818883111b9da6e1b4974d41ba
+lastReviewedCommit: cfa0cf890f6e8f15c7088200e889f15f1eee3732
 lastReviewedNote: 'Reviewed for Platform #1111: dependency qualification advances the exact installed TIDAS SDK to 0.3.1 and covers ordered Process reviews; the validation command matrix and gate policy are unchanged.'
 related:
   - ../AGENTS.md
