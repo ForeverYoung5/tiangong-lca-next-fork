@@ -1,5 +1,9 @@
 import AccessDenied from '@/components/AccessDenied';
 import { getReviewUserRoleApi } from '@/services/roles/api';
+import {
+  getReviewerContactStatus,
+  type ReviewerContactStatus,
+} from '@/services/reviewerContacts/api';
 import { PageContainer } from '@ant-design/pro-components';
 import { FormattedMessage } from '@umijs/max';
 import { Spin, Tabs } from 'antd';
@@ -7,6 +11,7 @@ import { useEffect, useRef, useState } from 'react';
 import AssignmentReview from './Components/AssignmentReview';
 import ReviewMember from './Components/ReviewMember';
 import ReviewQualityDiagnostic from './Components/ReviewQualityDiagnostic';
+import ReviewerProfile from './Components/ReviewerProfile';
 
 const Review = () => {
   const [activeTabKey, setActiveTabKey] = useState('');
@@ -14,6 +19,9 @@ const Review = () => {
   const [authResolved, setAuthResolved] = useState(false);
   const [qualityDiagnosticOpen, setQualityDiagnosticOpen] = useState(false);
   const [userData, setUserData] = useState<{ user_id: string; role: string } | null>(null);
+  const [profileStatus, setProfileStatus] = useState<ReviewerContactStatus | null>(null);
+  const [profileLoading, setProfileLoading] = useState(false);
+  const [profileError, setProfileError] = useState<any>(null);
   const actionRef = useRef<any>(undefined);
   const unassignedTableRef = useRef<any>(undefined);
   const inProgressTableRef = useRef<any>(undefined);
@@ -37,6 +45,23 @@ const Review = () => {
   useEffect(() => {
     checkUserAuth();
   }, []);
+
+  const loadReviewerProfile = async () => {
+    setProfileLoading(true);
+    setProfileError(null);
+    try {
+      const result = await getReviewerContactStatus();
+      setProfileStatus(result.data);
+      setProfileError(result.error);
+      return result.data;
+    } finally {
+      setProfileLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    if (userData?.role === 'review-member') void loadReviewerProfile();
+  }, [userData?.role]);
 
   const onTabChange = (key: string) => {
     setActiveTabKey(key);
@@ -66,6 +91,7 @@ const Review = () => {
   const isReviewMember = userData?.role === 'review-member';
   const isAuthorized = isReviewAdmin || isReviewMember;
 
+  const profileReady = profileStatus?.ready === true && !profileError;
   const tabs = isReviewAdmin
     ? [
         {
@@ -115,6 +141,7 @@ const Review = () => {
         {
           key: 'pending',
           label: <FormattedMessage id='pages.review.tabs.pending' />,
+          disabled: !profileReady,
           children: (
             <AssignmentReview actionRef={pendingTableRef} tableType='pending' userData={userData} />
           ),
@@ -127,6 +154,7 @@ const Review = () => {
               defaultMessage='Submitted Opinions'
             />
           ),
+          disabled: !profileReady,
           children: (
             <AssignmentReview
               actionRef={submittedTableRef}
@@ -138,11 +166,24 @@ const Review = () => {
         {
           key: 'completed',
           label: <FormattedMessage id='pages.review.tabs.completed' defaultMessage='Completed' />,
+          disabled: !profileReady,
           children: (
             <AssignmentReview
               actionRef={completedTableRef}
               tableType='completed'
               userData={userData}
+            />
+          ),
+        },
+        {
+          key: 'reviewerProfile',
+          label: <FormattedMessage id='pages.review.tabs.reviewerProfile' />,
+          children: (
+            <ReviewerProfile
+              status={profileStatus}
+              loading={profileLoading}
+              error={profileError}
+              onRefresh={loadReviewerProfile}
             />
           ),
         },
@@ -154,8 +195,12 @@ const Review = () => {
       return;
     }
 
-    setActiveTabKey(isReviewAdmin ? 'unassigned' : 'pending');
-  }, [isAuthorized, isReviewAdmin]);
+    if (isReviewAdmin) {
+      setActiveTabKey('unassigned');
+    } else if (!profileLoading) {
+      setActiveTabKey(profileReady ? 'pending' : 'reviewerProfile');
+    }
+  }, [isAuthorized, isReviewAdmin, profileLoading, profileReady]);
 
   return (
     <PageContainer title={<FormattedMessage id='pages.review.title' />}>

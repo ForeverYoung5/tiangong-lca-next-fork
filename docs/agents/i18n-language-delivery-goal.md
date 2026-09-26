@@ -57,7 +57,7 @@ checkPaths:
   - .github/workflows/build.yml
   - package.json
 lastReviewedAt: 2026-09-26
-lastReviewedCommit: 93d0ffc795e9fa13929adbe9810e4e0582f2a9d6
+lastReviewedCommit: fb6a0d56609670e7c7e767cfbb4d1d0490fc278f
 lastReviewedNote: 'Reviewed Platform #1109 follow-up: shared review views remove one duplicate ProTable and locale-materialized implementation surface; generated locale artifacts were refreshed idempotently, while language, validation, gate, and testing policy remain unchanged.'
 baselineObservedAt: 2026-07-18
 related:

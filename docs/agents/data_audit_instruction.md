@@ -107,6 +107,8 @@ Only Review Admin can manually start or read the joint pending-review quality di
 
 ## Process Summary
 
+Before Review Members can access their task tabs, they must publish and bind a valid Contact through `My reviewer profile`. This readiness gate does not create or transition a Review.
+
 1. each of the seven edit pages shows one `Submit Review` action
 2. Process blocks only on editable current-record validation; no dataset type requires completeness or numerical-stability evidence to submit
 3. the database decides Root versus rejected-Reference repair and records exact relations

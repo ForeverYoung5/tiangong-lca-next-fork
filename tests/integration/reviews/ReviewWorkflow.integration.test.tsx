@@ -13,6 +13,10 @@ jest.mock('@/services/reviews/api', () => ({
   getReviewsTableDataOfReviewMember: jest.fn(),
 }));
 
+jest.mock('@/services/reviewerContacts/api', () => ({
+  getReviewerContactStatus: jest.fn(),
+}));
+
 jest.mock('@/services/roles/api', () => ({
   getReviewUserRoleApi: jest.fn(),
   getUserManageTableData: jest.fn(),
@@ -79,6 +83,13 @@ jest.mock('@/pages/Processes/Components/view', () => ({
 jest.mock('@/pages/Review/Components/AddMemberModal', () => ({
   __esModule: true,
   default: ({ open }: any) => (open ? <div data-testid='add-member-modal' /> : null),
+}));
+
+jest.mock('@/pages/Review/Components/ReviewerProfile', () => ({
+  __esModule: true,
+  default: ({ status }: any) => (
+    <div data-testid='reviewer-profile'>{status?.status ?? 'loading'}</div>
+  ),
 }));
 
 jest.mock('@umijs/max', () => ({
@@ -354,6 +365,7 @@ import {
   getReviewsTableDataOfReviewAdmin,
   getReviewsTableDataOfReviewMember,
 } from '@/services/reviews/api';
+import { getReviewerContactStatus } from '@/services/reviewerContacts/api';
 import {
   delRoleApi,
   getReviewUserRoleApi,
@@ -372,6 +384,7 @@ import {
 
 const mockGetReviewsTableDataOfReviewAdmin = jest.mocked(getReviewsTableDataOfReviewAdmin);
 const mockGetReviewsTableDataOfReviewMember = jest.mocked(getReviewsTableDataOfReviewMember);
+const mockGetReviewerContactStatus = jest.mocked(getReviewerContactStatus);
 const mockGetReviewUserRoleApi = jest.mocked(getReviewUserRoleApi);
 const mockGetUserManageTableData = jest.mocked(getUserManageTableData);
 const mockUpdateRoleApi = jest.mocked(updateRoleApi);
@@ -390,6 +403,21 @@ describe('Review workflow integration', () => {
       success: true,
       total: 0,
     } as any);
+    mockGetReviewerContactStatus.mockResolvedValue({
+      data: {
+        status: 'ready',
+        ready: true,
+        contact: { '@refObjectId': 'contact-1', '@version': '01.00.000' },
+        dataset: {
+          id: 'contact-1',
+          version: '01.00.000',
+          state_code: 100,
+          rule_verification: true,
+          json_ordered: {},
+        },
+      },
+      error: null,
+    });
     mockGetReviewUserRoleApi.mockResolvedValue({
       user_id: 'user-admin',
       role: 'review-admin',
