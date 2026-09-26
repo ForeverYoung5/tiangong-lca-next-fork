@@ -2365,7 +2365,7 @@ describe('AssignmentReview', () => {
 
     await userEvent.click(await screen.findByRole('button', { name: 'expand-review-2' }));
     expect(await screen.findAllByText('Approved')).toHaveLength(2);
-    expect(screen.getByText('Returned')).toBeInTheDocument();
+    expect(await screen.findByText('Returned')).toBeInTheDocument();
     expect(screen.getByTestId('row-review-2')).toHaveTextContent('-');
   });
 
