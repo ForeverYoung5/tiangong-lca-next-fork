@@ -52,6 +52,7 @@ export default {
   'pages.review.detail.dataUnavailable': 'Les données soumises ne sont pas accessibles à cet utilisateur.',
   'pages.review.detail.opinions': 'Avis des réviseurs',
   'pages.review.detail.opinionSummary': 'Approbations : {approve} ; rejets : {reject} ; en attente : {pending}.',
+  'pages.review.progress.noReviewers': 'Aucun réviseur affecté pour le moment.',
   'pages.review.simpleDecision.approveSummary': 'Version {version} ; avis favorables : {approve} ; avis défavorables : {reject}.',
   'pages.review.batch.previewError': 'Impossible de vérifier le périmètre sélectionné.',
   'pages.review.batch.scopeSummary': '{total} revues sélectionnées (références incluses) ; {eligible} peuvent être traitées.',
@@ -187,6 +188,8 @@ export default {
   'pages.review.progress.tooltip.revoke': "Révoquer l'attribution de l'évaluateur",
 
   'pages.review.actions.view': 'Afficher',
+  'pages.review.actions.viewData': 'Afficher les données',
+  'pages.review.actions.viewDetails': 'Afficher les détails de la revue',
   'pages.review.actions.review': 'Évaluer',
 
   'pages.review.ReviewProcessDetail.edit.title': 'Évaluer le processus',

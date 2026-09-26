@@ -36,15 +36,17 @@ jest.mock('dayjs', () => {
 jest.mock('antd', () => {
   const React = require('react');
 
-  const Button = ({ children, onClick, disabled, icon, ...rest }: any) => {
+  const Button = ({ children, onClick, disabled, icon, shape, size, ...rest }: any) => {
     const restProps = { ...rest } as Record<string, any>;
     delete restProps.danger;
     return (
       <button
+        {...restProps}
         type='button'
         onClick={disabled ? undefined : onClick}
         disabled={disabled}
-        {...restProps}
+        data-shape={shape}
+        data-size={size}
       >
         {icon}
         {toText(children)}
@@ -225,6 +227,22 @@ describe('SelectReviewer component', () => {
     });
     message.success.mockReset();
     message.error.mockReset();
+  });
+
+  it('renders the assignment trigger as a small circular icon button', () => {
+    render(
+      <SelectReviewer
+        reviewIds={['review-1']}
+        tabType='unassigned'
+        actionRef={{ current: { reload: jest.fn() } }}
+      />,
+    );
+
+    const trigger = screen.getByTestId('icon-user').closest('button');
+
+    expect(trigger).toHaveAttribute('data-shape', 'circle');
+    expect(trigger).toHaveAttribute('data-size', 'small');
+    expect((trigger as HTMLButtonElement).style.width).toBe('');
   });
 
   it('does not open reviewer assignment while the selected review scope is loading', () => {

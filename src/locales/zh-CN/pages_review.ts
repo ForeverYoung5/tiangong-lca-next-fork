@@ -53,6 +53,7 @@ export default {
   'pages.review.detail.dataUnavailable': '当前用户无法查看该提交数据。',
   'pages.review.detail.opinions': '审核意见',
   'pages.review.detail.opinionSummary': '通过：{approve}；驳回：{reject}；待提交：{pending}。',
+  'pages.review.progress.noReviewers': '尚未分配审核员。',
   'pages.review.simpleDecision.approveSummary': '数据版本 {version}；通过意见 {approve}；驳回意见 {reject}。',
   'pages.review.batch.previewError': '无法检查所选审核范围。',
   'pages.review.batch.scopeSummary': '已选择 {total} 个审核（含引用），其中 {eligible} 个可执行。',
@@ -187,6 +188,8 @@ export default {
 
   'pages.review.actions': '操作',
   'pages.review.actions.view': '查看',
+  'pages.review.actions.viewData': '查看数据',
+  'pages.review.actions.viewDetails': '查看审核详情',
   'pages.review.actions.review': '审核',
 
   'pages.review.ReviewProcessDetail.edit.title': '审核过程',

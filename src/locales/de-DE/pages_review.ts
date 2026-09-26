@@ -52,6 +52,7 @@ export default {
   'pages.review.detail.dataUnavailable': 'Die eingereichten Daten sind für diesen Benutzer nicht verfügbar.',
   'pages.review.detail.opinions': 'Stellungnahmen',
   'pages.review.detail.opinionSummary': 'Zustimmung: {approve}; Ablehnung: {reject}; ausstehend: {pending}.',
+  'pages.review.progress.noReviewers': 'Noch keine Prüfer zugewiesen.',
   'pages.review.simpleDecision.approveSummary': 'Version {version}; Zustimmungen: {approve}; Ablehnungen: {reject}.',
   'pages.review.batch.previewError': 'Der ausgewählte Prüfumfang konnte nicht geprüft werden.',
   'pages.review.batch.scopeSummary': '{total} Prüfungen ausgewählt (einschließlich Referenzen); {eligible} können verarbeitet werden.',
@@ -187,6 +188,8 @@ export default {
   'pages.review.progress.tooltip.revoke': 'Zuweisung aufheben',
 
   'pages.review.actions.view': 'Anzeigen',
+  'pages.review.actions.viewData': 'Daten anzeigen',
+  'pages.review.actions.viewDetails': 'Prüfdetails anzeigen',
   'pages.review.actions.review': 'Prüfen',
 
   'pages.review.ReviewProcessDetail.edit.title': 'Prozess prüfen',

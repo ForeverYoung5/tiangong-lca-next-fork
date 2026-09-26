@@ -205,12 +205,12 @@ export default function SelectReviewer({
         }
       >
         <Button
-          style={{ width: 'inherit' }}
+          shape='circle'
           onClick={() => setDrawerVisible(true)}
           disabled={disabled}
           type='text'
           icon={<UsergroupAddOutlined />}
-          size='large'
+          size='small'
         />
       </Tooltip>
       <Drawer

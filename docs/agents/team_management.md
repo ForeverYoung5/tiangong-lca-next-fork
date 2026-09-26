@@ -20,7 +20,7 @@ checkPaths:
   - src/pages/Review/**
   - src/pages/ManageSystem/**
 lastReviewedAt: 2026-09-26
-lastReviewedCommit: 6ea2083644c71db8fdb47694f8024b7d3876b96a
+lastReviewedCommit: 735da3b6957955f81e71f44d31389aa3cc6caa3f
 lastReviewedNote: 'Reviewed review input/output display parity against shared Process and LifeCycleModel data views. Audit transitions, ownership, validation requirements, and testing policy are unchanged.'
 ---
 

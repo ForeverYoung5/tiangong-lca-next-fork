@@ -44,7 +44,7 @@ checkPaths:
   - pnpm-workspace.yaml
   - Dockerfile.app
 lastReviewedAt: 2026-09-26
-lastReviewedCommit: cfa0cf890f6e8f15c7088200e889f15f1eee3732
+lastReviewedCommit: 735da3b6957955f81e71f44d31389aa3cc6caa3f
 lastReviewedNote: 'Reviewed for Platform #1111: SDK 0.3.1 review-array qualification extends the existing mapper-independent package contract and does not change the long-term testing strategy.'
 ---
 

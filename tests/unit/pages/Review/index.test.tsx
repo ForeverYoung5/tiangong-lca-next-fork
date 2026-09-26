@@ -88,11 +88,15 @@ jest.mock('antd', () => {
     </section>
   );
   const Spin = ({ children }: any) => <div data-testid='spin'>{children}</div>;
-  const Tabs = ({ items = [], activeKey, onChange }: any) => {
+  const Tabs = ({ items = [], activeKey, onChange, styles }: any) => {
     const currentItem = items.find((item: any) => item.key === activeKey) ?? items[0];
 
     return (
-      <div>
+      <div
+        data-testid='review-tabs'
+        data-body-min-width={String(styles?.body?.minWidth)}
+        data-content-min-width={String(styles?.content?.minWidth)}
+      >
         <div>
           {items.map((item: any) => (
             <button
@@ -136,6 +140,8 @@ describe('Review page', () => {
     expect(await screen.findByTestId('assignment-unassigned')).toHaveTextContent(
       'unassigned:review-admin',
     );
+    expect(screen.getByTestId('review-tabs')).toHaveAttribute('data-body-min-width', '0');
+    expect(screen.getByTestId('review-tabs')).toHaveAttribute('data-content-min-width', '0');
     expect(screen.getByTestId('review-quality-diagnostic')).toBeInTheDocument();
     expect(screen.getByTestId('review-quality-diagnostic')).toHaveAttribute('data-open', 'false');
     fireEvent.click(screen.getByRole('button', { name: 'open-quality-diagnostic' }));

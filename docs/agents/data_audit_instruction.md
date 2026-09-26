@@ -19,7 +19,7 @@ checkPaths:
   - src/pages/Review/**
   - src/pages/ManageSystem/**
 lastReviewedAt: 2026-09-26
-lastReviewedCommit: 6ea2083644c71db8fdb47694f8024b7d3876b96a
+lastReviewedCommit: 735da3b6957955f81e71f44d31389aa3cc6caa3f
 lastReviewedNote: 'Aligned the Review workspace with pending/submitted/completed member stages, unassigned/in-progress/completed admin stages, V5 queue facts, and batch preflight behavior.'
 ---
 
@@ -122,7 +122,9 @@ Before Review Members can access their task tabs, they must publish and bind a v
 11. the child table does not show a reference-path column, and no persisted or visible reference-overview field is required
 12. every readable Root or Reference row exposes a view icon that opens the existing read-only Contact, Source, Unit Group, Flow Property, Flow, Process, or Lifecycle Model drawer; viewing does not alter review state or access
 13. Review Member tabs are `pending`, `submitted`, and `completed`, defaulting to `pending`; Review Admin tabs are `unassigned`, `in-progress`, `completed`, followed by Review Member Management as the final tab
-14. clicking a task name opens a unified task summary containing exact data identity, progress/opinion facts, the data-view entry, and the actions available in the current stage; completed tasks are read-only
+14. task names are non-interactive; the adjacent view icon opens readable data, while review actions remain in the action column and completed tasks remain read-only
+15. the Review Admin in-progress main-table progress cell shows submitted/assigned reviewer counts; hover or keyboard focus reveals approve/reject/pending reviewer-opinion totals, or an unassigned message when no reviewer is assigned
+16. the action column stays fixed on the right and centers its heading and controls during horizontal scrolling in both the top-level review table and actionable expanded Reference tables
 
 ## Review Queue Search
 

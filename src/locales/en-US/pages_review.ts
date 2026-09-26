@@ -52,6 +52,7 @@ export default {
   'pages.review.detail.dataUnavailable': 'The submitted data is not available to this actor.',
   'pages.review.detail.opinions': 'Reviewer opinions',
   'pages.review.detail.opinionSummary': 'Approve: {approve}; reject: {reject}; pending: {pending}.',
+  'pages.review.progress.noReviewers': 'No reviewers assigned yet.',
   'pages.review.simpleDecision.approveSummary': 'Version {version}; approve opinions: {approve}; reject opinions: {reject}.',
   'pages.review.batch.previewError': 'Unable to check the selected review scope.',
   'pages.review.batch.scopeSummary': '{total} reviews selected (including references); {eligible} can be processed.',
@@ -187,6 +188,8 @@ export default {
   'pages.review.progress.tooltip.revoke': 'Revoke reviewer assignment',
 
   'pages.review.actions.view': 'View',
+  'pages.review.actions.viewData': 'View data',
+  'pages.review.actions.viewDetails': 'View review details',
   'pages.review.actions.review': 'Review',
 
   'pages.review.ReviewProcessDetail.edit.title': 'Review Process',

@@ -219,6 +219,10 @@ const Review = () => {
               activeKey={activeTabKey}
               onChange={onTabChange}
               tabPlacement='start'
+              styles={{
+                body: { minWidth: 0 },
+                content: { minWidth: 0 },
+              }}
               items={tabs}
             />
           </>
