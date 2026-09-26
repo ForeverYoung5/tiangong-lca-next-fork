@@ -148,7 +148,10 @@ const ProTable = ({ rowSelection, actionRef, request, columns = [], toolbar, dat
         </button>
       )}
       {rows.map((row) => (
-        <div key={row.user_id ?? row.reviewer_id}>
+        <div
+          key={row.user_id ?? row.reviewer_id}
+          data-checkbox-disabled={String(!!rowSelection?.getCheckboxProps?.(row)?.disabled)}
+        >
           {columns.map((column: any, index: number) => {
             const value = column?.dataIndex ? row[column.dataIndex] : undefined;
             const rendered =
@@ -352,6 +355,80 @@ describe('SelectReviewer component', () => {
       '2026-03-20T10:00:00.000Z',
     );
     expect(message.success).toHaveBeenCalledWith('Reviewer assignments saved successfully.');
+  });
+
+  it('revokes a pending current reviewer immediately', async () => {
+    const actionRef = { current: { reload: jest.fn() } };
+    mockGetReviewerIdsByReviewId.mockResolvedValue([{ reviewer_id: 'user-1', state_code: 0 }]);
+    mockGetUsersByIds.mockResolvedValue([{ id: 'user-1', display_name: 'User One' }]);
+
+    render(<SelectReviewer reviewIds={['review-1']} tabType='assigned' actionRef={actionRef} />);
+
+    fireEvent.click(screen.getByTestId('icon-user').closest('button') as HTMLButtonElement);
+    await waitFor(() => expect(screen.getByText('User One')).toBeInTheDocument());
+    fireEvent.click(screen.getByTestId('icon-delete').closest('button') as HTMLButtonElement);
+
+    await waitFor(() => expect(mockRevokeReviewerApi).toHaveBeenCalledWith('review-1', 'user-1'));
+    expect(message.success).toHaveBeenCalledWith('Reviewer assignment revoked.');
+    expect(actionRef.current.reload).toHaveBeenCalled();
+    expect(screen.queryByText('Current reviewers')).not.toBeInTheDocument();
+  });
+
+  it('keeps the current reviewer when immediate revocation fails', async () => {
+    const actionRef = { current: { reload: jest.fn() } };
+    mockGetReviewerIdsByReviewId.mockResolvedValue([{ reviewer_id: 'user-1', state_code: 0 }]);
+    mockGetUsersByIds.mockResolvedValue([{ id: 'user-1', display_name: 'User One' }]);
+    mockRevokeReviewerApi.mockResolvedValueOnce({ data: [{}], error: new Error('revoke failed') });
+
+    render(<SelectReviewer reviewIds={['review-1']} tabType='assigned' actionRef={actionRef} />);
+
+    fireEvent.click(screen.getByTestId('icon-user').closest('button') as HTMLButtonElement);
+    await waitFor(() => expect(screen.getByText('User One')).toBeInTheDocument());
+    fireEvent.click(screen.getByTestId('icon-delete').closest('button') as HTMLButtonElement);
+
+    await waitFor(() =>
+      expect(message.error).toHaveBeenCalledWith('Failed to revoke the reviewer assignment.'),
+    );
+    expect(actionRef.current.reload).not.toHaveBeenCalled();
+    expect(screen.getByText('User One')).toBeInTheDocument();
+  });
+
+  it('keeps the current reviewer when revocation returns no changed row', async () => {
+    const actionRef = { current: { reload: jest.fn() } };
+    mockGetReviewerIdsByReviewId.mockResolvedValue([{ reviewer_id: 'user-1', state_code: 0 }]);
+    mockGetUsersByIds.mockResolvedValue([{ id: 'user-1', display_name: 'User One' }]);
+    mockRevokeReviewerApi.mockResolvedValueOnce({ data: [], error: null });
+
+    render(<SelectReviewer reviewIds={['review-1']} tabType='assigned' actionRef={actionRef} />);
+
+    fireEvent.click(screen.getByTestId('icon-user').closest('button') as HTMLButtonElement);
+    await waitFor(() => expect(screen.getByText('User One')).toBeInTheDocument());
+    fireEvent.click(screen.getByTestId('icon-delete').closest('button') as HTMLButtonElement);
+
+    await waitFor(() =>
+      expect(message.error).toHaveBeenCalledWith('Failed to revoke the reviewer assignment.'),
+    );
+    expect(actionRef.current.reload).not.toHaveBeenCalled();
+    expect(screen.getByText('User One')).toBeInTheDocument();
+  });
+
+  it('keeps the current reviewer when revocation returns no data payload', async () => {
+    const actionRef = { current: { reload: jest.fn() } };
+    mockGetReviewerIdsByReviewId.mockResolvedValue([{ reviewer_id: 'user-1', state_code: 0 }]);
+    mockGetUsersByIds.mockResolvedValue([{ id: 'user-1', display_name: 'User One' }]);
+    mockRevokeReviewerApi.mockResolvedValueOnce({ data: undefined, error: null });
+
+    render(<SelectReviewer reviewIds={['review-1']} tabType='assigned' actionRef={actionRef} />);
+
+    fireEvent.click(screen.getByTestId('icon-user').closest('button') as HTMLButtonElement);
+    await waitFor(() => expect(screen.getByText('User One')).toBeInTheDocument());
+    fireEvent.click(screen.getByTestId('icon-delete').closest('button') as HTMLButtonElement);
+
+    await waitFor(() =>
+      expect(message.error).toHaveBeenCalledWith('Failed to revoke the reviewer assignment.'),
+    );
+    expect(actionRef.current.reload).not.toHaveBeenCalled();
+    expect(screen.getByText('User One')).toBeInTheDocument();
   });
 
   it('renders deadline controls and supports both close actions', async () => {

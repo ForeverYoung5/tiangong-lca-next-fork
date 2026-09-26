@@ -790,19 +790,21 @@ const AssignmentReview = ({
       !['processes', 'lifecyclemodels'].includes(record.targetTable as string));
 
   const getApproveDisabledReason = (record: ReviewsTable) => {
-    if ((record.reviewerCount ?? 0) === 0) {
+    const reviewerCount = record.reviewerCount ?? 0;
+    const completedReviewerCount = record.completedReviewerCount ?? 0;
+    if (reviewerCount === 0) {
       return intl.formatMessage({
         id: 'pages.review.approve.disabled.noReviewers',
         defaultMessage: 'Assign at least one reviewer before final approval.',
       });
     }
-    if ((record.completedReviewerCount ?? 0) < (record.reviewerCount ?? 0)) {
+    if (completedReviewerCount < reviewerCount) {
       return intl.formatMessage(
         {
           id: 'pages.review.approve.disabled.pendingOpinions',
           defaultMessage: '{count} reviewer opinions are still pending.',
         },
-        { count: (record.reviewerCount ?? 0) - (record.completedReviewerCount ?? 0) },
+        { count: reviewerCount - completedReviewerCount },
       );
     }
     return undefined;
