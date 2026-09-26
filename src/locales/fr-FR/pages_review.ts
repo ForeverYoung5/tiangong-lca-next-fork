@@ -24,6 +24,7 @@ export default {
   'pages.review.result.inProgress': 'En cours',
   'pages.review.reviewKind': 'Type de revue',
   'pages.review.detail.data': 'Données à examiner',
+  'pages.review.detail.close': 'Fermer',
   'pages.review.detail.dataUnavailable': 'Les données soumises ne sont pas accessibles à cet utilisateur.',
   'pages.review.detail.opinions': 'Avis des réviseurs',
   'pages.review.detail.opinionSummary': 'Approbations : {approve} ; rejets : {reject} ; en attente : {pending}.',

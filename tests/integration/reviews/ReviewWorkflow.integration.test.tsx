@@ -95,6 +95,7 @@ jest.mock('@ant-design/icons', () => ({
   CloseOutlined: () => <span data-testid='icon-close' />,
   CrownOutlined: () => <span data-testid='icon-crown' />,
   DeleteOutlined: () => <span data-testid='icon-delete' />,
+  EyeOutlined: () => <span data-testid='icon-eye' />,
   ExperimentOutlined: () => <span data-testid='icon-experiment' />,
   PlusOutlined: () => <span data-testid='icon-plus' />,
   UserOutlined: () => <span data-testid='icon-user' />,
@@ -171,6 +172,7 @@ jest.mock('antd', () => {
   const Col = ({ children }: any) => <div data-testid='col'>{children}</div>;
   const Space = ({ children }: any) => <div data-testid='space'>{children}</div>;
   const Tooltip = ({ children }: any) => <>{children}</>;
+  const Tag = ({ children }: any) => <span>{children}</span>;
   const Flex = ({ children }: any) => <div data-testid='flex'>{children}</div>;
   const Input = ({ value, onChange, ...rest }: any) => (
     <input
@@ -219,6 +221,7 @@ jest.mock('antd', () => {
     Space,
     Spin,
     Tabs,
+    Tag,
     Tooltip,
     message,
     ConfigProvider,
@@ -410,16 +413,18 @@ describe('Review workflow integration', () => {
       ).toBe(true);
     });
 
-    fireEvent.click(screen.getByTestId('tab-assigned'));
+    fireEvent.click(screen.getByTestId('tab-in-progress'));
 
     await waitFor(() => {
       expect(
-        mockGetReviewsTableDataOfReviewAdmin.mock.calls.some(([, , type]) => type === 'assigned'),
+        mockGetReviewsTableDataOfReviewAdmin.mock.calls.some(
+          ([, , type]) => type === 'in-progress',
+        ),
       ).toBe(true);
     });
   });
 
-  it('defaults review members to the reviewed tab and requests reviewed queue data', async () => {
+  it('defaults review members to the pending tab and requests pending queue data', async () => {
     mockGetReviewUserRoleApi.mockResolvedValueOnce({
       user_id: 'member-007',
       role: 'review-member',
@@ -430,13 +435,13 @@ describe('Review workflow integration', () => {
     await waitFor(() => {
       expect(
         mockGetReviewsTableDataOfReviewMember.mock.calls.some(
-          ([, , type, lang]) => type === 'reviewed' && lang === 'en',
+          ([, , type, lang]) => type === 'pending' && lang === 'en',
         ),
       ).toBe(true);
     });
 
     expect(screen.queryByTestId('tab-unassigned')).not.toBeInTheDocument();
-    expect(screen.getByTestId('tab-reviewed')).toBeInTheDocument();
+    expect(screen.getByTestId('tab-pending')).toBeInTheDocument();
   });
 
   it('passes explicit reviewer id when loading queues from member drawer context', async () => {
@@ -488,7 +493,7 @@ describe('Review workflow integration', () => {
     renderWithProviders(
       <AssignmentReview
         actionRef={React.createRef<any>()}
-        tableType='assigned'
+        tableType='in-progress'
         userData={{ user_id: 'user-admin', role: 'review-admin' }}
       />,
     );

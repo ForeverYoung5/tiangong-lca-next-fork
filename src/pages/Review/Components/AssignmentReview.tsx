@@ -1016,7 +1016,7 @@ const AssignmentReview = ({
         }
         return tableType === 'unassigned' ? (
           <Tag>
-            <FormattedMessage id='pages.review.tabs.unassigned' defaultMessage='Unassigned' />
+            <FormattedMessage id='pages.review.tabs.unassigned' defaultMessage='Unassigned Task' />
           </Tag>
         ) : (
           <Tag color='processing'>

@@ -24,6 +24,7 @@ export default {
   'pages.review.result.inProgress': 'In progress',
   'pages.review.reviewKind': 'Review kind',
   'pages.review.detail.data': 'Review data',
+  'pages.review.detail.close': 'Close',
   'pages.review.detail.dataUnavailable': 'The submitted data is not available to this actor.',
   'pages.review.detail.opinions': 'Reviewer opinions',
   'pages.review.detail.opinionSummary': 'Approve: {approve}; reject: {reject}; pending: {pending}.',

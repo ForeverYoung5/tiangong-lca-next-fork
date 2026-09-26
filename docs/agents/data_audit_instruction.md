@@ -19,7 +19,7 @@ checkPaths:
   - src/pages/Review/**
   - src/pages/ManageSystem/**
 lastReviewedAt: 2026-09-26
-lastReviewedCommit: 79f0f66d83067983120072e8acd62616ad89eff2
+lastReviewedCommit: 93d0ffc795e9fa13929adbe9810e4e0582f2a9d6
 lastReviewedNote: 'Aligned the Review workspace with pending/submitted/completed member stages, unassigned/in-progress/completed admin stages, V5 queue facts, and batch preflight behavior.'
 ---
 

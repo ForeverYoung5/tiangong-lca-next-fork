@@ -243,7 +243,7 @@ export const EXPECTED_PRO_COMPONENT_RUNTIME_COUNTS = {
   PageContainer: 15,
   ProForm: 27,
   ProLayout: 3,
-  ProTable: 66,
+  ProTable: 67,
   SettingDrawer: 1,
   TableDropdown: 3,
 } as const satisfies Record<ProComponentRuntimeTag, number>;

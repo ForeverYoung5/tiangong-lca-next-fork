@@ -24,6 +24,7 @@ export default {
   'pages.review.result.inProgress': 'In Bearbeitung',
   'pages.review.reviewKind': 'Prüfart',
   'pages.review.detail.data': 'Prüfdaten',
+  'pages.review.detail.close': 'Schließen',
   'pages.review.detail.dataUnavailable': 'Die eingereichten Daten sind für diesen Benutzer nicht verfügbar.',
   'pages.review.detail.opinions': 'Stellungnahmen',
   'pages.review.detail.opinionSummary': 'Zustimmung: {approve}; Ablehnung: {reject}; ausstehend: {pending}.',

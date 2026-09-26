@@ -25,6 +25,7 @@ export default {
   'pages.review.result.inProgress': '审核中',
   'pages.review.reviewKind': '审核类型',
   'pages.review.detail.data': '审核数据',
+  'pages.review.detail.close': '关闭',
   'pages.review.detail.dataUnavailable': '当前用户无法查看该提交数据。',
   'pages.review.detail.opinions': '审核意见',
   'pages.review.detail.opinionSummary': '通过：{approve}；驳回：{reject}；待提交：{pending}。',

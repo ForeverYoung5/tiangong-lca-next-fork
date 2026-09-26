@@ -34,7 +34,7 @@ const ReviewTaskDetail = ({ record, dataView, actions }: ReviewTaskDetailProps) 
             <h3>{record.name}</h3>
             {actions}
             <Button onClick={() => setOpen(false)}>
-              <FormattedMessage id='pages.button.close' defaultMessage='Close' />
+              <FormattedMessage id='pages.review.detail.close' defaultMessage='Close' />
             </Button>
           </Space>
           <dl style={{ display: 'grid', gridTemplateColumns: 'max-content 1fr', gap: '8px 16px' }}>
@@ -71,7 +71,10 @@ const ReviewTaskDetail = ({ record, dataView, actions }: ReviewTaskDetailProps) 
             </dt>
             <dd>{record.deadline ? new Date(record.deadline).toLocaleString() : '-'}</dd>
             <dt>
-              <FormattedMessage id='pages.review.progress.button' defaultMessage='Progress' />
+              <FormattedMessage
+                id='pages.review.progress.button'
+                defaultMessage='Review Progress'
+              />
             </dt>
             <dd>
               {record.completedReviewerCount ?? 0}/{record.reviewerCount ?? 0}
