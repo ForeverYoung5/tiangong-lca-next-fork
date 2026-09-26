@@ -493,21 +493,8 @@ describe('AssignmentReview', () => {
             user: { id: 'user-2' },
           },
         },
-        {
-          id: 'review-returned',
-          name: 'Returned Contact Review',
-          userName: 'Reviewer',
-          stateCode: -1,
-          isFromLifeCycle: false,
-          reviewKind: 'root',
-          targetTable: 'contacts',
-          json: {
-            data: { id: 'contact-returned', version: '1.0.0' },
-            user: { id: 'user-2' },
-          },
-        },
       ],
-      total: 2,
+      total: 1,
     });
   });
 
@@ -2336,8 +2323,21 @@ describe('AssignmentReview', () => {
             user: { id: 'user-2' },
           },
         },
+        {
+          id: 'review-returned',
+          name: 'Returned Contact Review',
+          userName: 'Reviewer',
+          stateCode: -1,
+          isFromLifeCycle: false,
+          reviewKind: 'root',
+          targetTable: 'contacts',
+          json: {
+            data: { id: 'contact-returned', version: '1.0.0' },
+            user: { id: 'user-2' },
+          },
+        },
       ],
-      total: 1,
+      total: 2,
     });
     mockGetRootReviewReferenceProgress.mockResolvedValueOnce({
       data: [
